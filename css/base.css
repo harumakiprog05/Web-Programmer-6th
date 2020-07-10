@@ -3,14 +3,22 @@ html{
     /* font-family: 'Noto Sans JP', sans-serif; */
     font-size: 14px;
     line-height: 32px;
+    color: #707070;
 
 }
 
-h1{
+
+h2{
     font-size: 24px;
+
 }
 
-/* マルチクラス */
+p{
+    margin-bottom: 30px;
+}
+
+/* ----------------------------マルチクラス用---------------------------- */
+
 .centering{
     text-align: center;
 }
@@ -19,3 +27,51 @@ h1{
     margin: 0 auto;
     width: 350px;
 }
+
+.circle{
+    border-radius: 50%;
+}
+
+/* カラー */
+.fun_color_dark{
+     background-color: #F0B75A;
+}
+.fun_color_middle{
+     background-color: #F7D7A3;
+}
+.fun_color_light{
+     background-color: #FAEAD0;
+}
+
+.calm_color_dark{
+     background-color: #A5D495;
+}
+.calm_color_middle{
+     background-color: #C4E3BA;
+}
+.calm_color_light{
+     background-color: #E3F1DE;
+}
+
+.yum_color_dark{
+     background-color: #CFB18B;
+}
+.yum_color_middle{
+     background-color: #DECAAF;
+}
+.yum_color_light{
+     background-color: #EDE2D3;
+}
+/*
+楽（濃）‣#F0B75A ボタン・強調時
+楽（通）‣#F7D7A3 基本
+楽（薄）‣#FAEAD0 背景等
+
+静（濃）‣#A5D495 ボタン・強調時
+静（通）‣#C4E3BA 基本
+静（薄）‣#E3F1DE 背景等
+
+旨（濃）‣#CFB18B ボタン・強調時
+旨（通）‣#DECAAF 基本
+旨（薄）‣#EDE2D3 背景等
+ */
