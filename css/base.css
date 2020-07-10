@@ -1,0 +1,21 @@
+html{
+    font-family: 'Noto Serif', serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    font-size: 14px;
+    line-height: 32px;
+
+}
+
+h1{
+    font-size: 24px;
+}
+
+/* マルチクラス */
+.centering{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 350px;
+}
