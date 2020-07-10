@@ -2,6 +2,7 @@
     display: flex;
     width: 200px;
     justify-content: space-around;
+    margin:15px auto;
 
 }
     .top_category_set li{
@@ -14,6 +15,22 @@
     }
 
 
-.site_about_content{
-    
+.heading_decoration{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
 }
+
+    .heading_decoration span{
+        height: 35px;
+        width: 35px;
+    }
+
+    .heading_decoration h2{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
