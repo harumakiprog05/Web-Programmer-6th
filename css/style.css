@@ -1,0 +1,19 @@
+.top_category_set{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+
+}
+    .top_category_set li{
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 22px;
+        color: white  ;
+    }
+
+
+.site_about_content{
+    
+}
