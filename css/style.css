@@ -15,7 +15,7 @@
     }
 
 
-.heading_decoration{
+.section_hedding{
     display: flex;
     justify-content: space-around;
     width: 200px;
@@ -23,12 +23,12 @@
     position: relative;
 }
 
-    .heading_decoration span{
+    .section_hedding span{
         height: 35px;
         width: 35px;
     }
 
-    .heading_decoration h2{
+    .section_hedding h2{
         position: absolute;
         top: 0;
         left: 0;
