@@ -17,6 +17,10 @@ p{
     margin-bottom: 30px;
 }
 
+span{
+     display: inline-block;
+}
+
 /* ----------------------------マルチクラス用---------------------------- */
 
 .centering{
@@ -26,42 +30,70 @@ p{
 .container{
     margin: 0 auto;
     max-width: 480px;
-    background-color: rgb(255, 255, 230);
+    background-color: rgb(253, 253, 242);
 }
 
+/* サークルサイズ */
 .circle{
     border-radius: 50%;
+}
+
+.short_circle_set{
+     height: 35px;
+     width: 35px;
+     line-height: 35px;
+}
+.tall_circle_set{
+     height: 40px;
+     width: 40px;
+     line-height: 40px;
+     font-size: 22px;
+}
+.grande_circle_set{
+     height: 50px;
+     width: 50px;
+     line-height: 50px;
+     font-size: 24px;
 }
 
 /* カラー */
 .fun_color_dark{
      background-color: #F0B75A;
+     color: white;
 }
 .fun_color_middle{
      background-color: #F7D7A3;
+     color: white;
 }
 .fun_color_light{
      background-color: #FAEAD0;
+     color: white;
 }
 
 .calm_color_dark{
      background-color: #A5D495;
+     color: white;
 }
 .calm_color_middle{
      background-color: #C4E3BA;
+     color: white;
 }
 .calm_color_light{
      background-color: #E3F1DE;
+     color: white;
 }
 
 .yum_color_dark{
      background-color: #CFB18B;
+     color: white;
 }
 .yum_color_middle{
      background-color: #DECAAF;
+     color: white;
 }
 .yum_color_light{
      background-color: #EDE2D3;
+     color: white;
 }
 /*
 楽（濃）‣#F0B75A ボタン・強調時

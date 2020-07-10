@@ -124,7 +124,7 @@
   -ms-transform: translateY(-6px) rotate(45deg);
   transform: translateY(-6px) rotate(45deg); }
 
-.navi {
+.spgnav {
   position: fixed;
   right: 0;
   height: 100%;
@@ -138,25 +138,40 @@
   -o-transition: all 600ms ease-out;
   transition: all 600ms ease-out;
   overflow: hidden; }
-  .js_humburgerOpen .navi {
+  .js_humburgerOpen .spgnav {
     width: 450px; }
     @media screen and (max-width: 940px) {
-      .js_humburgerOpen .navi {
+      .js_humburgerOpen .spgnav {
         width: 100%;
         padding: 100px 5% 0; } }
 
-.navi_item {
+.gnav_item {
   margin-bottom: 28px;
   font-size: 20px;
   font-family: "Marcellus", serif !important;
   white-space: nowrap;
   margin-left: 90px; }
-  .navi_item.op_innerLink {
+  .gnav_item.op_innerLink {
     cursor: pointer; }
   @media screen and (max-width: 940px) {
-    .navi_item {
+    .gnav_item {
       margin-left: 0;
       font-size: 18px; } }
+
+.gnav_inner{
+    text-align: center;
+}
+
+.gnav_menu{
+    text-align: left;
+    width: 130px;
+    margin: 0 auto;
+}
+
+    .gnav_item span{
+        text-align: center;
+        margin-right: 8px;
+    }
 
  /* ハンバーガーメニュー終 */
 
@@ -185,23 +200,20 @@
         object-fit: cover;
     }
 
+.site_about_title{
+    padding-top: 30px;
+    margin-bottom: 15px;
+}
+
 
 .top_category_set{
     display: flex;
     width: 200px;
     justify-content: space-around;
-    margin:15px auto;
+    margin:0 auto 15px;
 
 }
 
-    .top_category_set li{
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        line-height: 40px;
-        font-size: 22px;
-        color: white  ;
-    }
 
 
 .section_hedding{
@@ -217,9 +229,32 @@
         width: 35px;
     }
 
-    .section_hedding h2{
-        position: absolute;
-        top: 0;
-        left: 0;
+    .section_hedding{
+        margin-bottom: 40px;
+    }
 
+    .section_hedding .global_section_title{
+        position: absolute;
+        /* margin-bottom: 40px; */
+
+    }
+
+
+        .spot_img_frame{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .spot_img{
+            width: 100%;
+        }
+
+
+    .main_category_description section span{
+        position: absolute;
+        top: -15%;
+        left: -7%;
     }

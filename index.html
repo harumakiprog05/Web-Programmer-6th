@@ -15,6 +15,7 @@
 
 <body>
 <div class="body_wrap">
+  <header>
 
   <div class="el_humburger">
     <!--ハンバーガーボタン-->
@@ -25,19 +26,35 @@
     </div>
   </div>
 
-  <header class="navi">
+  <nav class="spgnav">
     <!--ナビゲーション-->
-    <div class="navi_inner">
-      <div class="navi_item"><a href="">ABOUT</a></div>
-      <div class="navi_item"><a href="">WORKS</a></div>
-      <div class="navi_item"><a href="">GALLERY</a></div>
+    <div class="gnav_inner">
 
-      <div class="navi_item"><a href="">FLOW</a></div>
-      <div class="navi_item"><a href="">FAQ</a></div>
-      <div class="navi_item"><a href="">CONTACT</a></div>
-    </div>
+
+      <div class="gnav_item">
+        <img class="gnav_logo" src="image\logo.png" alt="ロゴ">
+      </div>
+      <div class="gnav_menu">
+        <div class="gnav_item">
+          <span class="circle fun fun_color_dark tall_circle_set">楽</span>-たのしい-
+        </div>
+
+        <div class="gnav_item">
+          <span class="circle calm calm_color_dark tall_circle_set">静</span>-しずか-
+        </div>
+
+        <div class="gnav_item">
+          <span class="circle yum yum_color_dark tall_circle_set">旨</span>-うまい-
+        </div>
+
+        <div class="gnav_item">モデルコース</div>
+        <div class="gnav_item">検索</div>
+      </div>
+
+      </div>
+  </nav>
   </header>
-    <!-- <header>
+    <!--
 
       <nav class="gnav">
         <ul>
@@ -62,8 +79,7 @@
             <li>検索</li>
           </a>
         </ul>
-      </nav>
-    </header> -->
+      </nav> -->
 
     <div class="main_visual">
       <img class="main_visual_logo" src="image\main_visual_img.png" alt="top-image">
@@ -75,9 +91,9 @@
       <h2 class="site_about_title">あわいやしとは</h2>
 
       <ul class="top_category_set">
-        <li class="circle fun fun_color_dark">楽</li>
-        <li class="circle calm calm_color_dark">静</li>
-        <li class="circle yum yum_color_dark">旨</li>
+        <li class="circle fun fun_color_dark tall_circle_set">楽</li>
+        <li class="circle calm calm_color_dark tall_circle_set">静</li>
+        <li class="circle yum yum_color_dark tall_circle_set">旨</li>
       </ul>
 
     <div class="site_about_content">
@@ -98,19 +114,22 @@
 
     </section>
 
-    <section class="main_category_description">
+    <section class="main_category_description centering">
 
       <div class="section_hedding">
-      <span class="circle fun fun_color_middle"></span>
-      <span class="circle calm calm_color_middle"></span>
-      <span class="circle yum yum_color_middle"></span>
+        <span class="circle fun fun_color_middle"></span>
+        <span class="circle calm calm_color_middle"></span>
+        <span class="circle yum yum_color_middle"></span>
 
-      <h2 class="global_section_title">いやしスポット</h2>
-    </div>
+        <h2 class="global_section_title">いやしスポット</h2>
+     </div>
 
       <section id="fadeIn">
-        <span class="circle fun">楽</span>
-        <img src="" alt="">
+        <div class="spot_img_frame">
+          <img class="spot_img" src="image\1.png" alt="">
+          <span class="circle fun fun_color_dark grande_circle_set">楽</span>
+
+        </div>
         <h3 class="category_catch_copy">自然と文化に触れ楽しむ ひととき。</h3>
         <div class="categry_description">
         <p>自然の中でアクティブに過ごすことで「ココロ」と「カラダ」を癒してみませんか。</p>
@@ -122,8 +141,10 @@
       </section>
 
       <section id="fadeIn">
-        <span class="circle calm">静</span>
-        <img src="" alt="">
+        <div class="spot_img_frame">
+        <img class="spot_img" src="image\1.png" alt="">
+        <span class="circle calm calm_color_dark grande_circle_set">静</span>
+        </div>
         <h3 class="category_catch_copy">自分に向き合う 静かなひととき。</h3>
 <div class="categry_description">
         <p>静かな時を過ごして、「わたし」と向き合う</p>
@@ -134,8 +155,10 @@
       </section>
 
       <section id="fadeIn">
-        <span class="circle yum">旨</span>
-        <img src="" alt="">
+        <div class="spot_img_frame">
+        <img class="spot_img" src="image\1.png" alt="">
+        <span class="circle yum yum_color_dark grande_circle_set">旨</span>
+        </div>
         <h3 class="category_catch_copy">お腹にいやしを。 旨いひととき</h3>
 <div class="categry_description">
         <p>食べて、満たして、癒される</p>
