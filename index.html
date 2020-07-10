@@ -7,17 +7,42 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
+<!--CDNでjQuery読み込む-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
   <title>あわいやし</title>
 </head>
 
 <body>
 <div class="body_wrap">
-    <header>
+
+  <div class="el_humburger">
+    <!--ハンバーガーボタン-->
+    <div class="el_humburger_wrapper">
+      <span class="el_humburger_bar top"></span>
+      <span class="el_humburger_bar middle"></span>
+      <span class="el_humburger_bar bottom"></span>
+    </div>
+  </div>
+
+  <header class="navi">
+    <!--ナビゲーション-->
+    <div class="navi_inner">
+      <div class="navi_item"><a href="">ABOUT</a></div>
+      <div class="navi_item"><a href="">WORKS</a></div>
+      <div class="navi_item"><a href="">GALLERY</a></div>
+
+      <div class="navi_item"><a href="">FLOW</a></div>
+      <div class="navi_item"><a href="">FAQ</a></div>
+      <div class="navi_item"><a href="">CONTACT</a></div>
+    </div>
+  </header>
+    <!-- <header>
 
       <nav class="gnav">
         <ul>
           <a href="">
-            <li><img src="" alt="あわいやしロゴ"> </li> 
+            <li><img src="" alt="あわいやしロゴ"> </li>
           </a>
           <a href="">
             <li><span class="circle fun">楽</span>-たのしい-</li>
@@ -38,11 +63,11 @@
           </a>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <div class="main_visual">
       <img class="main_visual_logo" src="image\main_visual_img.png" alt="top-image">
-      <h1 class="main_catch_copy">ゆっくりするから、見えてくるもの。</h1>
+      <h1 class="main_catch_copy">ゆっくりするから、<br>見えてくるもの。</h1>
     </div>
 
     <div class="container">
@@ -165,6 +190,7 @@
       </ul>
       <h1><img src="" alt="あわいやしロゴ"></h1>
       <small>Copyright © あわいやし. All rights reserved.</small>
+      <script src="js\jQuery.js"></script>
     </footer>
   </div>
 </body>
