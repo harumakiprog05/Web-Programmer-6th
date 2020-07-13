@@ -208,10 +208,14 @@
 
 .top_category_set{
     display: flex;
-    width: 200px;
-    justify-content: space-around;
+    /* width: 200px; */
+    justify-content: center;
     margin:0 auto 15px;
 
+}
+
+.top_category_set li{
+  margin: 0 15px;
 }
 
 
@@ -219,7 +223,7 @@
 .section_hedding{
     display: flex;
     justify-content: space-around;
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
     position: relative;
 }
@@ -235,9 +239,28 @@
 
     .section_hedding .global_section_title{
         position: absolute;
+        /* width: 100%; */
         /* margin-bottom: 40px; */
-
     }
+
+      .global_section_title p{
+        font-size: 14px;
+      }
+
+
+
+.fun_category{
+   background:
+   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #FAEAD0 20%, #FAEAD0 100%)
+}
+.calm_category{
+   background:
+   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #E3F1DE 20%, #E3F1DE 100%)
+}
+.yum_category{
+   background:
+   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE2D3 20%, #EDE2D3 100%)
+}
 
 
         .spot_img_frame{
@@ -252,9 +275,93 @@
             width: 100%;
         }
 
+          .category_catch_copy{
+            position: absolute;
+            top: 20px;
+            right: 0;
+            font-family :'Yu Mincho';/* Windows用 */
+            color: white;
+            background-color: #2a2a2a60;
+            padding: 5px 20px;
+            text-align: left;
+            line-height: 1.9rem;
+          }
 
-    .main_category_description section span{
-        position: absolute;
-        top: -15%;
-        left: -7%;
+
+          .fun_category span,.yum_category span{
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: translate(-50%,-50%);
+          }
+
+          .calm_category span{
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(50%,-50%);
+          }
+
+.spot_more{
+  border-radius: 20px;
+  padding: 3px 15px;
+  margin-bottom: 50px;
+}
+
+.more{
+  border-radius: 20px;
+  padding: 3px 15px;
+
+}
+
+
+
+
+
+
+.instagram .fa-instagram{
+  font-size: 50px;
+}
+
+
+
+.on_footer{
+  background-color: #FEF6E9;
+  padding: 30px 0;
+}
+
+  .footer_h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8C6C47;
+    margin-bottom: 20px;
+  }
+
+    .footer_h2 .fa-instagram{
+      font-size: 30px;
+      margin-right: 10px;
+      color: #CFB18B;
     }
+
+
+  .formbutton_parent{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+    .top_return{
+      position: absolute;
+      right: 10%;
+    }
+
+
+
+.under_footer ul li{
+  line-height: 1.7rem;
+
+}
+
+.under_footer{
+  padding-top: 20px;
+}

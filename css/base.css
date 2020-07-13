@@ -7,6 +7,10 @@ html{
 
 }
 
+section{
+     margin-bottom: 100px;
+}
+
 
 h2{
     font-size: 24px;
@@ -28,9 +32,10 @@ span{
 }
 
 .container{
+    text-align: center;
     margin: 0 auto;
-    max-width: 480px;
-    background-color: rgb(253, 253, 242);
+    max-width: 950px;
+    /* background-color: rgb(253, 253, 242); */
 }
 
 /* サークルサイズ */
@@ -67,7 +72,6 @@ span{
 }
 .fun_color_light{
      background-color: #FAEAD0;
-     color: white;
 }
 
 .calm_color_dark{
@@ -80,7 +84,6 @@ span{
 }
 .calm_color_light{
      background-color: #E3F1DE;
-     color: white;
 }
 
 .yum_color_dark{
@@ -93,7 +96,6 @@ span{
 }
 .yum_color_light{
      background-color: #EDE2D3;
-     color: white;
 }
 /*
 楽（濃）‣#F0B75A ボタン・強調時
@@ -108,3 +110,52 @@ span{
 旨（通）‣#DECAAF 基本
 旨（薄）‣#EDE2D3 背景等
  */
+
+
+/* ---------------PC時の表示設定--------------- */
+
+ @media screen and (min-width: 950px) {
+
+/* サークルの大きさ */
+.short_circle_set{
+     height: 60px;
+     width: 60px;
+     line-height: 60px;
+}
+.tall_circle_set{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 35px;
+}
+.grande_circle_set{
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    font-size: 55px;
+}
+
+
+  /* display: none; */
+  .spgnav,
+  .el_humburger_wrapper,
+  .sp_footer
+  { display: none;}
+
+  html{
+    font-size: 16px;
+    line-height: 32px;
+    color: #707070;
+     }
+
+  h2{
+    font-size: 27px;
+  }
+
+  .section_hedding{
+       width: 400px;
+  }
+
+
+
+     }
