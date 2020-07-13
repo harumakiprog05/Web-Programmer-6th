@@ -178,6 +178,8 @@
 
 
 
+/* メインビジュアルスタイル */
+
  .main_visual{
      position: relative;
 
@@ -200,6 +202,11 @@
         object-fit: cover;
     }
 
+
+
+
+/* あわいやしとは？セクション */
+
 .site_about_title{
     padding-top: 30px;
     margin-bottom: 15px;
@@ -219,6 +226,9 @@
 }
 
 
+
+
+/* メインカテゴリーセクション */
 
 .section_hedding{
     display: flex;
@@ -249,18 +259,18 @@
 
 
 
-.fun_category{
-   background:
-   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #FAEAD0 20%, #FAEAD0 100%)
-}
-.calm_category{
-   background:
-   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #E3F1DE 20%, #E3F1DE 100%)
-}
-.yum_category{
-   background:
-   linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE2D3 20%, #EDE2D3 100%)
-}
+  .fun_category{
+    background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #FAEAD0 20%, #FAEAD0 100%)
+  }
+  .calm_category{
+    background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #E3F1DE 20%, #E3F1DE 100%)
+  }
+  .yum_category{
+    background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE2D3 20%, #EDE2D3 100%)
+  }
 
 
         .spot_img_frame{
@@ -318,6 +328,7 @@
 
 
 
+/* インスタセクション */
 
 .instagram .fa-instagram{
   font-size: 50px;
@@ -325,43 +336,51 @@
 
 
 
-.on_footer{
-  background-color: #FEF6E9;
-  padding: 30px 0;
+
+
+/* フッターセクション */
+
+.sp_footer{
+  text-align: center;
 }
 
-  .footer_h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #8C6C47;
-    margin-bottom: 20px;
+  .on_footer{
+    background-color: #FEF6E9;
+    padding: 30px 0;
   }
 
-    .footer_h2 .fa-instagram{
-      font-size: 30px;
-      margin-right: 10px;
-      color: #CFB18B;
+    .footer_h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #8C6C47;
+      margin-bottom: 20px;
     }
 
+      .footer_h2 .fa-instagram{
+        font-size: 30px;
+        margin-right: 10px;
+        color: #CFB18B;
+      }
 
-  .formbutton_parent{
-    display: flex;
-    justify-content: center;
-    position: relative;
+
+    .formbutton_parent{
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+      .top_return{
+        position: absolute;
+        right: 10%;
+      }
+
+
+
+  .under_footer ul li{
+    line-height: 1.7rem;
+
   }
-    .top_return{
-      position: absolute;
-      right: 10%;
-    }
 
-
-
-.under_footer ul li{
-  line-height: 1.7rem;
-
-}
-
-.under_footer{
-  padding-top: 20px;
-}
+  .under_footer{
+    padding-top: 20px;
+  }
