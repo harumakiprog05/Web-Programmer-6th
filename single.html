@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/single.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
 
 	<!--CDNでjQuery読み込む-->
@@ -87,14 +88,14 @@
       </nav> -->
 
 		<div class="main_visual">
-			<img class="main_visual_logo" src="image/binbi_eye.jpg" alt="top-image">
+			<img class="single_visual_top" src="image/binbi_eye.jpg" alt="top-image">
 		</div>
 
 
 		<section class="main_category_description">
 			<div class="container">
                 <!-- 記事タイトル -->
-				<div class="section_hedding">
+				<div class="section_hedding single_title">
 					<span class="circle fun fun_color_middle"></span>
 					<span class="circle calm calm_color_middle"></span>
 					<span class="circle yum yum_color_middle"></span>
@@ -102,7 +103,7 @@
 					<h2 class="global_section_title">びんび屋</h2>
                 </div>
                 <!-- 癒しの一言 -->
-                <div>
+                <div class="single_description">
                     <p>新鮮な魚を求めて海沿いのお店へ
                         <br>
                         磯の香りで心やすらぐひと時
@@ -113,18 +114,18 @@
 
             </div>
             <!-- 施設詳細 -->
-            <div>
-                <section class="">
-                    <button>施設の詳細</button>
+            <div class="">
+                <section class="tabele_section container">
+                    <button class="spot_more yum_color_dark single_button"><i class="fa fa-caret-down"></i>　施設の詳細</button>
                     <table>
                         <tbody>
                             <tr>
                                 <th>名称</th>
-                                <td colspan="2">びんび屋<br></td>
+                                <td >びんび屋<br></td>
                             </tr>
                             <tr>
                                 <th>かな</th>
-                                <td colspan="2">びんびや<br></td>
+                                <td >びんびや<br></td>
                             </tr>
                             <tr class="address">
                             <th>住所</th>
@@ -185,7 +186,7 @@
                     <!-- 地図 -->
                     <div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.9030804725253!2d134.53404581565758!3d34.225493016026526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35537ac401dd5545%3A0x2d5a3012431e159e!2z44CSNzcxLTAzNzIg5b6z5bO255yM6bO06ZaA5biC5YyX54GY55S657Kf55Sw44OP44K344Kr6LC377yS77yQ4oiS77yS!5e0!3m2!1sja!2sjp!4v1594696140809!5m2!1sja!2sjp" 
-                        width="80%"
+                        width="95%"
                         height="auto" 
                         frameborder="0" 
                         style="border:0;" 
@@ -194,42 +195,68 @@
                         tabindex="0">
                     </iframe>" 
                     </div>
-                    <button>閉じる</button>
+                    <button class="spot_more yum_color_dark single_button"><i class="fa fa-caret-up"></i>　閉じる　</button>
                 </section>
             </div>
             <!-- 記事コンテンツ -->
-            <div class="">
-                <img class="main_visual_logo" src="image/binbi_2.jpg" alt="">
-                <img src="" alt="">
-                <p>瀬戸内海を望む道路沿いにたつびんび屋<br>
+            <div class="container">
+                    <img class="single_visual" src="image/binbi_2.jpg" alt="">
+                </div>
+                    <p class="single_text">瀬戸内海を望む道路沿いにたつびんび屋<br>
+                        お昼時で混んでいても、目の前の景色を眺めていれば待ち時間も気にならない？<br>
+                        生簀で元気に泳ぐハマチやタイは子どもの目も釘付けです</p>
+                <div class="image_wrap">
+                <img class="single_visual" src="image/binbi_2.jpg" alt="">
+                <img class="single_visual" src="image/binbi_2.JPG" alt="">
+            </div>
+                <p class="single_text">瀬戸内海を望む道路沿いにたつびんび屋<br>
                     お昼時で混んでいても、目の前の景色を眺めていれば待ち時間も気にならない？<br>
                     生簀で元気に泳ぐハマチやタイは子どもの目も釘付けです</p>
+                
             </div>
             <!-- ニコちゃんマーク -->
-            <div>
-
+            <div class="smile">
+                <div class="smile_box">
+                    <p>いやされた</p>
+                    <p><i class="far fa-smile"></i>18</p>
+                </div>
+            
+                <div class="smile_box">
+                    <p>いきたい</p>
+                    <p><i class="far fa-laugh"></i>18</p>
+                </div>
             </div>
             <!-- 近くのおすすめ -->
-            <div class="2_colum">
-                <div>
-                    <img src="" alt="">
-                    <p></p>   
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p></p>   
-                </div>
-            </div>
-            <div class="2_colum">
-                <div>
-                    <img src="" alt="">
-                    <p></p>   
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p></p>   
-                </div>
-            </div>
+            <!-- <ul class="spot">
+                <li>
+
+                </li>
+                <li>
+                    <div>
+                        <img src="image/main_visual_img.png" alt="">
+                    </div>
+                    <p>祖谷のかずら橋</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/main_visual_img.png" alt="">
+                    </div>
+                    <p>祖谷のかずら橋</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/main_visual_img.png" alt="">
+                    </div>
+                    <p>祖谷のかずら橋</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/main_visual_img.png" alt="">
+                    </div>
+                    <p>祖谷のかずら橋</p>
+                </li>
+            </ul> -->
+
 			
 		</section>
 
