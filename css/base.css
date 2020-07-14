@@ -46,6 +46,7 @@ span {
 .flex {
      display: flex;
      justify-content: space-around;
+     align-items: center;
 }
 
 .spot_more {
@@ -87,66 +88,53 @@ span {
 
 /* カラー */
 
-.fun_color_dark {
-     background-color: #F0B75A;
+.theme_color_dark {
+     background-color: #67A1A6;
      color: white;
 }
 
-.fun_color_middle {
-     background-color: #F7D7A3;
+.theme_color_light {
+     background-color: #E1F6F7;
+     color: white;
+}
+
+.fun_color_dark {
+     background-color: #9FBF82;
      color: white;
 }
 
 .fun_color_light {
-     background-color: #FAEAD0;
+     background-color: #DDEBD1;
 }
 
 .calm_color_dark {
-     background-color: #A5D495;
-     color: white;
-}
-
-.calm_color_middle {
-     background-color: #C4E3BA;
+     background-color: #83CCD2;
      color: white;
 }
 
 .calm_color_light {
-     background-color: #E3F1DE;
+     background-color: #B5D0D2;
 }
 
 .yum_color_dark {
-     background-color: #CFB18B;
-     color: white;
-}
-
-.yum_color_middle {
-     background-color: #DECAAF;
+     background-color: #EEC362;
      color: white;
 }
 
 .yum_color_light {
-     background-color: #EDE2D3;
+     background-color: #EDE3CC;
 }
-
-/*
-楽（濃）‣#F0B75A ボタン・強調時
-楽（通）‣#F7D7A3 基本
-楽（薄）‣#FAEAD0 背景等
-
-静（濃）‣#A5D495 ボタン・強調時
-静（通）‣#C4E3BA 基本
-静（薄）‣#E3F1DE 背景等
-
-旨（濃）‣#CFB18B ボタン・強調時
-旨（通）‣#DECAAF 基本
-旨（薄）‣#EDE2D3 背景等
- */
 
 /* ---------------PC時の表示設定--------------- */
 
 @media screen and (min-width: 950px) {
      /* サークルの大きさ */
+     .nav_circle_set {
+          height: 35px;
+          width: 35px;
+          line-height: 35px;
+          margin: 0 5px;
+     }
      .short_circle_set {
           height: 60px;
           width: 60px;
@@ -169,9 +157,10 @@ span {
           display: none !important;
      }
      /* PC版は表示 */
-     .pc_footer, .pcgnav {
+     .pc_footer{
           display: block;
      }
+
      /* PC版共通設定 */
      html {
           font-size: 16px;
@@ -190,5 +179,10 @@ span {
      .category_catch_copy {
           font-size: 30px;
           line-height: 38px !important;
+     }
+
+     .pcgnav{
+          width: 100%;
+          padding: 16px 0;
      }
 }

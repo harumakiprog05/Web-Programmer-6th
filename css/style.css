@@ -215,6 +215,12 @@
 
 /* ハンバーガーメニュー終 */
 
+.pcgnav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
 /* メインビジュアルスタイル */
 
 .main_visual {
@@ -287,15 +293,15 @@
 }
 
 .fun_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #FAEAD0 20%, #FAEAD0 100%)
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #DDEBD1 20%, #DDEBD1 100%)
 }
 
 .calm_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #E3F1DE 20%, #E3F1DE 100%)
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #B5D0D2 20%, #B5D0D2 100%)
 }
 
 .yum_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE2D3 20%, #EDE2D3 100%)
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE3CC 20%, #EDE3CC 100%)
 }
 
 .spot_img_frame {
@@ -352,14 +358,11 @@
 }
 
 .on_footer {
-  background-color: #FEF6E9;
   padding: 30px 0;
 }
 
 .footer_h2 {
-  display: flex;
   justify-content: center;
-  align-items: center;
   color: #8C6C47;
   margin-bottom: 20px;
 }
@@ -398,7 +401,6 @@
 
 .pc_footer .footer_ul {
   color: #8C6C47;
-  align-items: center;
 }
 
 .pc_footer .footer_ul li {
@@ -409,14 +411,10 @@
   font-size: 40px;
 }
 
-.pc_footer .under_footer {
-  align-items: center;
-}
-
 .pc_footer .under_footer ul li {
   padding: 0 20px;
 }
 
-.pc_footer .under_footer .right{
+.pc_footer .under_footer .right {
   text-align: center;
 }

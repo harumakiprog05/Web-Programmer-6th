@@ -31,8 +31,8 @@
 				</div>
 			</div>
 
+			<!--スマホ用ナビゲーション-->
 			<nav class="spgnav">
-				<!--ナビゲーション-->
 				<div class="gnav_inner">
 
 
@@ -41,7 +41,7 @@
 					</div>
 					<div class="gnav_menu">
 						<div class="gnav_item">
-							<span class="circle fun fun_color_dark tall_circle_set">楽</span>-たのしい-
+							<span class="circle fun fun_color_dark tall_circle_set0">楽</span>-たのしい-
 						</div>
 
 						<div class="gnav_item">
@@ -58,38 +58,46 @@
 
 				</div>
 			</nav>
+
+
+
 		</header>
 
 
-      <nav class="pcgnav">
-        <ul>
-          <a href="">
-            <li><img src="" alt="あわいやしロゴ"> </li>
-          </a>
-          <a href="">
-            <li><span class="circle fun short_circle_set">楽</span>-たのしい-</li>
-          </a>
-          <a href="">
-            <li><span class="circle calm short_circle_set">静</span>-しずか-</li>
-          </a>
-          <a href="">
-            <li>
-              <spna class="circle yum short_circle_set">旨</spna>-うまい-
-            </li>
-          </a>
-          <a href="">
-            <li>モデルコース</li>
-          </a>
-          <a href="">
-            <li>検索</li>
-          </a>
-        </ul>
-      </nav>
 
-		<div class="main_visual">
+		<div id="main_visual" class="main_visual">
 			<img class="main_visual_logo" src="image\main_visual_img.png" alt="top-image">
 			<h1 class="main_catch_copy">ゆっくりするから、<br>見えてくるもの。</h1>
 		</div>
+		<!--PC用ナビゲーション-->
+		<nav id="pcgnav" class="pcgnav theme_color_dark">
+			<div class="container">
+
+				<ul class="flex">
+					<a href="">
+						<li><img src="image/logo_white.png" alt="あわいやしロゴ"> </li>
+					</a>
+					<a href="">
+						<li><span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
+					</a>
+					<a href="">
+						<li><span class="circle calm_color_dark nav_circle_set">静</span>-しずか-</li>
+					</a>
+					<a href="">
+						<li>
+							<span class="circle yum_color_dark nav_circle_set">旨</span>-うまい-
+						</li>
+					</a>
+					<a href="">
+						<li>モデルコース</li>
+					</a>
+					<a href="">
+						<li><i class="fas fa-search"></i> 検索</li>
+					</a>
+				</ul>
+			</div>
+		</nav>
+
 
 
 		<section class="site_about">
@@ -125,9 +133,9 @@
 		<section class="main_category_description">
 			<div class="container">
 				<div class="section_hedding">
-					<span class="circle fun fun_color_middle"></span>
-					<span class="circle calm calm_color_middle"></span>
-					<span class="circle yum yum_color_middle"></span>
+					<span class="circle fun fun_color_light"></span>
+					<span class="circle calm calm_color_light"></span>
+					<span class="circle yum yum_color_light"></span>
 
 					<h2 class="global_section_title">いやしスポット</h2>
 				</div>
@@ -138,7 +146,7 @@
 			<section class="fun_category fun_color_light" id="fadeIn">
 				<div class="container">
 					<div class="spot_img_frame">
-						<img class="spot_img" src="image\1.png" alt="">
+						<img class="spot_img" src="image\category_img.png" alt="">
 						<span class="circle fun fun_color_dark grande_circle_set">楽</span>
 						<h3 class="category_catch_copy">自然と文化に触れ<br>楽しむひととき。</h3>
 
@@ -158,7 +166,7 @@
 			<section class="calm_category calm_color_light" id="fadeIn">
 				<div class="container">
 					<div class="spot_img_frame">
-						<img class="spot_img" src="image\1.png" alt="">
+						<img class="spot_img" src="image\category_img.png" alt="">
 						<span class="circle calm calm_color_dark grande_circle_set ">静</span>
 						<h3 class="category_catch_copy">自分に向き合う<br>静かなひととき。</h3>
 					</div>
@@ -176,7 +184,7 @@
 			<section class="yum_category yum_color_light" id="fadeIn">
 				<div class="container">
 					<div class="spot_img_frame">
-						<img class="spot_img" src="image\1.png" alt="">
+						<img class="spot_img" src="image\category_img.png" alt="">
 						<span class="circle yum yum_color_dark grande_circle_set">旨</span>
 						<h3 class="category_catch_copy">お腹にいやしを。<br>旨いひととき</h3>
 					</div>
@@ -198,9 +206,9 @@
 				<section class="main_category_description">
 
 					<div class="section_hedding">
-						<span class="circle fun fun_color_middle"></span>
-						<span class="circle calm calm_color_middle"></span>
-						<span class="circle yum yum_color_middle"></span>
+						<span class="circle fun fun_color_light"></span>
+						<span class="circle calm calm_color_light"></span>
+						<span class="circle yum yum_color_light"></span>
 
 						<h2 class="global_section_title">あわいやしプラン
          				     <p>～モデルコース～</p>
@@ -223,9 +231,9 @@
 		<section class="instagram">
 			<div class="container">
 				<div class="section_hedding">
-					<span class="circle fun fun_color_middle"></span>
-					<span class="circle calm calm_color_middle"></span>
-					<span class="circle yum yum_color_middle"></span>
+					<span class="circle fun fun_color_light"></span>
+					<span class="circle calm calm_color_light"></span>
+					<span class="circle yum yum_color_light"></span>
 
 					<h2 class="global_section_title">インスタグラム</h2>
 				</div>
@@ -242,18 +250,18 @@
 
 			<!-- スマートフォン用フッター -->
 			<div class="sp_footer">
-				<div class="on_footer yum_color_middle">
-					<div class="footer_h2">
+				<div class="on_footer theme_color_light">
+					<div class="flex">
 						<i class="fab fa-instagram"></i>
 						<h2>#あわいやし</h2>
 					</div>
 					<div class="formbutton_parent">
-						<button class="more yum_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
-						<button class="top_return grande_circle_set yum_color_dark circle"><i class="fas fa-chevron-up"></i></button>
+						<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
+						<button class="top_return grande_circle_set calm_color_dark circle"><i class="fas fa-chevron-up"></i></button>
 					</div>
 				</div>
 
-				<div class="under_footer yum_color_dark">
+				<div class="under_footer theme_color_dark">
 					<ul class="footer_ul">
 						<li>運営者情報</li>
 						<li>プライバシーポリシー</li>
@@ -269,7 +277,7 @@
 
 			<!-- PC用フッター -->
 			<div class="pc_footer">
-				<div class="on_footer yum_color_middle">
+				<div class="on_footer theme_color_light">
 					<div id="waveAnimation" class="flex">
 						<ul class="footer_ul flex">
 							<li>SNSシェア</li>
@@ -278,12 +286,12 @@
 							<li><a href=""><i class="fab fa-line"></i></a></li>
 						</ul>
 
-						<button class="more yum_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
+						<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
 					</div>
 
 				</div>
 
-				<div class="under_footer yum_color_dark flex">
+				<div class="under_footer theme_color_dark flex">
 					<ul class="flex left">
 						<li>運営者情報</li>
 						<li>プライバシーポリシー</li>
