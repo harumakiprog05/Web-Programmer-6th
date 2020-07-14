@@ -114,6 +114,10 @@ span{
 
 /* ---------------PC時の表示設定--------------- */
 
+.pc_footer{
+     display: none;
+}
+
  @media screen and (min-width: 950px) {
 
 /* サークルの大きさ */
@@ -154,6 +158,10 @@ span{
 
   .section_hedding{
        width: 400px;
+  }
+
+  .pc_footer{
+       display: block;
   }
 
 
