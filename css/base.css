@@ -22,14 +22,6 @@ span {
      display: inline-block;
 }
 
-.pc_footer {
-     display: none;
-}
-
-.pcgnav {
-     display: none;
-}
-
 /* ----------------------------マルチクラス用---------------------------- */
 
 .centering {
@@ -125,6 +117,30 @@ span {
      background-color: #EDE3CC;
 }
 
+/* ヘッダーCSS */
+
+/* フッターCSS */
+
+.pc_footer {
+     display: none;
+}
+
+.pcgnav {
+     display: none;
+}
+
+.sp_footer .sns_tag .fa-instagram {
+     font-size: 40px;
+}
+
+.sns_tag {
+     justify-content: center;
+     padding-bottom: 10px;
+}
+
+.sns_tag h2{
+     padding: 0 10px;
+}
 /* ---------------PC時の表示設定--------------- */
 
 @media screen and (min-width: 950px) {
@@ -153,14 +169,13 @@ span {
           font-size: 55px;
      }
      /* PC版は非表示 */
-     .spgnav, .el_humburger_wrapper, .sp_footer {
+     .spgnav,.sp_footer {
           display: none !important;
      }
      /* PC版は表示 */
-     .pc_footer{
+     .pc_footer {
           display: block;
      }
-
      /* PC版共通設定 */
      html {
           font-size: 16px;
@@ -180,8 +195,7 @@ span {
           font-size: 30px;
           line-height: 38px !important;
      }
-
-     .pcgnav{
+     .pcgnav {
           width: 100%;
           padding: 16px 0;
      }
