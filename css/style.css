@@ -47,7 +47,8 @@
 .el_humburger_text {
   font-size: 12px;
   letter-spacing: 0.1em;
-  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro",
+    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
@@ -90,9 +91,9 @@
   margin: 0 auto 9px;
   height: 1px;
   background: #000;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .el_humburger span.el_humburger_bar:last-child {
@@ -292,15 +293,33 @@
 }
 
 .fun_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #DDEBD1 20%, #DDEBD1 100%)
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 20%,
+    #ddebd1 20%,
+    #ddebd1 100%
+  );
 }
 
 .calm_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #B5D0D2 20%, #B5D0D2 100%)
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 20%,
+    #b5d0d2 20%,
+    #b5d0d2 100%
+  );
 }
 
 .yum_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE3CC 20%, #EDE3CC 100%)
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 20%,
+    #ede3cc 20%,
+    #ede3cc 100%
+  );
 }
 
 .spot_img_frame {
@@ -319,7 +338,7 @@
   position: absolute;
   top: 20px;
   right: 0;
-  font-family: 'Yu Mincho';
+  font-family: "Yu Mincho";
   /* Windows用 */
   color: white;
   background-color: #2a2a2a60;
@@ -328,7 +347,8 @@
   line-height: 1.9rem;
 }
 
-.fun_category span, .yum_category span {
+.fun_category span,
+.yum_category span {
   position: absolute;
   top: 0;
   left: 0;
@@ -362,14 +382,14 @@
 
 .footer_h2 {
   justify-content: center;
-  color: #8C6C47;
+  color: #8c6c47;
   margin-bottom: 20px;
 }
 
 .footer_h2 .fa-instagram {
   font-size: 30px;
   margin-right: 10px;
-  color: #CFB18B;
+  color: #cfb18b;
 }
 
 .formbutton_parent {
@@ -399,7 +419,7 @@
 }
 
 .pc_footer .footer_ul {
-  color: #8C6C47;
+  color: #8c6c47;
 }
 
 .pc_footer .footer_ul li {
@@ -418,6 +438,11 @@
   text-align: center;
 }
 
-.pc_footer .wave_footer{
-  height: 178px;
+.pc_footer .waves {
+  width: 100%;
+  height: 180px;
+}
+
+.pc_footer .wave_footer {
+  height: 180px;
 }
