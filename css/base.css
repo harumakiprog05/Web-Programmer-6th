@@ -148,6 +148,9 @@ span {
      padding: 0 10px;
 }
 
+.waves{
+     height: 178px;
+}
 /* SVG Animation   */
 
 .parallax>use {

@@ -96,30 +96,37 @@
 			<div class="container">
 
 				<div class="tag_search_wrap">
-					<p>絞り込み検索</p>
+					<span>絞り込み検索</span>
 
-					<div class="checkbox_group">
+					<div class="checkbox_group flex">
+						<div class="left">
+							<label><input type="checkbox" name="get_tags[]" value="絶景">絶景</label>
+							<label><input type="checkbox" name="get_tags[]" value="やすらぎ">やすらぎ</label>
+							<label><input type="checkbox" name="get_tags[]" value="ヘルシー">ヘルシー</label>
+							<label><input type="checkbox" name="get_tags[]" value="特産・ローカル">特産・ローカル</label>
 
-						<label><input type="checkbox" name="get_tags[]" value="絶景">絶景</label>
-						<label><input type="checkbox" name="get_tags[]" value="自然いっぱい">自然いっぱい</label>
-						<label><input type="checkbox" name="get_tags[]" value="やすらぎ">やすらぎ</label>
-						<label><input type="checkbox" name="get_tags[]" value="リフレッシュ">リフレッシュ</label>
-						<label><input type="checkbox" name="get_tags[]" value="ヘルシー">ヘルシー</label>
-						<label><input type="checkbox" name="get_tags[]" value="交流">交流</label>
-						<label><input type="checkbox" name="get_tags[]" value="ふれあい">ふれあい</label>
-						<label><input type="checkbox" name="get_tags[]" value="ひろびろ">ひろびろ</label>
+						</div>
+
+						<div class="right">
+							<label><input type="checkbox" name="get_tags[]" value="自然いっぱい">自然いっぱい</label>
+							<label><input type="checkbox" name="get_tags[]" value="リフレッシュ">リフレッシュ</label>
+							<label><input type="checkbox" name="get_tags[]" value="交流・ふれあい">交流・ふれあい</label>
+							<label><input type="checkbox" name="get_tags[]" value="ひろびろ">ひろびろ</label>
+
+						</div>
+
 
 					</div>
 					<input type="text" placeholder="キーワードで検索">
 
 					<div class="flex">
-						<label for=""><input type="submit" value="この条件で検索"> <i class="fas fa-search"></i></label>
-						<input type="reset" value="条件をクリア">
+						<label class="more yum_color_dark" for=""><input type="submit" value="この条件で検索"> <i class="fas fa-search"></i></label>
+						<input class="more" type="reset" value="条件をクリア">
 					</div>
 
 				</div>
 
-				<button class="area_search_button">▽エリアで検索</button>
+				<button class="area_search_button more calm_color_dark">▽エリアで検索</button>
 
 				<div class="area_search_wrap">
 
@@ -130,10 +137,88 @@
 		<section class="result_section">
 			<div class="container">
 
-				<div class="fun_result">
-					<h2 class="fun_color_dark tall_circle_set">楽</h2>
+				<div class="fun_result fun_color_light">
+					<h2 class="result_categry_title fun_color_dark tall_circle_set">楽</h2>
 
-					<ul class="result_items">
+					<ul class="result_items flex">
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+
+				<div class="calm_result calm_color_light">
+					<h2 class="result_categry_title calm_color_dark tall_circle_set">静</h2>
+
+					<ul class="result_items flex">
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+						<li class="result_item">
+							<a href="個別記事へのURL">
+								<img src="image\category_img.png" alt="">
+								<span>祖谷のかずら橋</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="yum_result yum_color_light">
+					<h2 class="result_categry_title yum_color_dark tall_circle_set">静</h2>
+
+					<ul class="result_items flex">
 						<li class="result_item">
 							<a href="個別記事へのURL">
 								<img src="image\category_img.png" alt="">
@@ -161,12 +246,7 @@
 					</ul>
 
 				</div>
-				<div class="calm_malc">
 
-				</div>
-				<div class="yum_result">
-
-				</div>
 
 			</div>
 		</section>
