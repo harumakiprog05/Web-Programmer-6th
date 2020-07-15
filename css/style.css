@@ -256,11 +256,11 @@
   display: flex;
   /* width: 200px; */
   justify-content: center;
-  margin: 0 auto 15px;
+  margin: 50px auto;
 }
 
 .top_category_set li {
-  margin: 0 15px;
+  margin: 0 50px;
 }
 
 /* メインカテゴリーセクション */
@@ -282,10 +282,9 @@
   margin-bottom: 40px;
 }
 
-.section_hedding .global_section_title {
-  position: absolute;
-  /* width: 100%; */
-  /* margin-bottom: 40px; */
+.global_section_title {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .global_section_title p {

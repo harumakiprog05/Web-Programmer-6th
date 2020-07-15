@@ -59,23 +59,29 @@ span {
 }
 
 .short_circle_set {
+     border-radius: 50%;
      height: 35px;
      width: 35px;
      line-height: 35px;
+     text-align: center;
 }
 
 .tall_circle_set {
+     border-radius: 50%;
      height: 40px;
      width: 40px;
      line-height: 40px;
      font-size: 22px;
+     text-align: center;
 }
 
 .grande_circle_set {
+     border-radius: 50%;
      height: 50px;
      width: 50px;
      line-height: 50px;
      font-size: 24px;
+     text-align: center;
 }
 
 /* カラー */
@@ -146,23 +152,31 @@ span {
 @media screen and (min-width: 950px) {
      /* サークルの大きさ */
      .nav_circle_set {
+          border-radius: 50%;
+          text-align: center;
           height: 35px;
           width: 35px;
           line-height: 35px;
           margin: 0 5px;
      }
      .short_circle_set {
+          border-radius: 50%;
+          text-align: center;
           height: 60px;
           width: 60px;
           line-height: 60px;
      }
      .tall_circle_set {
+          border-radius: 50%;
+          text-align: center;
           height: 60px;
           width: 60px;
           line-height: 60px;
           font-size: 35px;
      }
      .grande_circle_set {
+          border-radius: 50%;
+          text-align: center;
           height: 100px;
           width: 100px;
           line-height: 100px;
