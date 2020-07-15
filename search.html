@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/single.css">
+
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
 
 	<!--CDNでjQuery読み込む-->
@@ -126,11 +128,32 @@
 
 				</div>
 
-				<button class="area_search_button more calm_color_dark">▽エリアで検索</button>
+				<div class="info_actab">
+					<input id="info_actab_one" type="checkbox" name="tabs" />
+					<label for="info_actab_one">詳細情報</label>
+					<div class="info_actab_content">
+						<!-- 中身 -->
+						<div class="area_search_wrap tabele_section ">
+										<figure>
+											<img src="image/tokushima_map.png" alt="">
 
-				<div class="area_search_wrap">
 
+										</figure>
+
+
+
+										<input class="more " type="reset" value="条件をクリア">
+
+					</div>
 				</div>
+
+
+
+
+
+			</div>
+
+
 			</div>
 		</section>
 
@@ -138,7 +161,7 @@
 			<div class="container">
 
 				<div class="fun_result fun_color_light">
-					<h2 class="result_categry_title fun_color_dark tall_circle_set">楽</h2>
+					<h2 class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
 
 					<ul class="result_items flex">
 						<li class="result_item">
@@ -184,7 +207,7 @@
 
 
 				<div class="calm_result calm_color_light">
-					<h2 class="result_categry_title calm_color_dark tall_circle_set">静</h2>
+					<h2 class="result_categry_title calm_color_dark grande_circle_set">静</h2>
 
 					<ul class="result_items flex">
 						<li class="result_item">
@@ -216,7 +239,7 @@
 
 
 				<div class="yum_result yum_color_light">
-					<h2 class="result_categry_title yum_color_dark tall_circle_set">静</h2>
+					<h2 class="result_categry_title yum_color_dark grande_circle_set">静</h2>
 
 					<ul class="result_items flex">
 						<li class="result_item">
@@ -290,8 +313,26 @@
 
 		<!-- PC用フッター -->
 		<div class="pc_footer">
+
+
+
+			<div class="wave_footer">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
+					</g>
+				</svg>
+			</div>
+
 			<div class="on_footer theme_color_light">
-				<div id="waveAnimation" class="flex">
+				<div class="flex">
+
 					<ul class="footer_ul flex">
 						<li>SNSシェア</li>
 						<li><a href=""><i class="fab fa-twitter-square"></i></a></li>
