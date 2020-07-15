@@ -1,0 +1,71 @@
+.tag_search_wrap {
+    border: dashed 2px gray;
+    border-radius: 30px;
+    margin: 0 30px;
+    padding: 10px 10px 30px;
+}
+
+.checkbox_group label {
+    display: block;
+    text-align: left;
+}
+
+.search_section input[type="text"] {
+    border: 2px solid gray;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search_section input[type="reset"] {
+    border: 2px solid #EEC362;
+}
+
+/* 検索結果のスタイル */
+
+.result_items {
+    flex-wrap: wrap;
+}
+
+.result_item {
+    margin-bottom: 20px;
+}
+
+/* ブラウザ幅によって表示される行の数を変更 */
+@media screen and (max-width: 480px) {
+    .result_item {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:481px) and ( max-width:700px) {
+    .result_item {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:701px) {
+    .result_item {
+        width: 25%;
+    }
+}
+
+
+.result_item img {
+    width: 140px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.result_item span {
+    display: block;
+}
+
+.result_categry_title {
+    margin: 0 auto;
+    transform: translate(0, -50%);
+}
+
+.fun_result, .calm_result, .yum_result {
+    margin-bottom: 30px;
+}
