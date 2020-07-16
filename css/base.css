@@ -4,6 +4,10 @@ html {
   font-size: 14px;
   line-height: 32px;
   color: #707070;
+  /* テキストをドラッグで選択きないようにする */
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 section {
@@ -84,7 +88,9 @@ span {
   text-align: center;
 }
 
-/* カラー */
+/* -----カラー----- */
+
+/* テーマカラー */
 
 .theme_color_dark {
   background-color: #67a1a6;
@@ -95,6 +101,8 @@ span {
   background-color: #e1f6f7;
   color: white;
 }
+
+/* 楽カラー */
 
 .fun_color_dark {
   background-color: #9fbf82;
@@ -109,6 +117,8 @@ span {
   border: #9fbf82 2px solid;
 }
 
+/* 静カラー */
+
 .calm_color_dark {
   background-color: #83ccd2;
   color: white;
@@ -121,6 +131,8 @@ span {
 .calm_bdcolor_dark {
   border: #83ccd2 2px solid;
 }
+
+/* 旨カラー */
 
 .yum_color_dark {
   background-color: #eec362;
@@ -193,10 +205,10 @@ span {
   padding-top: 20px;
 }
 
-.sp_footer .sns_tag h2{
-color: #707070;
-
+.sp_footer .sns_tag h2 {
+  color: #707070;
 }
+
 /* PC用フッター */
 
 .pc_footer .col_2 {
