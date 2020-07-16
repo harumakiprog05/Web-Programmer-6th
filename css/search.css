@@ -24,6 +24,10 @@
     width: 60%;
 }
 
+input::placeholder {
+    color: rgb(228, 228, 228);
+}
+
 /* 検索結果のスタイル */
 
 .fun_result,
@@ -76,10 +80,12 @@
 }
 
 /*マップ絞り込み検索の色が変わるcss*/
+
 .map_color {
     height: auto;
     fill: #7bab4f;
     border: #fff;
+    pointer-events: none;
 }
 
 #east:checked + label .map_color {
@@ -104,8 +110,8 @@
 
 /*マップのsvgを徳島県の形に合わせてます*/
 
-.svg {
-    pointer-events: visiblePainted;
+path {
+    pointer-events: auto;
 }
 
 .area_search_wrap {
@@ -115,28 +121,45 @@
 
 .east_map_color {
     position: absolute;
-    width: 225px;
-    left: 50px;
-    top: 70px;
-    border: #fff;
-    z-index: 2;
+    width: 180%;
+    left: 30%;
+    top: 30px;
 }
 
 .west_map_color {
     position: absolute;
-    width: 450px;
+    width: 360%;
     right: 100px;
     top: 40px;
 }
 
 .south_map_color {
     position: absolute;
-    width: 450px;
+    width: 360%;
     top: 140px;
 }
 
 .north_map_color {
     position: absolute;
-    width: 150px;
-    top: 5px;
+    width: 120%;
+    top: 0%;
+}
+
+/*
+single.cssの110行目
+.info_actab input[type="checkbox"] + label::after {content: "+";}
+を打ち消している
+*/
+
+#east + label::after {
+    content: none;
+}
+#west + label::after {
+    content: none;
+}
+#south + label::after {
+    content: none;
+}
+#north + label::after {
+    content: none;
 }

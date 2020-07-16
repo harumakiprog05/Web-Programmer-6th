@@ -89,4 +89,7 @@ let scrollHeight = $(window).scroll(function () {
 
 })
 
-// console.log(scrollHight);
+
+$(function () {
+    $('#modelCourseSlide').slick();
+});
