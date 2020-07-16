@@ -1,8 +1,14 @@
 .tag_search_wrap {
-    border: dashed 2px gray;
+    border: dashed 2px #b5d0d2;
     border-radius: 30px;
-    margin: 0 30px;
+    margin: 30px;
     padding: 10px 10px 30px;
+}
+
+.tag_search_wrap .search_title {
+    color: #83ccd2;
+    font-weight: 600;
+    padding: 20px 0;
 }
 
 .checkbox_group label {
@@ -12,17 +18,19 @@
 
 .search_section input[type="text"] {
     padding: 5px 0;
-    border: 2px solid gray;
     border-radius: 20px;
     text-align: center;
     margin: 20px 0;
-}
-
-.search_section input[type="reset"] {
-    border: 2px solid #EEC362;
+    width: 60%;
 }
 
 /* 検索結果のスタイル */
+
+.fun_result,
+.calm_result,
+.yum_result {
+    margin-bottom: 50px;
+}
 
 .result_items {
     flex-wrap: wrap;
@@ -32,25 +40,25 @@
     margin-bottom: 20px;
 }
 
-/* ブラウザ幅によって表示される行の数を変更 */
+/* ブラウザ幅によって表示される行数を変更 */
+
 @media screen and (max-width: 480px) {
     .result_item {
         width: 50%;
     }
 }
 
-@media screen and (min-width:481px) and ( max-width:700px) {
+@media screen and (min-width: 481px) and (max-width: 700px) {
     .result_item {
         width: 30%;
     }
 }
 
-@media screen and (min-width:701px) {
+@media screen and (min-width: 701px) {
     .result_item {
         width: 25%;
     }
 }
-
 
 .result_item img {
     width: 140px;
@@ -67,6 +75,68 @@
     transform: translate(0, -50%);
 }
 
-.fun_result, .calm_result, .yum_result {
-    margin-bottom: 30px;
+/*マップ絞り込み検索の色が変わるcss*/
+.map_color {
+    height: auto;
+    fill: #7bab4f;
+    border: #fff;
+}
+
+#east:checked + label .map_color {
+    fill: #000;
+}
+
+#west:checked + label .map_color {
+    fill: #fdbc00;
+}
+
+#south:checked + label .map_color {
+    fill: #83ccd2;
+}
+
+#north:checked + label .map_color {
+    fill: #888888;
+}
+
+.area_search_wrap figure input {
+    opacity: 0;
+}
+
+/*マップのsvgを徳島県の形に合わせてます*/
+
+.svg {
+    pointer-events: visiblePainted;
+}
+
+.area_search_wrap {
+    position: relative;
+    height: 530px;
+}
+
+.east_map_color {
+    position: absolute;
+    width: 225px;
+    left: 50px;
+    top: 70px;
+    border: #fff;
+    z-index: 2;
+}
+
+.west_map_color {
+    position: absolute;
+    width: 450px;
+    right: 100px;
+    top: 40px;
+}
+
+.south_map_color {
+    position: absolute;
+    width: 450px;
+    top: 140px;
+}
+
+.north_map_color {
+    position: absolute;
+    width: 150px;
+    top: 5px;
 }
