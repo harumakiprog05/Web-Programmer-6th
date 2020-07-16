@@ -342,6 +342,19 @@
   transform: translate(50%, -50%);
 }
 
+/* モデルコースセクション */
+
+.model_course_parent {
+  position: relative;
+  width: 100%;
+}
+
+.model_course_parent .model_course_mask {
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
 /* インスタセクション */
 
 .instagram .fa-instagram {
