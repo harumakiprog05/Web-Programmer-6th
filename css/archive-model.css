@@ -11,9 +11,18 @@
 .model_text {
     margin: 0 2%;
 }
+.spot_visual {
+    margin-bottom: 10px;
+}
 .model_card li h3,
 .model_card_description {
     text-align: left;
+}
+.model_text p {
+    margin-bottom: 10px;
+}
+.model_card li {
+    margin-bottom: 50px;
 }
 .model_more {
     text-align: end;
@@ -36,6 +45,9 @@
 }
 
 @media screen and (min-width: 480px) {
+    .model_spot_wrap ul {
+        margin: 0;
+    }
     .model_card {
         display: flex;
         justify-content: center;
@@ -49,7 +61,6 @@
     }
     .model_card li {
         width: 30%;
-        margin-bottom: 50px;
     }
     .model_card li:not(:nth-child(3n)) {
         margin-right: 4%;

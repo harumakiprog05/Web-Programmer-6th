@@ -1,7 +1,26 @@
 /* ハンバーガーメニュー始 */
-
+.model_spot_card {
+    border: solid 3px #c8a87a;
+    border-radius: 5%;
+    padding: 10px 10px 0 10px;
+}
 .model_spot_wrap {
     margin: 0 3.5%;
+}
+.model_circle_set {
+    border-radius: 50%;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    line-height: 96px;
+    margin: 0 5px;
+}
+.road {
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    display: block;
+    margin: -2px auto 0;
 }
 
 .model_spot_wrap img {
@@ -9,14 +28,6 @@
     height: 50%;
     object-fit: cover;
     margin: 30px 0;
-}
-
-.model_card li {
-    border: dashed 2px #C8A87A;
-    border-radius: 5%;
-    padding: 10px 10px 0 10px;
-    margin-bottom: 50px;
-    position: relative;
 }
 
 .model_info {
@@ -33,8 +44,9 @@
     margin-bottom: 30px;
 }
 
-@media screen and (max-width:940px) {
-    .model_pc_img, .model_pc_img_top {
+@media screen and (max-width: 940px) {
+    .model_pc_img,
+    .model_pc_img_top {
         display: none;
     }
 }
