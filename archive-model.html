@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/archive-model.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--CDNでjQuery読み込む-->
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"
+        ></script>
+
+        <!--CDNでFontAwsome読み込む-->
+        <link
+            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            rel="stylesheet"
+        />
+
+        <title>あわいやし</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="el_humburger">
+                <!--ハンバーガーボタン-->
+                <div class="el_humburger_wrapper">
+                    <span class="el_humburger_bar top"></span>
+                    <span class="el_humburger_bar middle"></span>
+                    <span class="el_humburger_bar bottom"></span>
+                </div>
+            </div>
+
+            <nav class="spgnav">
+                <!--ナビゲーション-->
+                <div class="gnav_inner">
+                    <div class="gnav_item">
+                        <img
+                            class="gnav_logo"
+                            src="image\logo.png"
+                            alt="ロゴ"
+                        />
+                    </div>
+                    <div class="gnav_menu">
+                        <div class="gnav_item">
+                            <span
+                                class="circle fun fun_color_dark tall_circle_set"
+                                >楽</span
+                            >-たのしい-
+                        </div>
+
+                        <div class="gnav_item">
+                            <span
+                                class="circle calm calm_color_dark tall_circle_set"
+                                >静</span
+                            >-しずか-
+                        </div>
+
+                        <div class="gnav_item">
+                            <span
+                                class="circle yum yum_color_dark tall_circle_set"
+                                >旨</span
+                            >-うまい-
+                        </div>
+
+                        <div class="gnav_item">モデルコース</div>
+                        <div class="gnav_item">検索</div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--
+
+      <nav class="gnav">
+        <ul>
+          <a href="">
+            <li><img src="" alt="あわいやしロゴ"> </li>
+          </a>
+          <a href="">
+            <li><span class="circle fun short_circle_set">楽</span>-たのしい-</li>
+          </a>
+          <a href="">
+            <li><span class="circle calm short_circle_set">静</span>-しずか-</li>
+          </a>
+          <a href="">
+            <li>
+              <spna class="circle yum short_circle_set">旨</spna>-うまい-
+            </li>
+          </a>
+          <a href="">
+            <li>モデルコース</li>
+          </a>
+          <a href="">
+            <li>検索</li>
+          </a>
+        </ul>
+      </nav> -->
+
+        <!-- モデルコース一覧トップ -->
+
+        <section class="container">
+            <div class="model_pc_img_top">
+                <img src="image/model_pc_img.png" alt="" />
+            </div>
+            <div class="model_description">
+                <h2>モデルコース一覧</h2>
+
+                <p>
+                    モデルコース一覧モデルコース一覧モデルコース一覧
+                    <br />
+                    モデルコース一覧モデルコース一覧モデルコース一覧<br />
+                    モデルコース一覧モデルコース一覧モデルコース一覧
+                    <br />
+                </p>
+            </div>
+            <div class="model_sp_img">
+                <img src="image/model_img.png" alt="" />
+            </div>
+
+            <!-- 一覧表示カード -->
+            <div class="model_spot_wrap">
+                <ul class="model_card">
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="model_text">
+                            <h3>大自然コース</h3>
+                            <p class="model_card_description">
+                                祖谷渓谷とうだつの街並みで<br />
+                                自然と歴史を堪能
+                            </p>
+                            <p class="model_more">
+                                詳細はこちら
+                                <i class="fas fa-chevron-right"></i>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/test_sample_400_300.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <h3>大自然コース</h3>
+                        <p class="model_card_description">
+                            祖谷渓谷とうだつの街並みで<br />
+                            自然と歴史を堪能
+                        </p>
+                        <p class="model_more">
+                            詳細はこちら <i class="fas fa-chevron-right"></i>
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <h3>大自然コース</h3>
+                        <p class="model_card_description">
+                            祖谷渓谷とうだつの街並みで<br />
+                            自然と歴史を堪能
+                        </p>
+                        <p class="model_more">
+                            詳細はこちら <i class="fas fa-chevron-right"></i>
+                        </p>
+                    </li>
+                    <!-- </ul> -->
+                    <!-- <ul class="model_card container"> -->
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <h3>大自然コース</h3>
+                        <p>
+                            祖谷渓谷とうだつの街並みで<br />
+                            自然と歴史を堪能
+                        </p>
+                        <p class="model_info">
+                            詳細はこちら <i class="fas fa-chevron-right"></i>
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <h3>大自然コース</h3>
+                        <p>
+                            祖谷渓谷とうだつの街並みで<br />
+                            自然と歴史を堪能
+                        </p>
+                        <p class="model_info">
+                            詳細はこちら <i class="fas fa-chevron-right"></i>
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <h3>大自然コース</h3>
+                        <p>
+                            祖谷渓谷とうだつの街並みで<br />
+                            自然と歴史を堪能
+                        </p>
+                        <p class="model_info">
+                            詳細はこちら <i class="fas fa-chevron-right"></i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="model_sp_img">
+                <img src="image/model_bottom_img.png" alt="" />
+            </div>
+            <div class="model_pc_img">
+                <img src="image/model_pc_bottom_img.png" alt="" />
+            </div>
+        </section>
+
+        <section class="instagram">
+            <div class="container">
+                <div class="section_hedding">
+                    <span class="circle fun fun_color_middle"></span>
+                    <span class="circle calm calm_color_middle"></span>
+                    <span class="circle yum yum_color_middle"></span>
+
+                    <h2 class="global_section_title">インスタグラム</h2>
+                </div>
+                <i class="fab fa-instagram"></i>
+                <p>gallery</p>
+                <!-- ここにインスタのAPI -->
+            </div>
+        </section>
+
+        <footer>
+            <!-- スマートフォン用フッター -->
+            <div class="sp_footer">
+                <div class="on_footer yum_color_middle">
+                    <div class="footer_h2">
+                        <i class="fab fa-instagram"></i>
+                        <h2>#あわいやし</h2>
+                    </div>
+                    <div class="formbutton_parent">
+                        <button class="more yum_color_dark">
+                            お問い合わせ <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button
+                            class="top_return grande_circle_set yum_color_dark circle"
+                        >
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="under_footer yum_color_dark">
+                    <ul class="footer_ul">
+                        <li>運営者情報</li>
+                        <li>プライバシーポリシー</li>
+                    </ul>
+                    <h1>
+                        <img src="image\logo_white.png" alt="あわいやしロゴ" />
+                    </h1>
+                    <small class="copyright"
+                        >Copyright © あわいやし. All rights reserved.</small
+                    >
+                    -->
+                </div>
+            </div>
+
+            <!-- PC用フッター -->
+            <div class="pc_footer">
+                <div id="waveAnimation">
+                    <p>SNSシェア</p>
+                    <ul>
+                        <li>
+                            <a href="">Twitter<img src="" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="">facebook<img src="" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="">line<img src="" alt="" /></a>
+                        </li>
+                    </ul>
+                    <button>お問い合わせ</button>
+                </div>
+                <ul>
+                    <li>運営者情報</li>
+                    <li>プライバシーポリシー</li>
+                </ul>
+                <h1><img src="" alt="あわいやしロゴ" /></h1>
+                <small>Copyright © あわいやし. All rights reserved.</small>
+            </div>
+
+            <script src="js\jQuery.js"></script>
+        </footer>
+    </body>
+</html>

@@ -65,7 +65,7 @@ var spNavInOut = {
 
 // PC用ナビゲーションの表示・非表示
 
-let visualHeightHeaf = $("#main_visual").outerHeight()/2;
+let visualHeightHeaf = $("#main_visual").outerHeight() / 2;
 
 // $("#pcnav").hide();
 
@@ -74,7 +74,7 @@ let scrollHeight = $(window).scroll(function () {
 
     scrollVolume = $(this).scrollTop();
 
-    if ($(window).width() >= 950) {
+    if ($(window).width() >= 1000) {
         if (scrollVolume > visualHeightHeaf) {
             $("#pcgnav").fadeIn();
 
@@ -82,6 +82,8 @@ let scrollHeight = $(window).scroll(function () {
             $("#pcgnav").fadeOut();
 
         }
+    } else {
+        $("#pcgnav").css("display", "none");
     }
 
 

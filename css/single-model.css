@@ -1,0 +1,60 @@
+/* ハンバーガーメニュー始 */
+
+.model_spot_wrap {
+    margin: 0 3.5%;
+}
+
+.model_spot_wrap img {
+    width: 95%;
+    height: 50%;
+    object-fit: cover;
+    margin: 30px 0;
+}
+
+.model_card li {
+    border: dashed 2px #C8A87A;
+    border-radius: 5%;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.model_info {
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.model_pc_img_top {
+    position: absolute;
+    transform: translateY(14%) translateX(1%);
+}
+
+.model_description h2 {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:940px) {
+    .model_pc_img, .model_pc_img_top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .model_card {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .model_card li {
+        margin: 0 20px 50px;
+    }
+    .model_sp_img {
+        display: none;
+    }
+    .model_description {
+        position: relative;
+        margin-bottom: 80px;
+        margin-top: 80px;
+    }
+}

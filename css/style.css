@@ -90,9 +90,9 @@
   margin: 0 auto 9px;
   height: 1px;
   background: #000;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .el_humburger span.el_humburger_bar:last-child {
@@ -292,15 +292,15 @@
 }
 
 .fun_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #DDEBD1 20%, #DDEBD1 100%)
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ddebd1 20%, #ddebd1 100%);
 }
 
 .calm_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #B5D0D2 20%, #B5D0D2 100%)
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #b5d0d2 20%, #b5d0d2 100%);
 }
 
 .yum_category {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 20%, #EDE3CC 20%, #EDE3CC 100%)
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ede3cc 20%, #ede3cc 100%);
 }
 
 .spot_img_frame {
@@ -319,7 +319,7 @@
   position: absolute;
   top: 20px;
   right: 0;
-  font-family: 'Yu Mincho';
+  font-family: "Yu Mincho";
   /* Windows用 */
   color: white;
   background-color: #2a2a2a60;
@@ -346,74 +346,4 @@
 
 .instagram .fa-instagram {
   font-size: 50px;
-}
-
-/* ---フッターセクション--- */
-
-/* スマホ用フッター */
-
-.sp_footer {
-  text-align: center;
-}
-
-.on_footer {
-  padding: 30px 0;
-}
-
-.footer_h2 {
-  justify-content: center;
-  color: #8C6C47;
-  margin-bottom: 20px;
-}
-
-.footer_h2 .fa-instagram {
-  font-size: 30px;
-  margin-right: 10px;
-  color: #CFB18B;
-}
-
-.formbutton_parent {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.top_return {
-  position: absolute;
-  right: 10%;
-}
-
-.under_footer ul li {
-  line-height: 1.7rem;
-}
-
-.under_footer {
-  padding-top: 20px;
-}
-
-/* PC用フッター */
-
-.pc_footer .col_2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-.pc_footer .footer_ul {
-  color: #8C6C47;
-}
-
-.pc_footer .footer_ul li {
-  padding: 0 30px;
-}
-
-.pc_footer .footer_ul .fab {
-  font-size: 40px;
-}
-
-.pc_footer .under_footer ul li {
-  padding: 0 20px;
-}
-
-.pc_footer .under_footer .right {
-  text-align: center;
 }
