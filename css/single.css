@@ -78,7 +78,7 @@
     -webkit-transition: max-height 0.35s;
     transition: max-height 0.35s;
     color: #333333;
-    background: #E1F6F7;
+    background: #e1f6f7;
 }
 
 .info_actab .info_actab_content p {
@@ -87,14 +87,14 @@
 
 /* :checked */
 
-.info_actab input:checked~.info_actab_content {
+.info_actab input:checked ~ .info_actab_content {
     max-height: 70em;
     margin-bottom: 50px;
 }
 
 /* Icon */
 
-.info_actab label::after {
+.info_actab .label_cross::after {
     line-height: 3;
     position: absolute;
     top: 0;
@@ -107,11 +107,11 @@
     text-align: center;
 }
 
-.info_actab input[type="checkbox"]+label::after {
+.info_actab input[type="checkbox"] + label::after {
     content: "+";
 }
 
-.info_actab input[type="checkbox"]:checked+label::after {
+.info_actab input[type="checkbox"]:checked + label::after {
     transform: rotate(315deg);
 }
 

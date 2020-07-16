@@ -1,27 +1,22 @@
 /* ハンバーガーメニュー始 */
-
-.model_spot_wrap {
-    margin: 0 3.5%;
+.model_spot_wrap ul {
+    margin: 0 3%;
 }
-
-.model_spot_wrap img {
-    width: 95%;
-    height: 50%;
+.model_spot_wrap img,
+.model_pc_img_top img,
+.model_pc_img img {
+    width: 100%;
     object-fit: cover;
-    margin: 30px 0;
 }
-
-.model_card li {
-    border: dashed 2px #C8A87A;
-    border-radius: 5%;
-    padding: 10px 10px 0 10px;
-    margin-bottom: 50px;
-    position: relative;
+.model_text {
+    margin: 0 2%;
 }
-
-.model_info {
-    position: absolute;
-    transform: translateY(-50%) translateX(-50%);
+.model_card li h3,
+.model_card_description {
+    text-align: left;
+}
+.model_more {
+    text-align: end;
 }
 
 .model_pc_img_top {
@@ -33,24 +28,31 @@
     margin-bottom: 30px;
 }
 
-@media screen and (max-width:940px) {
-    .model_pc_img, .model_pc_img_top {
+@media screen and (max-width: 480px) {
+    .model_pc_img,
+    .model_pc_img_top {
         display: none;
     }
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 480px) {
     .model_card {
         display: flex;
-        justify-content: space-between;
-        max-width: 1500px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
         margin: 0 auto;
     }
-    .model_card li {
-        margin: 0 20px 50px;
-    }
+
     .model_sp_img {
         display: none;
+    }
+    .model_card li {
+        width: 30%;
+        margin-bottom: 50px;
+    }
+    .model_card li:not(:nth-child(3n)) {
+        margin-right: 4%;
     }
     .model_description {
         position: relative;
@@ -58,3 +60,21 @@
         margin-top: 80px;
     }
 }
+/* .model_card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.model_sp_img {
+    display: none;
+}
+.model_card li {
+    width: 30%;
+    margin-bottom: 50px;
+}
+.model_card li:not(:nth-child(3n)) {
+    margin-right: 4%;
+} */
