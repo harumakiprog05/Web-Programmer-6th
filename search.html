@@ -26,74 +26,84 @@
 
 
 		<!--スマホ用ナビゲーション-->
-		<img src="image/logo.png" alt="">
-		<nav class="spgnav">
-			<div class="el_humburger">
-				<!--ハンバーガーボタン-->
-				<div class="el_humburger_wrapper">
-					<span class="el_humburger_bar top"></span>
-					<span class="el_humburger_bar middle"></span>
-					<span class="el_humburger_bar bottom"></span>
-				</div>
-			</div>
-			<div class="gnav_inner">
+		<div class="sp_header">
 
+			<img src="image/logo.png" alt="">
 
-				<div class="gnav_item">
-					<img class="gnav_logo" src="image\logo.png" alt="ロゴ">
-				</div>
-				<div class="gnav_menu">
-					<div class="gnav_item">
-						<span class="circle fun fun_color_dark tall_circle_set0">楽</span>-たのしい-
+			<nav class="spgnav">
+				<div class="el_humburger">
+					<!--ハンバーガーボタン-->
+					<div class="el_humburger_wrapper">
+						<span class="el_humburger_bar top"></span>
+						<span class="el_humburger_bar middle"></span>
+						<span class="el_humburger_bar bottom"></span>
 					</div>
+				</div>
+				<div class="gnav_inner">
+
 
 					<div class="gnav_item">
-						<span class="circle calm calm_color_dark tall_circle_set">静</span>-しずか-
+						<img class="gnav_logo" src="image\logo.png" alt="ロゴ">
+					</div>
+					<div class="gnav_menu">
+						<div class="gnav_item">
+							<span class="circle fun fun_color_dark tall_circle_set0">楽</span>-たのしい-
+						</div>
+
+						<div class="gnav_item">
+							<span class="circle calm calm_color_dark tall_circle_set">静</span>-しずか-
+						</div>
+
+						<div class="gnav_item">
+							<span class="circle yum yum_color_dark tall_circle_set">旨</span>-うまい-
+						</div>
+
+						<div class="gnav_item">モデルコース</div>
+						<div class="gnav_item">検索</div>
 					</div>
 
-					<div class="gnav_item">
-						<span class="circle yum yum_color_dark tall_circle_set">旨</span>-うまい-
-					</div>
-
-					<div class="gnav_item">モデルコース</div>
-					<div class="gnav_item">検索</div>
 				</div>
+			</nav>
 
-			</div>
-		</nav>
-
-
-
-	</header>
-	<!--PC用ナビゲーション-->
-	<nav id="pcgnav" class="pcgnav theme_color_dark">
-		<div class="container">
-
-			<ul class="flex">
-				<a href="">
-					<li><img src="image/logo_white.png" alt="あわいやしロゴ"> </li>
-				</a>
-				<a href="">
-					<li><span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
-				</a>
-				<a href="">
-					<li><span class="circle calm_color_dark nav_circle_set">静</span>-しずか-</li>
-				</a>
-				<a href="">
-					<li>
-						<span class="circle yum_color_dark nav_circle_set">旨</span>-うまい-
-					</li>
-				</a>
-				<a href="">
-					<li>モデルコース</li>
-				</a>
-				<a href="">
-					<li><i class="fas fa-search"></i> 検索</li>
-				</a>
-			</ul>
 		</div>
-	</nav>
+
+
+
+		<!--PC用ナビゲーション-->
+		<div class="pc_header">
+			<nav id="pcgnav" class="pcgnav theme_color_dark">
+				<div class="container">
+
+					<ul class="flex">
+						<a href="">
+							<li><img src="image/logo_white.png" alt="あわいやしロゴ"> </li>
+						</a>
+						<a href="">
+							<li><span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
+						</a>
+						<a href="">
+							<li><span class="circle calm_color_dark nav_circle_set">静</span>-しずか-</li>
+						</a>
+						<a href="">
+							<li>
+								<span class="circle yum_color_dark nav_circle_set">旨</span>-うまい-
+							</li>
+						</a>
+						<a href="">
+							<li>モデルコース</li>
+						</a>
+						<a href="">
+							<li><i class="fas fa-search"></i> 検索</li>
+						</a>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+	</header>
 	<main>
+
+		<!------- 絞り込み検索セクション ------->
 		<section class="search_section">
 			<div class="container">
 
@@ -128,35 +138,38 @@
 
 				</div>
 
+
 				<div class="info_actab">
 					<input id="info_actab_one" type="checkbox" name="tabs" />
 					<label for="info_actab_one">詳細情報</label>
 					<div class="info_actab_content">
+
 						<!-- 中身 -->
 						<div class="area_search_wrap tabele_section ">
-										<figure>
-											<img src="image/tokushima_map.png" alt="">
+							<figure>
+								<img src="image/tokushima_map.png" alt="">
 
 
-										</figure>
+							</figure>
 
 
 
-										<input class="more " type="reset" value="条件をクリア">
+							<input class="more " type="reset" value="条件をクリア">
 
+						</div>
 					</div>
+
+
+
+
+
 				</div>
-
-
-
-
-
-			</div>
 
 
 			</div>
 		</section>
 
+		<!------- 検索結果表示セクション ------->
 		<section class="result_section">
 			<div class="container">
 
@@ -286,6 +299,7 @@
 
 		<!-- スマートフォン用フッター -->
 		<div class="sp_footer">
+			
 			<div class="on_footer theme_color_light">
 				<div class="flex sns_tag">
 					<i class="fab fa-instagram"></i>

@@ -125,6 +125,10 @@ span {
 
 /* ヘッダーCSS */
 
+.sidepage_header .sp_header {
+  padding: 20px 20px 0;
+}
+
 /* フッターCSS */
 
 .pc_footer {
@@ -150,26 +154,26 @@ span {
 
 /* SVG Animation   */
 
-.parallax > use {
+.parallax>use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
 
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
 
-.parallax > use:nth-child(3) {
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
 
-.parallax > use:nth-child(4) {
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
@@ -219,8 +223,7 @@ span {
     font-size: 55px;
   }
   /* PC版は非表示 */
-  .spgnav,
-  .sp_footer {
+  .spgnav, .sp_footer {
     display: none !important;
   }
   /* PC版は表示 */
