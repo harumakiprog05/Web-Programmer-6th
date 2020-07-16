@@ -105,7 +105,7 @@
 /*マップのsvgを徳島県の形に合わせてます*/
 
 .svg {
-    pointer-events: visiblePainted;
+    pointer-events: visibleFill;
 }
 
 .area_search_wrap {
@@ -138,4 +138,8 @@
     position: absolute;
     width: 150px;
     top: 5px;
+}
+
+.actab_cnasel input[type="checkbox"] + label::after {
+    content: none;
 }
