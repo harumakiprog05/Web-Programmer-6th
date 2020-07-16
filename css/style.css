@@ -47,8 +47,7 @@
 .el_humburger_text {
   font-size: 12px;
   letter-spacing: 0.1em;
-  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro",
-    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
@@ -293,33 +292,15 @@
 }
 
 .fun_category {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #ffffff 20%,
-    #ddebd1 20%,
-    #ddebd1 100%
-  );
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ddebd1 20%, #ddebd1 100%);
 }
 
 .calm_category {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #ffffff 20%,
-    #b5d0d2 20%,
-    #b5d0d2 100%
-  );
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #b5d0d2 20%, #b5d0d2 100%);
 }
 
 .yum_category {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #ffffff 20%,
-    #ede3cc 20%,
-    #ede3cc 100%
-  );
+  background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ede3cc 20%, #ede3cc 100%);
 }
 
 .spot_img_frame {
@@ -347,8 +328,7 @@
   line-height: 1.9rem;
 }
 
-.fun_category span,
-.yum_category span {
+.fun_category span, .yum_category span {
   position: absolute;
   top: 0;
   left: 0;
@@ -366,92 +346,4 @@
 
 .instagram .fa-instagram {
   font-size: 50px;
-}
-
-/* ---フッターセクション--- */
-
-/* スマホ用フッター */
-
-.sp_footer {
-  text-align: center;
-}
-
-.sp_footer .wave_footer .waves {
-  width: 100%;
-  height: 158px;
-}
-
-.sp_footer .wave_footer {
-  height: 158px;
-}
-
-.on_footer {
-  padding: 30px 0;
-}
-
-.footer_h2 {
-  justify-content: center;
-  color: #8c6c47;
-  margin-bottom: 20px;
-}
-
-.footer_h2 .fa-instagram {
-  font-size: 30px;
-  margin-right: 10px;
-  color: #cfb18b;
-}
-
-.formbutton_parent {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.top_return {
-  position: absolute;
-  right: 10%;
-}
-
-.under_footer ul li {
-  line-height: 1.7rem;
-}
-
-.under_footer {
-  padding-top: 20px;
-}
-
-/* PC用フッター */
-
-.pc_footer .col_2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-.pc_footer .footer_ul {
-  color: #8c6c47;
-}
-
-.pc_footer .footer_ul li {
-  padding: 0 30px;
-}
-
-.pc_footer .footer_ul .fab {
-  font-size: 40px;
-}
-
-.pc_footer .under_footer ul li {
-  padding: 0 20px;
-}
-
-.pc_footer .under_footer .right {
-  text-align: center;
-}
-
-.pc_footer .waves {
-  width: 100%;
-  height: 180px;
-}
-
-.pc_footer .wave_footer {
-  height: 180px;
 }

@@ -1,8 +1,14 @@
 .tag_search_wrap {
-    border: dashed 2px gray;
+    border: dashed 2px #b5d0d2;
     border-radius: 30px;
     margin: 30px;
     padding: 10px 10px 30px;
+}
+
+.tag_search_wrap .search_title {
+    color: #83ccd2;
+    font-weight: 600;
+    padding: 20px 0;
 }
 
 .checkbox_group label {
@@ -12,17 +18,17 @@
 
 .search_section input[type="text"] {
     padding: 5px 0;
-    border: 2px solid gray;
     border-radius: 20px;
     text-align: center;
     margin: 20px 0;
-}
-
-.search_section input[type="reset"] {
-    border: 2px solid #EEC362;
+    width: 60%;
 }
 
 /* 検索結果のスタイル */
+
+.fun_result, .calm_result, .yum_result {
+    margin-bottom: 50px;
+}
 
 .result_items {
     flex-wrap: wrap;
@@ -32,7 +38,8 @@
     margin-bottom: 20px;
 }
 
-/* ブラウザ幅によって表示される行の数を変更 */
+/* ブラウザ幅によって表示される行数を変更 */
+
 @media screen and (max-width: 480px) {
     .result_item {
         width: 50%;
@@ -51,7 +58,6 @@
     }
 }
 
-
 .result_item img {
     width: 140px;
     height: 110px;
@@ -65,8 +71,4 @@
 .result_categry_title {
     margin: 0 auto;
     transform: translate(0, -50%);
-}
-
-.fun_result, .calm_result, .yum_result {
-    margin-bottom: 30px;
 }

@@ -108,7 +108,7 @@
 			<div class="container">
 
 				<div class="tag_search_wrap">
-					<span>絞り込み検索</span>
+					<h2 class="search_title">絞り込み検索</h2>
 
 					<div class="checkbox_group flex">
 						<div class="left">
@@ -129,11 +129,11 @@
 
 
 					</div>
-					<input type="text" placeholder="キーワードで検索">
+					<input class="calm_bdcolor_dark" type="text" placeholder="キーワードで検索">
 
 					<div class="flex">
-						<label class="more yum_color_dark" for=""><input type="submit" value="この条件で検索"> <i class="fas fa-search"></i></label>
-						<input class="more" type="reset" value="条件をクリア">
+						<label class="more calm_color_dark" for=""><input type="submit" value="この条件で検索"> <i class="fas fa-search"></i></label>
+						<input class="more calm_bdcolor_dark" type="button" value="条件をクリア" onclick="back();">
 					</div>
 
 				</div>
@@ -141,7 +141,7 @@
 
 				<div class="info_actab">
 					<input id="info_actab_one" type="checkbox" name="tabs" />
-					<label for="info_actab_one">詳細情報</label>
+					<label class="fun_color_dark" for="info_actab_one">エリアで検索</label>
 					<div class="info_actab_content">
 
 						<!-- 中身 -->
@@ -252,7 +252,7 @@
 
 
 				<div class="yum_result yum_color_light">
-					<h2 class="result_categry_title yum_color_dark grande_circle_set">静</h2>
+					<h2 class="result_categry_title yum_color_dark grande_circle_set">旨</h2>
 
 					<ul class="result_items flex">
 						<li class="result_item">
@@ -295,102 +295,102 @@
 
 
 
-		<footer>
+	<footer>
 
-			<!-- スマートフォン用フッター -->
-			<div class="sp_footer">
-				<div class="wave_footer">
-					<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-						<defs>
-							<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-						</defs>
-						<g class="parallax">
-							<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
-							<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
-							<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
-							<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
-						</g>
-					</svg>
+		<!-- スマートフォン用フッター -->
+		<div class="sp_footer">
+			<div class="wave_footer">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
+					</g>
+				</svg>
+			</div>
+			<div class="on_footer theme_color_light">
+				<div class="flex sns_tag">
+					<i class="fab fa-instagram"></i>
+					<h2>#あわいやし</h2>
 				</div>
-				<div class="on_footer theme_color_light">
-					<div class="flex sns_tag">
-						<i class="fab fa-instagram"></i>
-						<h2>#あわいやし</h2>
-					</div>
-					<div class="formbutton_parent">
-						<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
-						<button class="top_return grande_circle_set calm_color_dark circle"><i class="fas fa-chevron-up"></i></button>
-					</div>
+				<div class="formbutton_parent">
+					<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
+					<button class="top_return grande_circle_set calm_color_dark circle"><i class="fas fa-chevron-up"></i></button>
 				</div>
+			</div>
 
-				<div class="under_footer theme_color_dark">
-					<ul class="footer_ul">
-						<li>運営者情報</li>
-						<li>プライバシーポリシー</li>
+			<div class="under_footer theme_color_dark">
+				<ul class="footer_ul">
+					<li>運営者情報</li>
+					<li>プライバシーポリシー</li>
+				</ul>
+				<h1><img src="image\logo_white.png" alt="あわいやしロゴ"></h1>
+				<small class="copyright">Copyright © あわいやし. All rights reserved.</small>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- PC用フッター -->
+		<div class="pc_footer">
+
+
+
+			<div class="wave_footer">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
+					</g>
+				</svg>
+			</div>
+
+			<div class="on_footer theme_color_light">
+				<div class="flex">
+
+					<ul class="footer_ul flex">
+						<li>SNSシェア</li>
+						<li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href=""><i class="fab fa-line"></i></a></li>
 					</ul>
-					<h1><img src="image\logo_white.png" alt="あわいやしロゴ"></h1>
-					<small class="copyright">Copyright © あわいやし. All rights reserved.</small> -->
+
+					<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
+				</div>
+
+			</div>
+
+			<div class="under_footer theme_color_dark flex">
+				<ul class="flex left">
+					<li>運営者情報</li>
+					<li>プライバシーポリシー</li>
+				</ul>
+				<div class="right">
+					<h1><img src="image/logo_white.png" alt="あわいやしロゴ"></h1>
+					<small>Copyright © あわいやし. All rights reserved.</small>
 
 				</div>
 
 			</div>
 
 
-
-			<!-- PC用フッター -->
-			<div class="pc_footer">
+		</div>
 
 
 
-				<div class="wave_footer">
-					<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-						<defs>
-							<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-						</defs>
-						<g class="parallax">
-							<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
-							<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
-							<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
-							<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
-						</g>
-					</svg>
-				</div>
-
-				<div class="on_footer theme_color_light">
-					<div class="flex">
-
-						<ul class="footer_ul flex">
-							<li>SNSシェア</li>
-							<li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-							<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-							<li><a href=""><i class="fab fa-line"></i></a></li>
-						</ul>
-
-						<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
-					</div>
-
-				</div>
-
-				<div class="under_footer theme_color_dark flex">
-					<ul class="flex left">
-						<li>運営者情報</li>
-						<li>プライバシーポリシー</li>
-					</ul>
-					<div class="right">
-						<h1><img src="image/logo_white.png" alt="あわいやしロゴ"></h1>
-						<small>Copyright © あわいやし. All rights reserved.</small>
-
-					</div>
-
-				</div>
-
-
-			</div>
-
-
-
-			<script src="js\jQuery.js"></script>
-		</footer>
+		<script src="js\jQuery.js"></script>
+	</footer>
 
 </body>
 </html>

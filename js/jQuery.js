@@ -74,7 +74,7 @@ let scrollHeight = $(window).scroll(function () {
 
     scrollVolume = $(this).scrollTop();
 
-    if ($(window).width() >= 950) {
+    if ($(window).width() >= 1000) {
         if (scrollVolume > visualHeightHeaf) {
             $("#pcgnav").fadeIn();
 

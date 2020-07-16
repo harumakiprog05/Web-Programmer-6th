@@ -31,7 +31,7 @@ span {
 .container {
   text-align: center;
   margin: 0 auto;
-  max-width: 950px;
+  max-width: 1000px;
   /* background-color: rgb(253, 253, 242); */
 }
 
@@ -105,6 +105,10 @@ span {
   background-color: #ddebd1;
 }
 
+.fun_bdcolor_dark {
+  border: #9fbf82 2px solid;
+}
+
 .calm_color_dark {
   background-color: #83ccd2;
   color: white;
@@ -112,6 +116,10 @@ span {
 
 .calm_color_light {
   background-color: #b5d0d2;
+}
+
+.calm_bdcolor_dark {
+  border: #83ccd2 2px solid;
 }
 
 .yum_color_dark {
@@ -123,13 +131,119 @@ span {
   background-color: #ede3cc;
 }
 
-/* ヘッダーCSS */
+.yum_bdcolor_dark {
+  border: #eec362 2px solid;
+}
+
+/* ヘッダーセクション */
 
 .sidepage_header .sp_header {
   padding: 20px 20px 0;
 }
 
-/* フッターCSS */
+/* ---フッターセクション--- */
+
+/* スマホ用フッター */
+
+.sp_footer {
+  text-align: center;
+}
+
+.sp_footer .wave_footer .waves {
+  width: 100%;
+  height: 158px;
+}
+
+.sp_footer .wave_footer {
+  height: 158px;
+}
+
+.on_footer {
+  padding: 30px 0;
+}
+
+.footer_h2 {
+  justify-content: center;
+  color: #8c6c47;
+  margin-bottom: 20px;
+}
+
+.footer_h2 .fa-instagram {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #cfb18b;
+}
+
+.formbutton_parent {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.top_return {
+  position: absolute;
+  right: 10%;
+}
+
+.under_footer ul li {
+  line-height: 1.7rem;
+}
+
+.under_footer {
+  padding-top: 20px;
+}
+
+.sp_footer .sns_tag h2{
+color: #707070;
+
+}
+/* PC用フッター */
+
+.pc_footer .col_2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pc_footer .footer_ul {
+  color: #707070;
+}
+
+.pc_footer .footer_ul li {
+  padding: 0 20px;
+}
+
+.pc_footer .footer_ul .fab {
+  font-size: 40px;
+}
+
+.pc_footer .footer_ul .fa-twitter-square {
+  color: #00acee;
+}
+
+.pc_footer .footer_ul .fa-facebook-square {
+  color: #3b5998;
+}
+
+.pc_footer .footer_ul .fa-line {
+  color: #00B900;
+}
+
+.pc_footer .under_footer ul li {
+  padding: 0 20px;
+}
+
+.pc_footer .under_footer .right {
+  text-align: center;
+}
+
+.pc_footer .waves {
+  width: 100%;
+  height: 180px;
+}
+
+.pc_footer .wave_footer {
+  height: 180px;
+}
 
 .pc_footer {
   display: none;
@@ -189,7 +303,7 @@ span {
 
 /* ---------------PC時の表示設定--------------- */
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
   /* サークルの大きさ */
   .nav_circle_set {
     border-radius: 50%;
