@@ -89,7 +89,14 @@ let scrollHeight = $(window).scroll(function () {
 
 })
 
+// トップページスライドショー
 
-$(function () {
-    $('#modelCourseSlide').slick();
-});
+// $(function () {
+//     $('#modelCourseSlide').slick();
+// });
+
+$(document).ready(function () {
+    $('#modelCourseSlide').slick({
+        
+ 　});
+ });

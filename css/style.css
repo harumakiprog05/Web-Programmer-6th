@@ -347,15 +347,23 @@
 .model_course_parent {
   position: relative;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .model_course_parent .model_course_mask {
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 0;
+  margin: auto;
+  right: 0;
+  transform: scale(1.001);
 }
 
 /* インスタセクション */
+
+.instagram {
+  background: url("../image/main_visual_img_01.jpg");
+}
 
 .instagram .fa-instagram {
   font-size: 50px;

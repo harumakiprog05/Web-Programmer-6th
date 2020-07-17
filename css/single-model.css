@@ -1,3 +1,9 @@
+/*左上のロゴ*/
+
+.logo {
+    margin: 10px 15px;
+}
+
 /* ハンバーガーメニュー始 */
 .model_spot_card {
     border: solid 3px #c8a87a;
@@ -15,6 +21,12 @@
     line-height: 96px;
     margin: 0 5px;
 }
+.model_big_circle {
+    height: 200px;
+    width: 200px;
+    font-size: 2rem;
+}
+
 .road {
     width: 20px;
     height: 100px;
@@ -35,9 +47,21 @@
     transform: translateY(-50%) translateX(-50%);
 }
 
+.model_couse_title {
+    font-size: 2rem;
+
+    margin-top: 2%;
+}
+
 .model_pc_img_top {
     position: absolute;
     transform: translateY(14%) translateX(1%);
+    top: 0%;
+}
+
+.model_description {
+    background: url(../image/モデルコース枠.png);
+    width: auto;
 }
 
 .model_description h2 {
