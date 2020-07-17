@@ -1,0 +1,165 @@
+.tag_search_wrap {
+    border: dashed 2px #b5d0d2;
+    border-radius: 30px;
+    margin: 30px;
+    padding: 10px 10px 30px;
+}
+
+.tag_search_wrap .search_title {
+    color: #83ccd2;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+.checkbox_group label {
+    display: block;
+    text-align: left;
+}
+
+.search_section input[type="text"] {
+    padding: 5px 0;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px 0;
+    width: 60%;
+}
+
+input::placeholder {
+    color: rgb(228, 228, 228);
+}
+
+/* 検索結果のスタイル */
+
+.fun_result,
+.calm_result,
+.yum_result {
+    margin-bottom: 50px;
+}
+
+.result_items {
+    flex-wrap: wrap;
+}
+
+.result_item {
+    margin-bottom: 20px;
+}
+
+/* ブラウザ幅によって表示される行数を変更 */
+
+@media screen and (max-width: 480px) {
+    .result_item {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 700px) {
+    .result_item {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .result_item {
+        width: 25%;
+    }
+}
+
+.result_item img {
+    width: 140px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.result_item span {
+    display: block;
+}
+
+.result_categry_title {
+    margin: 0 auto;
+    transform: translate(0, -50%);
+}
+
+/*マップ絞り込み検索の色が変わるcss*/
+
+.map_color {
+    height: auto;
+    fill: #7bab4f;
+    border: #fff;
+    pointer-events: none;
+}
+
+#east:checked + label .map_color {
+    fill: #000;
+}
+
+#west:checked + label .map_color {
+    fill: #fdbc00;
+}
+
+#south:checked + label .map_color {
+    fill: #83ccd2;
+}
+
+#north:checked + label .map_color {
+    fill: #888888;
+}
+
+.area_search_wrap figure input {
+    opacity: 0;
+}
+
+/*マップのsvgを徳島県の形に合わせてます*/
+
+path {
+    pointer-events: auto;
+}
+
+.area_search_wrap {
+    position: relative;
+    height: 530px;
+}
+
+.east_map_color {
+    position: absolute;
+    width: 180%;
+    left: 30%;
+    top: 30px;
+}
+
+.west_map_color {
+    position: absolute;
+    width: 360%;
+    right: 100px;
+    top: 40px;
+}
+
+.south_map_color {
+    position: absolute;
+    width: 360%;
+    top: 140px;
+}
+
+.north_map_color {
+    position: absolute;
+    width: 120%;
+    top: 0%;
+}
+
+/*
+single.cssの110行目
+.info_actab input[type="checkbox"] + label::after {content: "+";}
+を打ち消している
+*/
+
+#east + label::after {
+    content: none;
+}
+#west + label::after {
+    content: none;
+}
+#south + label::after {
+    content: none;
+}
+#north + label::after {
+    content: none;
+}

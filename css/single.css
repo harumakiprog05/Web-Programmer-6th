@@ -1,0 +1,194 @@
+/* ハンバーガーメニュー始 */
+
+.single_title {
+    padding-top: 30px;
+}
+
+.image_wrap {
+    display: flex;
+    margin: 0 3.5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px;
+}
+
+.single_visual {
+    width: 95%;
+    height: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 940px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+.image_wrap img {
+    width: 45%;
+    vertical-align: middle;
+}
+
+.single_visual_top {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.image_wrap img:nth-child(2) {
+    padding-top: 7%;
+}
+
+.single_button {
+    width: 150px;
+    height: 32px;
+}
+
+.info_actab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.info_actab input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.label_cross {
+    font-weight: bold;
+    line-height: 3;
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    background: #83ccd2;
+    width: 150px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.info_actab .info_actab_content {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.35s;
+    transition: max-height 0.35s;
+    color: #333333;
+    background: #e1f6f7;
+}
+
+.info_actab .info_actab_content p {
+    margin: 1em;
+}
+
+/* :checked */
+
+.info_actab input:checked ~ .info_actab_content {
+    max-height: 70em;
+    margin-bottom: 50px;
+}
+
+/* Icon */
+
+.info_actab .label_cross::after {
+    line-height: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    text-align: center;
+}
+
+.info_actab input[type="checkbox"] + label::after {
+    content: "+";
+}
+
+.info_actab input[type="checkbox"]:checked + label::after {
+    transform: rotate(315deg);
+}
+
+table {
+    width: 90%;
+    margin: 50px auto 30px;
+    border-top: 2px solid #d9d9d9;
+    table-layout: fixed;
+    text-align: left;
+}
+
+th {
+    white-space: nowrap;
+    width: 150px;
+}
+
+tr {
+    border-bottom: 2px solid #d9d9d9;
+    padding: 20px;
+}
+
+.center_button {
+    text-align: center;
+}
+
+.smile {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.smile_box {
+    text-align: center;
+    margin: 15px;
+}
+
+.smile_box p {
+    margin-bottom: 0px;
+}
+
+.smile_box div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.single_text {
+    text-align: left;
+    margin: 15px 30px;
+}
+
+iframe {
+    margin-bottom: 30px;
+}
+
+.spot {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 940px) {
+    .spot_wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}
+
+.spot_visual {
+    width: 95%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.spot p {
+    text-align: left;
+    padding-left: 6px;
+}
