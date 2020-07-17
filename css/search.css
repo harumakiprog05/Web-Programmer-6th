@@ -28,6 +28,14 @@ input::placeholder {
     color: rgb(228, 228, 228);
 }
 
+/* マップのスタイル */
+.west_name{
+position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+}
+
 /* 検索結果のスタイル */
 
 .fun_result,
