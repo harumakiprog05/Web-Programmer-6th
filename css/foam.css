@@ -1,10 +1,10 @@
-span {
+.foam_wrap span {
   color: #eec362;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
+.foam_wrap input[type="text"],
+.foam_wrap input[type="tel"],
+.foam_wrap input[type="email"],
 textarea {
   width: 510px;
   padding: 5px;
@@ -12,10 +12,16 @@ textarea {
   background-color: #e1f6f7;
 }
 
-dl {
+.foam_wrap dl {
   text-align: left;
+  padding-bottom: 20px;
 }
 
 .button {
   margin: 100px;
+}
+
+.foam_wrap {
+  margin: 0 auto;
+  max-width: 510px;
 }
