@@ -377,6 +377,14 @@ span {
   }
   .pcgnav {
     width: 100%;
-    padding: 16px 0;
   }
+  .gnav_logo {
+    height: 70px;
+    padding: 10px 0;
+  }
+  .insta_container{
+  display: inline-block;
+  /* min-width: 100%; */
+  margin-left: 50%;
+  transform: translate(-50%,0);    }
 }
