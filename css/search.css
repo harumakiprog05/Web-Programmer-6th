@@ -115,36 +115,237 @@ path {
 }
 
 .area_search_wrap {
-    position: relative;
     height: 530px;
 }
-
+.area_search_flex {
+    position: relative;
+    height: 530px;
+    width: 1400px;
+    margin: auto;
+}
 .east_map_color {
     position: absolute;
-    width: 180%;
-    left: 30%;
-    top: 30px;
+    width: 17%;
+    right: 37.5%;
+    top: 21.9%;
+    stroke: #fff;
+    stroke-width: 2px;
 }
 
 .west_map_color {
     position: absolute;
-    width: 360%;
-    right: 100px;
-    top: 40px;
+    width: 32%;
+    right: 46%;
+    top: 11%;
+    stroke: #fff;
+    stroke-width: 2px;
 }
 
 .south_map_color {
     position: absolute;
-    width: 360%;
-    top: 140px;
+    width: 31%;
+    top: 34.5%;
+    right: 31.3%;
+    stroke: #fff;
+    stroke-width: 2px;
 }
 
 .north_map_color {
     position: absolute;
-    width: 120%;
-    top: 0%;
+    width: 12%;
+    top: 1.7%;
+    right: 35.59%;
+    stroke: #fff;
+    stroke-width: 2px;
 }
 
+@media screen and (max-width: 1000px) {
+    .area_search_wrap {
+        height: 400px;
+    }
+    .area_search_flex {
+        position: relative;
+        height: 400px;
+        width: 800px;
+        margin: auto;
+    }
+    .east_map_color {
+        position: absolute;
+        width: 18%;
+        right: 21%;
+        top: 25.4%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .west_map_color {
+        position: absolute;
+        width: 34%;
+        right: 30%;
+        top: 17%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .south_map_color {
+        position: absolute;
+        width: 33%;
+        top: 35.5%;
+        right: 14.2%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .north_map_color {
+        position: absolute;
+        width: 13%;
+        top: 8.9%;
+        right: 18.72%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .area_search_wrap {
+        height: 300px;
+    }
+    .area_search_flex {
+        position: relative;
+        height: 300px;
+        width: 550px;
+        margin: auto;
+    }
+    .east_map_color {
+        position: absolute;
+        width: 18%;
+        right: 35.8%;
+        top: 26.4%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .west_map_color {
+        position: absolute;
+        width: 34%;
+        right: 44.8%;
+        top: 18.5%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .south_map_color {
+        position: absolute;
+        width: 33%;
+        top: 35.5%;
+        right: 29.2%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .north_map_color {
+        position: absolute;
+        width: 13%;
+        top: 11%;
+        right: 33.6%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .area_search_wrap {
+        height: 300px;
+    }
+    .area_search_flex {
+        position: relative;
+        height: 300px;
+        width: 550px;
+        margin: auto;
+    }
+    .east_map_color {
+        position: absolute;
+        width: 18%;
+        right: 31%;
+        top: 26.4%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .west_map_color {
+        position: absolute;
+        width: 34%;
+        right: 40%;
+        top: 18.5%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .south_map_color {
+        position: absolute;
+        width: 33%;
+        top: 35.5%;
+        right: 24.2%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .north_map_color {
+        position: absolute;
+        width: 13%;
+        top: 10.9%;
+        right: 28.82%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .area_search_wrap {
+        height: 300px;
+    }
+    .area_search_flex {
+        position: relative;
+        height: 300px;
+        width: 380px;
+        margin: auto;
+    }
+    .east_map_color {
+        position: absolute;
+        width: 22%;
+        right: 32.4%;
+        top: 27.8%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .west_map_color {
+        position: absolute;
+        width: 41%;
+        right: 43.4%;
+        top: 21.4%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .south_map_color {
+        position: absolute;
+        width: 40%;
+        top: 35.5%;
+        right: 24.2%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+
+    .north_map_color {
+        position: absolute;
+        width: 15.4%;
+        top: 15.6%;
+        right: 29.99%;
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+}
 /*
 single.cssの110行目
 .info_actab input[type="checkbox"] + label::after {content: "+";}
