@@ -1,3 +1,21 @@
 span {
   color: #eec362;
 }
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 510px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #e1f6f7;
+}
+
+dl {
+  text-align: left;
+}
+
+.button {
+  margin: 100px;
+}

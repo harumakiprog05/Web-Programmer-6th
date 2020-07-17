@@ -29,11 +29,11 @@ input::placeholder {
 }
 
 /* マップのスタイル */
-.west_name{
-position: absolute;
-top: 50%;
-left: 0;
-right: 0;
+.west_name {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
 }
 
 /* 検索結果のスタイル */
@@ -143,8 +143,8 @@ path {
 .west_map_color {
     position: absolute;
     width: 32%;
-    right: 46%;
-    top: 11%;
+    right: 46.1%;
+    top: 11.3%;
     stroke: #fff;
     stroke-width: 2px;
 }

@@ -29,33 +29,63 @@
   </head>
 
   <body>
-    <header>
+    <main class="container">
       <h2>お問い合わせ</h2>
-      <p>
-        『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
-        <span>*</span>は必須項目です。
-      </p>
-    </header>
-    <main>
-      <dt>貴社名</dt>
-      <dd><input type="text" name="company" autofocus /></dd>
 
-      <dt>お名前<span>*</span></dt>
-      <dd><input type="text" name="name" required /></dd>
+        <div>
+            <p>
+                『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
+                <span>*</span>は必須項目です。
+            </p>
+            <section class="container">
+            <dl>
+            <dt>貴社名</dt>
+            <dd>
+                <input type="text" name="company" class="background" autofocus />
+            </dd>
+            </dl>
 
-      <dt>電話番号<span>*</span></dt>
-      <dd><input type="tel" name="tel" required /></dd>
+            <dl>
+            <dt>お名前<span>*</span></dt>
+            <dd><input type="text" name="name" class="background" required /></dd>
+            </dl>
 
-      <dt>メールアドレス<span>*</span></dt>
-      <dd>
-        <input type="email" name="email" required />
-        <small>※半角で入力してください</small>
-      </dd>
+            <dl>
+            <dt>電話番号<span>*</span></dt>
+            <dd><input type="tel" name="tel" class="background" required /></dd>
+            </dl>
 
-      <dt>お問い合わせ内容<span>*</span></dt>
-      <dd>
-        <textarea name="comment" cols="30" rows="10" required></textarea>
-      </dd>
+            <dl>
+            <dt>
+                メールアドレス<span>*</span> <small> ※半角で入力してください</small>
+            </dt>
+            <dd>
+                <input type="email" name="email" class="background" required />
+            </dd>
+            </dl>
+
+            <dl>
+            <dt>お問い合わせ内容<span>*</span></dt>
+            <dd>
+                <textarea
+                name="comment"
+                cols="30"
+                rows="10"
+                class="background"
+                required
+                ></textarea>
+            </dd>
+            </dl>
+
+            <div class="button">
+            <input
+                type="submit"
+                class="spot_more calm_color_dark"
+                value="入力内容を確認する"
+            />
+            </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>

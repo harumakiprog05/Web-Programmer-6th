@@ -2,6 +2,8 @@
 
 .logo {
     margin: 10px 15px;
+    width: 50px;
+    height: 50px;
 }
 
 /* ハンバーガーメニュー始 */
@@ -93,7 +95,7 @@
     .model_card li {
         margin: 0 20px 50px;
     }
-    .model_sp_img {
+    .model_sp_img1 {
         display: none;
     }
     .model_description {
