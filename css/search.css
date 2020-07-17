@@ -121,6 +121,7 @@ path {
     position: relative;
     height: 530px;
     width: 1400px;
+    margin: auto;
 }
 .east_map_color {
     position: absolute;
@@ -166,6 +167,7 @@ path {
         position: relative;
         height: 400px;
         width: 800px;
+        margin: auto;
     }
     .east_map_color {
         position: absolute;
@@ -212,12 +214,13 @@ path {
         position: relative;
         height: 300px;
         width: 550px;
+        margin: auto;
     }
     .east_map_color {
         position: absolute;
         width: 18%;
-        right: 21%;
-        top: 25.4%;
+        right: 35.8%;
+        top: 26.4%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -225,8 +228,8 @@ path {
     .west_map_color {
         position: absolute;
         width: 34%;
-        right: 30%;
-        top: 17%;
+        right: 44.8%;
+        top: 18.5%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -235,7 +238,7 @@ path {
         position: absolute;
         width: 33%;
         top: 35.5%;
-        right: 14.2%;
+        right: 29.2%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -243,8 +246,8 @@ path {
     .north_map_color {
         position: absolute;
         width: 13%;
-        top: 8.9%;
-        right: 18.72%;
+        top: 11%;
+        right: 33.6%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -258,6 +261,7 @@ path {
         position: relative;
         height: 300px;
         width: 550px;
+        margin: auto;
     }
     .east_map_color {
         position: absolute;
@@ -304,6 +308,7 @@ path {
         position: relative;
         height: 300px;
         width: 380px;
+        margin: auto;
     }
     .east_map_color {
         position: absolute;
