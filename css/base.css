@@ -10,7 +10,11 @@ html {
   user-select: none;
 }
 
-section {
+main>section {
+  margin-bottom: 150px;
+}
+
+section>section{
   margin-bottom: 100px;
 }
 
@@ -202,7 +206,7 @@ span {
 }
 
 .under_footer {
-  padding-top: 20px;
+  height: 160px;
 }
 
 .sp_footer .sns_tag h2 {
@@ -379,8 +383,8 @@ span {
     width: 100%;
   }
   .gnav_logo {
-    height: 70px;
     padding: 10px 0;
+    width: 80px;
   }
   .insta_container{
   display: inline-block;
