@@ -1,29 +1,34 @@
 /* ハンバーガーメニュー始 */
+
 .model_spot_wrap ul {
     margin: 0 3%;
 }
-.model_spot_wrap img,
-.model_pc_img_top img,
-.model_pc_img img {
+
+.model_spot_wrap img, .model_pc_img_top img, .model_pc_img img {
     width: 100%;
     object-fit: cover;
 }
+
 .model_text {
     margin: 0 2%;
 }
+
 .spot_visual {
     margin-bottom: 10px;
 }
-.model_card li h3,
-.model_card_description {
+
+.model_card li h3, .model_card_description {
     text-align: left;
 }
+
 .model_text p {
     margin-bottom: 10px;
 }
+
 .model_card li {
     margin-bottom: 50px;
 }
+
 .model_more {
     text-align: end;
 }
@@ -38,8 +43,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .model_pc_img,
-    .model_pc_img_top {
+    .model_pc_img, .model_pc_img_top {
         display: none;
     }
 }
@@ -55,7 +59,6 @@
         max-width: 1000px;
         margin: 0 auto;
     }
-
     .model_sp_img {
         display: none;
     }
@@ -71,6 +74,7 @@
         margin-top: 80px;
     }
 }
+
 /* .model_card {
     display: flex;
     justify-content: center;
