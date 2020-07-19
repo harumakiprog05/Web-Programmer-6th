@@ -2,6 +2,8 @@
 
 .logo {
     margin: 10px 15px;
+    width: 50px;
+    height: 50px;
 }
 
 /* ハンバーガーメニュー始 */
@@ -22,9 +24,11 @@
     margin: 0 5px;
 }
 .model_big_circle {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     font-size: 2rem;
+    text-align: center;
+    line-height: 150px;
 }
 
 .road {
@@ -60,12 +64,18 @@
 }
 
 .model_description {
-    background: url(../image/モデルコース枠.png);
-    width: auto;
+    background-image: url(../image/model_couse.png);
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px -34px;
+    z-index: 2;
+    margin: auto;
 }
 
 .model_description h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 940px) {
@@ -85,7 +95,7 @@
     .model_card li {
         margin: 0 20px 50px;
     }
-    .model_sp_img {
+    .model_sp_img1 {
         display: none;
     }
     .model_description {
@@ -93,4 +103,12 @@
         margin-bottom: 80px;
         margin-top: 80px;
     }
+}
+
+.back_model_archive {
+    background-color: #c8a87a;
+    color: #fff;
+    border-radius: 30px;
+    width: 136px;
+    margin-bottom: 100px;
 }

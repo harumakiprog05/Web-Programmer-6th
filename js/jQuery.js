@@ -85,6 +85,15 @@ let scrollHeight = $(window).scroll(function () {
     }
 });
 
+// メインビジュアルのフェードイン・アウト
+$(".main_visual_images img:nth-child(n+2)").hide();
+
+setInterval(function () {
+    $(".main_visual_images img:first-child").fadeOut(2000);
+    $(".main_visual_images img:nth-child(2)").fadeIn(2000);
+    $(".main_visual_images img:first-child").appendTo(".main_visual_images");
+}, 4000);
+
 // トップページスライドショー
 
 // $(function () {

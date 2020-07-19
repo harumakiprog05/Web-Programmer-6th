@@ -225,18 +225,27 @@
 
 .main_visual {
   position: relative;
+  height: 100vh;
+}
+
+.main_visual_images {
+  position: relative;
+}
+
+.main_visual_images img {
+  width: 100%;
+  position: absolute;
 }
 
 .main_catch_copy {
   position: absolute;
+  top: 50vh;
   left: 50%;
-  top: 50%;
-  width: 100%;
   color: white;
   font-size: 32px;
-  transform: translate(-50%, -50%);
   text-align: center;
   line-height: 3.5rem;
+  transform: translate(-50%,-50%);
 }
 
 .main_visual_logo {
@@ -248,15 +257,15 @@
 /* あわいやしとは？セクション */
 
 .site_about_title {
-  padding-top: 30px;
-  margin-bottom: 15px;
+  padding-top: 80px;
+  margin-bottom: 50px;
 }
 
 .top_category_set {
   display: flex;
   /* width: 200px; */
   justify-content: center;
-  margin: 50px auto;
+  margin: 0px auto 50px;
 }
 
 .top_category_set li {
@@ -283,7 +292,7 @@
 }
 
 .global_section_title {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -362,9 +371,32 @@
 /* インスタセクション */
 
 .instagram {
-  background: url("../image/main_visual_img_01.jpg");
+  background: url("../image/instaimage.jpg");
+  background-size: cover;
 }
 
 .instagram .fa-instagram {
-  font-size: 50px;
+  font-size: 70px;
+  margin: 30px 0;
+}
+
+.insta_container {
+  color: white;
+  background-color: rgba(80, 80, 80, 0.5);
+  /* opacity: 0.3; */
+  padding: 30px 0;
+}
+
+.insta_container {
+  padding: 0 100px;
+}
+
+.insta_container .container {
+  padding: 50px 0;
+}
+
+.insta_hashtag_title {
+  font-size: 27px;
+  margin-top: 30px;
+  font-weight: 600;
 }
