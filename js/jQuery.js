@@ -67,9 +67,6 @@ var spNavInOut = {
 
 let visualHeightHeaf = $("#main_visual").outerHeight() / 2;
 
-// $("#pcnav").hide();
-
-
 let scrollHeight = $(window).scroll(function () {
 
     scrollVolume = $(this).scrollTop();
@@ -101,9 +98,9 @@ setInterval(function () {
 
 // トップページスライドショー
 
-// $(function () {
-//     $('#modelCourseSlide').slick();
-// });
+$(function () {
+    $('#modelCourseSlide').slick();
+});
 
 // $(document).ready(function () {
 //     $('#modelCourseSlide').slick({
