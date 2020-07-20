@@ -16,7 +16,11 @@ $(function () {
         }
     });
     $(document).on("click touchend", function (event) {
-        if (!$(event.target).closest(".bl_header,.el_humburger").length && $("body").hasClass("js_humburgerOpen") && focusFlag) {
+        if (
+            !$(event.target).closest(".bl_header,.el_humburger").length &&
+            $("body").hasClass("js_humburgerOpen") &&
+            focusFlag
+        ) {
             focusFlag = false;
             //scrollBlocker(false);
             spNavInOut.switch();
@@ -175,3 +179,15 @@ setInterval(function () {
     $(".model_fade_3 img:nth-child(2)").fadeIn(2000);
     $(".model_fade_3 img:first-child").appendTo(".model_fade_3");
 }, 4000);
+
+//モーダルウィンドウ//
+$(function () {
+    $(".js-modal-open").on("click", function () {
+        $(".js-modal").fadeIn();
+        return false;
+    });
+    $(".js-modal-close").on("click", function () {
+        $(".js-modal").fadeOut();
+        return false;
+    });
+});
