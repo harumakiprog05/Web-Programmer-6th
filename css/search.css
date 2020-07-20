@@ -108,7 +108,7 @@ input::placeholder {
     .result_item span {
         display: block;
         text-align: left;
-        width: 70%;
+        width: 200px;
         margin: 0 auto;
     }
 }
@@ -121,6 +121,12 @@ input::placeholder {
         width: 150px;
         height: 112.5px;
         object-fit: cover;
+    }
+    .result_item span {
+        display: block;
+        text-align: left;
+        width: 150px;
+        margin: 0 auto;
     }
 }
 

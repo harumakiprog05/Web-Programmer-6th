@@ -96,7 +96,7 @@ setInterval(function () {
 }, 4000);
 
 
-// トップページスライドショー
+// トップページのモデルコーススライドショー
 
 $(function () {
     $('#modelCourseSlide').slick();
