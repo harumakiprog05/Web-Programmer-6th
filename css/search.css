@@ -11,6 +11,11 @@
     padding: 20px 0;
 }
 
+.checkbox_group {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .checkbox_group label {
     display: block;
     text-align: left;
@@ -21,6 +26,28 @@
     border-radius: 20px;
     text-align: center;
     margin: 20px 0;
+    width: 80%;
+    max-width: 450px;
+}
+
+.search_button_wrap label {
+    padding: 5px 0;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 300px;
+}
+
+.area_serch_more {
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.search_section input[type="submit"] {
+    border-radius: 20px;
+    text-align: center;
     width: 60%;
 }
 
@@ -29,6 +56,7 @@ input::placeholder {
 }
 
 /* マップのスタイル */
+
 .west_name {
     position: absolute;
     top: 50%;
@@ -38,9 +66,7 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result,
-.calm_result,
-.yum_result {
+.fun_result, .calm_result, .yum_result {
     margin-bottom: 50px;
 }
 
@@ -54,37 +80,54 @@ input::placeholder {
 
 /* ブラウザ幅によって表示される行数を変更 */
 
-@media screen and (max-width: 480px) {
-    .result_item {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 700px) {
-    .result_item {
-        width: 30%;
-    }
-}
-
-@media screen and (min-width: 701px) {
-    .result_item {
-        width: 25%;
-    }
-}
-
 .result_item img {
-    width: 140px;
-    height: 110px;
+    width: 300px;
+    height: 225px;
     object-fit: cover;
 }
 
 .result_item span {
     display: block;
+    text-align: left;
 }
 
 .result_categry_title {
     margin: 0 auto;
     transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 1000px) {
+    .result_item {
+        width: 50%;
+    }
+    .result_item img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .result_item span {
+        display: block;
+        text-align: left;
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .result_item {
+        width: 50%;
+    }
+    .result_item img {
+        width: 150px;
+        height: 112.5px;
+        object-fit: cover;
+    }
+    .result_item span {
+        display: block;
+        text-align: left;
+        width: 150px;
+        margin: 0 auto;
+    }
 }
 
 /*マップ絞り込み検索の色が変わるcss*/
@@ -96,19 +139,19 @@ input::placeholder {
     pointer-events: none;
 }
 
-#east:checked + label .map_color {
+#east:checked+label .map_color {
     fill: #000;
 }
 
-#west:checked + label .map_color {
+#west:checked+label .map_color {
     fill: #fdbc00;
 }
 
-#south:checked + label .map_color {
+#south:checked+label .map_color {
     fill: #83ccd2;
 }
 
-#north:checked + label .map_color {
+#north:checked+label .map_color {
     fill: #888888;
 }
 
@@ -125,12 +168,14 @@ path {
 .area_search_wrap {
     height: 530px;
 }
+
 .area_search_flex {
     position: relative;
     height: 530px;
     width: 1400px;
     margin: auto;
 }
+
 .east_map_color {
     position: absolute;
     width: 17%;
@@ -185,7 +230,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .west_map_color {
         position: absolute;
         width: 34%;
@@ -194,7 +238,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .south_map_color {
         position: absolute;
         width: 33%;
@@ -203,7 +246,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .north_map_color {
         position: absolute;
         width: 13%;
@@ -232,7 +274,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .west_map_color {
         position: absolute;
         width: 34%;
@@ -241,7 +282,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .south_map_color {
         position: absolute;
         width: 33%;
@@ -250,7 +290,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .north_map_color {
         position: absolute;
         width: 13%;
@@ -279,7 +318,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .west_map_color {
         position: absolute;
         width: 34%;
@@ -288,7 +326,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .south_map_color {
         position: absolute;
         width: 33%;
@@ -297,7 +334,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .north_map_color {
         position: absolute;
         width: 13%;
@@ -326,7 +362,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .west_map_color {
         position: absolute;
         width: 41%;
@@ -335,7 +370,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .south_map_color {
         position: absolute;
         width: 40%;
@@ -344,7 +378,6 @@ path {
         stroke: #fff;
         stroke-width: 2px;
     }
-
     .north_map_color {
         position: absolute;
         width: 15.4%;
@@ -354,21 +387,32 @@ path {
         stroke-width: 2px;
     }
 }
+
 /*
 single.cssの110行目
 .info_actab input[type="checkbox"] + label::after {content: "+";}
 を打ち消している
 */
 
-#east + label::after {
+#east+label::after {
     content: none;
 }
-#west + label::after {
+
+#west+label::after {
     content: none;
 }
-#south + label::after {
+
+#south+label::after {
     content: none;
 }
-#north + label::after {
+
+#north+label::after {
     content: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .search_button_wrap {
+        display: flex;
+        justify-content: space-around;
+    }
 }

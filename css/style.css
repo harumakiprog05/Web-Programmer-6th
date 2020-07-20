@@ -215,11 +215,7 @@
 
 /* ハンバーガーメニュー終 */
 
-.pcgnav {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-}
+
 
 /* メインビジュアルスタイル */
 
@@ -245,7 +241,7 @@
   font-size: 32px;
   text-align: center;
   line-height: 3.5rem;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .main_visual_logo {
