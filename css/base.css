@@ -207,19 +207,19 @@ span {
 }
 
 .under_footer {
-  height: 160px;
+  background-color: #BFE1EC;
+  color: #67A1A6;
 }
 
 .sp_footer .sns_tag h2 {
   color: #707070;
 }
 
-/* PC用フッター */
-
-.pc_footer .col_2 {
-  display: flex;
-  justify-content: space-around;
+.sp_footer .footer_ul li {
+  margin-bottom: 20px;
 }
+
+/* PC用フッター */
 
 .pc_footer .footer_ul {
   color: #707070;
@@ -245,6 +245,9 @@ span {
   color: #00B900;
 }
 
+.pc_footer .under_footer ul {
+  padding: 30px 0;
+}
 .pc_footer .under_footer ul li {
   padding: 0 20px;
 }
@@ -262,6 +265,12 @@ span {
   height: 180px;
 }
 
+.pc_footer .footer_logo{
+display: block;
+margin: 0 auto
+;}
+
+
 .pc_footer {
   display: none;
 }
@@ -272,19 +281,6 @@ span {
 
 .adjustment_height {
   height: 100px;
-}
-
-.sp_footer .sns_tag .fa-instagram {
-  font-size: 40px;
-}
-
-.sns_tag {
-  justify-content: center;
-  padding-bottom: 10px;
-}
-
-.sns_tag h2 {
-  padding: 0 10px;
 }
 
 /* SVG Animation   */
@@ -404,7 +400,7 @@ span {
   }
   .gnav_logo {
     padding: 10px 0;
-    width: 80px;
+    width: 170px;
   }
   .insta_container {
     display: inline-block;
