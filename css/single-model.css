@@ -63,12 +63,14 @@
     top: 0%;
 }
 
-.model_description {
-    background-image: url(../image/model_couse.png);
+.model_description_back {
+    position: absolute;
+    right: 0;
     height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0px -34px;
+    width: 90%;
+}
+
+.model_description {
     z-index: 2;
     margin: auto;
 }
@@ -85,6 +87,24 @@
     }
 }
 
+/*SP版画像配置*/
+.model_sp_img1 {
+}
+
+.model_sp_img2 {
+}
+
+.model_sp_img3 {
+}
+
+.model_sp_img4 {
+}
+
+.model_sp_img5 {
+}
+
+/*PC版画像配置*/
+
 @media screen and (min-width: 940px) {
     .model_card {
         display: flex;
@@ -95,7 +115,11 @@
     .model_card li {
         margin: 0 20px 50px;
     }
-    .model_sp_img1 {
+    .model_sp_img1,
+    .model_sp_img2,
+    .model_sp_img3,
+    .model_sp_img4,
+    .model_sp_img5 {
         display: none;
     }
     .model_description {
