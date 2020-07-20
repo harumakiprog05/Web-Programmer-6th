@@ -115,3 +115,25 @@ $(function () {
         return false;
     });
 });
+
+// archive-model画像フェード切替
+$(".model_fade_1 img:nth-child(n+2)").hide();
+
+setInterval(function () {
+    $(".model_fade_1 img:first-child").fadeOut(2000);
+    $(".model_fade_1 img:nth-child(2)").fadeIn(2000);
+    $(".model_fade_1 img:first-child").appendTo("..model_fade_1");
+}, 4000);
+
+$(".model_fade_2 img:nth-child(n+2)").hide();
+
+setInterval(function () {
+    $(".model_fade_2 img:first-child").fadeOut(2000);
+    $(".model_fade_2 img:nth-child(2)").fadeIn(2000);
+    $(".model_fade_2 img:first-child").appendTo(".model_fade_2");
+}, 4000);
+setInterval(function () {
+    $(".model_fade_3 img:first-child").fadeOut(2000);
+    $(".model_fade_3 img:nth-child(2)").fadeIn(2000);
+    $(".model_fade_3 img:first-child").appendTo(".model_fade_3");
+}, 4000);
