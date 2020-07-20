@@ -73,14 +73,14 @@ let scrollHeight = $(window).scroll(function () {
 
     if ($(window).width() >= 1000) {
         if (scrollVolume > visualHeightHeaf) {
-            $("#pcgnav").fadeIn();
+            $(".toppage_header #pcgnav").fadeIn();
 
         } else {
-            $("#pcgnav").fadeOut();
+            $(".toppage_header #pcgnav").fadeOut();
 
         }
     } else {
-        $("#pcgnav").css("display", "none");
+        $(".toppage_header #pcgnav").css("display", "none");
     }
 
 

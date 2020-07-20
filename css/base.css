@@ -14,7 +14,7 @@ main>section {
   margin-bottom: 150px;
 }
 
-section>section{
+section>section {
   margin-bottom: 100px;
 }
 
@@ -58,6 +58,7 @@ span {
 .more {
   border-radius: 20px;
   padding: 7px 20px;
+  display: block;
 }
 
 /* サークルサイズ */
@@ -65,7 +66,6 @@ span {
 .circle {
   border-radius: 50%;
 }
-
 
 .short_circle_set {
   border-radius: 50%;
@@ -266,8 +266,12 @@ span {
   display: none;
 }
 
-.pcgnav {
+.pcgnav, .adjustment_height {
   display: none;
+}
+
+.adjustment_height {
+  height: 100px;
 }
 
 .sp_footer .sns_tag .fa-instagram {
@@ -383,13 +387,29 @@ span {
   .pcgnav {
     width: 100%;
   }
+  .toppage_header .pcgnav {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .sidepage_header .pcgnav {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .adjustment_height {
+    display: block;
+  }
   .gnav_logo {
     padding: 10px 0;
     width: 80px;
   }
-  .insta_container{
-  display: inline-block;
-  /* min-width: 100%; */
-  margin-left: 50%;
-  transform: translate(-50%,0);    }
+  .insta_container {
+    display: inline-block;
+    /* min-width: 100%; */
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
 }

@@ -73,6 +73,7 @@
 
 
         <!--PC用ナビゲーション-->
+        <div class="adjustment_height"></div>
         <nav id="pcgnav" class="pcgnav theme_color_dark">
             <div class="container">
 
@@ -123,16 +124,20 @@
                         </div>
                     </div>
 
+                    
                     <input class="calm_bdcolor_dark" type="text" placeholder="キーワードで検索" />
+                    <div class="search_button_wrap">
 
-                    <div class="flex">
                         <label class="more calm_color_dark" for=""><input type="submit" value="この条件で検索" /> <i class="fas fa-search"></i></label>
-                        <input class="more calm_bdcolor_dark" type="button" value="条件をクリア" onclick="back();" />
+
+                        <label class="more calm_bdcolor_dark"><input type="button" value="条件をクリア" onclick="back();" /></label>
+
                     </div>
+
 
                     <div class="info_actab">
                         <input id="info_actab_one" type="checkbox" name="tabs" />
-                        <label class="fun_color_dark more" for="info_actab_one">エリアで検索</label>
+                        <label class="fun_color_dark more area_serch_more" for="info_actab_one">エリアで検索</label>
                         <div class="info_actab_content">
                             <div class="area_search_wrap tabele_section">
                                 <div class="area_search_flex">
@@ -190,8 +195,9 @@
 
         <!------- 検索結果表示セクション ------->
         <section class="result_section">
-            <div class="container">
-                <div class="fun_result fun_color_light">
+
+            <div class="fun_result fun_color_light">
+                <div class="container">
                     <h2 class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
 
                     <ul class="result_items flex">
@@ -233,8 +239,10 @@
                         </li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="calm_result calm_color_light">
+            <div class="calm_result calm_color_light">
+                <div class="container">
                     <h2 class="result_categry_title calm_color_dark grande_circle_set">静</h2>
 
                     <ul class="result_items flex">
@@ -264,8 +272,10 @@
                         </li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="yum_result yum_color_light">
+            <div class="yum_result yum_color_light">
+                <div class="container">
                     <h2 class="result_categry_title yum_color_dark grande_circle_set">旨</h2>
 
                     <ul class="result_items flex">
