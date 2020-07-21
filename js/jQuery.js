@@ -16,11 +16,7 @@ $(function () {
         }
     });
     $(document).on("click touchend", function (event) {
-        if (
-            !$(event.target).closest(".bl_header,.el_humburger").length &&
-            $("body").hasClass("js_humburgerOpen") &&
-            focusFlag
-        ) {
+        if (!$(event.target).closest(".bl_header,.el_humburger").length && $("body").hasClass("js_humburgerOpen") && focusFlag) {
             focusFlag = false;
             //scrollBlocker(false);
             spNavInOut.switch();
@@ -102,61 +98,6 @@ $(function () {
 //     $('#modelCourseSlide').slick({
 //  　});
 //  });
-
-//モデルコースシングル用コンテンツが横から出てくる
-jQuery(function () {
-    var appear = false;
-    var pagetop = $("#modelSpotCard1");
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            if (appear == false) {
-                appear = true;
-                pagetop.stop().animate(
-                    {
-                        right: "1%",
-                    },
-                    300
-                );
-            }
-        }
-    });
-});
-
-jQuery(function () {
-    var appear = false;
-    var pagetop = $("#modelSpotCard2");
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 600) {
-            if (appear == false) {
-                appear = true;
-                pagetop.stop().animate(
-                    {
-                        left: "1%",
-                    },
-                    300
-                );
-            }
-        }
-    });
-});
-
-jQuery(function () {
-    var appear = false;
-    var pagetop = $("#modelSpotCard3");
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
-            if (appear == false) {
-                appear = true;
-                pagetop.stop().animate(
-                    {
-                        right: "1%",
-                    },
-                    300
-                );
-            }
-        }
-    });
-});
 
 // archive-model画像フェード切替
 $(".model_fade_1 img:nth-child(n+2)").hide();
