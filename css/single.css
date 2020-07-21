@@ -1,18 +1,19 @@
 .single_eye_catch {
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 .single_description {
     text-align: center;
+    margin: 0 3%;
 }
 
 .single_title {
     margin-top: 50px;
+    color: #9fbf82;
 }
 
 .title_under_bar {
-    border-top: 1px solid #333333;
+    border-top: 3px solid #9fbf82;
     width: 30%;
 }
 
@@ -42,6 +43,7 @@
 
 .sudachi_point {
     margin: 50px auto;
+    max-width: 1000px;
 }
 
 .sudachi_point ul {
@@ -49,15 +51,29 @@
     justify-content: space-between;
 }
 
-.sudachi_point img {
+.sudachi_point img, .inside_modal img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.sudachi_point li {
+.inside_modal img {
+    width: 100px;
+}
+
+.sudachi_point li, .inside_modal li {
     margin: 0 5px;
     position: relative;
+}
+
+.inside_modal li {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.inside_modal p {
+    padding-top: 35px;
+    margin-left: 30px;
 }
 
 .sudachi_point p {
@@ -139,7 +155,6 @@
     text-align: center;
     cursor: pointer;
     margin: 0 auto;
-    background: #83ccd2;
     width: 150px;
     border-radius: 20px;
     margin-bottom: 50px;
