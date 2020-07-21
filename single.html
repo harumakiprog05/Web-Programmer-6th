@@ -29,81 +29,115 @@
     </head>
     
     <body>
-        <div class="body_wrap">
-            <header class="toppage_header">
-    
-    
-                <!--スマホ用ナビゲーション-->
-                <nav class="spgnav">
-                    <div class="el_humburger">
-                        <!--ハンバーガーボタン-->
-                        <div class="el_humburger_wrapper">
-                            <span class="el_humburger_bar top"></span>
-                            <span class="el_humburger_bar middle"></span>
-                            <span class="el_humburger_bar bottom"></span>
-                        </div>
+        <header class="toppage_header">
+
+            <!--スマホ用ナビゲーション-->
+            <nav class="spgnav">
+                <div class="el_humburger">
+                    <!--ハンバーガーボタン-->
+                    <div class="el_humburger_wrapper">
+                        <span class="el_humburger_bar top"></span>
+                        <span class="el_humburger_bar middle"></span>
+                        <span class="el_humburger_bar bottom"></span>
                     </div>
-                    <div class="gnav_inner">
+                </div>
     
-    
-                        <div class="gnav_item">
-                            <a href=""><img class="gnav_logo" src="image\logo.png" alt="ロゴ"></a>
-                        </div>
-                        <div class="gnav_menu">
-                            <a href="">
-                                <div class="gnav_item">
-                                    <span class="fun fun_color_dark tall_circle_set">楽</span>-たのしい-
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="gnav_item">
-                                    <span class="calm calm_color_dark tall_circle_set">静</span>-しずか-
-                                </div>
-                            </a>
-    
-                            <a href="">
-                                <div class="gnav_item">
-                                    <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
-                                </div>
-                            </a>
-    
-                            <a href="">
-                                <div class="gnav_item">モデルコース</div>
-                            </a>
-    
-                            <a href="">
-                                <div class="gnav_item">検索</div>
-                            </a>
-                        </div>
-    
+                <!-- ハンバーガーの中身 -->
+                <div class="gnav_inner">
+                    <div class="gnav_item">
+                        <a href=""><img class="gnav_logo" src="image\logo.png" width="70" alt="ロゴ"></a>
                     </div>
-                </nav>
+                    <div class="gnav_menu">
+                        <a href="">
+                            <div class="gnav_item">
+                                <span class="fun fun_color_dark tall_circle_set">楽</span>-たのしい-
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="gnav_item">
+                                <span class="calm calm_color_dark tall_circle_set">静</span>-しずか-
+                            </div>
+                        </a>
     
-        <div class="main_visual">
+                        <a href="">
+                            <div class="gnav_item">
+                                <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
+                            </div>
+                        </a>
+    
+                        <a href="">
+                            <div class="gnav_item">モデルコース</div>
+                        </a>
+    
+                        <a href="">
+                            <div class="gnav_item">検索</div>
+                        </a>
+                    </div>
+    
+                </div>
+            </nav>
+    
+    
+    
+            
+            <!--PC用ナビゲーション-->
+            <nav id="pcgnav" class="pcgnav theme_color_dark">
+                <div class="container">
+    
+                    <ul class="flex">
+                        <a href="">
+                            <li><img class="gnav_logo" src="image/logo.png" alt="あわいやしロゴ"> </li>
+                        </a>
+                        <a href="">
+                            <li><span class="fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
+                        </a>
+                        <a href="">
+                            <li><span class="calm_color_dark nav_circle_set">静</span>-しずか-</li>
+                        </a>
+                        <a href="">
+                            <li>
+                                <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>モデルコース</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-search"></i> 検索</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+<main>   
+        <div class="single_eye_catch">
             <img
                 class="single_visual_top"
-                src="image/binbi_eye.jpg"
+                src="image/oogawara_thumb.jpg"
                 alt="top-image"
             />
         </div>
 
         <section class="main_category_description">
-            <div class="container">
+            <div class="">
                 <!-- 記事タイトル -->
                 <div class="section_hedding single_title">
-                    <h2 class="global_section_title">びんび屋</h2>
+                    <h2>大川原高原</h2>
                 </div>
                 <!-- 癒しの一言 -->
                 <div class="single_description">
                     <p>
-                        新鮮な魚を求めて海沿いのお店へ
-                        <br />
-                        磯の香りで心やすらぐひと時
+                        気軽に行ける絶景の癒しスポット。<br>
+                        巨大風車の下に広がるのどかな牧場と、幻想的なあじさい畑。
                     </p>
                     <span class="title_under_bar"></span>
+                    
+                    
                 </div>
+                
                 <!-- ポイントタグ -->
-                <div class="sudachi_point">
+                <!-- <div class="sudachi_point">
                     <ul>
                         <li>
                             <img
@@ -113,7 +147,7 @@
                             />
                             <p>絶景</p>
                         </li>
-                        <!-- <li>
+                        <li>
                             <img
                                 class="sudachi_visual"
                                 src="image/awaiyashi_sudachi.png"
@@ -128,8 +162,8 @@
                                 alt=""
                             />
                             <p>やすらぎ</p>
-                        </li> -->
-                        <!-- <li>
+                        </li>
+                        <li>
                             <img
                                 class="sudachi_visual"
                                 src="image/awaiyashi_sudachi.png"
@@ -155,7 +189,7 @@
                                 特産<br />
                                 ローカル
                             </p>
-                        </li> -->
+                        </li>
                         <li>
                             <img
                                 class="sudachi_visual"
@@ -176,18 +210,12 @@
                             <p>ひろびろ</p>
                         </li>
                     </ul>
-                </div>
-                <!-- モーダル -->
+                </div> -->
+                <!-- モーダルウィンドウ -->
                 <div class="modal_wrap">
                 <div class="content">
-                    <a class="js-modal-open" href="">すだち？</a>
-                </div>
-                <div class="modal js-modal">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <p>
-                            ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。
-                        </p>
+                    <p>癒しのポイント</p>
+                    <a class="js-modal-open" href="">
                         <div class="sudachi_point">
                             <ul>
                                 <li>
@@ -198,7 +226,7 @@
                                     />
                                     <p>絶景</p>
                                 </li>
-                                <!-- <li>
+                                <li>
                                     <img
                                         class="sudachi_visual"
                                         src="image/awaiyashi_sudachi.png"
@@ -213,23 +241,30 @@
                                         alt=""
                                     />
                                     <p>やすらぎ</p>
-                                </li> -->
-                                <!-- <li>
-                                    <img
-                                        class="sudachi_visual"
-                                        src="image/awaiyashi_sudachi.png"
-                                        alt=""
-                                    />
-                                    <p>気分転換</p>
                                 </li>
+                                
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+                <div class="modal js-modal">
+                    <div class="modal__bg js-modal-close"></div>
+                    <div class="modal__content">
+                        <p>
+                            すだちは何？？
+                        </p>
+                        <div class="inside_modal">
+                            <ul>
                                 <li>
                                     <img
                                         class="sudachi_visual"
                                         src="image/awaiyashi_sudachi.png"
                                         alt=""
                                     />
-                                    <p>ヘルシー</p>
+                                
+                                    <p>絶景が楽しめる、自然を眺めがら楽しめる場所</p>
                                 </li>
+                                
                                 <li>
                                     <img
                                         class="sudachi_visual"
@@ -237,19 +272,7 @@
                                         alt=""
                                     />
                                     <p>
-                                        特産<br />
-                                        ローカル
-                                    </p>
-                                </li> -->
-                                <li>
-                                    <img
-                                        class="sudachi_visual"
-                                        src="image/awaiyashi_sudachi.png"
-                                        alt=""
-                                    />
-                                    <p>
-                                        交流<br />
-                                        ふれあい
+                                        自然を近くに感じることができる場所
                                     </p>
                                 </li>
                                 <li>
@@ -258,8 +281,57 @@
                                         src="image/awaiyashi_sudachi.png"
                                         alt=""
                                     />
-                                    <p>ひろびろ</p>
+                                    <p>身体と心を休める場所</p>
                                 </li>
+                                <li>
+                                    <img
+                                        class="sudachi_visual"
+                                        src="image/awaiyashi_sudachi.png"
+                                        alt=""
+                                    />
+                                
+                                    <p>絶景が楽しめる、自然を眺めがら楽しめる場所</p>
+                                </li>
+                                
+                                <li>
+                                    <img
+                                        class="sudachi_visual"
+                                        src="image/awaiyashi_sudachi.png"
+                                        alt=""
+                                    />
+                                    <p>
+                                        健康を考えた施設や工夫、食べ物を体験できる場所
+                                    </p>
+                                </li>
+                                <li>
+                                    <img
+                                        class="sudachi_visual"
+                                        src="image/awaiyashi_sudachi.png"
+                                        alt=""
+                                    />
+                                    <p>地元の人や同じ目的の人との交流、
+                                        動物と触れ合える場所</p>
+                                </li><li>
+                                    <img
+                                        class="sudachi_visual"
+                                        src="image/awaiyashi_sudachi.png"
+                                        alt=""
+                                    />
+                                
+                                    <p>徳島の環境や地形を活かしたもの</p>
+                                </li>
+                                
+                                <li>
+                                    <img
+                                        class="sudachi_visual"
+                                        src="image/awaiyashi_sudachi.png"
+                                        alt=""
+                                    />
+                                    <p>
+                                        3密回避
+                                    </p>
+                                </li>
+                                
                             </ul>
                         </div>
                         <a class="js-modal-close" href="">閉じる</a>
@@ -268,11 +340,11 @@
                 </div>
             </div>
                 <!--modal-->
-            </div>
+            <!-- </div> -->
             <!-- 施設詳細 -->
             <div class="info_actab">
                 <input id="info_actab_one" type="checkbox" name="tabs" />
-                <label class="label_cross calm_color_dark" for="info_actab_one"
+                <label class="label_cross fun_color_dark" for="info_actab_one"
                     >詳細情報</label
                 >
                 <div class="info_actab_content">
@@ -362,21 +434,39 @@
             </div>
             <!-- 記事コンテンツ -->
             <div class="single_page_contents container">
-                <img class="single_visual" src="image/binbi_eye.jpg" alt="" />
+                <!-- 画像1枚バージョン -->
+                <img class="single_visual" src="image/oogawara_.01.jpg" alt="" />
 
                 <p class="single_text">
-                    瀬戸内海を望む道路沿いにたつびんび屋<br />
-                    お昼時で混んでいても、目の前の景色を眺めていれば待ち時間も気にならない？<br />
-                    生簀で元気に泳ぐハマチやタイは子どもの目も釘付けです
+                    徳島の癒しの絶景スポットといえばここ大川原高原です。
+標高900ｍの山頂にある高原へは、徳島市内からも車で約１時間弱で行けるお手軽なドライブコースでもあり、
+天気のいい日には徳島平野や紀伊水道、淡路島までも見渡すことができます。
                 </p>
+                <!-- 画像2枚バージョン -->
                 <div class="image_wrap">
-                    <img class="single_visual" src="image/binbi_4.jpg" alt="" />
-                    <img class="single_visual" src="image/binbi_5.JPG" alt="" />
+                    <img class="single_visual" src="image/oogawara_02.jpg" alt="" />
+                    <img class="single_visual" src="image/oogawara_03.jpg" alt="" />
                 </div>
                 <p class="single_text">
-                    瀬戸内海を望む道路沿いにたつびんび屋<br />
-                    お昼時で混んでいても、目の前の景色を眺めていれば待ち時間も気にならない？<br />
-                    生簀で元気に泳ぐハマチやタイは子どもの目も釘付けです
+                    高原のシンボルでもある15基の巨大風車。その真下には牧場が広がり、初夏から秋にかけて牛が放牧されています。
+牧場の静かな風景の中でのんびり過ごしたり、遊歩道やクロスカントリーのコースも整備されているので、
+澄んだ高原の空気を吸いながら歩けば、心も身体もリフレッシュできます。
+                </p>
+                <!-- 画像1枚バージョン -->
+                <img class="single_visual" src="image/oogawara_04.jpg" alt="" />
+
+                <p class="single_text">
+                    普段はのどかな大川原高原ですが、毎年７月の上旬には約３万株のあじさいが開花し、たくさんの観光客が訪れます。
+真っ青に染った高原はとても幻想的で、カメラが好きな人には絶好のフォトスポットでもあります。
+                </p>
+                <!-- 画像2枚バージョン -->
+                <div class="image_wrap">
+                    <img class="single_visual" src="image/oogawara_05.jpg" alt="" />
+                    <img class="single_visual" src="image/oogawara_06.jpg" alt="" />
+                </div>
+                <p class="single_text">
+                    牧場とあじさい畑の間辺りにある一軒茶屋では、大川原高原オリジナルのソフトクリームを食べることができます。
+景色を楽しんだ後の甘く濃厚なソフトクリームは格別です！高原散策のシメにいかがでしょうか。
                 </p>
             </div>
             <!-- ニコちゃんマーク -->
@@ -414,8 +504,6 @@
                         </div>
                         <p>祖谷のかずら橋</p>
                     </li>
-                </ul>
-                <ul class="spot container">
                     <li>
                         <div>
                             <img
@@ -436,7 +524,59 @@
                         </div>
                         <p>祖谷のかずら橋</p>
                     </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>祖谷のかずら橋</p>
+                    </li>
+                    <!-- <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>祖谷のかずら橋</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>祖谷のかずら橋</p>
+                    </li> -->
                 </ul>
+                <!-- <ul class="spot container">
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>祖谷のかずら橋</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img
+                                class="spot_visual"
+                                src="image/main_visual_img.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>祖谷のかずら橋</p>
+                    </li>
+                </ul> --> 
             </div>
         </section>
 
@@ -450,121 +590,89 @@
                 <!-- ここにインスタのAPI -->
             </div>
         </section>
+    </main> 
+	<footer>
 
-		<footer>
+		<!-- スマートフォン用フッター -->
+		<div class="sp_footer">
+			<div class="wave_footer">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
+					</g>
+				</svg>
+			</div>
 
-			<!-- スマートフォン用フッター -->
-			<div class="sp_footer">
-				<div class="wave_footer">
-					<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-						<defs>
-							<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-						</defs>
-						<g class="parallax">
-							<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
-							<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
-							<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
-							<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
-						</g>
-					</svg>
-				</div>
-				<div class="on_footer theme_color_light">
-					<div class="flex sns_tag">
-						<img src="image/instagram_logo.png" width="50" alt="">
-						<h2>#あわいやし</h2>
-					</div>
-					<div class="formbutton_parent">
 
-						<a href="">
-							<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
-						</a>
+			<div class="under_footer">
+				<ul class="footer_ul">
+					<li>お問い合わせ</li>
+					<li>運営者情報</li>
 
-						<button class="top_return grande_circle_set calm_color_dark circle"><i class="fas fa-chevron-up"></i></button>
-					</div>
-				</div>
+					<li>プライバシーポリシー</li>
+				</ul>
+				<a href="">
+					<h1><img src="image\logo.png" width="170" alt="あわいやしロゴ"></h1>
+				</a>
+				<small class="copyright">Copyright © あわいやし. All rights reserved.</small>
 
-				<div class="under_footer theme_color_dark">
-					<ul class="footer_ul">
-						<a href="">
-							<li>運営者情報</li>
-						</a>
-						<a href="">
-							<li>プライバシーポリシー</li>
-						</a>
-					</ul>
-					<a href="">
-						<h1><img src="image\logo_white.png" alt="あわいやしロゴ"></h1>
-					</a>
-					<small class="copyright">Copyright © あわいやし. All rights reserved.</small>
+			</div>
 
-				</div>
+		</div>
 
+
+
+		<!-- PC用フッター -->
+		<div class="pc_footer">
+
+
+
+			<div class="wave_footer">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
+					</g>
+				</svg>
 			</div>
 
 
 
-			<!-- PC用フッター -->
-			<div class="pc_footer">
-
-
-
-				<div class="wave_footer">
-					<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-						<defs>
-							<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-						</defs>
-						<g class="parallax">
-							<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.1)" />
-							<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(175, 238, 238, 0.4)" />
-							<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(25, 25, 112, 0.05)" />
-							<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(173, 216, 230, 0.4)" />
-						</g>
-					</svg>
-				</div>
-
-				<div class="on_footer theme_color_light">
-					<div class="flex">
-
-						<ul class="footer_ul flex">
-							<li>SNSシェア</li>
-							<li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-							<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-							<li><a href=""><i class="fab fa-line"></i></a></li>
-						</ul>
-
-						<a href="">
-							<button class="more calm_color_dark">お問い合わせ　<i class="fas fa-chevron-right"></i></button>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="under_footer theme_color_dark flex">
+			<div class="under_footer theme_color_dark centering">
+				<div class="container">
 					<ul class="flex left">
-						<a href="">
-							<li>運営者情報</li>
-						</a>
-						<a href="">
-							<li>プライバシーポリシー</li>
-						</a>
+						<li><a href="">運営者情報</a></li>
+						<li><a href="">プライバシーポリシー</a></li>
+						<li><a href="">お問い合わせ</a></li>
 					</ul>
-					<div class="right">
-						<a href="">
-							<h1><img src="image/logo_white.png" alt="あわいやしロゴ"></h1>
-						</a>
-						<small>Copyright © あわいやし. All rights reserved.</small>
 
-					</div>
+					<img src="image/logo.png" class="footer_logo" alt="">
 
+					<small>Copyright © あわいやし. All rights reserved.</small>
 				</div>
-
 
 			</div>
 
-			<!--CDNでjQuery読み込む-->
-			<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-			<script type="text/javascript" src="js/slick.min.js"></script>
-			<script src="js\jQuery.js"></script>
-		</footer>
+
+
+
+		</div>
+
+		<!--CDNでjQuery読み込む-->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script src="js\jQuery.js"></script>
+	</footer>
 </body>
 </html>

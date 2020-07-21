@@ -1,7 +1,20 @@
-/* ハンバーガーメニュー始 */
+.single_eye_catch {
+    margin: 0 auto;
+}
+
+.single_description {
+    text-align: center;
+    margin: 0 3%;
+}
 
 .single_title {
-    padding-top: 30px;
+    margin-top: 50px;
+    color: #9fbf82;
+}
+
+.title_under_bar {
+    border-top: 3px solid #9fbf82;
+    width: 30%;
 }
 
 .image_wrap {
@@ -17,6 +30,11 @@
     margin-bottom: 50px;
 }
 
+.sudachi_point p {
+    margin-bottom: 0;
+    line-height: 20px;
+}
+
 @media screen and (min-width: 940px) {
     .container {
         max-width: 1000px;
@@ -24,7 +42,8 @@
 }
 
 .sudachi_point {
-    margin: 80px auto;
+    margin: 50px auto;
+    max-width: 1000px;
 }
 
 .sudachi_point ul {
@@ -32,15 +51,29 @@
     justify-content: space-between;
 }
 
-.sudachi_point img {
+.sudachi_point img, .inside_modal img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.sudachi_point li {
+.inside_modal img {
+    width: 100px;
+}
+
+.sudachi_point li, .inside_modal li {
     margin: 0 5px;
     position: relative;
+}
+
+.inside_modal li {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.inside_modal p {
+    padding-top: 35px;
+    margin-left: 30px;
 }
 
 .sudachi_point p {
@@ -56,8 +89,11 @@
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 1000px;
     z-index: 999;
+}
+
+.modal_wrap {
+    text-align: center;
 }
 
 .modal__bg {
@@ -65,7 +101,6 @@
     height: 100vh;
     position: absolute;
     width: 100%;
-    max-width: 1000px;
 }
 
 .modal__content {
@@ -75,10 +110,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-.modal_wrap {
-    margin: 0;
+    width: 80%;
 }
 
 .image_wrap img {
@@ -123,7 +155,6 @@
     text-align: center;
     cursor: pointer;
     margin: 0 auto;
-    background: #83ccd2;
     width: 150px;
     border-radius: 20px;
     margin-bottom: 50px;
@@ -262,22 +293,17 @@ iframe {
 
 .spot {
     display: flex;
-    justify-content: space-between;
-}
-
-@media screen and (min-width: 940px) {
-    .spot_wrap {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .spot_visual {
-    width: 95%;
-    height: 50%;
+    width: 100%;
     object-fit: cover;
+}
+
+.spot li {
+    width: 300px;
 }
 
 .spot p {
