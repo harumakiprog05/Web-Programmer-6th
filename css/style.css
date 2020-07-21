@@ -248,6 +248,18 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  filter: brightness(70%);
+  animation-name: inout;
+  animation-duration: 10s;
+}
+
+@keyframes inout {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.3, 1.3);
+  }
 }
 
 .visual_logo_wrap {
@@ -376,12 +388,20 @@
 
 /* モデルコースセクション */
 
-.awaiyashi_plan h2{
+.awaiyashi_plan h2 {
   margin-bottom: 10px;
 }
-.awaiyashi_plan h3{
+
+.awaiyashi_plan h3 {
   margin-bottom: 20px;
 }
+
+.model_bg_image {
+  background-image: url("../image/model_bg_image.jpg");
+  background-size: cover;
+  min-height: 400px;
+}
+
 /* インスタセクション */
 
 .instagram {

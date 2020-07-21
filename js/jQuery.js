@@ -83,10 +83,10 @@ let scrollHeight = $(window).scroll(function () {
 $(".main_visual_images img:nth-child(n+2)").hide();
 
 setInterval(function () {
-    $(".main_visual_images img:first-child").fadeOut(2000);
-    $(".main_visual_images img:nth-child(2)").fadeIn(2000);
+    $(".main_visual_images img:first-child").fadeOut(3000);
+    $(".main_visual_images img:nth-child(2)").fadeIn(3000);
     $(".main_visual_images img:first-child").appendTo(".main_visual_images");
-}, 4000);
+}, 3000);
 
 
 
@@ -118,3 +118,28 @@ $(function (){
 })
 
 // トップページのモデルコーススライドショー
+
+$(function () {
+    $('.modelcose_slide_wrap').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        slidesToShow: 5,
+        infinite: true,
+        responsive: [
+
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ]
+    });
+})

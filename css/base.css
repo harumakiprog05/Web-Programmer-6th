@@ -21,6 +21,7 @@ section>section {
 h2 {
   font-size: 24px;
 }
+
 h3 {
   font-size: 20px;
 }
@@ -383,6 +384,10 @@ span {
   .spgnav, .sp_footer {
     display: none !important;
   }
+
+  br.sp{
+    display: none;
+  }
   /* PC版は表示 */
   .pc_footer {
     display: block;
@@ -426,5 +431,8 @@ span {
     /* min-width: 100%; */
     margin-left: 50%;
     transform: translate(-50%, 0);
+  }
+  .category_catch_copy{
+    margin-bottom: 50px;
   }
 }
