@@ -1,27 +1,23 @@
 .foam_wrap span {
-  color: #eec362;
+    color: #eec362;
 }
 
-.foam_wrap input[type="text"],
-.foam_wrap input[type="tel"],
-.foam_wrap input[type="email"],
-textarea {
-  width: 510px;
-  padding: 5px;
-  box-sizing: border-box;
-  background-color: #e1f6f7;
+.foam_wrap input[type="text"], .foam_wrap input[type="tel"], .foam_wrap input[type="email"], textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #e1f6f7;
 }
 
 .foam_wrap dl {
-  text-align: left;
-  padding-bottom: 20px;
+    text-align: left;
+    padding-bottom: 20px;
 }
 
 .button {
-  margin: 100px;
+    margin: 100px;
 }
 
 .foam_wrap {
-  margin: 0 auto;
-  max-width: 510px;
+    margin: 0 auto;
 }
