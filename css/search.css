@@ -66,7 +66,9 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result, .calm_result, .yum_result {
+.fun_result,
+.calm_result,
+.yum_result {
     margin-bottom: 50px;
 }
 
@@ -139,19 +141,19 @@ input::placeholder {
     pointer-events: none;
 }
 
-#east:checked+label .map_color {
+#east:checked + label .map_color {
     fill: #000;
 }
 
-#west:checked+label .map_color {
+#west:checked + label .map_color {
     fill: #fdbc00;
 }
 
-#south:checked+label .map_color {
+#south:checked + label .map_color {
     fill: #83ccd2;
 }
 
-#north:checked+label .map_color {
+#north:checked + label .map_color {
     fill: #888888;
 }
 
@@ -179,7 +181,7 @@ path {
 .east_map_color {
     position: absolute;
     width: 17%;
-    right: 37.5%;
+    right: 55.5%;
     top: 21.9%;
     stroke: #fff;
     stroke-width: 2px;
@@ -188,7 +190,7 @@ path {
 .west_map_color {
     position: absolute;
     width: 32%;
-    right: 46.1%;
+    right: 64.1%;
     top: 11.3%;
     stroke: #fff;
     stroke-width: 2px;
@@ -198,7 +200,7 @@ path {
     position: absolute;
     width: 31%;
     top: 34.5%;
-    right: 31.3%;
+    right: 49.3%;
     stroke: #fff;
     stroke-width: 2px;
 }
@@ -207,7 +209,7 @@ path {
     position: absolute;
     width: 12%;
     top: 1.7%;
-    right: 35.59%;
+    right: 53.59%;
     stroke: #fff;
     stroke-width: 2px;
 }
@@ -225,7 +227,7 @@ path {
     .east_map_color {
         position: absolute;
         width: 18%;
-        right: 21%;
+        right: 42%;
         top: 25.4%;
         stroke: #fff;
         stroke-width: 2px;
@@ -233,7 +235,7 @@ path {
     .west_map_color {
         position: absolute;
         width: 34%;
-        right: 30%;
+        right: 51%;
         top: 17%;
         stroke: #fff;
         stroke-width: 2px;
@@ -242,7 +244,7 @@ path {
         position: absolute;
         width: 33%;
         top: 35.5%;
-        right: 14.2%;
+        right: 35.2%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -250,7 +252,7 @@ path {
         position: absolute;
         width: 13%;
         top: 8.9%;
-        right: 18.72%;
+        right: 39.72%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -269,7 +271,7 @@ path {
     .east_map_color {
         position: absolute;
         width: 18%;
-        right: 35.8%;
+        right: 41.8%;
         top: 26.4%;
         stroke: #fff;
         stroke-width: 2px;
@@ -277,7 +279,7 @@ path {
     .west_map_color {
         position: absolute;
         width: 34%;
-        right: 44.8%;
+        right: 50.8%;
         top: 18.5%;
         stroke: #fff;
         stroke-width: 2px;
@@ -286,7 +288,7 @@ path {
         position: absolute;
         width: 33%;
         top: 35.5%;
-        right: 29.2%;
+        right: 35.2%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -294,7 +296,7 @@ path {
         position: absolute;
         width: 13%;
         top: 11%;
-        right: 33.6%;
+        right: 39.6%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -313,7 +315,7 @@ path {
     .east_map_color {
         position: absolute;
         width: 18%;
-        right: 31%;
+        right: 54%;
         top: 26.4%;
         stroke: #fff;
         stroke-width: 2px;
@@ -321,7 +323,7 @@ path {
     .west_map_color {
         position: absolute;
         width: 34%;
-        right: 40%;
+        right: 63%;
         top: 18.5%;
         stroke: #fff;
         stroke-width: 2px;
@@ -330,7 +332,7 @@ path {
         position: absolute;
         width: 33%;
         top: 35.5%;
-        right: 24.2%;
+        right: 47.2%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -338,7 +340,7 @@ path {
         position: absolute;
         width: 13%;
         top: 10.9%;
-        right: 28.82%;
+        right: 51.82%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -357,7 +359,7 @@ path {
     .east_map_color {
         position: absolute;
         width: 22%;
-        right: 32.4%;
+        right: 46.4%;
         top: 27.8%;
         stroke: #fff;
         stroke-width: 2px;
@@ -365,7 +367,7 @@ path {
     .west_map_color {
         position: absolute;
         width: 41%;
-        right: 43.4%;
+        right: 57.4%;
         top: 21.4%;
         stroke: #fff;
         stroke-width: 2px;
@@ -374,7 +376,7 @@ path {
         position: absolute;
         width: 40%;
         top: 35.5%;
-        right: 24.2%;
+        right: 38.2%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -382,7 +384,7 @@ path {
         position: absolute;
         width: 15.4%;
         top: 15.6%;
-        right: 29.99%;
+        right: 43.99%;
         stroke: #fff;
         stroke-width: 2px;
     }
@@ -394,19 +396,19 @@ single.cssの110行目
 を打ち消している
 */
 
-#east+label::after {
+#east + label::after {
     content: none;
 }
 
-#west+label::after {
+#west + label::after {
     content: none;
 }
 
-#south+label::after {
+#south + label::after {
     content: none;
 }
 
-#north+label::after {
+#north + label::after {
     content: none;
 }
 
