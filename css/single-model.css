@@ -16,7 +16,7 @@
     position: fixed;
     height: 100vh;
     width: 1920px;
-    z-index: -1;
+    z-index: -5;
 }
 /* ハンバーガーメニュー始 */
 .model_spot_card {
@@ -42,15 +42,15 @@
         display: none;
     }
     .spot_fade_in1 {
-        top: 60%;
+        top: 47%;
         right: -40%;
     }
     .spot_fade_in2 {
-        top: 122%;
+        top: 113%;
         left: -40%;
     }
     .spot_fade_in3 {
-        top: 185%;
+        top: 176%;
         right: -40%;
     }
 }
