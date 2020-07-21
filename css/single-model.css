@@ -11,6 +11,13 @@
     }
 }
 
+/*背景画像*/
+.background_img img {
+    position: fixed;
+    height: 100vh;
+    width: 1920px;
+    z-index: -1;
+}
 /* ハンバーガーメニュー始 */
 .model_spot_card {
     border: solid 3px #c8a87a;
