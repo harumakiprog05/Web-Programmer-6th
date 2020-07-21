@@ -96,13 +96,32 @@ setInterval(function () {
 }, 4000);
 
 
+
+// カテゴリーごとのスポットスライドショー
+
+$(function (){
+    $('.spot_slide_wrap').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        slidesToShow: 5,
+        infinite: true,
+        responsive: [
+
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ]
+    });
+})
+
 // トップページのモデルコーススライドショー
-
-$(function () {
-    $('#modelCourseSlide').slick();
-});
-
-// $(document).ready(function () {
-//     $('#modelCourseSlide').slick({
-//  　});
-//  });

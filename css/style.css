@@ -215,8 +215,6 @@
 
 /* ハンバーガーメニュー終 */
 
-
-
 /* メインビジュアルスタイル */
 
 .main_visual {
@@ -237,17 +235,39 @@
   position: absolute;
   top: 50vh;
   left: 50%;
+  width: 100%;
   color: white;
-  font-size: 32px;
+  font-size: 8vw;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 15vw;
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black;
 }
 
-.main_visual_logo {
+.main_visual_image {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+
+.visual_logo_wrap {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  width: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main_visual_logo {
+  width: 70%;
+}
+
+.visual_subtitle {
+  color: white;
+  width: 100%;
+  font-size: 3vw;
 }
 
 /* あわいやしとは？セクション */
@@ -259,13 +279,18 @@
 
 .top_category_set {
   display: flex;
-  /* width: 200px; */
-  justify-content: center;
+  width: 70%;
+  max-width: 400px;
+  justify-content: space-around;
   margin: 0px auto 50px;
 }
 
-.top_category_set li {
-  margin: 0 50px;
+.site_about_end {
+  font-size: 20px;
+}
+
+.contents_copy {
+  margin-bottom: 30px;
 }
 
 /* メインカテゴリーセクション */
@@ -288,15 +313,15 @@
 }
 
 .global_section_title {
-  margin-bottom: 100px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .global_section_title p {
   font-size: 14px;
 }
 
-.fun_category {
+/* .fun_category {
   background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ddebd1 20%, #ddebd1 100%);
 }
 
@@ -306,6 +331,27 @@
 
 .yum_category {
   background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ede3cc 20%, #ede3cc 100%);
+} */
+
+.fun_category_image {
+  background-image: url("../image/category_img_fun.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 170px;
+}
+
+.calm_category_image {
+  background-image: url("../image/category_img_calm.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 170px;
+}
+
+.yum_category_image {
+  background-image: url("../image/category_img_yum.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 170px;
 }
 
 .spot_img_frame {
@@ -321,49 +367,21 @@
 }
 
 .category_catch_copy {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  font-family: "Yu Mincho";
-  /* Windows用 */
-  color: white;
-  background-color: #2a2a2a60;
-  padding: 5px 20px;
-  text-align: left;
-  line-height: 1.9rem;
+  font-size: 18px;
 }
 
-.fun_category span, .yum_category span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-
-.calm_category span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
+.fun_category span, .calm_category span, .yum_category span {
+  transform: translate(0, -50%);
 }
 
 /* モデルコースセクション */
 
-.model_course_parent {
-  position: relative;
-  width: 100%;
-  margin-bottom: 50px;
+.awaiyashi_plan h2{
+  margin-bottom: 10px;
 }
-
-.model_course_parent .model_course_mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
-  right: 0;
-  transform: scale(1.001);
+.awaiyashi_plan h3{
+  margin-bottom: 20px;
 }
-
 /* インスタセクション */
 
 .instagram {
@@ -379,13 +397,9 @@
 .insta_container {
   color: white;
   background-color: rgba(80, 80, 80, 0.5);
-  /* opacity: 0.3; */
-  padding: 30px 0;
 }
 
-.insta_container {
-  padding: 0 100px;
-}
+.insta_container {}
 
 .insta_container .container {
   padding: 50px 0;
@@ -395,4 +409,48 @@
   font-size: 27px;
   margin-top: 30px;
   font-weight: 600;
+}
+
+@media screen and (min-width:1000px) {
+  .main_catch_copy {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+  .main_visual_image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .visual_logo_wrap {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 30%;
+    z-index: 3;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+  .main_visual_logo {
+    width: 60%;
+  }
+  .visual_subtitle {
+    color: white;
+    width: 100%;
+    font-size: 1.3vw;
+  }
+  .fun_category_image {
+    height: 500px;
+  }
+  .calm_category_image {
+    height: 500px;
+  }
+  .yum_category_image {
+    height: 500px;
+  }
+  .category_catch_copy {
+    font-size: 34px;
+  }
+  .insta_container {
+    padding: 0 70px;
+  }
 }
