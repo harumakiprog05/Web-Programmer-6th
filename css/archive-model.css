@@ -14,6 +14,27 @@
 
 /* 上下イラスト飾り */
 
+.model_head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.model_pc_img_top {
+    width: 200px;
+}
+
+.right_top {
+    position: absolute;
+    top: 68px;
+    left: 65%;
+}
+
+.left_top {
+    top: 200px;
+    left: 20%;
+    position: absolute;
+}
+
 .model_pc_img_top img, .model_pc_img img {
     width: 100%;
     object-fit: cover;
@@ -37,25 +58,46 @@
     }
 }
 
+/* パンクズ */
+
+.pankuzu {
+    padding-left: 50px;
+}
+
+.pankuzu ul {
+    display: table;
+}
+
+.pankuzu ul li {
+    margin: 7px 0;
+    float: left;
+}
+
 /* メインコンテンツ */
 
 .model_spot_wrap {
     margin: 0 3%;
 }
 
-.model_pc_img_top {
+@media screen and (min-width: 480px) {
+    .model_spot_wrap {
+        margin: 0;
+    }
+}
+
+/* .model_pc_img_top {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 /* 各モデルコース画像 */
 
 .model_course_card {
     position: relative;
-    height: 75vw;
-    max-height: 750px;
+    height: 38vw;
+    max-height: 380px;
 }
 
 .model_course_card img {
@@ -75,6 +117,11 @@
     margin-bottom: 10px;
 }
 
+h3 {
+    font-size: 20px;
+}
+
+/* 
 @media screen and (min-width: 480px) {
     .model_text h3, .model_card_description {
         text-align: left;
@@ -82,4 +129,4 @@
     .model_more {
         text-align: end;
     }
-}
+} */
