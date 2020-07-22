@@ -157,7 +157,7 @@ span {
 }
 
 .calm_ftcolor_dark {
-  color: #83ccd2;
+  color: #67A1A6;
 }
 
 /* 旨カラー */
@@ -279,6 +279,10 @@ span {
   color: #00B900;
 }
 
+.pc_footer .under_footer {
+  background-color: #BFE1EC;
+}
+
 .pc_footer .under_footer ul {
   padding: 30px 0;
 }
@@ -303,6 +307,7 @@ span {
 .pc_footer .footer_logo {
   display: block;
   margin: 0 auto;
+  width: 170px;
 }
 
 .pc_footer {
