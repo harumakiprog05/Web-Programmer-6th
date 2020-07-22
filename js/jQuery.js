@@ -80,19 +80,22 @@ let scrollHeight = $(window).scroll(function () {
 });
 
 // メインビジュアルのフェードイン・アウト
-// $(".main_visual_images img:nth-child(n+2)").hide();
 
-// setInterval(function () {
-//     $(".main_visual_images img:first-child").fadeOut(3000);
-//     $(".main_visual_images img:nth-child(2)").fadeIn(3000);
-//     $(".main_visual_images img:first-child").appendTo(".main_visual_images");
-//     // $(".main_visual_images img:first-child").hide;
-// }, 3000);
-
-$(".main_visual_images img:not(:first-child)").hide();
-setInterval(function () {
-    $(".main_visual_images img:first-child").fadeOut("slow").next("img").fadeIn("slow").end().appendTo("..main_visual_images");
-}, 3000);
+$(function () {
+    var $width = "100%"; // 横幅
+    var $height = "100vh"; // 高さ
+    var $interval = 4000; // 切り替わりの間隔（ミリ秒）
+    var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+    $(".main_visual_images ul li").css({ position: "relative", overflow: "hidden", width: $width, height: $height });
+    $(".main_visual_images ul li").hide().css({ position: "absolute", top: 0, left: 0 });
+    $(".main_visual_images ul li:first").addClass("active").show();
+    setInterval(function () {
+        var $active = $(".main_visual_images ul li.active");
+        var $next = $active.next("li").length ? $active.next("li") : $(".main_visual_images ul li:first");
+        $active.fadeOut($fade_speed).removeClass("active");
+        $next.fadeIn($fade_speed).addClass("active");
+    }, $interval);
+});
 
 // カテゴリーごとのスポットスライドショー
 
@@ -144,15 +147,14 @@ $(function () {
             },
         ],
     });
-})
-
+});
 
 // トップへ戻るボタン実装
 $("#top_return_button").css("display", "none");
 
 // ボタンの表示・非表示
 $(document).ready(function () {
-    var pagetop = $('#top_return_button');
+    var pagetop = $("#top_return_button");
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 500) {
@@ -164,7 +166,7 @@ $(document).ready(function () {
 
     // クリックでトップへ戻る
     pagetop.click(function () {
-        $('body, html').animate({ scrollTop: 0 }, 500);
+        $("body, html").animate({ scrollTop: 0 }, 500);
         return false;
     });
 });
