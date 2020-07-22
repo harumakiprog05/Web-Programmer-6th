@@ -144,4 +144,27 @@ $(function () {
             },
         ],
     });
+})
+
+
+// トップへ戻るボタン実装
+$("#top_return_button").css("display", "none");
+
+// ボタンの表示・非表示
+$(document).ready(function () {
+    var pagetop = $('#top_return_button');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            pagetop.fadeIn();
+        } else {
+            pagetop.fadeOut();
+        }
+    });
+
+    // クリックでトップへ戻る
+    pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
 });
