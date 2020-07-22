@@ -14,7 +14,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <header class="toppage_header">
 
     <!-- ▼ スマホ用ナビゲーション : 開始 -->
@@ -65,47 +65,71 @@
     </nav>
     <!-- ▲ スマホ用ナビゲーション : 終了 -->
 
+
+    <!-- ▼ メインビジュアル : 開始 -->
+    <div class="main_visual_contain">
+      <div id="main_visual" class="main_visual">
+        <div class="main_visual_images">
+          <ul>
+            <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_01.jpg")); ?>" alt="top-image" /></li>
+            <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_02.jpg")); ?>" alt="top-image" /></li>
+            <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_03.jpg")); ?>" alt="top-image" /></li>
+          </ul>
+        </div>
+        <div class="visual_logo_wrap">
+          <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="main_visual_logo" alt="" />
+          <h2 class="visual_subtitle">とくしまの癒し再発見。</h2>
+        </div>
+        <h1 class="main_catch_copy">ゆっくりするから、<br />見えてくるもの。</h1>
+      </div>
+    </div>
+    <!-- ▲ メインビジュアル : 終了 -->
+
+
     <!-- ▼ PC用ナビゲーション : 開始 -->
     <nav id="pcgnav" class="pcgnav theme_color_dark">
       <div class="container">
 
         <ul class="flex">
-          <a href="<?php echo home_url('/'); ?>">
-            <li><img src="<?php echo esc_url(get_theme_file_uri("image/logo_white.png")); ?>" alt="あわいやしロゴ"> </li>
-          </a>
-          <a href="<?php echo esc_url(get_term_link(2)); ?>">
-            <li><span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
-          </a>
-          <a href="<?php echo esc_url(get_term_link(3)); ?>">
-            <li><span class="circle calm_color_dark nav_circle_set">静</span>-しずか-</li>
-          </a>
-          <a href="<?php echo esc_url(get_term_link(4)); ?>">
-            <li>
+          <li>
+            <a href="<?php echo home_url('/'); ?>">
+              <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" alt="あわいやしロゴ">
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(get_term_link(2)); ?>">
+              <span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(get_term_link(3)); ?>">
+              <span class="circle calm_color_dark nav_circle_set">静</span>-しずか-
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(get_term_link(4)); ?>">
+
               <span class="circle yum_color_dark nav_circle_set">旨</span>-うまい-
-            </li>
-          </a>
-          <a href="<?php echo esc_url(get_post_type_archive_link('model')); ?>">
-            <li>モデルコース</li>
-          </a>
-          <a href="<?php echo home_url('/?s=&post_type=spot'); ?>">
-            <li><i class="fas fa-search"></i> 検索</li>
-          </a>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(get_post_type_archive_link('model')); ?>">
+              モデルコース
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo home_url('/?s=&post_type=spot'); ?>">
+              <i class="fas fa-search"></i> 検索
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <!-- ▲ PC用ナビゲーション : 終了 -->
-
-    <!-- ▼ メインビジュアル : 開始 -->
-    <!-- <div id="main_visual" class="main_visual">
-      <img class="main_visual_logo" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img.png")); ?>" alt="top-image">
-      <h1 class="main_catch_copy">ゆっくりするから、<br>見えてくるもの。</h1>
-    </div> -->
-    <!-- ▲ メインビジュアル : 終了 -->
 
     <!-- ▼ パンくずリスト : 開始-->
     <nav class="breadcrumb">
       <?php breadcrumb(); ?>
     </nav>
     <!-- ▲ パンくずリスト : 終了-->
-
   </header>
