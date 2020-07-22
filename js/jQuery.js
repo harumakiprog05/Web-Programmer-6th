@@ -128,36 +128,23 @@ $(function () {
 $(function () {
     $(".modelcose_slide_wrap").slick({
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         dots: true,
-        slidesToShow: 5,
+        slidesToShow: 1,
         infinite: true,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-        ],
+
     });
 });
 
 // トップへ戻るボタン実装
-$("#top_return_button").css("display", "none");
+$(".top_return_button").css("display", "none");
 
 // ボタンの表示・非表示
 $(document).ready(function () {
-    var pagetop = $("#top_return_button");
+    var pagetop = $(".top_return_button");
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 500) {
+        if ($(this).scrollTop() > 800) {
             pagetop.fadeIn();
         } else {
             pagetop.fadeOut();
@@ -166,7 +153,7 @@ $(document).ready(function () {
 
     // クリックでトップへ戻る
     pagetop.click(function () {
-        $("body, html").animate({ scrollTop: 0 }, 500);
+        $("body, html").animate({ scrollTop: 0 }, 800);
         return false;
     });
 });
