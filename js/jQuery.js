@@ -80,12 +80,18 @@ let scrollHeight = $(window).scroll(function () {
 });
 
 // メインビジュアルのフェードイン・アウト
-$(".main_visual_images img:nth-child(n+2)").hide();
+// $(".main_visual_images img:nth-child(n+2)").hide();
 
+// setInterval(function () {
+//     $(".main_visual_images img:first-child").fadeOut(3000);
+//     $(".main_visual_images img:nth-child(2)").fadeIn(3000);
+//     $(".main_visual_images img:first-child").appendTo(".main_visual_images");
+//     // $(".main_visual_images img:first-child").hide;
+// }, 3000);
+
+$(".main_visual_images img:not(:first-child)").hide();
 setInterval(function () {
-    $(".main_visual_images img:first-child").fadeOut(3000);
-    $(".main_visual_images img:nth-child(2)").fadeIn(3000);
-    $(".main_visual_images img:first-child").appendTo(".main_visual_images").hide();
+    $(".main_visual_images img:first-child").fadeOut("slow").next("img").fadeIn("slow").end().appendTo("..main_visual_images");
 }, 3000);
 
 // カテゴリーごとのスポットスライドショー
