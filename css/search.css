@@ -16,6 +16,10 @@
     margin: 0 auto;
 }
 
+.checkbox_group [type="checkbox"] {
+    margin-right: 7px;
+}
+
 .checkbox_group label {
     display: block;
     text-align: left;
@@ -66,9 +70,7 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result,
-.calm_result,
-.yum_result {
+.fun_result, .calm_result, .yum_result {
     margin-bottom: 50px;
 }
 
@@ -141,19 +143,19 @@ input::placeholder {
     pointer-events: none;
 }
 
-#east:checked + label .map_color {
+#east:checked+label .map_color {
     fill: #000;
 }
 
-#west:checked + label .map_color {
+#west:checked+label .map_color {
     fill: #fdbc00;
 }
 
-#south:checked + label .map_color {
+#south:checked+label .map_color {
     fill: #83ccd2;
 }
 
-#north:checked + label .map_color {
+#north:checked+label .map_color {
     fill: #888888;
 }
 
@@ -396,19 +398,19 @@ single.cssの110行目
 を打ち消している
 */
 
-#east + label::after {
+#east+label::after {
     content: none;
 }
 
-#west + label::after {
+#west+label::after {
     content: none;
 }
 
-#south + label::after {
+#south+label::after {
     content: none;
 }
 
-#north + label::after {
+#north+label::after {
     content: none;
 }
 
@@ -416,5 +418,8 @@ single.cssの110行目
     .search_button_wrap {
         display: flex;
         justify-content: space-around;
+    }
+    .fun_result, .calm_result, .yum_result {
+        margin-bottom: 130px;
     }
 }

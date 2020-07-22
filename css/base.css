@@ -1,6 +1,5 @@
 html {
   font-family: "Noto Serif", serif;
-  /* font-family: 'Noto Sans JP', sans-serif; */
   font-size: 14px;
   line-height: 32px;
   color: #707070;
@@ -34,7 +33,7 @@ span {
   display: inline-block;
 }
 
-/* ----------------------------マルチクラス用---------------------------- */
+/* ------------------------マルチクラス用------------------------ */
 
 .centering {
   text-align: center;
@@ -45,7 +44,6 @@ span {
   margin: 0 auto;
   padding: 0 3%;
   max-width: 1000px;
-  /* background-color: rgb(253, 253, 242); */
 }
 
 .flex {
@@ -72,13 +70,13 @@ span {
   text-align: center;
   z-index: 5;
   font-family: 'Hannari', serif;
-  font-size: 30px;
-  padding: 60px 0;
+  font-size: 25px;
+  padding: 30px 0;
 }
 
 .header_band i {
   display: block;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* サークルサイズ*/
@@ -328,7 +326,7 @@ span {
   display: none;
 }
 
-.pcgnav {
+.pcheader {
   display: none;
 }
 
@@ -407,7 +405,7 @@ span {
     font-size: 55px;
   }
   /* PC版は非表示 */
-  .spgnav, .sp_footer {
+  .spheader, .sp_footer {
     display: none !important;
   }
   br.sp {
@@ -429,19 +427,19 @@ span {
   .container {
     padding: 0;
   }
-  .pcgnav {
+  .pcheader {
     width: 100%;
   }
   .adjustment_height {
     height: 58.4px;
   }
-  .toppage_header .pcgnav {
+  .toppage_header .pcheader {
     display: block;
     position: fixed;
     top: 0;
     z-index: 2;
   }
-  .sidepage_header .pcgnav {
+  .sidepage_header .pcheader {
     display: block;
     position: fixed;
     top: 0;
@@ -451,4 +449,7 @@ span {
     padding: 10px 0;
     width: 170px;
   }
+  .header_band {
+    font-size: 30px;
+
 }
