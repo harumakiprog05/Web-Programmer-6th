@@ -794,23 +794,22 @@ single.cssの110行目
     justify-content: space-around;
 }
 
-.model_pc_img_top {
+.archive_model_pc_img_top {
     width: 200px;
 }
 
 .right_top {
     position: absolute;
-    top: 350px;
-    left: 65%;
+    left: 70%;
 }
 
 .left_top {
-    top: 500px;
-    left: 20%;
+    top: 315px;
+    left: 12%;
     position: absolute;
 }
 
-.model_pc_img_top img, .model_pc_img img {
+.archive_model_pc_img_top img, .model_pc_img img {
     width: 100%;
     object-fit: cover;
 }
@@ -821,8 +820,8 @@ single.cssの110行目
 
 /* イラスト：レスポンシブ変更 */
 
-@media screen and (max-width: 480px) {
-    .model_pc_img, .model_pc_img_top {
+@media screen and (max-width: 940px) {
+    .model_pc_img, .archive_model_pc_img_top {
         display: none;
     }
 }
@@ -850,12 +849,12 @@ single.cssの110行目
 
 /* メインコンテンツ */
 
-.model_spot_wrap {
+.archive_model_spot_wrap {
     margin: 0 3%;
 }
 
 @media screen and (min-width: 480px) {
-    .model_spot_wrap {
+    .archive_model_spot_wrap {
         margin: 0;
     }
 }
@@ -920,8 +919,6 @@ single.cssの110行目
     width: 1920px;
     z-index: -5;
 }
-
-/* ハンバーガーメニュー始 */
 
 .model_spot_card {
     border-radius: 5%;
@@ -1725,8 +1722,15 @@ single.cssの110行目
     object-fit: cover;
 }
 
+.inside_modal ul {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .inside_modal img {
-    width: 100px;
+    width: 100%;
 }
 
 .sudachi_point li, .inside_modal li {
@@ -1735,13 +1739,8 @@ single.cssの110行目
 }
 
 .inside_modal li {
-    display: flex;
     margin-bottom: 15px;
-}
-
-.inside_modal p {
-    padding-top: 35px;
-    margin-left: 30px;
+    width: 20%;
 }
 
 .sudachi_point p {

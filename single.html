@@ -2,15 +2,13 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/single.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
-            rel="stylesheet"
-        />
 
         <!--CDNでjQuery読み込む-->
         <script
@@ -21,7 +19,15 @@
 
         <!--CDNでFontAwsome読み込む-->
         <link
+            href="https://fonts.googleapis.com/earlyaccess/hannari.css"
+            rel="stylesheet"
+        />
+        <link
             href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
             rel="stylesheet"
         />
 
@@ -29,109 +35,121 @@
     </head>
 
     <body>
-        <header class="toppage_header">
+        <header class="sidepage_header">
             <!--スマホ用ナビゲーション-->
-            <nav class="spgnav">
-                <div class="el_humburger">
-                    <!--ハンバーガーボタン-->
-                    <div class="el_humburger_wrapper">
-                        <span class="el_humburger_bar top"></span>
-                        <span class="el_humburger_bar middle"></span>
-                        <span class="el_humburger_bar bottom"></span>
-                    </div>
+            <div class="spheader">
+                <div class="adjustment_height"></div>
+                <div class="header_band">
+                    <h1>検 索</h1>
+                    <i class="fas fa-search"></i>
                 </div>
 
-                <!-- ハンバーガーの中身 -->
-                <div class="gnav_inner">
-                    <div class="gnav_item">
-                        <a href=""
-                            ><img
-                                class="gnav_logo"
-                                src="image\logo.png"
-                                width="70"
-                                alt="ロゴ"
-                        /></a>
+                <nav class="spgnav">
+                    <div class="el_humburger">
+                        <!--ハンバーガーボタン-->
+                        <div class="el_humburger_wrapper">
+                            <span class="el_humburger_bar top"></span>
+                            <span class="el_humburger_bar middle"></span>
+                            <span class="el_humburger_bar bottom"></span>
+                        </div>
                     </div>
-                    <div class="gnav_menu">
-                        <a href="">
-                            <div class="gnav_item">
-                                <span class="fun fun_color_dark tall_circle_set"
-                                    >楽</span
-                                >-たのしい-
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="gnav_item">
-                                <span
-                                    class="calm calm_color_dark tall_circle_set"
-                                    >静</span
-                                >-しずか-
-                            </div>
-                        </a>
 
-                        <a href="">
-                            <div class="gnav_item">
-                                <span class="yum yum_color_dark tall_circle_set"
-                                    >旨</span
-                                >-うまい-
-                            </div>
-                        </a>
+                    <!-- ハンバーガーの中身 -->
+                    <div class="gnav_inner">
+                        <div class="gnav_item">
+                            <a href=""
+                                ><img
+                                    class="gnav_logo"
+                                    src="image\logo.png"
+                                    width="70"
+                                    alt="ロゴ"
+                            /></a>
+                        </div>
+                        <div class="gnav_menu">
+                            <a href="">
+                                <div class="gnav_item">
+                                    <span
+                                        class="fun fun_color_dark tall_circle_set"
+                                        >楽</span
+                                    >-たのしい-
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="gnav_item">
+                                    <span
+                                        class="calm calm_color_dark tall_circle_set"
+                                        >静</span
+                                    >-しずか-
+                                </div>
+                            </a>
 
-                        <a href="">
-                            <div class="gnav_item">モデルコース</div>
-                        </a>
+                            <a href="">
+                                <div class="gnav_item">
+                                    <span
+                                        class="yum yum_color_dark tall_circle_set"
+                                        >旨</span
+                                    >-うまい-
+                                </div>
+                            </a>
 
-                        <a href="">
-                            <div class="gnav_item">検索</div>
-                        </a>
+                            <a href="">
+                                <div class="gnav_item">モデルコース</div>
+                            </a>
+
+                            <a href="">
+                                <div class="gnav_item">検索</div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
 
             <!--PC用ナビゲーション-->
-
-            <nav id="pcgnav" class="pcgnav theme_color_dark">
-                <div class="container">
-                    <ul class="flex">
-                        <a href="">
-                            <li>
-                                <img
-                                    class="gnav_logo"
-                                    src="image/logo.png"
-                                    alt="あわいやしロゴ"
-                                />
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <span class="fun_color_dark nav_circle_set"
-                                    >楽</span
-                                >-たのしい-
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <span class="calm_color_dark nav_circle_set"
-                                    >静</span
-                                >-しずか-
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <span class="yum_color_dark nav_circle_set"
-                                    >旨</span
-                                >-うまい-
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>モデルコース</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fas fa-search"></i> 検索</li>
-                        </a>
-                    </ul>
-                </div>
-            </nav>
+            <div class="pcheader">
+                <div class="adjustment_height"></div>
+                <nav id="pcgnav" class="pcgnav theme_color_dark">
+                    <div class="container">
+                        <ul class="flex">
+                            <a href="">
+                                <li>
+                                    <img
+                                        class="gnav_logo"
+                                        src="image/logo.png"
+                                        alt="あわいやしロゴ"
+                                    />
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <span class="fun_color_dark nav_circle_set"
+                                        >楽</span
+                                    >-たのしい-
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <span class="calm_color_dark nav_circle_set"
+                                        >静</span
+                                    >-しずか-
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <span class="yum_color_dark nav_circle_set"
+                                        >旨</span
+                                    >-うまい-
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>モデルコース</li>
+                            </a>
+                            <a href="">
+                                <li><i class="fas fa-search"></i> 検索</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <main>
@@ -159,81 +177,6 @@
                     </div>
                 </section>
 
-                <!-- ポイントタグ -->
-                <!-- <div class="sudachi_point">
-                    <ul>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>絶景</p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>自然いっぱい</p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>やすらぎ</p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>気分転換</p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>ヘルシー</p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>
-                                特産<br />
-                                ローカル
-                            </p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>
-                                交流<br />
-                                ふれあい
-                            </p>
-                        </li>
-                        <li>
-                            <img
-                                class="sudachi_visual"
-                                src="image/awaiyashi_sudachi.png"
-                                alt=""
-                            />
-                            <p>ひろびろ</p>
-                        </li>
-                    </ul>
-                </div> -->
                 <!-- モーダルウィンドウ -->
                 <section class="modal_wrap">
                     <div class="content">
@@ -244,35 +187,56 @@
                                     <li>
                                         <img
                                             class="sudachi_visual"
-                                            src="image/point_cont.png"
+                                            src="image/communication.png"
                                             alt=""
                                         />
                                     </li>
                                     <li>
                                         <img
                                             class="sudachi_visual"
-                                            src="image/point_hlth.png"
+                                            src="image/healthy.png"
                                             alt=""
                                         />
                                     </li>
                                     <li>
                                         <img
                                             class="sudachi_visual"
-                                            src="image/point_loc.png"
+                                            src="image/natural.png"
                                             alt=""
                                         />
                                     </li>
                                     <li>
                                         <img
                                             class="sudachi_visual"
-                                            src="image/point_nat.png"
+                                            src="image/open.png"
                                             alt=""
                                         />
                                     </li>
                                     <li>
                                         <img
                                             class="sudachi_visual"
-                                            src="image/point_pce.png"
+                                            src="image/refresh.png"
+                                            alt=""
+                                        />
+                                    </li>
+                                    <li>
+                                        <img
+                                            class="sudachi_visual"
+                                            src="image/relax.png"
+                                            alt=""
+                                        />
+                                    </li>
+                                    <li>
+                                        <img
+                                            class="sudachi_visual"
+                                            src="image/view.png"
+                                            alt=""
+                                        />
+                                    </li>
+                                    <li>
+                                        <img
+                                            class="sudachi_visual"
+                                            src="image/local.png"
                                             alt=""
                                         />
                                     </li>
@@ -289,11 +253,9 @@
                             <div class="inside_modal">
                                 <ul>
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
 
                                         <p>
                                             絶景が楽しめる、自然を眺めがら楽しめる場所
@@ -301,29 +263,27 @@
                                     </li>
 
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
+
                                         <p>
-                                            自然を近くに感じることができる場所
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
                                         </p>
                                     </li>
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
-                                        <p>身体と心を休める場所</p>
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
+
+                                        <p>
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
+                                        </p>
                                     </li>
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
 
                                         <p>
                                             絶景が楽しめる、自然を眺めがら楽しめる場所
@@ -331,44 +291,39 @@
                                     </li>
 
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
+
                                         <p>
-                                            健康を考えた施設や工夫、食べ物を体験できる場所
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
                                         </p>
                                     </li>
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
+
                                         <p>
-                                            地元の人や同じ目的の人との交流、
-                                            動物と触れ合える場所
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
                                         </p>
                                     </li>
                                     <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
 
-                                        <p>徳島の環境や地形を活かしたもの</p>
-                                    </li>
-
-                                    <li>
-                                        <img
-                                            class="sudachi_visual"
-                                            src="image/awaiyashi_sudachi.png"
-                                            alt=""
-                                        />
                                         <p>
-                                            3密回避
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="sudachi_visual">
+                                            <img src="image/view.png" alt="" />
+                                        </div>
+
+                                        <p>
+                                            絶景が楽しめる、自然を眺めがら楽しめる場所
                                         </p>
                                     </li>
                                 </ul>
