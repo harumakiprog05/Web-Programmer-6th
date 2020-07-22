@@ -6,10 +6,6 @@
     text-align: center;
 }
 
-.margin_b0 {
-    margin-bottom: 0px;
-}
-
 .margin_b20 {
     margin-bottom: 20px;
 }
@@ -45,9 +41,9 @@
     justify-content: flex-start;
 }
 
-body {
+/* body {
     transition: all 1s;
-}
+} */
 
 .bodyfadeout {
     opacity: 0;
@@ -68,6 +64,10 @@ a {
 .tag_search {
     padding: 10px;
     border-radius: 100px;
+}
+
+.tag_search p {
+    margin-bottom: 0px;
 }
 
 .cat_image {
