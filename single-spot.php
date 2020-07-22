@@ -48,11 +48,15 @@
 								<li>定休日：<?php echo CFS()->get('holiday'); ?></li>
 								<li>料金<?php echo CFS()->get('fee'); ?></li>
 
+
 								<?php
-
+								// 施設のエリアスラッグを取得
 								$info_cat = get_the_terms($post, 'info_cat');
-								$slug_area = $info_cat[1]->slug;
-
+								foreach ($info_cat as $term) :
+									if ($term->parent) :
+										$slug_area = $term->slug;
+									endif;
+								endforeach;
 								?>
 
 
@@ -124,19 +128,19 @@
 					'taxonomy' => $taxonomy_name,
 					'terms' => array($slug_area),
 					'field' => 'slug',
-					'include_children' => true, //子タクソノミーを含める
+					// 'include_children' => true, //子タクソノミーを含める
 				)
-			)
+			),
+			'orderby' => 'rand'
 		));
-
-		// 取得した配列をシャッフル
-		shuffle($tax_posts);
 
 		if ($tax_posts) :
 			$count = 1;
 			$num = 4;
 
 			foreach ($tax_posts as $tax_post) :
+				setup_postdata($tax_post);
+
 				$spot_slug = $tax_post->post_name;
 
 				if ($num < $count) { // 表示数の制限
