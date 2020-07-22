@@ -37,7 +37,7 @@
                     </div>
                     <div class="gnav_inner">
                         <div class="gnav_item">
-                            <a href=""><img class="gnav_logo" src="image\logo.png" alt="ロゴ" /></a>
+                            <a href=""><img class="gnav_logo" src="image/logo.png" alt="ロゴ" /></a>
                         </div>
                         <div class="gnav_menu">
                             <a href="">
@@ -66,31 +66,30 @@
                 <nav id="pcgnav" class="pcgnav theme_color_dark">
                     <div class="container">
                         <ul class="flex">
-                            <a href="">
-                                <li><img src="image/logo_white.png" alt="あわいやしロゴ" /></li>
-                            </a>
-                            <a href="">
-                                <li><span class="fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
-                            </a>
-                            <a href="">
-                                <li><span class="calm_color_dark nav_circle_set">静</span>-しずか-</li>
-                            </a>
-                            <a href="">
-                                <li><span class="yum_color_dark nav_circle_set">旨</span>-うまい-</li>
-                            </a>
-                            <a href="">
-                                <li>モデルコース</li>
-                            </a>
-                            <a href="">
-                                <li><i class="fas fa-search"></i> 検索</li>
-                            </a>
-                        </ul>
+                            <li><a href="">
+                                <img src="image/logo_white.png" alt="あわいやしロゴ" />
+                            </a></li>
+                            <li><a href="">
+                                <span class="fun_color_dark nav_circle_set">楽</span>-たのしい-
+                            </a></li>
+                            <li><a href="">
+                                <span class="calm_color_dark nav_circle_set">静</span>-しずか-
+                            </a></li>
+                            <li><a href="">
+                                <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
+                            </a></li>
+                            <li><a href="">
+                                モデルコース
+                            </a></li>
+                            <li><a href="">
+                                <i class="fas fa-search"></i> 検索
+                            </a></li>
                     </div>
                 </nav>
             </header>
             <!-- モデルコース一覧トップ -->
             <div class="background_img"><img src="image/model_bg_image.jpg" alt /></div>
-            <section class="container">
+            <section class="container model_container_wrap">
                 <div class="model_couse_title">
                     <h1>モデルコース</h1>
                 </div>
@@ -116,15 +115,14 @@
                 <span class="calm_color_dark model_circle_set model_big_circle">スタート！</span>
                 <!-- 道路 -->
                 <span class="calm_color_dark road"
-                    ><div class="model_sp_img2">
-                        <img src="image/awaiyashi_gyogun.png" alt="" /></div
-                ></span>
+                    >
+                        <img class="model_sp_img2" src="image/awaiyashi_gyogun.png" alt="" /></span>
                 <!-- スポットカード-1-->
                 <div class="pc_spot_more">
                     <button class="spot_more calm_color_dark pc_spot_name1 fun">スポット名<i class="fas fa-chevron-right"></i></button>
                 </div>
                 <div class="model_spot_wrap spot_fade_in1" id="modelSpotCard1">
-                    <div class="model_spot_card">
+                    <div class="model_spot_card fun_border">
                         <div>
                             <img class="spot_visual" src="image/test_sample_400_300.jpg" alt="" />
                         </div>
@@ -144,23 +142,23 @@
 
                 <!-- 道路 -->
                 <span class="calm_color_dark road"
-                    ><div class="model_sp_img4">
-                        <img src="image/awaiyashi_sudachi_flower3.png" alt="" />
-                    </div>
+                    >
+                        <img class="model_sp_img4" src="image/awaiyashi_sudachi_flower3.png" alt="" />
+
                 </span>
                 <!-- 中間 -->
                 <span class="calm_color_dark model_circle_set">車で約30分</span>
                 <!-- 道路 -->
                 <span class="calm_color_dark road"
-                    ><div class="model_sp_img3">
-                        <img src="image/awaiyashi_sudatiburi.png" alt="" /></div
-                ></span>
+                    >
+                        <img class="model_sp_img3" src="image/awaiyashi_sudatiburi.png" alt="" />
+                </span>
                 <!-- スポットカード-2-->
                 <div class="pc_spot_more">
                     <button class="spot_more calm_color_dark pc_spot_name2 tasty"><i class="fas fa-chevron-left"></i>スポット名</button>
                 </div>
                 <div class="model_spot_wrap spot_fade_in2" id="modelSpotCard2">
-                    <div class="model_spot_card">
+                    <div class="model_spot_card tasty_border">
                         <div>
                             <img class="spot_visual" src="image/test_sample_400_300.jpg" alt="" />
                         </div>
@@ -179,9 +177,8 @@
                 </div>
                 <!-- 道路 -->
                 <span class="calm_color_dark road"
-                    ><div class="model_sp_img5">
-                        <img src="image/awaiyashi_car.png" alt="" /></div
-                ></span>
+                    >
+                        <img class="model_sp_img5" src="image/awaiyashi_car.png" alt="" /></span>
                 <!-- 中間 -->
                 <span class="calm_color_dark model_circle_set">車で約25分</span>
                 <!-- 道路 -->
@@ -191,7 +188,7 @@
                     <button class="spot_more calm_color_dark pc_spot_name3 calm">スポット名<i class="fas fa-chevron-right"></i></button>
                 </div>
                 <div class="model_spot_wrap spot_fade_in3" id="modelSpotCard3">
-                    <div class="model_spot_card">
+                    <div class="model_spot_card calm_border">
                         <div>
                             <img class="spot_visual" src="image/test_sample_400_300.jpg" alt="" />
                         </div>
@@ -212,14 +209,14 @@
                 <span class="calm_color_dark road"></span>
                 <!-- ゴール -->
                 <span class="calm_color_dark model_circle_set model_big_circle">ゴール！</span>
-                <div class="model_sp_img6">
-                    <img src="image/model_bottom_img.png" alt="" />
+                <div >
+                    <img class="model_sp_img6" src="image/model_bottom_img.png" alt="" />
                 </div>
                 <div>
                     <img class="sample" src="image/model_course_sample.jpg" />
                     <!-- ここにグーグルマップのAPI -->
                 </div>
-                <button class="back_model_archive">
+                <button class="back_model_archive calm_color_dark">
                     モデルコース一覧へ
                 </button>
             </section>
