@@ -85,61 +85,57 @@ $(".main_visual_images img:nth-child(n+2)").hide();
 setInterval(function () {
     $(".main_visual_images img:first-child").fadeOut(3000);
     $(".main_visual_images img:nth-child(2)").fadeIn(3000);
-    $(".main_visual_images img:first-child").appendTo(".main_visual_images");
+    $(".main_visual_images img:first-child").appendTo(".main_visual_images").hide();
 }, 3000);
-
-
 
 // カテゴリーごとのスポットスライドショー
 
-$(function (){
-    $('.spot_slide_wrap').slick({
+$(function () {
+    $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         slidesToShow: 5,
         infinite: true,
         responsive: [
-
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 3,
-                }
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                }
+                },
             },
-        ]
+        ],
     });
-})
+});
 
 // トップページのモデルコーススライドショー
 
 $(function () {
-    $('.modelcose_slide_wrap').slick({
+    $(".modelcose_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         slidesToShow: 5,
         infinite: true,
         responsive: [
-
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 3,
-                }
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                }
+                },
             },
-        ]
+        ],
     });
-})
+});
