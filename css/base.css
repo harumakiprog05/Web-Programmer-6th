@@ -68,15 +68,20 @@ span {
 }
 
 .header_band {
-  background-image: url("../image/header_band.png");
+  background-image: url("../image/header_band2.png");
   text-align: center;
-  line-height: 200px;
   z-index: 5;
   font-family: 'Hannari', serif;
   font-size: 30px;
+  padding: 60px 0;
 }
 
-/* サークルサイズ */
+.header_band i {
+  display: block;
+  margin-top: 50px;
+}
+
+/* サークルサイズ*/
 
 .circle {
   border-radius: 50%;
