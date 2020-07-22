@@ -79,6 +79,10 @@ span {
   margin-top: 20px;
 }
 
+.pcheader .adjustment_height {
+  display: none;
+}
+
 /* サークルサイズ*/
 
 .circle {
@@ -543,8 +547,16 @@ span {
   display: none;
 }
 
-.pcheader {
+.pcgnav {
   display: none;
+}
+
+.header_band {
+  display: none;
+}
+
+.spheader .header_band {
+  display: block;
 }
 
 .adjustment_height {
@@ -644,19 +656,19 @@ span {
   .container {
     padding: 0;
   }
-  .pcheader {
+  .pcgnav {
     width: 100%;
   }
   .adjustment_height {
     height: 58.4px;
   }
-  .toppage_header .pcheader {
+  .toppage_header .pcgnav {
     display: block;
     position: fixed;
     top: 0;
     z-index: 2;
   }
-  .sidepage_header .pcheader {
+  .sidepage_header .pcgnav {
     display: block;
     position: fixed;
     top: 0;
@@ -669,3 +681,10 @@ span {
   .header_band {
     font-size: 30px;
   }
+  .pcheader .header_band {
+    display: block;
+  }
+  .pcheader .adjustment_height {
+    display: block;
+  }
+}
