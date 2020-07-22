@@ -64,16 +64,13 @@
     text-align: left;
     height: 55vh;
     overflow-y: auto;
-}
-
-.absolute {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.relative {
+.container {
     position: relative;
 }
 
