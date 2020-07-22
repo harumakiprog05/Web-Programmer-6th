@@ -358,6 +358,7 @@ span {
 .spgnav {
   position: fixed;
   right: 0;
+  top:0;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   width: 0;
@@ -636,6 +637,12 @@ span {
   /* PC版は非表示 */
   .spheader, .sp_footer {
     display: none !important;
+  }
+  .toppage_header .spgnav {
+    display: none;
+  }
+  .sidepage_header .spgnav {
+    display: none;
   }
   br.sp {
     display: none;
