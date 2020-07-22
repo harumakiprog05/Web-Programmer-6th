@@ -80,66 +80,93 @@ let scrollHeight = $(window).scroll(function () {
 });
 
 // メインビジュアルのフェードイン・アウト
-$(".main_visual_images img:nth-child(n+2)").hide();
 
-setInterval(function () {
-    $(".main_visual_images img:first-child").fadeOut(3000);
-    $(".main_visual_images img:nth-child(2)").fadeIn(3000);
-    $(".main_visual_images img:first-child").appendTo(".main_visual_images");
-}, 3000);
-
-
+$(function () {
+    var $width = "100%"; // 横幅
+    var $height = "100vh"; // 高さ
+    var $interval = 4000; // 切り替わりの間隔（ミリ秒）
+    var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+    $(".main_visual_images ul li").css({ position: "relative", overflow: "hidden", width: $width, height: $height });
+    $(".main_visual_images ul li").hide().css({ position: "absolute", top: 0, left: 0 });
+    $(".main_visual_images ul li:first").addClass("active").show();
+    setInterval(function () {
+        var $active = $(".main_visual_images ul li.active");
+        var $next = $active.next("li").length ? $active.next("li") : $(".main_visual_images ul li:first");
+        $active.fadeOut($fade_speed).removeClass("active");
+        $next.fadeIn($fade_speed).addClass("active");
+    }, $interval);
+});
 
 // カテゴリーごとのスポットスライドショー
 
-$(function (){
-    $('.spot_slide_wrap').slick({
+$(function () {
+    $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         slidesToShow: 5,
         infinite: true,
         responsive: [
-
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 3,
-                }
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                }
+                },
             },
-        ]
+        ],
     });
-})
+});
 
 // トップページのモデルコーススライドショー
 
 $(function () {
-    $('.modelcose_slide_wrap').slick({
+    $(".modelcose_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         slidesToShow: 5,
         infinite: true,
         responsive: [
-
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 3,
-                }
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                }
+                },
             },
-        ]
+        ],
     });
-})
+});
+
+// トップへ戻るボタン実装
+$("#top_return_button").css("display", "none");
+
+// ボタンの表示・非表示
+$(document).ready(function () {
+    var pagetop = $("#top_return_button");
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            pagetop.fadeIn();
+        } else {
+            pagetop.fadeOut();
+        }
+    });
+
+    // クリックでトップへ戻る
+    pagetop.click(function () {
+        $("body, html").animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+});
