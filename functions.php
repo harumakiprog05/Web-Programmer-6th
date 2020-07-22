@@ -13,6 +13,7 @@
 /**
  * ＜index＞
  *
+ * ┗カスタム投稿spotのみ検索
  * ┗テーマのセットアップ
  * ┗CSS・JavaScriptの読み込み
  * ┗パンくずリストの作成(自作関数)
@@ -24,6 +25,7 @@
  *    ┗カテゴリ、タグ ― spot
  *    ┗カテゴリ、タグ ― model
  *    ┗カテゴリ、タグ ― info
+ * ┗カスタム投稿spotのみ検索
  * ┗SQL文を使用して絞り込み検索
  * ┗親カテゴリーの取得関数(自作関数)
  * ┗スラッグの「-」以降をカットする関数(自作関数)
@@ -34,15 +36,7 @@ global $content_width;
 if (!isset($content_width)) {
 	$content_width = 723;
 }
-// 検索
-function SearchFilter($query)
-{
-	if ($query->is_search) {
-		$query->set('post_type', 'spot');
-	}
-	return $query;
-}
-add_filter('pre_get_posts', 'SearchFilter');
+
 
 //▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
 // テーマのセットアップ
@@ -111,7 +105,6 @@ function myportfolio_scripts()
 			true //</body> 終了タグの前で読み込み
 		);
 	}
-
 	// ▼▼▼▼▼ベースJSの読み込み
 	wp_enqueue_script(
 		'base-script',
@@ -120,6 +113,16 @@ function myportfolio_scripts()
 		filemtime(get_theme_file_path('/js/jQuery.js')),
 		true
 	);
+	// ▼▼▼▼▼スリックJSの読み込み
+	if (is_front_page()) {
+		wp_enqueue_script(
+			'slick-min-script',
+			get_template_directory_uri() . '/js/slick.min.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/slick.min.js')),
+			true
+		);
+	}
 }
 add_action("wp_enqueue_scripts", "myportfolio_scripts");
 
@@ -466,6 +469,19 @@ function my_rewrite_rules_array($rules)
 	return $new_rules + $rules;
 }
 add_filter('rewrite_rules_array', 'my_rewrite_rules_array');
+
+
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+// カスタム投稿spotのみ検索
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+function SearchFilter($query)
+{
+	if ($query->is_search) {
+		$query->set('post_type', 'spot');
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'SearchFilter');
 
 
 //▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
