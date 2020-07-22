@@ -8,7 +8,7 @@ jQuery(function () {
                 appear = true;
                 modelmove.stop().fadeIn(500).animate(
                     {
-                        right: "1%",
+                        right: "2%",
                     },
                     {
                         duration: 300,
@@ -29,7 +29,7 @@ jQuery(function () {
                 appear = true;
                 modelmove.stop().fadeIn(500).animate(
                     {
-                        left: "1%",
+                        left: "2%",
                     },
                     {
                         duration: 300,
@@ -50,7 +50,7 @@ jQuery(function () {
                 appear = true;
                 modelmove.stop().fadeIn(500).animate(
                     {
-                        right: "1%",
+                        right: "2%",
                     },
                     {
                         duration: 300,

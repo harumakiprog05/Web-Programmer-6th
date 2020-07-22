@@ -1,4 +1,11 @@
 /*背景画像*/
+@media screen and (min-width: 1025px) {
+    .model_container_wrap {
+        position: relative;
+        width: 1300px;
+    }
+}
+
 .background_img img {
     position: fixed;
     height: 100vh;
@@ -7,10 +14,22 @@
 }
 /* ハンバーガーメニュー始 */
 .model_spot_card {
-    border: solid 3px #c8a87a;
     border-radius: 5%;
     padding: 10px 10px 0 10px;
 }
+
+.fun_border {
+    border: solid 3px #9fbf82;
+}
+
+.calm_border {
+    border: solid 3px #83ccd2;
+}
+
+.tasty_border {
+    border: solid 3px #eec362;
+}
+
 .model_spot_wrap {
     margin: 0 3.5%;
 }
@@ -29,16 +48,34 @@
         display: none;
     }
     .spot_fade_in1 {
-        top: 47%;
+        top: 20%;
         right: -40%;
     }
     .spot_fade_in2 {
-        top: 113%;
+        top: 36%;
         left: -40%;
     }
     .spot_fade_in3 {
-        top: 176%;
+        top: 50%;
         right: -40%;
+    }
+    .model_text h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.model_start_img img {
+    position: relative;
+    width: 60%;
+    margin: 10px 0px;
+}
+
+@media screen and (min-width: 1025px) {
+    .model_start_img img {
+        width: 300px;
+        height: 168px;
+        margin-bottom: 50px;
     }
 }
 
@@ -82,7 +119,7 @@
     width: 95%;
     height: 50%;
     object-fit: cover;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .model_info {
@@ -104,6 +141,13 @@
     margin: 0;
     margin-bottom: 10px;
 }
+
+@media screen and (min-width: 1025px) {
+    .spot_more {
+        margin-bottom: 30px;
+    }
+}
+
 .pc_spot_name1 {
     margin-bottom: 0;
 }
@@ -115,7 +159,7 @@
 }
 .model_pc_img_top {
     position: absolute;
-    top: 20%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -131,7 +175,7 @@
 }
 
 .model_description h2 {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     margin-top: 30px;
 }
 
@@ -139,8 +183,10 @@
     font-size: 0.5em;
 }
 
-.model_card_description {
-    margin-bottom: 5px;
+@media screen and (min-width: 1025px) {
+    .model_card_description {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -152,28 +198,28 @@
 
 /*SP版画像配置*/
 
-.model_sp_img2 img {
+.model_sp_img2 {
     position: relative;
     top: 80%;
     left: 60px;
     width: 100px;
 }
 
-.model_sp_img3 img {
+.model_sp_img3 {
     position: relative;
     top: 20px;
     left: 50px;
     width: 100px;
 }
 
-.model_sp_img4 img {
+.model_sp_img4 {
     position: relative;
     width: 70px;
     top: 10px;
     right: 120px;
 }
 
-.model_sp_img5 img {
+.model_sp_img5 {
     position: relative;
     top: 50px;
     right: 150px;
@@ -182,37 +228,37 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         left: 150px;
     }
-    .model_sp_img3 img {
+    .model_sp_img3 {
         left: 140px;
     }
-    .model_sp_img4 img {
+    .model_sp_img4 {
         right: 240px;
     }
-    .model_sp_img5 img {
+    .model_sp_img5 {
         right: 300px;
     }
-    .model_sp_img6 img {
+    .model_sp_img6 {
         width: 400px;
     }
 }
 
 @media screen and (min-width: 640px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         left: 150px;
     }
-    .model_sp_img3 img {
+    .model_sp_img3 {
         left: 140px;
     }
-    .model_sp_img4 img {
+    .model_sp_img4 {
         right: 240px;
     }
-    .model_sp_img5 img {
+    .model_sp_img5 {
         right: 300px;
     }
-    .model_sp_img6 img {
+    .model_sp_img6 {
         width: 300px;
     }
 }
@@ -220,31 +266,31 @@
 /*PC版画像配置*/
 
 @media screen and (min-width: 481px) and (max-width: 640px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         height: 30px;
         width: 70px;
         left: 100px;
     }
-    .model_sp_img6 img {
+    .model_sp_img6 {
         margin-top: 30px;
         width: 30%;
         margin-bottom: 20px;
     }
 }
 @media screen and (min-width: 640px) and (max-width: 768px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         position: absolute;
         top: 215%;
     }
-    .model_sp_img3 img {
+    .model_sp_img3 {
         left: 140px;
     }
-    .model_sp_img4 img {
+    .model_sp_img4 {
         right: 240px;
     }
-    .model_sp_img5 img {
+    .model_sp_img5 {
         position: absolute;
-        right: 70%;
+        right: 80%;
         top: 50%;
         width: 150px;
         height: 90px;
@@ -277,29 +323,29 @@
         }
     }
 }
-.model_sp_img6 img {
+.model_sp_img6 {
     width: 300px;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         height: 50px;
         width: 100px;
         left: 70%;
         top: 180%;
         position: absolute;
     }
-    .model_sp_img3 img {
+    .model_sp_img3 {
         left: 10%;
         top: 234%;
         position: absolute;
     }
-    .model_sp_img4 img {
+    .model_sp_img4 {
         position: absolute;
         right: 80%;
         top: 100%;
     }
-    .model_sp_img5 img {
+    .model_sp_img5 {
         position: absolute;
         right: 80%;
         top: 45%;
@@ -333,42 +379,42 @@
             transform: translateY(0);
         }
     }
-    .model_sp_img6 img {
+    .model_sp_img6 {
         width: 300px;
         margin-top: 30px;
         margin-bottom: 20px;
     }
-    .model_sp_img6 img {
+    .model_sp_img6 {
         margin-top: 30px;
         width: 30%;
         margin-bottom: 20px;
     }
 }
 @media screen and (min-width: 1025px) {
-    .model_sp_img2 img {
+    .model_sp_img2 {
         height: 75px;
         width: 150px;
         left: 70%;
-        top: 160%;
+        top: 43%;
         position: absolute;
     }
-    .model_sp_img3 img {
-        left: 20%;
-        top: 234%;
+    .model_sp_img3 {
+        left: 5%;
+        top: 65%;
         width: 15%;
         position: absolute;
     }
-    .model_sp_img4 img {
+    .model_sp_img4 {
         position: absolute;
         right: 80%;
-        top: 60%;
+        top: 10%;
     }
-    .model_sp_img5 img {
+    .model_sp_img5 {
         position: absolute;
-        right: 60%;
-        top: 80%;
-        width: 200px;
-        height: 140px;
+        right: 80%;
+        top: 21%;
+        width: 150px;
+        height: 110px;
         animation: carmove 3s ease infinite;
     }
     @keyframes carmove {
@@ -397,14 +443,10 @@
             transform: translateY(0);
         }
     }
-    .model_sp_img6 img {
-        width: 300px;
+    .model_sp_img6 {
+        position: relative;
         margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    .model_sp_img6 img {
-        margin-top: 30px;
-        width: 30%;
+        width: 250px;
         margin-bottom: 20px;
     }
 }
@@ -419,19 +461,16 @@
     .model_card li {
         margin: 0 20px 50px;
     }
-    .model_sp_img1 {
-        display: none;
-    }
+
     .model_description {
         position: relative;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
         margin-top: 20px;
     }
 }
 
 .back_model_archive {
-    background-color: #c8a87a;
-    color: #fff;
+    background-color: #67a1a6;
     border-radius: 30px;
     width: 136px;
     margin-bottom: 100px;
@@ -450,6 +489,6 @@
 }
 
 .sample {
-    height: 20%;
-    width: 40%;
+    height: 364.58px;
+    width: 1000px;
 }
