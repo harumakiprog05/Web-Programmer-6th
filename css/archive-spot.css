@@ -1,3 +1,11 @@
+.center {
+    margin: 0 auto;
+}
+
+.text_center {
+    text-align: center;
+}
+
 .margin_b20 {
     margin-bottom: 20px;
 }
@@ -11,10 +19,6 @@
     margin-bottom: 50px;
 }
 
-.center {
-    text-align: center;
-}
-
 .spot_title {
     font-size: 70px;
     width: 150px;
@@ -23,8 +27,12 @@
     margin-right: auto;
 }
 
-.underline {
-    border-bottom: 2px solid #707070;
+.fun_underline {
+    border-bottom: 2px solid #9fbf82;
+}
+
+.tag_underline {
+    border-bottom: 2px solid #ffffff;
 }
 
 .stage {
@@ -33,9 +41,9 @@
     justify-content: flex-start;
 }
 
-body {
+/* body {
     transition: all 1s;
-}
+} */
 
 .bodyfadeout {
     opacity: 0;
@@ -53,11 +61,13 @@ a {
     color: #707070;
 }
 
-.tag-search {
-    font-size: 20px;
-    padding-top: 20px;
+.tag_search {
+    padding: 10px;
     border-radius: 100px;
-    margin: 0 auto 50px auto;
+}
+
+.tag_search p {
+    margin-bottom: 0px;
 }
 
 .cat_image {
@@ -96,7 +106,7 @@ a {
     position: relative;
 }
 
-.raku-select img {
+.raku_select img {
     width: 100%;
     height: auto;
 }
@@ -117,7 +127,7 @@ a {
     display: none;
 }
 
-.spot-photo img {
+.spot_photo img {
     width: 100%;
 }
 
@@ -134,9 +144,54 @@ a {
     animation: .6s zoom-in;
 }
 
-@media screen and (max-width: 1000px) {}
-
 @media screen and (min-width: 480px) {
+    .spot_wrap {
+        width: 90%;
+    }
+    .spot_wrap ul {
+        margin: 0;
+    }
+    .spotl_card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .spot_card li {
+        width: 30%;
+    }
+    .tag-search {
+        font-size: 27px;
+        padding: 50px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 746px) {
+    .spot_wrap {
+        width: 80%;
+    }
+    .spot_wrap ul {
+        margin: 0;
+    }
+    .spotl_card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .tag_search {
+        padding: 10px;
+        width: 80%;
+    }
+    .tag_search p {
+        font-size: 27px;
+    }
+    .dropmenu {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
     .spot_Contana {
         max-width: 1000px;
         margin: 0 auto;
@@ -147,22 +202,18 @@ a {
     .spot_wrap ul {
         margin: 0;
     }
-    .spotl_card {
+    .spot_card {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         max-width: 1000px;
         margin: 0 auto;
     }
-    .spotl_card li {
-        width: 30%;
+    .tag_search {
+        padding: 20px;
+        max-width: 1000px;
     }
-    .tag-search {
+    .tag_search p {
         font-size: 27px;
-        padding: 50px 20px 20px 20px;
-        max-width: 500px;
-    }
-    .dropmenu {
-        width: 500px;
     }
 }

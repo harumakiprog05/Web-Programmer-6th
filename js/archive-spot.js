@@ -14,12 +14,10 @@ var $boxes = $(".boxes [data-category]");
 $filters.on("click", function (e) {
   e.preventDefault();
   var $this = $(this);
-  // $filters.removeClass('active');
-  // $this.addClass('active');
+  var $tag = $this.find(".select-text").text();
+  console.log($tag);
 
   var $filterColor = $this.attr("data-filter");
-
-  //試し▼
   var $filterColors = document.querySelector('[data-filter*=""]');
 
   if ($filterColor == "all") {
@@ -37,11 +35,13 @@ $filters.on("click", function (e) {
       .promise()
       .done(function () {
         $boxes
-          .filter('[data-category = "' + $filterColor + '"]')
+          .filter('[data-category~= "' + $filterColor + '"]')
           .addClass("is-animated")
           .fadeIn();
       });
   }
 
   $(".menu-box ul").slideToggle();
+
+  $("#select_tag").text("　" + $tag + "　");
 });
