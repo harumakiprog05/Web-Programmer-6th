@@ -19,12 +19,6 @@
     border-bottom: 2px solid #ffffff;
 }
 
-.stage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
 .bodyfadeout {
     opacity: 0;
 }
@@ -70,11 +64,7 @@
     transform: translate(-50%, -50%);
 }
 
-.container {
-    position: relative;
-}
-
-.raku_select img {
+.fun_select img {
     width: 100%;
     height: auto;
 }
@@ -89,6 +79,10 @@
 
 .dropmenu li a p {
     padding-left: 5%;
+}
+
+.menu-box {
+    position: relative;
 }
 
 .menu-box ul {
