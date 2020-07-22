@@ -233,7 +233,7 @@ span {
   line-height: 1.7rem;
 }
 
-.under_footer {
+.sp_footer .under_footer {
   background-color: #BFE1EC;
   color: #67A1A6;
 }
@@ -244,6 +244,13 @@ span {
 
 .sp_footer .footer_ul li {
   margin-bottom: 20px;
+}
+
+.under_footer .fa-chevron-up {
+  position: fixed;
+  right: 10%;
+  bottom: 5%;
+  padding: 18px;
 }
 
 /* PC用フッター */
@@ -384,8 +391,7 @@ span {
   .spgnav, .sp_footer {
     display: none !important;
   }
-
-  br.sp{
+  br.sp {
     display: none;
   }
   /* PC版は表示 */
@@ -432,7 +438,7 @@ span {
     margin-left: 50%;
     transform: translate(-50%, 0);
   }
-  .category_catch_copy{
+  .category_catch_copy {
     margin-bottom: 50px;
   }
 }
