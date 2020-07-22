@@ -169,7 +169,9 @@
     font-size: 18px;
 }
 
-.fun_category span, .calm_category span, .yum_category span {
+.fun_category span,
+.calm_category span,
+.yum_category span {
     transform: translate(0, -50%);
 }
 
@@ -329,9 +331,22 @@
 }
 
 .area_serch_more {
+    height: 30px;
     width: 60%;
     max-width: 300px;
-    margin: 0 auto;
+}
+
+.arrow {
+    color: #000;
+}
+
+.arrow::after {
+    width: 50px;
+    height: 20px;
+    border: 5px solid;
+    border-color: transparent transparent #565656 #565656;
+    transform: rotate(-45deg);
+    padding: 30px;
 }
 
 .search_section input[type="submit"] {
@@ -355,7 +370,9 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result, .calm_result, .yum_result {
+.fun_result,
+.calm_result,
+.yum_result {
     margin-bottom: 50px;
 }
 
@@ -428,19 +445,19 @@ input::placeholder {
     pointer-events: none;
 }
 
-#east:checked+label .map_color {
+#east:checked + label .map_color {
     fill: #000;
 }
 
-#west:checked+label .map_color {
+#west:checked + label .map_color {
     fill: #fdbc00;
 }
 
-#south:checked+label .map_color {
+#south:checked + label .map_color {
     fill: #83ccd2;
 }
 
-#north:checked+label .map_color {
+#north:checked + label .map_color {
     fill: #888888;
 }
 
@@ -683,19 +700,19 @@ single.cssの110行目
 を打ち消している
 */
 
-#east+label::after {
+#east + label::after {
     content: none;
 }
 
-#west+label::after {
+#west + label::after {
     content: none;
 }
 
-#south+label::after {
+#south + label::after {
     content: none;
 }
 
-#north+label::after {
+#north + label::after {
     content: none;
 }
 
@@ -704,7 +721,9 @@ single.cssの110行目
         display: flex;
         justify-content: space-around;
     }
-    .fun_result, .calm_result, .yum_result {
+    .fun_result,
+    .calm_result,
+    .yum_result {
         margin-bottom: 130px;
     }
 }
@@ -715,7 +734,10 @@ single.cssの110行目
     color: #eec362;
 }
 
-.foam_wrap input[type="text"], .foam_wrap input[type="tel"], .foam_wrap input[type="email"], textarea {
+.foam_wrap input[type="text"],
+.foam_wrap input[type="tel"],
+.foam_wrap input[type="email"],
+textarea {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
@@ -737,12 +759,14 @@ single.cssの110行目
 
 /* -----page.phpのスタイル----- */
 
-.pp_container p, .pp_container ol {
+.pp_container p,
+.pp_container ol {
     text-align: left;
     margin-bottom: 50px;
 }
 
-.pp_container h3, .pp_container h2 {
+.pp_container h3,
+.pp_container h2 {
     margin-bottom: 30px;
 }
 
@@ -810,7 +834,8 @@ single.cssの110行目
     position: absolute;
 }
 
-.model_pc_img_top img, .model_pc_img img {
+.model_pc_img_top img,
+.model_pc_img img {
     width: 100%;
     object-fit: cover;
 }
@@ -822,7 +847,8 @@ single.cssの110行目
 /* イラスト：レスポンシブ変更 */
 
 @media screen and (max-width: 480px) {
-    .model_pc_img, .model_pc_img_top {
+    .model_pc_img,
+    .model_pc_img_top {
         display: none;
     }
 }
@@ -1096,7 +1122,8 @@ single.cssの110行目
 }
 
 @media screen and (max-width: 1024px) {
-    .model_pc_img, .model_pc_img_top {
+    .model_pc_img,
+    .model_pc_img_top {
         display: none;
     }
 }
@@ -1426,7 +1453,8 @@ single.cssの110行目
     cursor: hand;
 }
 
-.slick-slider .slick-track, .slick-slider .slick-list {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -1443,9 +1471,10 @@ single.cssの110行目
     margin-right: auto;
 }
 
-.slick-track:before, .slick-track:after {
+.slick-track:before,
+.slick-track:after {
     display: table;
-    content: '';
+    content: "";
 }
 
 .slick-track:after {
@@ -1463,7 +1492,7 @@ single.cssの110行目
     min-height: 1px;
 }
 
-[dir='rtl'] .slick-slide {
+[dir="rtl"] .slick-slide {
     float: right;
 }
 
@@ -1499,22 +1528,24 @@ single.cssの110行目
 /* Slider */
 
 .slick-loading .slick-list {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url("./ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
 
 @font-face {
-    font-family: 'slick';
+    font-family: "slick";
     font-weight: normal;
     font-style: normal;
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url("./fonts/slick.eot");
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
+        url("./fonts/slick.svg#slick") format("svg");
 }
 
 /* Arrows */
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -1533,25 +1564,33 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
     color: transparent;
     outline: none;
     background: transparent;
 }
 
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
     opacity: 1;
 }
 
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
-    opacity: .25;
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: 0.25;
 }
 
-.slick-prev:before, .slick-next:before {
-    font-family: 'slick';
+.slick-prev:before,
+.slick-next:before {
+    font-family: "slick";
     font-size: 20px;
     line-height: 1;
-    opacity: .75;
+    opacity: 0.75;
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1561,34 +1600,34 @@ single.cssの110行目
     left: -25px;
 }
 
-[dir='rtl'] .slick-prev {
+[dir="rtl"] .slick-prev {
     right: -25px;
     left: auto;
 }
 
 .slick-prev:before {
-    content: '←';
+    content: "←";
 }
 
-[dir='rtl'] .slick-prev:before {
-    content: '→';
+[dir="rtl"] .slick-prev:before {
+    content: "→";
 }
 
 .slick-next {
     right: -25px;
 }
 
-[dir='rtl'] .slick-next {
+[dir="rtl"] .slick-next {
     right: auto;
     left: -25px;
 }
 
 .slick-next:before {
-    content: '→';
+    content: "→";
 }
 
-[dir='rtl'] .slick-next:before {
-    content: '←';
+[dir="rtl"] .slick-next:before {
+    content: "←";
 }
 
 /* Dots */
@@ -1632,16 +1671,18 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-dots li button:hover, .slick-dots li button:focus {
+.slick-dots li button:hover,
+.slick-dots li button:focus {
     outline: none;
 }
 
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
     opacity: 1;
 }
 
 .slick-dots li button:before {
-    font-family: 'slick';
+    font-family: "slick";
     font-size: 6px;
     line-height: 20px;
     position: absolute;
@@ -1649,16 +1690,16 @@ single.cssの110行目
     left: 0;
     width: 20px;
     height: 20px;
-    content: '•';
+    content: "•";
     text-align: center;
-    opacity: .25;
+    opacity: 0.25;
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots li.slick-active button:before {
-    opacity: .75;
+    opacity: 0.75;
     color: black;
 }
 
@@ -1717,7 +1758,8 @@ single.cssの110行目
     justify-content: space-between;
 }
 
-.sudachi_point img, .inside_modal img {
+.sudachi_point img,
+.inside_modal img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1727,7 +1769,8 @@ single.cssの110行目
     width: 100px;
 }
 
-.sudachi_point li, .inside_modal li {
+.sudachi_point li,
+.inside_modal li {
     margin: 0 5px;
     position: relative;
 }
@@ -1839,7 +1882,7 @@ single.cssの110行目
 
 /* :checked */
 
-.info_actab input:checked~.info_actab_content {
+.info_actab input:checked ~ .info_actab_content {
     max-height: 70em;
     margin: 50px 3%;
 }
@@ -1859,11 +1902,11 @@ single.cssの110行目
     text-align: center;
 }
 
-.info_actab input[type="checkbox"]+label::after {
+.info_actab input[type="checkbox"] + label::after {
     content: "+";
 }
 
-.info_actab input[type="checkbox"]:checked+label::after {
+.info_actab input[type="checkbox"]:checked + label::after {
     transform: rotate(315deg);
 }
 
