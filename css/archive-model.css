@@ -29,12 +29,12 @@
 
 .right_top {
     position: absolute;
-    top: 68px;
+    top: 350px;
     left: 65%;
 }
 
 .left_top {
-    top: 200px;
+    top: 500px;
     left: 20%;
     position: absolute;
 }

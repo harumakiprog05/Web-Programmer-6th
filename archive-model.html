@@ -12,109 +12,106 @@
             rel="stylesheet"
         />
 
-        <!--CDNでjQuery読み込む-->
-        <script
-            src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-            crossorigin="anonymous"
-        ></script>
+    <!--CDNでjQuery読み込む-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-        <!--CDNでFontAwsome読み込む-->
-        <link
-            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-            rel="stylesheet"
-        />
+    <!--CDNでFontAwsome読み込む-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
 
-        <title>あわいやし</title>
-    </head>
-    
-    <body>
-        <header class="toppage_header">
-    
-            <!--スマホ用ナビゲーション-->
-            <nav class="spgnav">
-                <div class="el_humburger">
-                    <!--ハンバーガーボタン-->
-                    <div class="el_humburger_wrapper">
-                        <span class="el_humburger_bar top"></span>
-                        <span class="el_humburger_bar middle"></span>
-                        <span class="el_humburger_bar bottom"></span>
-                    </div>
+    <title>あわいやし</title>
+</head>
+
+<body>
+    <header class="sidepage_header">
+
+        <!--スマホ用ナビゲーション-->
+        <nav class="spgnav">
+            <div class="el_humburger">
+                <!--ハンバーガーボタン-->
+                <div class="el_humburger_wrapper">
+                    <span class="el_humburger_bar top"></span>
+                    <span class="el_humburger_bar middle"></span>
+                    <span class="el_humburger_bar bottom"></span>
                 </div>
-    
-                <!-- ハンバーガーの中身 -->
-                <div class="gnav_inner">
-                    <div class="gnav_item">
-                        <a href=""><img class="gnav_logo" src="image\logo.png" width="70" alt="ロゴ"></a>
-                    </div>
-                    <div class="gnav_menu">
-                        <a href="">
-                            <div class="gnav_item">
-                                <span class="fun fun_color_dark tall_circle_set">楽</span>-たのしい-
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="gnav_item">
-                                <span class="calm calm_color_dark tall_circle_set">静</span>-しずか-
-                            </div>
-                        </a>
-    
-                        <a href="">
-                            <div class="gnav_item">
-                                <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
-                            </div>
-                        </a>
-    
-                        <a href="">
-                            <div class="gnav_item">モデルコース</div>
-                        </a>
-    
-                        <a href="">
-                            <div class="gnav_item">検索</div>
-                        </a>
-                    </div>
-    
+            </div>
+
+            <!-- ハンバーガーの中身 -->
+            <div class="gnav_inner">
+                <div class="gnav_item">
+                    <a href=""><img class="gnav_logo" src="image\logo.png" width="70" alt="ロゴ"></a>
                 </div>
-            </nav>
-    
-    
-    
-            <!--PC用ナビゲーション-->
-            <nav id="pcgnav" class="pcgnav theme_color_dark">
-                <div class="container">
-    
-                    <ul class="flex">
-                        <a href="">
-                            <li><img class="gnav_logo" src="image/logo.png" alt="あわいやしロゴ"> </li>
-                        </a>
-                        <a href="">
-                            <li><span class="fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
-                        </a>
-                        <a href="">
-                            <li><span class="calm_color_dark nav_circle_set">静</span>-しずか-</li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>モデルコース</li>
-                        </a>
-                        <a href="">
-                            <li><i class="fas fa-search"></i> 検索</li>
-                        </a>
-                    </ul>
+                <div class="gnav_menu">
+                    <a href="">
+                        <div class="gnav_item">
+                            <span class="fun fun_color_dark tall_circle_set">楽</span>-たのしい-
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="gnav_item">
+                            <span class="calm calm_color_dark tall_circle_set">静</span>-しずか-
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="gnav_item">
+                            <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="gnav_item">モデルコース</div>
+                    </a>
+
+                    <a href="">
+                        <div class="gnav_item">検索</div>
+                    </a>
                 </div>
-            </nav>
-        </header>
+
+            </div>
+        </nav>
+
+
+
+
+        <!--PC用ナビゲーション-->
+        <div class="adjustment_height"></div>
+        <div class="header_band">
+            <h1> モデルコース</h1><i class="fas fa-car"></i>
+        </div>
+        <nav id="pcgnav" class="pcgnav theme_color_dark">
+            <div class="container">
+
+                <ul class="flex">
+                    <a href="">
+                        <li><img class="gnav_logo" src="image/logo.png" alt="あわいやしロゴ"> </li>
+                    </a>
+                    <a href="">
+                        <li><span class="fun_color_dark nav_circle_set">楽</span>-たのしい-</li>
+                    </a>
+                    <a href="">
+                        <li><span class="calm_color_dark nav_circle_set">静</span>-しずか-</li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>モデルコース</li>
+                    </a>
+                    <a href="">
+                        <li><i class="fas fa-search"></i> 検索</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
     
         <!-- モデルコース一覧トップ -->
 
         <section class="model_archive_container">
             <div class="model_head">
                 <div class="model_description">
-                    <h2>モデルコース一覧</h2>
 
                     <p>
                         次のお休みは何して過ごす？<br />
