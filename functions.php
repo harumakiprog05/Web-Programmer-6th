@@ -69,6 +69,17 @@ function custom_theme_setup()
 }
 add_action("after_setup_theme", "custom_theme_setup");
 
+function change_title($title)
+{
+	if (is_search()) {
+		$title['title'] = '検索ページ';
+	} elseif (is_404()) {
+		$title['title'] = 'お探しのページは見つかりません';
+	}
+	return $title;
+};
+add_filter('document_title_parts', 'change_title');
+
 
 //▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
 // CSS・JavaScriptの読み込み
@@ -192,6 +203,7 @@ function breadcrumb()
 		}
 	}
 
+
 	// ▽▽▽▽▽ homeのリンク(liタグ)を変数へ代入 ▽▽▽▽▽
 	$home = '<li><a href="' . get_bloginfo('url') . '" >HOME</a></li>';
 
@@ -213,10 +225,39 @@ function breadcrumb()
 		// 表示カテゴリーページのリンク(liタグ)を出力
 		the_archive_title('<li>', '</li>');
 
+		// ▽▽▽▽▽ 絞り込み検索ページの場合 ▽▽▽▽▽
+	} else if (is_post_type_archive('spot')) {
+		echo $home;
+
 		// ▽▽▽▽▽ アーカイブ・タグページの場合 ▽▽▽▽▽
 	} else if (is_archive()) {
 		echo $home;
 		the_archive_title('<li>', '</li>');
+
+		// ▽▽▽▽▽ カスタム投稿model一覧ページの場合 ▽▽▽▽▽
+	} else if (is_singular('model')) {
+		echo $home;
+		echo '<li><a href="' . get_post_type_archive_link('model') . '">' . 'モデルコース一覧</a></li>';
+		the_title('<li>', '</li>');
+
+		// ▽▽▽▽▽ カスタム投稿spot一覧ページの場合 ▽▽▽▽▽
+	} else if (is_singular('spot')) {
+		$post = get_the_ID();
+		$term = get_category_parent($post, 'spot_cat');
+		switch ($term->name) {
+			case '楽':
+				$term_id = 2;
+				break;
+			case '静':
+				$term_id = 3;
+				break;
+			case '旨':
+				$term_id = 4;
+				break;
+		}
+		echo $home;
+		echo '<li><a href="' . get_term_link($term_id) . '">' . $term->name . '</a></li>';
+		the_title('<li>', '</li>');
 
 		// ▽▽▽▽▽ 投稿ページの場合 ▽▽▽▽▽
 	} else if (is_single()) {
