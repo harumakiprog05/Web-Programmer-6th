@@ -602,13 +602,14 @@ function header_band()
 {
 	$header_band_open = '<div class="header_band"><h1>';
 	$header_band_close = '</h1></div>';
+	$search_icon = '<i class="fas fa-search"></i>';
 
 	if (is_tax('spot_cat') || is_post_type_archive('model')) {
 		$text =  the_archive_title($header_band_open, $header_band_close);
 	} elseif (is_singular('model')) {
 		$text =  $header_band_open . 'モデルコース' . $header_band_close;
 	} elseif (is_post_type_archive('spot')) {
-		$text =  $header_band_open . '検索' . $header_band_close;
+		$text =  $header_band_open . '検索' . $search_icon . $header_band_close;
 	}
 	return $text;
 }
