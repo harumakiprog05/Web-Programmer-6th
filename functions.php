@@ -29,6 +29,7 @@
  * ┗SQL文を使用して絞り込み検索
  * ┗親カテゴリーの取得関数(自作関数)
  * ┗スラッグの「-」以降をカットする関数(自作関数)
+ * ┗ヘッダーバンドの条件分岐
  */
 
 // コンテンツ幅をセット
@@ -102,7 +103,7 @@ function myportfolio_scripts()
 			'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
 			array(),
 			'3.5.1',
-			true //</body> 終了タグの前で読み込み
+			// true //</body> 終了タグの前で読み込み
 		);
 	}
 	// ▼▼▼▼▼ベースJSの読み込み
@@ -114,12 +115,44 @@ function myportfolio_scripts()
 		true
 	);
 	// ▼▼▼▼▼スリックJSの読み込み
-	if (is_front_page()) {
+	wp_enqueue_script(
+		'slick-min-script',
+		get_template_directory_uri() . '/js/slick.min.js',
+		array('jquery'),
+		filemtime(get_theme_file_path('/js/slick.min.js')),
+		true
+	);
+	if (is_tax('spot_cat')) {
 		wp_enqueue_script(
-			'slick-min-script',
-			get_template_directory_uri() . '/js/slick.min.js',
+			'spot-cat-script',
+			get_template_directory_uri() . '/js/archive-spot.js',
 			array('jquery'),
-			filemtime(get_theme_file_path('/js/slick.min.js')),
+			filemtime(get_theme_file_path('/js/archive-spot.js')),
+			true
+		);
+		wp_enqueue_script(
+			'spot-cat-script2',
+			get_template_directory_uri() . '/js/jquery.morphing.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/jquery.morphing.js')),
+			true
+		);
+	}
+	if (is_post_type_archive('model')) {
+		wp_enqueue_script(
+			'archive-model-script',
+			get_template_directory_uri() . '/js/archive-model.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/archive-model.js')),
+			true
+		);
+	}
+	if (is_singular('model')) {
+		wp_enqueue_script(
+			'single-model-script',
+			get_template_directory_uri() . '/js/jQuery-modelsingle.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/jQuery-modelsingle.js')),
 			true
 		);
 	}
@@ -221,8 +254,10 @@ add_filter('get_the_archive_title', function ($title) {
 		$title = single_cat_title('', false);
 	} elseif (is_tag()) {
 		$title = single_tag_title('', false);
-	} elseif (is_month()) {
-		$title = single_month_title('', false);
+	} elseif (is_tax()) {
+		$title = single_term_title('', false);
+	} elseif (is_post_type_archive()) {
+		$title = post_type_archive_title('', false);
 	}
 	return $title;
 });
@@ -237,7 +272,7 @@ function create_my_post_types()
 	register_post_type(
 		'spot', //投稿タイプ名（識別子：半角英数字の小文字）
 		array(
-			'label' => 'スポット記事投稿',  //カスタム投稿タイプの名前（管理画面のメニューに表示される）
+			'label' => 'スポット記事一覧',  //カスタム投稿タイプの名前（管理画面のメニューに表示される）
 			'labels' => array(  //管理画面に表示されるラベルの文字を指定
 				'add_new'            => '新規スポット記事追加',
 				'edit_item'          => '新規スポット記事の編集',
@@ -267,7 +302,7 @@ function create_my_post_types()
 	register_post_type(
 		'model', //投稿タイプ名（識別子：半角英数字の小文字）
 		array(
-			'label'  => 'モデルコース投稿',  //カスタム投稿タイプの名前（管理画面のメニューに表示される）
+			'label'  => 'モデルコース一覧',  //カスタム投稿タイプの名前（管理画面のメニューに表示される）
 			'labels' => array(  //管理画面に表示されるラベルの文字を指定
 				'add_new'   => '新規モデルコース追加',
 				'edit_item' => '新規モデルコースの編集',
@@ -556,4 +591,24 @@ function cut_string($slug)
 	} else {
 		return $slug;
 	}
+}
+
+
+
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+// ヘッダーバンドの条件分岐
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+function header_band()
+{
+	$header_band_open = '<div class="header_band"><h1>';
+	$header_band_close = '</h1></div>';
+
+	if (is_tax('spot_cat') || is_post_type_archive('model')) {
+		$text =  the_archive_title($header_band_open, $header_band_close);
+	} elseif (is_singular('model')) {
+		$text =  $header_band_open . 'モデルコース' . $header_band_close;
+	} elseif (is_post_type_archive('spot')) {
+		$text =  $header_band_open . '検索' . $header_band_close;
+	}
+	return $text;
 }
