@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet" />
 
-    <!-- <title>あわいやし</title> -->
-
     <?php wp_head(); ?>
 </head>
 
@@ -23,9 +21,7 @@
         <div class="spheader">
             <div class="adjustment_height"></div>
 
-            <div class="header_band">
-                <h1><?php echo ''; ?></h1>
-            </div>
+            <?php echo header_band(); ?>
 
             <nav class="spgnav">
                 <div class="el_humburger">
@@ -37,10 +33,12 @@
                     </div>
                 </div>
 
-                <!-- ▼ ハンバーガー展開 : 終了開始 -->
+                <!-- ▼ ハンバーガー展開 : 開始 -->
                 <div class="gnav_inner">
                     <div class="gnav_item">
-                        <a href="<?php echo home_url('/'); ?>"><img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" width="70" alt="ロゴ" /></a>
+                        <a href="<?php echo home_url('/'); ?>">
+                            <img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" width="70" alt="ロゴ" />
+                        </a>
                     </div>
                     <div class="gnav_menu">
                         <a href="<?php echo esc_url(get_term_link(2)); ?>">
@@ -72,9 +70,6 @@
                 <!-- ▲ ハンバーガー展開 : 終了 -->
             </nav>
         </div>
-
-
-
 
         <!--PC用ナビゲーション-->
         <div class="pcheader">
