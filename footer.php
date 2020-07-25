@@ -69,7 +69,6 @@
         </div>
     </div>
     <!-- ▲ PC用フッター : 終了 -->
-
 </footer>
 
 <?php wp_footer(); ?>

@@ -75,9 +75,9 @@
 
 					<!-- ▲ 施設情報・地図 : 終了-->
 					<!-- <?php
-							$upload_dir = wp_upload_dir();
-							$medialibrary_url = $upload_dir['baseurl'] . '/';
-							?> -->
+								$upload_dir = wp_upload_dir();
+								$medialibrary_url = $upload_dir['baseurl'] . '/';
+								?> -->
 
 					<div class="">
 						<dl>

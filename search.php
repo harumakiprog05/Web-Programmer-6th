@@ -1,343 +1,297 @@
 <!-- ▼ ヘッダー : 開始-->
-<?php get_header(); ?>
+<?php get_header('subpage'); ?>
 <!-- ▲ ヘッダー : 終了-->
 
-<!-- ▼ searchform : 開始-->
-<?php get_search_form(); ?>
-<!-- ▲ searchform : 終了-->
+<main>
+	<!-- ▼ searchform : 開始-->
+	<?php get_search_form(); ?>
+	<!-- ▲ searchform : 終了-->
 
-<!-- ▼ searchformの値取得 : 開始-->
-<?php
-$s = $_GET['s'];
-$get_tags = $_GET['get_tags'];
-$get_cats = $_GET['get_cats'];
-
-
-if ($get_tags) {
-	$tax_ary[] = array(
-		'taxonomy' => 'spot_tag',
-		'field' => 'slug',
-		'terms' => $get_tags,
-		'operator' => 'AND', //ANDかIN
-	);
-}
-?>
-<!-- ▲ searchformの値取得 : 終了-->
-
-<!-- ▼ 絞り込み検索の結果出力 : 開始-->
-<?php if (!($s || $get_cats || $get_tags)) : ?>
-
-<?php else : ?>
-
-	<h2>＜＜＜検索結果＞＞＞</h2>
-
-	<!-- ▼ WP_Query（楽） : 開始------------------------------------------------------>
 	<?php
-	$my_query = new WP_Query(array(
-		'paged' => get_query_var('paged'),
-		'post_type' => 'post',
-		'tax_query' => $tax_ary,
-		'relation' => 'AND', //ANDかOR
-		's' => $s,
-	)); ?>
+	// <!-- ▼ searchformの値取得と変数定義 : 開始-->
+	$tax_name_spot = 'spot_cat';
+	$tax_name_info = 'info_cat';
+	$s = $get_tags = $get_cats = '';
+	$count_spot_fun = $count_spot_calm = $count_spot_tasty =  0;
 
-	<?php if ($my_query->have_posts()) : ?>
+	if (isset($_GET['s']) && $_GET['s'] != '') {
+		$s = $_GET['s'];
+	}
+	if (isset($_GET['get_tags']) && $_GET['get_tags'] != '') {
+		$get_tags = $_GET['get_tags'];
+	}
+	if (isset($_GET['get_cats']) && $_GET['get_cats'] != '') {
+		$get_cats = $_GET['get_cats'];
+	}
 
-		<h2>楽</h2>
-		<ul>
-			<?php while ($my_query->have_posts()) : ?>
-				<?php $my_query->the_post(); ?>
-
-				<!-- ▼ メインカテゴリになるまで親カテゴリーを取得 : 開始 -->
-				<?php
-				$cat = get_the_terms($post, 'spot_cat');
-				$cat = $cat[0];
-
-				$cat_id = $cat->parent;
-				while ($cat_id != 0) {
-					$cat = get_term($cat_id, 'spot_cat');
-					$cat_id = $cat->parent;
-				}
-				?>
-				<!-- ▲ メインカテゴリになるまで親カテゴリーを取得 : 終了-->
-
-				<!-- ▼ エリア指定「無」の処理 : 開始 -->
-				<?php if (!$get_cats) : ?>
-					<?php if ($cat->name == '楽') : ?>
-						<li>(<?php echo $cat->name; ?>)タグ：<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-						</li>
-					<?php endif; ?>
-					<!-- ▲ エリア指定「無」の処理 : 終了-->
+	$tax_ary_fun[] = create_taxquery_array($get_tags, 'fun');
+	$tax_ary_calm[] = create_taxquery_array($get_tags, 'calm');
+	$tax_ary_tasty[] = create_taxquery_array($get_tags, 'tasty');
+	// <!-- ▲ searchformの値取得と変数定義 : 終了-->
+	?>
 
 
-					<!-- ▼ エリア指定「有」の処理 : 開始 -->
-				<?php elseif ($get_cats) : ?>
-					<!-- ▼ カスタム投稿spotのスラッグ取得 : 開始 -->
-					<?php if ($cat->name == '楽') : ?>
-						<?php $slug = $post->post_name; ?>
-						<?php $spot_post_id = get_the_ID(); ?>
+	<section class="result_section">
 
-						<?php
-						// 文字列に「-(ハイフン)」が含まれている場合
-						if (strpos($slug, '-') !== false) {
-							$cut = 2; //カットしたい文字数
-							$slug = substr(
-								$slug,
-								0,
-								strlen($slug) - $cut
-							);
-						}
-						?>
-					<?php endif; ?>
-					<!-- ▲ カスタム投稿spotのスラッグ取得 : 終了-->
+		<!-- ▼ 絞り込み検索の結果出力 : 開始-->
+		<?php if (!($s || $get_cats || $get_tags)) : ?>
 
-					<!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 開始 -->
-					<?php
-					$args = array(
-						'post_type' => 'info', //投稿タイプ名
-						'name' => $slug
-					);
-					$customPosts = get_posts($args);
-					if ($customPosts) {
-						foreach ($customPosts as $post) {
-							setup_postdata($post);
-							$area = get_the_terms($post, 'info_cat');
-							$area = $area[0]->slug;
-						}
-					}
-					wp_reset_postdata(); //クエリのリセット
-					?>
-					<!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 終了-->
+		<?php else : ?>
 
-					<!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
-					<?php
-					foreach ($get_cats as $val) {
-						if ($area == $val && $cat->name == '楽') {
-							$post = get_post($spot_post_id);
-							echo '<li><a href="', get_permalink(), '">', $post->post_title, '</a></li>';
-						}
-					}
-					?>
-					<!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
-				<?php endif; ?>
-			<?php endwhile; ?>
-		</ul>
-	<?php else : ?>
-		<p>結果が見つかりませんでした。</p>
-	<?php endif; ?>
-	<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
+			<!-- ▼ WP_Query（楽） : 開始------------------------------------------------------>
+			<?php $my_query_fun = new WP_Query(create_wp_query($tax_ary_fun, 'AND', $s)); ?>
+			<div class="fun_result fun_color_light">
+				<div class="container">
+					<h2 class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
+					<ul class="result_items flex">
+						<?php if ($my_query_fun->have_posts()) : ?>
 
-	<!-- ▼ WP_Query（静） : 開始------------------------------------------------------>
-	<?php
-	$my_query = new WP_Query(array(
-		'paged' => get_query_var('paged'),
-		'post_type' => 'post',
-		'tax_query' => $tax_ary,
-		'relation' => 'AND', //ANDかOR
-		's' => $s,
-	)); ?>
-
-	<?php if ($my_query->have_posts()) : ?>
-
-		<h2>静</h2>
-		<ul>
-			<?php while ($my_query->have_posts()) : ?>
-				<?php $my_query->the_post(); ?>
-
-				<!-- ▼ メインカテゴリになるまで親カテゴリーを取得 : 開始 -->
-				<?php
-				$cat = get_the_terms($post, 'spot_cat');
-				$cat = $cat[0];
-
-				$cat_id = $cat->parent;
-				while ($cat_id != 0) {
-					$cat = get_term($cat_id, 'spot_cat');
-					$cat_id = $cat->parent;
-				}
-				?>
-				<!-- ▲ メインカテゴリになるまで親カテゴリーを取得 : 終了-->
-
-				<!-- ▼ エリア指定「無」の処理 : 開始 -->
-				<?php if (!$get_cats) : ?>
-					<?php if ($cat->name == '静') : ?>
-						<li>(<?php echo $cat->name; ?>)タグ：<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-						</li>
-					<?php endif; ?>
-					<!-- ▲ エリア指定「無」の処理 : 終了-->
+							<?php while ($my_query_fun->have_posts()) : ?>
+								<?php $my_query_fun->the_post(); ?>
 
 
-					<!-- ▼ エリア指定「有」の処理 : 開始 -->
-				<?php elseif ($get_cats) : ?>
-					<!-- ▼ カスタム投稿spotのスラッグ取得 : 開始 -->
-					<?php $slug = $post->post_name; ?>
-					<?php
-					// 文字列に「-(ハイフン)」が含まれている場合
-					if (strpos($slug, '-') !== false) {
-						$cut = 2; //カットしたい文字数
-						$slug = substr(
-							$slug,
-							0,
-							strlen($slug) - $cut
-						);
-					}
-					?>
-					<!-- ▲ カスタム投稿spotのスラッグ取得 : 終了-->
+								<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
+								if (!$get_cats) :
+								?>
+									<?php $count_spot_fun++; ?>
+									<li class="result_item">
+										<a href="<?php the_permalink() ?>">
+											<?php the_post_thumbnail(); ?>
+											<span><?php the_title(); ?></span>
+										</a>
+									</li>
 
-					<!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 開始 -->
-					<?php
-					$args = array(
-						'post_type' => 'info', //投稿タイプ名
-						'name' => $slug
-					);
-					$customPosts = get_posts($args);
-					if ($customPosts) {
-						foreach ($customPosts as $post) {
-							setup_postdata($post);
-							$area = get_the_terms($post, 'info_cat');
-							$area = $area[0]->slug;
-						}
-					}
-					wp_reset_postdata(); //クエリのリセット
-					?>
-					<!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 終了-->
 
-					<!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
-					<?php
-					foreach ($get_cats as $val) {
-						if ($area == $val) {
-							$args = array(
-								'post_type' => 'spot', //投稿タイプ名
-								'name' => $slug
-							);
-							$customPosts = get_posts($args);
-							if ($customPosts) {
-								foreach ($customPosts as $post) {
-									setup_postdata($post);
-									if ($cat->name == '静') {
-										echo '<li><a href="', the_permalink(), '">', the_title(), '</a></li>';
+								<?php // <!-- ▼ エリア指定が「有る」場合の処理 : 開始 ---------------------->
+								elseif ($get_cats) :
+								?>
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグとID取得 : 開始 -->
+									$spot_post_id = get_the_ID();
+									$slug = $post->post_name;
+									// <!-- スラッグに「-(ハイフン)」が含まれていれば「-」以下カット -->
+									$slug = cut_string($slug);
+									// <!-- ▲ カスタム投稿spotのスラッグとID取得 : 終了-->
+									?>
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
+									$args = array(
+										'post_type' => 'info', //投稿タイプ名
+										'name' => $slug
+									);
+									$customPosts = get_posts($args);
+									if ($customPosts) {
+										foreach ($customPosts as $post) {
+											setup_postdata($post);
+											$area = get_category_parent($post, $tax_name_info)->slug;
+										}
 									}
-								}
-							}
-							wp_reset_postdata(); //クエリのリセット
-						}
-					}
-					?>
-					<!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
-				<?php endif; ?>
-			<?php endwhile; ?>
-		</ul>
-	<?php else : ?>
-		<p>結果が見つかりませんでした。</p>
-	<?php endif; ?>
-	<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
+									wp_reset_postdata(); //クエリのリセット
+									// <!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 終了-->
+									?>
 
-	<!-- ▼ WP_Query（旨） : 開始------------------------------------------------------>
-	<?php
-	$my_query = new WP_Query(array(
-		'paged' => get_query_var('paged'),
-		'post_type' => 'post',
-		'tax_query' => $tax_ary,
-		'relation' => 'AND', //ANDかOR
-		's' => $s,
-	)); ?>
-
-	<?php if ($my_query->have_posts()) : ?>
-
-		<h2>旨</h2>
-		<ul>
-			<?php while ($my_query->have_posts()) : ?>
-				<?php $my_query->the_post(); ?>
-
-				<!-- ▼ メインカテゴリになるまで親カテゴリーを取得 : 開始 -->
-				<?php
-				$cat = get_the_terms($post, 'spot_cat');
-				$cat = $cat[0];
-
-				$cat_id = $cat->parent;
-				while ($cat_id != 0) {
-					$cat = get_term($cat_id, 'spot_cat');
-					$cat_id = $cat->parent;
-				}
-				?>
-				<!-- ▲ メインカテゴリになるまで親カテゴリーを取得 : 終了-->
-
-				<!-- ▼ エリア指定「無」の処理 : 開始 -->
-				<?php if (!$get_cats) : ?>
-					<?php if ($cat->name == '旨') : ?>
-						<li>(<?php echo $cat->name; ?>)タグ：<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-						</li>
-					<?php endif; ?>
-					<!-- ▲ エリア指定「無」の処理 : 終了-->
-
-
-					<!-- ▼ エリア指定「有」の処理 : 開始 -->
-				<?php elseif ($get_cats) : ?>
-					<!-- ▼ カスタム投稿spotのスラッグ取得 : 開始 -->
-					<?php $slug = $post->post_name; ?>
-					<?php
-					// 文字列に「-(ハイフン)」が含まれている場合
-					if (strpos($slug, '-') !== false) {
-						$cut = 2; //カットしたい文字数
-						$slug = substr(
-							$slug,
-							0,
-							strlen($slug) - $cut
-						);
-					}
-					?>
-					<!-- ▲ カスタム投稿spotのスラッグ取得 : 終了-->
-
-					<!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 開始 -->
-					<?php
-					$args = array(
-						'post_type' => 'info', //投稿タイプ名
-						'name' => $slug
-					);
-					$customPosts = get_posts($args);
-					if ($customPosts) {
-						foreach ($customPosts as $post) {
-							setup_postdata($post);
-							$area = get_the_terms($post, 'info_cat');
-							$area = $area[0]->slug;
-						}
-					}
-					wp_reset_postdata(); //クエリのリセット
-					?>
-					<!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ取得 : 終了-->
-
-					<!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
-					<?php
-					foreach ($get_cats as $val) {
-						if ($area == $val) {
-							$args = array(
-								'post_type' => 'spot', //投稿タイプ名
-								'name' => $slug
-							);
-							$customPosts = get_posts($args);
-							if ($customPosts) {
-								foreach ($customPosts as $post) {
-									setup_postdata($post);
-									if ($cat->name == '旨') {
-										echo '<li><a href="', the_permalink(), '">', the_title(), '</a></li>';
+									<?php
+									// <!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
+									foreach ($get_cats as $val) {
+										if ($area == $val) {
+											$post = get_post($spot_post_id);
+											echo '<li class="result_item"><a href="', get_permalink(), '">';
+											echo get_the_post_thumbnail($post);
+											echo '<span>', $post->post_title, '</span></a></li>';
+											$count_spot_fun++;
+										}
 									}
-								}
+									// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
+									?>
+
+								<?php // <!-- ▲ エリア指定が「有る」場合の処理 : 終了---------------------->
+								endif; ?>
+
+							<?php endwhile; ?>
+							<?php
+							if ($count_spot_fun == 0) {
+								echo '<li class="result_item">結果が見つかりませんでした。</li>';
 							}
-							wp_reset_postdata(); //クエリのリセット
-						}
-					}
-					?>
-					<!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
-				<?php endif; ?>
-			<?php endwhile; ?>
-		</ul>
-	<?php else : ?>
-		<p>結果が見つかりませんでした。</p>
-	<?php endif; ?>
-	<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
+							?>
+						<?php else : ?>
+							<li class="result_item">結果が見つかりませんでした。</li>
+						<?php endif; ?>
+					</ul>
+				</div>
+			</div>
+			<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
+
+			<!-- ▼ WP_Query（静） : 開始------------------------------------------------------>
+			<?php $my_query_calm = new WP_Query(create_wp_query($tax_ary_calm, 'AND', $s)); ?>
+			<div class="calm_result calm_color_light">
+				<div class="container">
+					<h2 class="result_categry_title calm_color_dark grande_circle_set">静</h2>
+					<ul class="result_items flex">
+						<?php if ($my_query_calm->have_posts()) : ?>
+
+							<?php while ($my_query_calm->have_posts()) : ?>
+								<?php $my_query_calm->the_post(); ?>
+
+								<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
+								if (!$get_cats) : ?>
+									<?php $count_spot_clam++; ?>
+									<li class="result_item">
+										<a href="<?php the_permalink() ?>">
+											<?php the_post_thumbnail(); ?>
+											<span><?php the_title(); ?></span>
+										</a>
+									</li>
 
 
-<?php endif; ?>
-<!-- ▲ 絞り込み検索の結果出力 : 終了-->
+								<?php // <!-- ▼ エリア指定が「有る」場合の処理 : 開始 ---------------------->
+								elseif ($get_cats) : ?>
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグとID取得 : 開始 -->
+									$spot_post_id = get_the_ID();
+									$slug = $post->post_name;
+									// <!-- スラッグに「-(ハイフン)」が含まれていれば「-」以下カット -->
+									$slug = cut_string($slug);
+									// <!-- ▲ カスタム投稿spotのスラッグとID取得 : 終了-->
+									?>
+
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
+									$args = array(
+										'post_type' => 'info', //投稿タイプ名
+										'name' => $slug
+									);
+									$customPosts = get_posts($args);
+									if ($customPosts) {
+										foreach ($customPosts as $post) {
+											setup_postdata($post);
+											$area = get_category_parent($post, $tax_name_info)->slug;
+										}
+									}
+									wp_reset_postdata(); //クエリのリセット
+									// <!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 終了-->
+									?>
+
+									<?php
+									// <!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
+									foreach ($get_cats as $val) {
+										if ($area == $val) {
+											$post = get_post($spot_post_id);
+											echo '<li class="result_item"><a href="', get_permalink(), '">';
+											echo get_the_post_thumbnail($post);
+											echo '<span>', $post->post_title, '</span></a></li>';
+											$count_spot_clam++;
+										}
+									}
+									// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
+									?>
+
+								<?php // <!-- ▲ エリア指定が「有る」場合の処理 : 終了---------------------->
+								endif; ?>
+
+							<?php endwhile; ?>
+							<?php
+							if ($count_spot_clam == 0) {
+								echo '<li class="result_item">結果が見つかりませんでした。</li>';
+							}
+							?>
+						<?php else : ?>
+							<li class="result_item">結果が見つかりませんでした。</li>
+						<?php endif; ?>
+					</ul>
+				</div>
+			</div>
+			<!-- ▲ WP_Query（静） : 終了------------------------------------------------------>
+
+			<!-- ▼ WP_Query（旨） : 開始------------------------------------------------------>
+			<?php $my_query_tasty = new WP_Query(create_wp_query($tax_ary_tasty, 'AND', $s)); ?>
+			<div class="yum_result yum_color_light">
+				<div class="container">
+					<h2 class="result_categry_title yum_color_dark grande_circle_set">旨</h2>
+					<ul class="result_items flex">
+						<?php if ($my_query_tasty->have_posts()) : ?>
+
+							<?php while ($my_query_tasty->have_posts()) : ?>
+								<?php $my_query_tasty->the_post(); ?>
+
+								<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
+								if (!$get_cats) : ?>
+									<?php $count_spot_tasty++; ?>
+									<li class="result_item">
+										<a href="<?php the_permalink() ?>">
+											<?php the_post_thumbnail(); ?>
+											<span><?php the_title(); ?></span>
+										</a>
+									</li>
+
+
+								<?php // <!-- ▼ エリア指定が「有る」場合の処理 : 開始 ---------------------->
+								elseif ($get_cats) : ?>
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグとID取得 : 開始 -->
+									$spot_post_id = get_the_ID();
+									$slug = $post->post_name;
+									// <!-- スラッグに「-(ハイフン)」が含まれていれば「-」以下カット -->
+									$slug = cut_string($slug);
+									// <!-- ▲ カスタム投稿spotのスラッグとID取得 : 終了-->
+									?>
+
+									<?php
+									// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
+									$args = array(
+										'post_type' => 'info', //投稿タイプ名
+										'name' => $slug
+									);
+									$customPosts = get_posts($args);
+									if ($customPosts) {
+										foreach ($customPosts as $post) {
+											setup_postdata($post);
+											$area = get_category_parent($post, $tax_name_info)->slug;
+										}
+									}
+									wp_reset_postdata(); //クエリのリセット
+									// <!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 終了-->
+									?>
+
+									<?php
+									// <!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
+									foreach ($get_cats as $val) {
+										if ($area == $val) {
+											$post = get_post($spot_post_id);
+											echo '<li class="result_item"><a href="', get_permalink(), '">';
+											echo get_the_post_thumbnail($post);
+											echo '<span>', $post->post_title, '</span></a></li>';
+											$count_spot_tasty++;
+										}
+									}
+									// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
+									?>
+
+								<?php // ▲ エリア指定が「有る」場合の処理 : 終了--------------------
+								endif; ?>
+
+							<?php endwhile; ?>
+							<?php
+							if ($count_spot_tasty == 0) {
+								echo '<li class="result_item">結果が見つかりませんでした。</li>';
+							}
+							?>
+						<?php else : ?>
+							<li class="result_item">結果が見つかりませんでした。</li>
+						<?php endif; ?>
+					</ul>
+				</div>
+			</div>
+			<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
+
+		<?php endif; ?>
+		<!-- ▲ 絞り込み検索の結果出力 : 終了-->
+	</section>
+</main>
 
 <!-- ▼ 検証条件クリアする為のJS : 開始-->
 <script>

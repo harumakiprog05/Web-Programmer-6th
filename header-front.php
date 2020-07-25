@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="<?php bloginfo("charset"); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
 
   <!--CDNでFontAwsome読み込む-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
-  <title>あわいやし</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+
+  <!-- <title>あわいやし</title> -->
 
   <?php wp_head(); ?>
 </head>
@@ -93,23 +96,23 @@
         <ul class="flex">
           <li>
             <a href="<?php echo home_url('/'); ?>">
-              <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" alt="あわいやしロゴ">
+              <img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" alt="あわいやしロゴ">
             </a>
           </li>
           <li>
             <a href="<?php echo esc_url(get_term_link(2)); ?>">
-              <span class="circle fun_color_dark nav_circle_set">楽</span>-たのしい-
+              <span class="fun_color_dark nav_circle_set">楽</span>-たのしい-
             </a>
           </li>
           <li>
             <a href="<?php echo esc_url(get_term_link(3)); ?>">
-              <span class="circle calm_color_dark nav_circle_set">静</span>-しずか-
+              <span class="calm_color_dark nav_circle_set">静</span>-しずか-
             </a>
           </li>
           <li>
             <a href="<?php echo esc_url(get_term_link(4)); ?>">
 
-              <span class="circle yum_color_dark nav_circle_set">旨</span>-うまい-
+              <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
             </a>
           </li>
           <li>
@@ -127,9 +130,4 @@
     </nav>
     <!-- ▲ PC用ナビゲーション : 終了 -->
 
-    <!-- ▼ パンくずリスト : 開始-->
-    <nav class="breadcrumb">
-      <?php breadcrumb(); ?>
-    </nav>
-    <!-- ▲ パンくずリスト : 終了-->
   </header>

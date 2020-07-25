@@ -4,18 +4,18 @@ var navButtonFlag = true;
 var focusFlag = false;
 
 //ハンバーガーメニュー
-$(function () {
-    $(document).on("click", ".el_humburger", function () {
+$(function() {
+    $(document).on("click", ".el_humburger", function() {
         if (navButtonFlag) {
             spNavInOut.switch();
             //一時的にボタンを押せなくする
-            setTimeout(function () {
+            setTimeout(function() {
                 navButtonFlag = true;
             }, 200);
             navButtonFlag = false;
         }
     });
-    $(document).on("click touchend", function (event) {
+    $(document).on("click touchend", function(event) {
         if (!$(event.target).closest(".bl_header,.el_humburger").length && $("body").hasClass("js_humburgerOpen") && focusFlag) {
             focusFlag = false;
             //scrollBlocker(false);
@@ -28,10 +28,10 @@ $(function () {
 function spNavIn() {
     $("body").removeClass("js_humburgerClose");
     $("body").addClass("js_humburgerOpen");
-    setTimeout(function () {
+    setTimeout(function() {
         focusFlag = true;
     }, 200);
-    setTimeout(function () {
+    setTimeout(function() {
         navigationOpenFlag = true;
     }, 200);
 }
@@ -40,7 +40,7 @@ function spNavIn() {
 function spNavOut() {
     $("body").removeClass("js_humburgerOpen");
     $("body").addClass("js_humburgerClose");
-    setTimeout(function () {
+    setTimeout(function() {
         $(".uq_spNavi").removeClass("js_appear");
         focusFlag = false;
     }, 200);
@@ -49,7 +49,7 @@ function spNavOut() {
 
 //ナビ開閉コントロール
 var spNavInOut = {
-    switch: function () {
+    switch: function() {
         if ($("body.spNavFreez").length) {
             return false;
         }
@@ -65,7 +65,7 @@ var spNavInOut = {
 
 let visualHeightHeaf = $("#main_visual").outerHeight() / 2;
 
-let scrollHeight = $(window).scroll(function () {
+let scrollHeight = $(window).scroll(function() {
     scrollVolume = $(this).scrollTop();
 
     if ($(window).width() >= 1000) {
@@ -81,7 +81,7 @@ let scrollHeight = $(window).scroll(function () {
 
 // メインビジュアルのフェードイン・アウト
 
-$(function () {
+$(function() {
     var $width = "100%"; // 横幅
     var $height = "100vh"; // 高さ
     var $interval = 4000; // 切り替わりの間隔（ミリ秒）
@@ -89,7 +89,7 @@ $(function () {
     $(".main_visual_images ul li").css({ position: "relative", overflow: "hidden", width: $width, height: $height });
     $(".main_visual_images ul li").hide().css({ position: "absolute", top: 0, left: 0 });
     $(".main_visual_images ul li:first").addClass("active").show();
-    setInterval(function () {
+    setInterval(function() {
         var $active = $(".main_visual_images ul li.active");
         var $next = $active.next("li").length ? $active.next("li") : $(".main_visual_images ul li:first");
         $active.fadeOut($fade_speed).removeClass("active");
@@ -99,15 +99,14 @@ $(function () {
 
 // カテゴリーごとのスポットスライドショー
 
-$(function () {
+$(function() {
     $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         slidesToShow: 5,
         infinite: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 3,
@@ -123,9 +122,9 @@ $(function () {
     });
 });
 
-// トップページのモデルコーススライドショー
+// モデルコーススライドショー
 
-$(function () {
+$(function() {
     $(".modelcose_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -140,10 +139,10 @@ $(function () {
 $(".top_return_button").css("display", "none");
 
 // ボタンの表示・非表示
-$(document).ready(function () {
+$(document).ready(function() {
     var pagetop = $(".top_return_button");
 
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 800) {
             pagetop.fadeIn();
         } else {
@@ -152,7 +151,7 @@ $(document).ready(function () {
     });
 
     // クリックでトップへ戻る
-    pagetop.click(function () {
+    pagetop.click(function() {
         $("body, html").animate({ scrollTop: 0 }, 800);
         return false;
     });

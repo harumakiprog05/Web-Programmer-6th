@@ -69,6 +69,7 @@
     font-size: 3vw;
 }
 
+
 /* あわいやしとは？セクション */
 
 .site_about_title {
@@ -91,6 +92,7 @@
 .contents_copy {
     margin-bottom: 30px;
 }
+
 
 /* メインカテゴリーセクション */
 
@@ -120,6 +122,7 @@
     font-size: 14px;
 }
 
+
 /* .fun_category {
   background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ddebd1 20%, #ddebd1 100%);
 }
@@ -133,21 +136,21 @@
 } */
 
 .fun_category_image {
-    background-image: url("../image/category_img_fun.jpg");
+    background-image: url("image/category_img_fun.jpg");
     background-size: cover;
     background-position: center;
     height: 170px;
 }
 
 .calm_category_image {
-    background-image: url("../image/category_img_calm.jpg");
+    background-image: url("image/category_img_calm.jpg");
     background-size: cover;
     background-position: center;
     height: 170px;
 }
 
 .yum_category_image {
-    background-image: url("../image/category_img_yum.jpg");
+    background-image: url("image/category_img_yum.jpg");
     background-size: cover;
     background-position: center;
     height: 170px;
@@ -169,14 +172,17 @@
     font-size: 18px;
 }
 
-.fun_category span, .calm_category span, .yum_category span {
+.fun_category span,
+.calm_category span,
+.yum_category span {
     transform: translate(0, -50%);
 }
+
 
 /* モデルコースセクション */
 
 .awaiyashi_plan {
-    background-image: url("../image/model_bg_image.jpg");
+    background-image: url("image/model_bg_image.jpg");
     /* filter: opacity(20%); */
     background-size: cover;
     min-height: 200px;
@@ -191,10 +197,11 @@
     margin-bottom: 20px;
 }
 
+
 /* インスタセクション */
 
 .instagram {
-    background: url("../image/instaimage.jpg");
+    background: url("image/instaimage.jpg");
     background-size: cover;
 }
 
@@ -217,6 +224,7 @@
     margin-top: 30px;
     font-weight: 600;
 }
+
 
 /* PC版表示 */
 
@@ -281,6 +289,7 @@
     }
 }
 
+
 /* サーチページのスタイル */
 
 .tag_search_wrap {
@@ -344,6 +353,7 @@ input::placeholder {
     color: rgb(228, 228, 228);
 }
 
+
 /* マップのスタイル */
 
 .west_name {
@@ -353,9 +363,12 @@ input::placeholder {
     right: 0;
 }
 
+
 /* 検索結果のスタイル */
 
-.fun_result, .calm_result, .yum_result {
+.fun_result,
+.calm_result,
+.yum_result {
     margin-bottom: 50px;
 }
 
@@ -366,6 +379,7 @@ input::placeholder {
 .result_item {
     margin-bottom: 20px;
 }
+
 
 /* ブラウザ幅によって表示される行数を変更 */
 
@@ -419,6 +433,7 @@ input::placeholder {
     }
 }
 
+
 /*マップ絞り込み検索の色が変わるcss*/
 
 .map_color {
@@ -447,6 +462,7 @@ input::placeholder {
 .area_search_wrap figure input {
     opacity: 0;
 }
+
 
 /*マップのsvgを徳島県の形に合わせてます*/
 
@@ -677,6 +693,7 @@ path {
     }
 }
 
+
 /*
 single.cssの110行目
 .info_actab input[type="checkbox"] + label::after {content: "+";}
@@ -704,10 +721,13 @@ single.cssの110行目
         display: flex;
         justify-content: space-around;
     }
-    .fun_result, .calm_result, .yum_result {
+    .fun_result,
+    .calm_result,
+    .yum_result {
         margin-bottom: 130px;
     }
 }
+
 
 /* ---フォームページのスタイル--- */
 
@@ -715,7 +735,10 @@ single.cssの110行目
     color: #eec362;
 }
 
-.foam_wrap input[type="text"], .foam_wrap input[type="tel"], .foam_wrap input[type="email"], textarea {
+.foam_wrap input[type="text"],
+.foam_wrap input[type="tel"],
+.foam_wrap input[type="email"],
+textarea {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
@@ -735,14 +758,17 @@ single.cssの110行目
     margin: 0 auto;
 }
 
+
 /* -----page.phpのスタイル----- */
 
-.pp_container p, .pp_container ol {
+.pp_container p,
+.pp_container ol {
     text-align: left;
     margin-bottom: 50px;
 }
 
-.pp_container h3, .pp_container h2 {
+.pp_container h3,
+.pp_container h2 {
     margin-bottom: 30px;
 }
 
@@ -767,12 +793,14 @@ single.cssの110行目
     width: 100%;
 }
 
+
 /* -----モデルコース一覧ページのスタイル----- */
 
 .model_archive_container {
     margin: 0 auto;
     max-width: 1000px;
 }
+
 
 /* モデルコース概要テキスト（top) */
 
@@ -786,6 +814,7 @@ single.cssの110行目
     margin-top: 80px;
     text-align: center;
 }
+
 
 /* 上下イラスト飾り */
 
@@ -809,7 +838,8 @@ single.cssの110行目
     position: absolute;
 }
 
-.archive_model_pc_img_top img, .model_pc_img img {
+.archive_model_pc_img_top img,
+.model_pc_img img {
     width: 100%;
     object-fit: cover;
 }
@@ -818,10 +848,12 @@ single.cssの110行目
     text-align: center;
 }
 
+
 /* イラスト：レスポンシブ変更 */
 
 @media screen and (max-width: 940px) {
-    .model_pc_img, .archive_model_pc_img_top {
+    .model_pc_img,
+    .archive_model_pc_img_top {
         display: none;
     }
 }
@@ -831,6 +863,7 @@ single.cssの110行目
         display: none;
     }
 }
+
 
 /* パンクズ */
 
@@ -847,6 +880,7 @@ single.cssの110行目
     float: left;
 }
 
+
 /* メインコンテンツ */
 
 .archive_model_spot_wrap {
@@ -859,12 +893,14 @@ single.cssの110行目
     }
 }
 
+
 /* .model_pc_img_top {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 } */
+
 
 /* 各モデルコース画像 */
 
@@ -880,6 +916,7 @@ single.cssの110行目
     object-fit: cover;
 }
 
+
 /* モデルコース説明テキスト */
 
 .model_text {
@@ -892,6 +929,7 @@ single.cssの110行目
     margin: 50px auto;
 }
 
+
 /*
 @media screen and (min-width: 480px) {
     .model_text h3, .model_card_description {
@@ -902,7 +940,9 @@ single.cssの110行目
     }
 } */
 
+
 /* -----モデルコース個別記事のスタイル----- */
+
 
 /*背景画像*/
 
@@ -1093,10 +1133,12 @@ single.cssの110行目
 }
 
 @media screen and (max-width: 1024px) {
-    .model_pc_img, .model_pc_img_top {
+    .model_pc_img,
+    .model_pc_img_top {
         display: none;
     }
 }
+
 
 /*SP版画像配置*/
 
@@ -1164,6 +1206,7 @@ single.cssの110行目
         width: 300px;
     }
 }
+
 
 /*PC版画像配置*/
 
@@ -1387,7 +1430,9 @@ single.cssの110行目
     width: 1000px;
 }
 
+
 /* -----slick系のスタイル----- */
+
 
 /* Slider */
 
@@ -1423,7 +1468,8 @@ single.cssの110行目
     cursor: hand;
 }
 
-.slick-slider .slick-track, .slick-slider .slick-list {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -1440,7 +1486,8 @@ single.cssの110行目
     margin-right: auto;
 }
 
-.slick-track:before, .slick-track:after {
+.slick-track:before,
+.slick-track:after {
     display: table;
     content: '';
 }
@@ -1493,11 +1540,14 @@ single.cssの110行目
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
 /* Slider */
 
 .slick-loading .slick-list {
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
+
 
 /* Icons */
 
@@ -1509,9 +1559,11 @@ single.cssの110行目
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 
+
 /* Arrows */
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -1530,21 +1582,29 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
     color: transparent;
     outline: none;
     background: transparent;
 }
 
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
     opacity: 1;
 }
 
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
     opacity: .25;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     font-family: 'slick';
     font-size: 20px;
     line-height: 1;
@@ -1588,6 +1648,7 @@ single.cssの110行目
     content: '←';
 }
 
+
 /* Dots */
 
 .slick-dotted.slick-slider {
@@ -1629,11 +1690,13 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-dots li button:hover, .slick-dots li button:focus {
+.slick-dots li button:hover,
+.slick-dots li button:focus {
     outline: none;
 }
 
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
     opacity: 1;
 }
 
@@ -1658,6 +1721,7 @@ single.cssの110行目
     opacity: .75;
     color: black;
 }
+
 
 /* 個別記事のスタイル */
 
@@ -1714,7 +1778,8 @@ single.cssの110行目
     justify-content: space-between;
 }
 
-.sudachi_point img, .inside_modal img {
+.sudachi_point img,
+.inside_modal img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1731,7 +1796,8 @@ single.cssの110行目
     width: 100%;
 }
 
-.sudachi_point li, .inside_modal li {
+.sudachi_point li,
+.inside_modal li {
     margin: 0 5px;
     position: relative;
 }
@@ -1836,12 +1902,14 @@ single.cssの110行目
     margin: 1em;
 }
 
+
 /* :checked */
 
 .info_actab input:checked~.info_actab_content {
     max-height: 70em;
     margin: 50px 3%;
 }
+
 
 /* Icon */
 
@@ -1900,6 +1968,7 @@ single.cssの110行目
     border-bottom: 2px solid #d9d9d9;
     padding: 20px;
 }
+
 
 /* tr:nth-child(even) {
     background-color: #EDE2D3;
