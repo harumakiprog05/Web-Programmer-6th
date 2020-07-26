@@ -1,95 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="widdt=device-widdt, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/foam.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="widdt=device-widdt, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/foam.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
+            rel="stylesheet"
+        />
 
-    <!--CDNでjQuery読み込む-->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
+        <!--CDNでjQuery読み込む-->
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"
+        ></script>
 
-    <!--CDNでFontAwsome読み込む-->
-    <link
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      rel="stylesheet"
-    />
+        <!--CDNでFontAwsome読み込む-->
+        <link
+            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            rel="stylesheet"
+        />
 
-    <title>お問い合わせ｜あわいやし</title>
-  </head>
+        <title>お問い合わせ｜あわいやし</title>
+    </head>
 
-  <body>
-    <main class="centering">
-      <h2 class="footer_h2">お問い合わせ</h2>
+    <body>
+        <main class="centering">
+            <h2 class="footer_h2">お問い合わせ</h2>
 
-        <div class="foam_wrap">
+            <div class="foam_wrap">
+                <p>
+                    『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
+                    <span>*</span>は必須項目です。
+                </p>
 
-            <p>
-                『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
-                <span>*</span>は必須項目です。
-            </p>
+                <div class="container">
+                    <dl>
+                        <dt>貴社名</dt>
+                        <dd>
+                            <input
+                                type="text"
+                                name="company"
+                                class="background"
+                                autofocus
+                            />
+                        </dd>
+                    </dl>
 
-            <section class="container">
-            <dl>
-            <dt>貴社名</dt>
-            <dd>
-                <input type="text" name="company" class="background" autofocus />
-            </dd>
-            </dl>
+                    <dl>
+                        <dt>お名前<span>*</span></dt>
+                        <dd>
+                            <input
+                                type="text"
+                                name="name"
+                                class="background"
+                                required
+                            />
+                        </dd>
+                    </dl>
 
-            <dl>
-            <dt>お名前<span>*</span></dt>
-            <dd><input type="text" name="name" class="background" required /></dd>
-            </dl>
+                    <dl>
+                        <dt>電話番号<span>*</span></dt>
+                        <dd>
+                            <input
+                                type="tel"
+                                name="tel"
+                                class="background"
+                                required
+                            />
+                        </dd>
+                    </dl>
 
-            <dl>
-            <dt>電話番号<span>*</span></dt>
-            <dd><input type="tel" name="tel" class="background" required /></dd>
-            </dl>
+                    <dl>
+                        <dt>
+                            メールアドレス<span>*</span>
+                            <small> ※半角で入力してください</small>
+                        </dt>
+                        <dd>
+                            <input
+                                type="email"
+                                name="email"
+                                class="background"
+                                required
+                            />
+                        </dd>
+                    </dl>
 
-            <dl>
-            <dt>
-                メールアドレス<span>*</span> <small> ※半角で入力してください</small>
-            </dt>
-            <dd>
-                <input type="email" name="email" class="background" required />
-            </dd>
-            </dl>
+                    <dl>
+                        <dt>お問い合わせ内容<span>*</span></dt>
+                        <dd>
+                            <textarea
+                                name="comment"
+                                cols="30"
+                                rows="10"
+                                class="background"
+                                required
+                            ></textarea>
+                        </dd>
+                    </dl>
 
-            <dl>
-            <dt>お問い合わせ内容<span>*</span></dt>
-            <dd>
-                <textarea
-                name="comment"
-                cols="30"
-                rows="10"
-                class="background"
-                required
-                ></textarea>
-            </dd>
-            </dl>
-
-            <div class="button">
-                <input
-                    type="submit"
-                    class="spot_more calm_color_dark"
-                    value="入力内容を確認する"
-                />
+                    <div class="button">
+                        <input
+                            type="submit"
+                            class="spot_more calm_color_dark"
+                            value="入力内容を確認する"
+                        />
+                    </div>
+                </div>
             </div>
-        </div>
-      </section>
-    </main>
+        </main>
 
-    <footer></footer>
-  </body>
+        <footer></footer>
+    </body>
 </html>
