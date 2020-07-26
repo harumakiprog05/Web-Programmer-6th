@@ -1525,6 +1525,10 @@ textarea {
     display: block;
 }
 
+.spot_slide_wrap img {
+    border: white 5px solid;
+}
+
 .slick-slide.slick-loading img {
     display: none;
 }
