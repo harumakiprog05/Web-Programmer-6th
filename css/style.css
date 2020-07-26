@@ -289,6 +289,10 @@
     }
 }
 
+.spot_slide_wrap a {
+    display: block;
+}
+
 
 /* サーチページのスタイル */
 
@@ -297,6 +301,10 @@
     border-radius: 30px;
     margin: 30px;
     padding: 10px 10px 30px;
+}
+
+.tag_search_wrap .info_actab {
+    color: #707070;
 }
 
 .tag_search_wrap .search_title {
@@ -341,6 +349,8 @@
     width: 60%;
     max-width: 300px;
     margin: 0 auto;
+    border-radius: 20px;
+    padding: 5px 20px;
 }
 
 .search_section input[type="submit"] {
