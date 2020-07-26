@@ -18,10 +18,15 @@
 
         <div class="under_footer">
             <ul class="footer_ul">
-                <li>お問い合わせ</li>
-                <li>運営者情報</li>
-
-                <li>プライバシーポリシー</li>
+                <li>
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">お問い合わせ</a>
+                </li>
+                <li>
+                    <a href="">運営者情報</a>
+                </li>
+                <li>
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">プライバシーポリシー</a>
+                </li>
             </ul>
             <a href="">
                 <h1>
@@ -57,8 +62,8 @@
             <div class="container">
                 <ul class="flex left">
                     <li><a href="">運営者情報</a></li>
-                    <li><a href="">プライバシーポリシー</a></li>
-                    <li><a href="">お問い合わせ</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">プライバシーポリシー</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">お問い合わせ</a></li>
                 </ul>
 
                 <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="footer_logo" alt="" />
