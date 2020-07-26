@@ -1,79 +1,108 @@
 <!-- ▼ ヘッダー : 開始-->
-<?php get_header(); ?>
+<?php get_header('subpage'); ?>
+<!-- ▲ ヘッダー : 終了-->
 
 <?php
+// <!-- ▼ 変数の定義とカテゴリ別テキストの定義 : 開始-->
+$cat_info = $select_cat = '';
 // カスタム投稿spotのタクソノミー名(category)
 $tax_name = 'spot_cat';
 // 親カテゴリーを取得
 $spot_cat = get_category_parent($post, $tax_name);
 
-// ヘッダーの条件分岐
-if ($spot_cat->name == '楽') {
-    // ここにヘッダーを入力
-
-} elseif ($spot_cat->name == '静') {
-    // ここにヘッダーを入力
-
-} elseif ($spot_cat->name == '旨') {
-    // ここにヘッダーを入力
-
+if (is_tax($tax_name, 'fun')) {
+    $cat_info = '※※要確認※※自然と文化に触れ楽しむひととき。';
+    $select_cat = '楽しむ';
+} elseif (is_tax($tax_name, 'calm')) {
+    $select_cat = '静か';
+} elseif (is_tax($tax_name, 'tasty')) {
+    $select_cat = '旨い';
 }
-?>
-<!-- ▲ ヘッダー : 終了-->
 
+$term_id = $spot_cat->term_id;
+// サブカテゴリーのID取得
+$spot_subcat = get_term_children($term_id, $tax_name);
+// <!-- ▲ 変数の定義とカテゴリ別テキストの定義 : 終了-->
+?>
 
 <main>
-
-    <section>
-        <!-- ▼ 記事ループ : 開始-->
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : ?>
-                <?php the_post(); ?>
-                <?php
-                // 記事のカテゴリー取得
-                $spot_cat_term = get_the_terms($post, $tax_name);
-                $length = count($spot_cat_term);
-                $count = $length == 2 ? 1 : 0;
-                // サブカテゴリーのみ文字列として変数に代入
-                $sub_cat = '';
-                foreach ($spot_cat_term as $cat) {
-                    if ($cat->parent != 0) {
-                        $sub_cat .= $count == $length - 1 ? $cat->slug : $cat->slug . ' ';
-                    }
-                    $count++;
-                }
-                ?>
-
-                <article <?php post_class(); ?>>
-                    <a href="<?php the_permalink(); ?>" data-group="<?php echo $sub_cat; ?>">
-                        <h3 class="">記事タイトル：
-                            <?php the_title(); ?>
-                        </h3>
-                    </a>
-
-                </article>
-
-            <?php endwhile; ?>
-            <!-- <?php the_post_navigation(); ?> -->
-        <?php endif; ?>
-        <!-- ▲ 記事ループ : 終了-->
+    <!-- <?php echo $spot_cat->name; ?> -->
+    <section class="spot-Contana">
+        <h2 class="<?php echo $spot_cat->slug; ?>_underline spot_title centering <?php echo $spot_cat->slug; ?>_ftcolor_dark"><?php echo $spot_cat->name; ?></h2>
+        <p class="centering"><?php echo $cat_info; ?></p>
     </section>
 
-    <!-- ▼ サブカテゴリー出力 : 開始-->
-    <div class="cat_search">
-        <?php
-        $term_id = $spot_cat->term_id;
-        // サブカテゴリーのID取得
-        $spot_subcat = get_term_children($term_id, $tax_name);
-        echo '<ul>';
-        foreach ($spot_subcat as $value) {
-            echo '<li>', get_the_category_by_ID($value), '</li>';
-        }
-        echo '</ul>';
-        ?>
-    </div>
-    <!-- ▲ サブカテゴリー出力 : 終了-->
+    <section>
+        <nav class="menu-box">
+            <div class="menu-btn tag_search <?php echo $spot_cat->slug; ?>_color_dark centering">
+                <p>徳島の<span id="select_tag" class="tag_underline">　<?php echo $select_cat; ?>　</span>でゆっくりしませんか？</p>
+            </div>
 
+
+            <ul class="dropmenu">
+                <?php // <!-- ▼ サブカテゴリー出力 : 開始->
+                foreach ($spot_subcat as $value) : ?>
+                    <?php $spot_term = get_term($value, $tax_name); ?>
+                    <li data-filter="<?php echo $spot_term->slug; ?>">
+                        <a>
+                            <figure class="<?php echo $spot_cat->slug; ?>_select">
+                                <img src="<?php echo esc_url(get_theme_file_uri("image/test_sample_140_105.jpg")); ?>" />
+                            </figure>
+                            <p class="select-text"><?php echo $spot_term->name; ?></p>
+                        </a>
+                    </li>
+                <?php endforeach;
+                // <!-- ▲ サブカテゴリー出力 : 終了-->
+                ?>
+                <li data-filter="all">
+                    <a>
+                        <figure class="<?php echo $spot_cat->slug; ?>_select">
+                            <img src="<?php echo esc_url(get_theme_file_uri("image/test_sample_140_105.jpg")); ?>" />
+                        </figure>
+                        <p class="select-text">ぜんぶ</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="spot_wrap boxes">
+            <ul class="spot_card">
+                <?php // <!-- ▼ 記事ループ : 開始-->
+                if (have_posts()) : ?>
+                    <?php while (have_posts()) : ?>
+                        <?php the_post(); ?>
+                        <?php
+                        // 記事のカテゴリー取得
+                        $spot_cat_term = get_the_terms($post, $tax_name);
+                        $length = count($spot_cat_term);
+                        $count = $length == 2 ? 1 : 0;
+                        // サブカテゴリーのみ文字列として変数に代入
+                        $sub_cat = '';
+                        foreach ($spot_cat_term as $cat) {
+                            if ($cat->parent != 0) {
+                                $sub_cat .= $count == ($length - 1) ? $cat->slug : $cat->slug . ' ';
+                            }
+                            $count++;
+                        }
+                        ?>
+                        <li class="cat_image" data-category="<?php echo $sub_cat; ?>">
+                            <a href="<?php the_permalink(); ?>">
+                                <figure class="spot_photo">
+                                    <?php set_thumbnail('thumbnail'); ?>
+                                </figure>
+                                <?php the_title('<h3 class="centering">', '</h3>'); ?>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                    <!-- <?php the_post_navigation(); ?> -->
+                <?php endif;
+                // <!-- ▲ 記事ループ : 終了-->
+                ?>
+            </ul>
+        </div>
+
+    </section>
 </main>
 
 <!-- ▼ フッター : 開始-->
