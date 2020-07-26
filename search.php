@@ -56,7 +56,7 @@
 									<?php $count_spot_fun++; ?>
 									<li class="result_item">
 										<a href="<?php the_permalink() ?>">
-											<?php the_post_thumbnail(); ?>
+											<?php set_thumbnail(''); ?>
 											<span><?php the_title(); ?></span>
 										</a>
 									</li>
@@ -98,7 +98,7 @@
 										if ($area == $val) {
 											$post = get_post($spot_post_id);
 											echo '<li class="result_item"><a href="', get_permalink(), '">';
-											echo get_the_post_thumbnail($post);
+											echo get_thumbnail($post, '');
 											echo '<span>', $post->post_title, '</span></a></li>';
 											$count_spot_fun++;
 										}
@@ -139,7 +139,7 @@
 									<?php $count_spot_clam++; ?>
 									<li class="result_item">
 										<a href="<?php the_permalink() ?>">
-											<?php the_post_thumbnail(); ?>
+											<?php set_thumbnail(''); ?>
 											<span><?php the_title(); ?></span>
 										</a>
 									</li>
@@ -181,7 +181,7 @@
 										if ($area == $val) {
 											$post = get_post($spot_post_id);
 											echo '<li class="result_item"><a href="', get_permalink(), '">';
-											echo get_the_post_thumbnail($post);
+											echo get_thumbnail($post, '');
 											echo '<span>', $post->post_title, '</span></a></li>';
 											$count_spot_clam++;
 										}
@@ -222,7 +222,7 @@
 									<?php $count_spot_tasty++; ?>
 									<li class="result_item">
 										<a href="<?php the_permalink() ?>">
-											<?php the_post_thumbnail(); ?>
+											<?php set_thumbnail(''); ?>
 											<span><?php the_title(); ?></span>
 										</a>
 									</li>
@@ -263,7 +263,7 @@
 										if ($area == $val) {
 											$post = get_post($spot_post_id);
 											echo '<li class="result_item"><a href="', get_permalink(), '">';
-											echo get_the_post_thumbnail($post);
+											echo get_thumbnail($post, '');
 											echo '<span>', $post->post_title, '</span></a></li>';
 											$count_spot_tasty++;
 										}

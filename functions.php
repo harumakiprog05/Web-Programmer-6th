@@ -32,6 +32,7 @@
  * ┗検索ページの地図(svg)画像のpath
  * ┗検索ページの配列作成関数(タクソノミークエリー)
  * ┗検索ページの配列作成関数(WPクエリー)
+ * ┗サムネイルの有無確認と表示
  */
 
 // コンテンツ幅をセット
@@ -108,6 +109,13 @@ function myportfolio_scripts()
 		"1.0",                 // バージョン指定
 		"all"                  // メディアタイプ
 	);
+	// ▼▼▼▼▼スタイルCSSの読み込み
+	if (is_tax('spot_cat')) {
+		wp_enqueue_style(
+			"tax-spot-style",
+			get_template_directory_uri() . "/css/archive-spot.css"
+		);
+	}
 
 	if (!is_admin()) {
 		// ▼▼▼▼▼WordPress 本体の jQuery を登録解除
@@ -650,12 +658,16 @@ function header_band()
 {
 	$header_band_open = '<div class="header_band"><h1>';
 	$header_band_close = '</h1></div>';
-	$search_icon = '<i class="fas fa-search"></i>';
 
-	if (is_tax('spot_cat') || is_post_type_archive('model')) {
+	$model_icon = '<i class="fas fa-car"></i>'; // 検索ページのアイコン
+	$search_icon = '<i class="fas fa-search"></i>'; // モデルコース一覧のアイコン
+
+	if (is_tax('spot_cat')) {
 		$text =  the_archive_title($header_band_open, $header_band_close);
 	} elseif (is_singular('model')) {
 		$text =  $header_band_open . 'モデルコース' . $header_band_close;
+	} elseif (is_post_type_archive('model')) {
+		$text =  the_archive_title($header_band_open, $model_icon . $header_band_close);
 	} elseif (is_post_type_archive('spot')) {
 		$text =  $header_band_open . '検索' . $search_icon . $header_band_close;
 	}
@@ -743,4 +755,25 @@ function create_wp_query($tax_array, $rela, $s)
 		's'         => $s,
 	);
 	return $wpquery_arr;
+}
+
+
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+// サムネイルの有無確認と表示
+//▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
+function set_thumbnail($size)
+{
+	if (has_post_thumbnail()) {
+		the_post_thumbnail($size);
+	} else {
+		echo '<img src="', esc_url(get_theme_file_uri("image/noimage.png")), '" alt="">';
+	}
+}
+function get_thumbnail($post, $size)
+{
+	if (get_the_post_thumbnail($post)) {
+		return get_the_post_thumbnail($post, $size);
+	} else {
+		return '<img src="' . esc_url(get_theme_file_uri("image/noimage.png")) . '" alt="">';
+	}
 }
