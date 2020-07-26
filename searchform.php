@@ -14,8 +14,8 @@
 						<!-- ▼△▼△▼△ カスタム投稿タイプspotのタグ ▼△▼△▼△ -->
 						<div class="checkbox_group flex">
 
-							<!-- ▼ PHP : 開始---------------->
 							<?php
+							// <!-- ▼ PHP : 開始---------------->
 							$spot_tag_args = array(
 								'orderby' => 'name',
 								'order' => 'ASC',
@@ -50,29 +50,28 @@
 										break;
 								}
 								?>
-							<?php endforeach; ?>
+							<?php endforeach;
+							// <!-- ▲ PHP : 終了---------------->
+							?>
 						</div>
-						<!-- ▲ PHP : 終了---------------->
+
 
 						<!-- ▼△▼△▼△ キーワード検索 ▼△▼△▼△ -->
-						<!-- ▼ HTML : 開始-->
 						<label for="s"><?php _x('Search for:', 'label'); ?></label>
 						<input class="calm_bdcolor_dark" type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="キーワードで検索" />
-						<!-- ▲ HTML : 終了-->
+
 
 						<!-- ▼△▼△▼△ カスタム投稿タイプinfoのカテゴリ ▼△▼△▼△ -->
 						<div class="info_actab">
 							<input id="info_actab_one" type="checkbox" name="tabs" />
-							<label class="more area_serch_more" for="info_actab_one">
-								<div class="arrow">マップで検索</div>
-							</label>
+							<label class="area_serch_more fun_color_dark" for="info_actab_one">マップで検索</label>
 							<div class="info_actab_content">
 								<div class="area_search_wrap tabele_section">
 									<div class="area_search_flex">
 										<figure class="actab_cansel">
 
-											<!-- ▼ PHP : 開始---------------->
 											<?php
+											// <!-- ▼ PHP : 開始---------------->
 											$taxonomy_args = array(
 												'orderby' => 'name',
 												'order' => 'ASC',
@@ -114,11 +113,11 @@
 												$arr_num += 3;
 											?>
 
-											<?php endforeach; ?>
-											<!-- ▲ PHP : 終了---------------->
-										</figure>
+											<?php endforeach;
+											// <!-- ▲ PHP : 終了---------------->
+											?>
 
-										<input class="more" type="button" value="条件をクリア" onclick="back();">
+										</figure>
 
 									</div>
 								</div>
