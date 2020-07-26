@@ -53,7 +53,7 @@
 					$cat_posts = get_posts(array(
 						'post_type' => 'spot', // 投稿タイプ
 						'spot_cat' => "fun", // カテゴリをスラッグで指定
-						'posts_per_page' => 5, // 表示件数
+						'posts_per_page' => 6, // 表示件数
 						'orderby' => 'rand', // 表示順の基準
 						'order' => 'DESC' // 昇順・降順
 					));
@@ -65,7 +65,13 @@
 
 							<!--記事URLを取得-->
 							<!-- サムネイルを取得 -->
-							<?php the_post_thumbnail(array(300, 230)); ?>
+							<?php if (has_post_thumbnail()) {
+								the_post_thumbnail(array(300, 230));
+							} else { ?>
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+
+							<?php } ?>
+
 							<!-- ループおわり -->
 
 					<?php endforeach;
@@ -100,7 +106,7 @@
 					$cat_posts = get_posts(array(
 						'post_type' => 'spot', // 投稿タイプ
 						'spot_cat' => "calm", // カテゴリをスラッグで指定
-						'posts_per_page' => 5, // 表示件数
+						'posts_per_page' => 6, // 表示件数
 						'orderby' => 'rand', // 表示順の基準
 						'order' => 'DESC' // 昇順・降順
 					));
@@ -112,7 +118,12 @@
 
 							<!--記事URLを取得-->
 							<!-- サムネイルを取得 -->
-							<?php the_post_thumbnail(array(300, 230)); ?>
+							<?php if (has_post_thumbnail()) {
+								the_post_thumbnail(array(300, 230));
+							} else { ?>
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+
+							<?php } ?>
 							<!-- ループおわり -->
 
 					<?php endforeach;
@@ -142,12 +153,35 @@
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image1.png")); ?>" alt="" />
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image2.png")); ?>" alt="" />
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image3.png")); ?>" alt="" />
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image2.png")); ?>" alt="" />
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image1.png")); ?>" alt="" />
-					<img src="<?php echo esc_url(get_theme_file_uri("image/funspot_slide_image2.png")); ?>" alt="" />
+					<!-- スライドショー記事ループ開始 -->
+
+					<?php
+					$cat_posts = get_posts(array(
+						'post_type' => 'spot', // 投稿タイプ
+						'spot_cat' => "tasty", // カテゴリをスラッグで指定
+						'posts_per_page' => 6, // 表示件数
+						'orderby' => 'rand', // 表示順の基準
+						'order' => 'DESC' // 昇順・降順
+					));
+					global $post;
+					if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post);
+					?>
+
+							<!-- ループはじめ -->
+
+							<!--記事URLを取得-->
+							<!-- サムネイルを取得 -->
+							<?php if (has_post_thumbnail()) {
+								the_post_thumbnail(array(300, 230));
+							} else { ?>
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+
+							<?php } ?>
+							<!-- ループおわり -->
+
+					<?php endforeach;
+					endif;
+					wp_reset_postdata(); ?>
 				</div>
 
 				<button onclick="location.href='<?php echo esc_url(get_term_link(4)); ?>'" class="spot_more yum_color_dark">旨 スポット一覧へ <i class="fas fa-chevron-right"></i></button>
