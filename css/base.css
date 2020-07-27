@@ -203,7 +203,9 @@ span {
 
 .breadcrumb {
   margin: 5px 0 5px 5px;
-}.breadcrumb li {
+}
+
+.breadcrumb li {
   display: inline-block;
 }
 
