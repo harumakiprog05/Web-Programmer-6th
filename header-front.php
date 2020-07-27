@@ -51,7 +51,7 @@
 
           <a href="<?php echo esc_url(get_term_link(4)); ?>">
             <div class="gnav_item">
-              <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
+              <span class="tasty tasty_color_dark tall_circle_set">旨</span>-うまい-
             </div>
           </a>
 
@@ -112,7 +112,7 @@
           <li>
             <a href="<?php echo esc_url(get_term_link(4)); ?>">
 
-              <span class="yum_color_dark nav_circle_set">旨</span>-うまい-
+              <span class="tasty_color_dark nav_circle_set">旨</span>-うまい-
             </a>
           </li>
           <li>

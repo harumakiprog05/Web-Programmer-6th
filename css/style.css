@@ -176,7 +176,7 @@
 /* モデルコースセクション */
 
 .awaiyashi_plan {
-    background-image: url("image/model_bg_image.jpg");
+    background-image: url("image/model_bg_image.png");
     /* filter: opacity(20%); */
     background-size: cover;
     min-height: 200px;
