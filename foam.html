@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/foam.css" />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif&display=swap"
             rel="stylesheet"
@@ -29,87 +29,85 @@
     </head>
 
     <body>
-        <main class="centering">
-            <h2 class="footer_h2">お問い合わせ</h2>
+        <main class="container">
+            <h2>お問い合わせ</h2>
 
-            <div class="foam_wrap">
-                <p>
-                    『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
-                    <span>*</span>は必須項目です。
-                </p>
+            <p>
+                『あわいやし』へのお問い合わせは下記のメールフォームより送信ください。<br />
+                <span>*</span>は必須項目です。
+            </p>
 
-                <div class="container">
-                    <dl>
-                        <dt>貴社名</dt>
-                        <dd>
-                            <input
-                                type="text"
-                                name="company"
-                                class="background"
-                                autofocus
-                            />
-                        </dd>
-                    </dl>
-
-                    <dl>
-                        <dt>お名前<span>*</span></dt>
-                        <dd>
-                            <input
-                                type="text"
-                                name="name"
-                                class="background"
-                                required
-                            />
-                        </dd>
-                    </dl>
-
-                    <dl>
-                        <dt>電話番号<span>*</span></dt>
-                        <dd>
-                            <input
-                                type="tel"
-                                name="tel"
-                                class="background"
-                                required
-                            />
-                        </dd>
-                    </dl>
-
-                    <dl>
-                        <dt>
-                            メールアドレス<span>*</span>
-                            <small> ※半角で入力してください</small>
-                        </dt>
-                        <dd>
-                            <input
-                                type="email"
-                                name="email"
-                                class="background"
-                                required
-                            />
-                        </dd>
-                    </dl>
-
-                    <dl>
-                        <dt>お問い合わせ内容<span>*</span></dt>
-                        <dd>
-                            <textarea
-                                name="comment"
-                                cols="30"
-                                rows="10"
-                                class="background"
-                                required
-                            ></textarea>
-                        </dd>
-                    </dl>
-
-                    <div class="button">
+            <div class="container pp_wrap">
+                <dl>
+                    <dt>貴社名</dt>
+                    <dd>
                         <input
-                            type="submit"
-                            class="spot_more calm_color_dark"
-                            value="入力内容を確認する"
+                            type="text"
+                            name="company"
+                            class="background"
+                            autofocus
                         />
-                    </div>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>お名前<span>*</span></dt>
+                    <dd>
+                        <input
+                            type="text"
+                            name="name"
+                            class="background"
+                            required
+                        />
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>電話番号<span>*</span></dt>
+                    <dd>
+                        <input
+                            type="tel"
+                            name="tel"
+                            class="background"
+                            required
+                        />
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>
+                        メールアドレス<span>*</span>
+                        <small> ※半角で入力してください</small>
+                    </dt>
+                    <dd>
+                        <input
+                            type="email"
+                            name="email"
+                            class="background"
+                            required
+                        />
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>お問い合わせ内容<span>*</span></dt>
+                    <dd>
+                        <textarea
+                            name="comment"
+                            cols="30"
+                            rows="10"
+                            class="background"
+                            required
+                        ></textarea>
+                    </dd>
+                </dl>
+
+                <div class="form_button">
+                    <input
+                        type="submit"
+                        class="spot_more calm_color_dark"
+                        value="入力内容を確認する"
+                    />
                 </div>
             </div>
         </main>
