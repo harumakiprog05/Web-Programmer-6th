@@ -178,7 +178,7 @@
 /* モデルコースセクション */
 
 .awaiyashi_plan {
-    background-image: url("image/model_bg_image.jpg");
+    background-image: url("image/model_bg_image.png");
     /* filter: opacity(20%); */
     background-size: cover;
     min-height: 200px;
@@ -287,6 +287,9 @@
     display: block;
 }
 
+.spot_slide_wrap{
+    margin-bottom: 30px;
+}
 /* サーチページのスタイル */
 
 .tag_search_wrap {
@@ -911,7 +914,6 @@ textarea {
 /* モデルコース説明テキスト */
 
 .model_text {
-    margin: 0 3% 80px;
     text-align: center;
 }
 
@@ -971,7 +973,7 @@ textarea {
         display: none;
     }
     .spot_fade_in1 {
-        top: 20%;
+        top: 13%;
         right: -40%;
     }
     .spot_fade_in2 {
@@ -979,7 +981,7 @@ textarea {
         left: -40%;
     }
     .spot_fade_in3 {
-        top: 51%;
+        top: 45%;
         right: -40%;
     }
     .model_text h3 {
@@ -1032,6 +1034,7 @@ textarea {
     text-align: center;
     display: block;
     margin: -2px auto 0;
+    margin-bottom: -2px;
     background-color: #67a1a6;
 }
 
@@ -1089,7 +1092,7 @@ textarea {
 
 .model_pc_img_top {
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -1213,6 +1216,7 @@ textarea {
     .model_sp_img2 {
         position: absolute;
         top: 215%;
+        left: 8%;
     }
     .model_sp_img3 {
         left: 140px;
@@ -1264,7 +1268,7 @@ textarea {
     .model_sp_img2 {
         height: 50px;
         width: 100px;
-        left: 70%;
+        left: 80%;
         top: 180%;
         position: absolute;
     }
@@ -1329,7 +1333,7 @@ textarea {
         height: 75px;
         width: 150px;
         left: 70%;
-        top: 43%;
+        top: 41%;
         position: absolute;
     }
     .model_sp_img3 {
@@ -1411,9 +1415,39 @@ textarea {
     margin-top: 50px;
 }
 
-.sample {
-    height: 364.58px;
-    width: 1000px;
+.model_iframe_outline {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-top: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.model_iframe_outline iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+    .model_iframe_outline {
+        position: relative;
+        width: 90%;
+        height: 0;
+        padding-top: 35%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .model_iframe_outline iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* -----slick系のスタイル----- */
@@ -1542,10 +1576,14 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
+<<<<<<< HEAD
     src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
         url("./fonts/slick.woff") format("woff"),
         url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
+=======
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+>>>>>>> 8af3572ce3bd6828132346c4adab65b0b3cbcac3
 }
 
 /* Arrows */
@@ -1586,6 +1624,7 @@ textarea {
     opacity: 1;
 }
 
+<<<<<<< HEAD
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
     opacity: 0.25;
@@ -1593,6 +1632,13 @@ textarea {
 
 .slick-prev:before,
 .slick-next:before {
+=======
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: 0.25;
+}
+
+.slick-prev:before, .slick-next:before {
+>>>>>>> 8af3572ce3bd6828132346c4adab65b0b3cbcac3
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
@@ -2127,9 +2173,13 @@ a {
     color: #707070;
 }
 
-.tag_search {
+.spot_tag_search {
     padding: 10px;
     border-radius: 100px;
+}
+
+.spot_tag_search p {
+    margin-bottom: 0;
 }
 
 .cat_image {
@@ -2149,6 +2199,7 @@ a {
     text-align: left;
     height: 55vh;
     overflow-y: auto;
+    margin: 0 auto;
 }
 
 .spot_flex {
@@ -2157,18 +2208,7 @@ a {
     flex-wrap: wrap;
 }
 
-.absolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.relative {
-    position: relative;
-}
-
-.raku_select img {
+.fun_select img {
     width: 100%;
     height: auto;
 }
@@ -2207,9 +2247,7 @@ a {
 @media screen and (min-width: 480px) {
     .spot_wrap {
         width: 90%;
-    }
-    .spot_wrap ul {
-        margin: 0;
+        margin: 0 auto;
     }
     .spotl_card {
         display: flex;
@@ -2220,18 +2258,20 @@ a {
     .spot_card li {
         width: 30%;
     }
-    .tag-search {
+    .spot_tag-search {
         font-size: 27px;
         padding: 50px 20px 20px 20px;
+        margin: 0 auto 50px auto;
+    }
+    .spot_tag_search p {
+        margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 746px) {
     .spot_wrap {
         width: 80%;
-    }
-    .spot_wrap ul {
-        margin: 0;
+        margin: 0 auto;
     }
     .spotl_card {
         display: flex;
@@ -2239,12 +2279,17 @@ a {
         flex-wrap: wrap;
         margin: 0 auto;
     }
-    .tag_search {
+    .spot_card li {
+        width: 35%;
+    }
+    .spot_tag_search {
         padding: 10px;
         width: 80%;
+        margin: 0 auto 50px auto;
     }
-    .tag_search p {
+    .spot_tag_search p {
         font-size: 27px;
+        margin-bottom: 0;
     }
     .dropmenu {
         width: 500px;
@@ -2252,15 +2297,9 @@ a {
 }
 
 @media screen and (min-width: 1000px) {
-    .spot_Contana {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
     .spot_wrap {
         max-width: 1000px;
-    }
-    .spot_wrap ul {
-        margin: 0;
+        margin: 0 auto;
     }
     .spot_card {
         display: flex;
@@ -2269,11 +2308,16 @@ a {
         max-width: 1000px;
         margin: 0 auto;
     }
-    .tag_search {
+    .spot_card li {
+        max-width: 300px;
+    }
+    .spot_tag_search {
         padding: 20px;
         max-width: 1000px;
+        margin: 0 auto 50px auto;
     }
-    .tag_search p {
+    .spot_tag_search p {
         font-size: 27px;
+        margin-bottom: 0;
     }
 }

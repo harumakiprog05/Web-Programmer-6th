@@ -208,9 +208,9 @@
 
 			<!-- ▼ WP_Query（旨） : 開始------------------------------------------------------>
 			<?php $my_query_tasty = new WP_Query(create_wp_query($tax_ary_tasty, 'AND', $s)); ?>
-			<div class="yum_result yum_color_light">
+			<div class="tasty_result tasty_color_light">
 				<div class="container">
-					<h2 class="result_categry_title yum_color_dark grande_circle_set">旨</h2>
+					<h2 class="result_categry_title tasty_color_dark grande_circle_set">旨</h2>
 					<ul class="result_items flex">
 						<?php if ($my_query_tasty->have_posts()) : ?>
 

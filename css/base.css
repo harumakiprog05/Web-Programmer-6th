@@ -201,12 +201,16 @@ span {
   padding: 20px 20px 0;
 }
 
+.breadcrumb {
+  margin: 5px 0 5px 5px;
+}
+
 .breadcrumb li {
   display: inline-block;
 }
 
 .breadcrumb li a {
-  border-bottom: 1px solid rgb(112, 112, 112);
+  text-decoration: underline;
 }
 
 .breadcrumb li::after {
@@ -432,6 +436,11 @@ span {
 .gnav_item span {
   text-align: center;
   margin-right: 8px;
+}
+
+.gnav_logo {
+  padding: 10px 0;
+  width: 130px;
 }
 
 /* ハンバーガーメニュー終 */
@@ -710,5 +719,8 @@ span {
   }
   .pcheader .adjustment_height {
     display: block;
+  }
+  .breadcrumb {
+    margin: 17px;
   }
 }

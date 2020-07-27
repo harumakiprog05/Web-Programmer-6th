@@ -106,7 +106,6 @@ $(function () {
     $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
-        dots: true,
         slidesToShow: 5,
         infinite: true,
         responsive: [{

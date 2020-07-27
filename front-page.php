@@ -216,7 +216,10 @@
 	</section>
 
 	<h2 class="global_section_title">インスタグラム</h2>
-	<?php echo do_shortcode('[instagram-feed]'); ?>
+	<div class="container">
+		<?php echo do_shortcode('[instagram-feed]'); ?>
+
+	</div>
 	<section class="instagram">
 		<div class="insta_container">
 			<div class="container">
