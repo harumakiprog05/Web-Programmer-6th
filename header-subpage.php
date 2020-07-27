@@ -125,6 +125,10 @@
 
     <!-- ▼ パンくずリスト : 開始-->
     <nav>
-        <?php breadcrumb(); ?>
+        <?php
+        if (!is_singular('spot')) {
+            breadcrumb();
+        }
+        ?>
     </nav>
     <!-- ▲ パンくずリスト : 終了-->
