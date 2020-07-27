@@ -438,6 +438,11 @@ span {
   margin-right: 8px;
 }
 
+.gnav_logo {
+  padding: 10px 0;
+  width: 130px;
+}
+
 /* ハンバーガーメニュー終 */
 
 /* ---フッターセクション--- */

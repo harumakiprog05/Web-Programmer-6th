@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="<?php echo esc_url(get_theme_file_uri("image/favicon/favicon-32x32.png")); ?>" />
+    <link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_file_uri("image/favicon/apple-touch-icon.png")); ?>">
+    <link rel="apple-touch-icon" href="<?php echo esc_url(get_theme_file_uri("image/favicon/android-chrome-512x512.png")); ?>">
+
     <!--CDNでFontAwsome読み込む-->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
 
@@ -37,7 +42,7 @@
                 <div class="gnav_inner">
                     <div class="gnav_item">
                         <a href="<?php echo home_url('/'); ?>">
-                            <img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" width="70" alt="ロゴ" />
+                            <img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo_black.png")); ?>" width="70" alt="ロゴ" />
                         </a>
                     </div>
                     <div class="gnav_menu">
@@ -54,7 +59,7 @@
 
                         <a href="<?php echo esc_url(get_term_link(4)); ?>">
                             <div class="gnav_item">
-                                <span class="yum yum_color_dark tall_circle_set">旨</span>-うまい-
+                                <span class="tasty tasty_color_dark tall_circle_set">旨</span>-うまい-
                             </div>
                         </a>
 
@@ -96,7 +101,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(get_term_link(4)); ?>"><span class="yum_color_dark nav_circle_set">旨</span>-うまい-</a>
+                            <a href="<?php echo esc_url(get_term_link(4)); ?>"><span class="tasty_color_dark nav_circle_set">旨</span>-うまい-</a>
                         </li>
                         <li>
                             <a href="<?php echo esc_url(get_post_type_archive_link('model')); ?>">モデルコース
