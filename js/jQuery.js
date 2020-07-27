@@ -68,7 +68,6 @@ $(".toppage_header #pcgnav").css("display", "none");
 
 $(window).scroll(function () {
     scrollVolume = $(this).scrollTop();
-    console.log(scrollVolume);
 
 
     if ($(window).width() >= 1000) {

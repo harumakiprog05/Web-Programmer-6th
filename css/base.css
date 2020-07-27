@@ -39,6 +39,10 @@ span {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .container {
   text-align: center;
   margin: 0 auto;
@@ -699,7 +703,7 @@ span {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 999;
   }
   .sidepage_header .pcgnav {
     display: block;
@@ -722,5 +726,8 @@ span {
   }
   .breadcrumb {
     margin: 17px;
+  }
+  .text-left {
+    text-align: center;
   }
 }
