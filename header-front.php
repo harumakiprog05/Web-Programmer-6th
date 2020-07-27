@@ -35,7 +35,7 @@
       <!-- ▼ ハンバーガー展開 : 終了開始 -->
       <div class="gnav_inner">
         <div class="gnav_item">
-          <a href="<?php echo home_url('/'); ?>"><img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" width="70" alt="ロゴ" /></a>
+          <a href="<?php echo home_url('/'); ?>"><img class="gnav_logo" src="<?php echo esc_url(get_theme_file_uri("image/logo_black.png")); ?>" width="70" alt="ロゴ" /></a>
         </div>
         <div class="gnav_menu">
           <a href="<?php echo esc_url(get_term_link(2)); ?>">

@@ -285,6 +285,9 @@
     display: block;
 }
 
+.spot_slide_wrap{
+    margin-bottom: 30px;
+}
 /* サーチページのスタイル */
 
 .tag_search_wrap {
@@ -438,19 +441,19 @@ input::placeholder {
     pointer-events: none;
 }
 
-#east:checked + label .map_color {
+#east:checked+label .map_color {
     fill: #000;
 }
 
-#west:checked + label .map_color {
+#west:checked+label .map_color {
     fill: #fdbc00;
 }
 
-#south:checked + label .map_color {
+#south:checked+label .map_color {
     fill: #83ccd2;
 }
 
-#north:checked + label .map_color {
+#north:checked+label .map_color {
     fill: #888888;
 }
 
@@ -693,19 +696,19 @@ single.cssの110行目
 を打ち消している
 */
 
-#east + label::after {
+#east+label::after {
     content: none;
 }
 
-#west + label::after {
+#west+label::after {
     content: none;
 }
 
-#south + label::after {
+#south+label::after {
     content: none;
 }
 
-#north + label::after {
+#north+label::after {
     content: none;
 }
 
@@ -825,8 +828,7 @@ single.cssの110行目
     position: absolute;
 }
 
-.archive_model_pc_img_top img,
-.model_pc_img img {
+.archive_model_pc_img_top img, .model_pc_img img {
     width: 100%;
     object-fit: cover;
 }
@@ -838,8 +840,7 @@ single.cssの110行目
 /* イラスト：レスポンシブ変更 */
 
 @media screen and (max-width: 940px) {
-    .model_pc_img,
-    .archive_model_pc_img_top {
+    .model_pc_img, .archive_model_pc_img_top {
         display: none;
     }
 }
@@ -1111,8 +1112,7 @@ single.cssの110行目
 }
 
 @media screen and (max-width: 1024px) {
-    .model_pc_img,
-    .model_pc_img_top {
+    .model_pc_img, .model_pc_img_top {
         display: none;
     }
 }
@@ -1410,6 +1410,7 @@ single.cssの110行目
     margin: 0 auto;
     margin-top: 10px;
 }
+
 .model_iframe_outline iframe {
     position: absolute;
     top: 0;
@@ -1472,8 +1473,7 @@ single.cssの110行目
     cursor: hand;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-slider .slick-track, .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -1490,8 +1490,7 @@ single.cssの110行目
     margin-right: auto;
 }
 
-.slick-track:before,
-.slick-track:after {
+.slick-track:before, .slick-track:after {
     display: table;
     content: "";
 }
@@ -1562,14 +1561,12 @@ single.cssの110行目
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
-        url("./fonts/slick.svg#slick") format("svg");
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
 }
 
 /* Arrows */
 
-.slick-prev,
-.slick-next {
+.slick-prev, .slick-next {
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -1588,29 +1585,21 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
     color: transparent;
     outline: none;
     background: transparent;
 }
 
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
     opacity: 1;
 }
 
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
     opacity: 0.25;
 }
 
-.slick-prev:before,
-.slick-next:before {
+.slick-prev:before, .slick-next:before {
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
@@ -1695,13 +1684,11 @@ single.cssの110行目
     background: transparent;
 }
 
-.slick-dots li button:hover,
-.slick-dots li button:focus {
+.slick-dots li button:hover, .slick-dots li button:focus {
     outline: none;
 }
 
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
     opacity: 1;
 }
 
@@ -1782,8 +1769,7 @@ single.cssの110行目
     justify-content: space-between;
 }
 
-.sudachi_point img,
-.inside_modal img {
+.sudachi_point img, .inside_modal img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1800,8 +1786,7 @@ single.cssの110行目
     width: 100%;
 }
 
-.sudachi_point li,
-.inside_modal li {
+.sudachi_point li, .inside_modal li {
     margin: 0 5px;
     position: relative;
 }
@@ -1908,7 +1893,7 @@ single.cssの110行目
 
 /* :checked */
 
-.info_actab input:checked ~ .info_actab_content {
+.info_actab input:checked~.info_actab_content {
     max-height: 70em;
     margin: 50px 3%;
 }
@@ -1928,11 +1913,11 @@ single.cssの110行目
     text-align: center;
 }
 
-.info_actab input[type="checkbox"] + label::after {
+.info_actab input[type="checkbox"]+label::after {
     content: "+";
 }
 
-.info_actab input[type="checkbox"]:checked + label::after {
+.info_actab input[type="checkbox"]:checked+label::after {
     transform: rotate(315deg);
 }
 
