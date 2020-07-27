@@ -1925,6 +1925,7 @@ textarea {
 .sudachi_point img {
     width: 100%;
     object-fit: cover;
+    max-width: 150px;
 }
 
 .sudachi_point li {
@@ -1941,7 +1942,7 @@ textarea {
 } */
 
 .inside_modal img {
-    width: 100%;
+    width: 150px;
     object-fit: cover;
     height: auto;
 }
