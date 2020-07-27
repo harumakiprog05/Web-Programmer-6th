@@ -287,7 +287,7 @@
     display: block;
 }
 
-.spot_slide_wrap{
+.spot_slide_wrap {
     margin-bottom: 30px;
 }
 /* サーチページのスタイル */
@@ -1576,14 +1576,10 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-<<<<<<< HEAD
     src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
         url("./fonts/slick.woff") format("woff"),
         url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
-=======
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
->>>>>>> 8af3572ce3bd6828132346c4adab65b0b3cbcac3
 }
 
 /* Arrows */
@@ -1624,7 +1620,6 @@ textarea {
     opacity: 1;
 }
 
-<<<<<<< HEAD
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
     opacity: 0.25;
@@ -1632,13 +1627,6 @@ textarea {
 
 .slick-prev:before,
 .slick-next:before {
-=======
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
-    opacity: 0.25;
-}
-
-.slick-prev:before, .slick-next:before {
->>>>>>> 8af3572ce3bd6828132346c4adab65b0b3cbcac3
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
