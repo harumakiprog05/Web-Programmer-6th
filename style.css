@@ -71,10 +71,6 @@
 
 /* あわいやしとは？セクション */
 
-.pc_site_about {
-    display: none;
-}
-
 .site_about_title {
     padding-top: 80px;
     margin-bottom: 50px;
@@ -82,12 +78,6 @@
 
 .site_about .info_actab_content {
     margin: 20px 0;
-}
-
-.site_about_content>p>span {
-    font-size: 17px;
-    display: block;
-    margin-bottom: 15px;
 }
 
 .top_category_set {
@@ -377,12 +367,6 @@
         width: 60px;
         margin: 0 12px;
         transform: translate(0, 15px)
-    }
-    .pc_site_about {
-        display: block;
-    }
-    .sp_site_about {
-        display: none;
     }
 }
 
