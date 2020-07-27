@@ -82,7 +82,7 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                                         </p>
                                         <a href="<?php echo the_permalink(); // <!-- spot詳細へのリンク -->
                                                     ?>">
-                                            <button class="spot_more calm_color_dark fun">
+                                            <button class="spot_more <?php echo $spot_cat_slug; ?>_color_dark">
                                                 詳細はこちら <i class="fas fa-chevron-right"></i>
                                             </button>
                                         </a>
