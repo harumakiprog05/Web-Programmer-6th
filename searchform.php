@@ -126,7 +126,7 @@
 
 						<div class="search_button_wrap">
 
-							<label class="more calm_color_dark" for=""><input type="submit" value="この条件で検索" /> <i class="fas fa-search"></i></label>
+							<label for=""><input class="more calm_color_dark" type="submit" value="この条件で検索" /> <i class="fas fa-search"></i></label>
 
 							<label class="more calm_bdcolor_dark"><input type="button" value="条件をクリア" onclick="back();" /></label>
 

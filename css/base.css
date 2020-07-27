@@ -178,20 +178,20 @@ span {
 
 /* 旨カラー */
 
-.yum_color_dark {
+.tasty_color_dark {
   background-color: #eec362;
   color: white;
 }
 
-.yum_color_light {
+.tasty_color_light {
   background-color: #ede3cc;
 }
 
-.yum_bdcolor_dark {
+.tasty_bdcolor_dark {
   border: #eec362 2px solid;
 }
 
-.yum_ftcolor_dark {
+.tasty_ftcolor_dark {
   color: #eec362;
 }
 
@@ -199,6 +199,23 @@ span {
 
 .sidepage_header .sp_header {
   padding: 20px 20px 0;
+}
+
+.breadcrumb li {
+  display: inline-block;
+}
+
+.breadcrumb li a {
+  border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin: 0 8px;
+}
+
+.breadcrumb li:last-child::after {
+  content: none;
 }
 
 /* ハンバーガーメニュー始 */
@@ -358,11 +375,11 @@ span {
 .spgnav {
   position: fixed;
   right: 0;
-  top:0;
+  top: 0;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   width: 0;
-  z-index: 3;
+  z-index: 999;
   padding-top: 100px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

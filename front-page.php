@@ -20,7 +20,7 @@
 			<ul class="top_category_set">
 				<li class="fun fun_color_dark top_circle_set">楽</li>
 				<li class="calm calm_color_dark top_circle_set">静</li>
-				<li class="yum yum_color_dark top_circle_set">旨</li>
+				<li class="tasty tasty_color_dark top_circle_set">旨</li>
 			</ul>
 			<span class="site_about_end fun_ftcolor_dark">今度の休みは、<br class="sp" />どんな癒しでゆっくりしますか？</span>
 		</div>
@@ -139,13 +139,13 @@
 			</div>
 		</section>
 
-		<section class="yum_category">
-			<div class="yum_category_image"></div>
+		<section class="tasty_category">
+			<div class="tasty_category_image"></div>
 
 			<div class="container">
-				<span class="yum yum_color_dark grande_circle_set">旨</span>
+				<span class="tasty tasty_color_dark grande_circle_set">旨</span>
 				<div class="categry_description">
-					<h3 class="category_catch_copy yum_ftcolor_dark">とくしまの自然を感じる、楽しいひととき。</h3>
+					<h3 class="category_catch_copy tasty_ftcolor_dark">とくしまの自然を感じる、楽しいひととき。</h3>
 					<p>
 						食べて、満たして、癒される<br />
 						とくしまの旨いもの自然の旨いもの<br />
@@ -184,9 +184,9 @@
 					wp_reset_postdata(); ?>
 				</div>
 
-				<button onclick="location.href='<?php echo esc_url(get_term_link(4)); ?>'" class="spot_more yum_color_dark">旨 スポット一覧へ <i class="fas fa-chevron-right"></i></button>
+				<button onclick="location.href='<?php echo esc_url(get_term_link(4)); ?>'" class="spot_more tasty_color_dark">旨 スポット一覧へ <i class="fas fa-chevron-right"></i></button>
 
-				<div class="categry_background yum_color_light"></div>
+				<div class="categry_background tasty_color_light"></div>
 			</div>
 		</section>
 	</section>
