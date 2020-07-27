@@ -719,62 +719,68 @@ single.cssの110行目
     }
 }
 
-/* ---フォームページのスタイル--- */
+/* -----page.phpのスタイル----- */
 
-.foam_wrap span {
-    color: #eec362;
+.pp_wrap ol {
+    text-align: left;
+    margin-bottom: 50px;
 }
 
-.foam_wrap input[type="text"], .foam_wrap input[type="tel"], .foam_wrap input[type="email"], textarea {
+.pp_wrap h3, .pp_wrap h2 {
+    margin-bottom: 30px;
+}
+
+.pp_wrap h3 {
+    margin: 50px 0 20px 0;
+    color: #333333;
+    padding: 5px 10px;
+    border-left: 10px solid #67a1a6;
+    border-bottom: 1px dashed #67a1a6;
+}
+
+.pp_wrap {
+    text-align: left;
+}
+
+.pp_wrap table {
+    width: 100%;
+}
+
+.page_right {
+    text-align: right;
+}
+
+.not_found_wrap {
+    margin: 20% auto;
+    text-align: center;
+}
+
+.not_found_wrap h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    color: #67A1A6;
+    font-size: 3em;
+}
+
+/* ---フォームページのスタイル--- */
+
+.pp_wrap input[type="text"], .pp_wrap input[type="tel"], .pp_wrap input[type="email"], textarea {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
     background-color: #e1f6f7;
 }
 
-.foam_wrap dl {
-    text-align: left;
-    padding-bottom: 20px;
-}
-
-.foam_wrap .button {
-    margin: 100px;
-}
-
-.foam_wrap {
-    margin: 0 auto;
-}
-
-/* -----page.phpのスタイル----- */
-
-.pp_container p, .pp_container ol {
-    text-align: left;
-    margin-bottom: 50px;
-}
-
-.pp_container h3, .pp_container h2 {
+.pp_wrap dl {
     margin-bottom: 30px;
 }
 
-.pp_container h3 {
-    text-align: left;
+.form_button {
+    text-align: center;
 }
 
-.site_about_wrap h3 {
-    margin: 50px 0 20px 0;
-    color: #333333;
-    padding: 5px 10px;
-    border-left: 10px solid #67a1a6;
-    border-bottom: 1px dashed #67a1a6;
-    text-align: left;
-}
-
-.site_about_wrap {
-    text-align: left;
-}
-
-.about_table table {
-    width: 100%;
+.mwform-tel-field {
+    display: flex;
 }
 
 /* -----モデルコース一覧ページのスタイル----- */
