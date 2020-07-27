@@ -128,7 +128,7 @@
   background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #b5d0d2 20%, #b5d0d2 100%);
 }
 
-.yum_category {
+.tasty_category {
   background: linear-gradient( 180deg, #ffffff 0%, #ffffff 20%, #ede3cc 20%, #ede3cc 100%);
 } */
 
@@ -146,8 +146,8 @@
     height: 170px;
 }
 
-.yum_category_image {
-    background-image: url("image/category_img_yum.jpg");
+.tasty_category_image {
+    background-image: url("image/category_img_tasty.jpg");
     background-size: cover;
     background-position: center;
     height: 170px;
@@ -169,7 +169,7 @@
     font-size: 18px;
 }
 
-.fun_category span, .calm_category span, .yum_category span {
+.fun_category span, .calm_category span, .tasty_category span {
     transform: translate(0, -50%);
 }
 
@@ -253,7 +253,7 @@
     .calm_category_image {
         height: 500px;
     }
-    .yum_category_image {
+    .tasty_category_image {
         height: 500px;
     }
     .category_catch_copy {
@@ -365,7 +365,7 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result, .calm_result, .yum_result {
+.fun_result, .calm_result, .tasty_result {
     margin-bottom: 50px;
 }
 
@@ -714,7 +714,7 @@ single.cssの110行目
         display: flex;
         justify-content: space-around;
     }
-    .fun_result, .calm_result, .yum_result {
+    .fun_result, .calm_result, .tasty_result {
         margin-bottom: 130px;
     }
 }
