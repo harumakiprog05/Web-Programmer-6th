@@ -8,7 +8,7 @@ $tax_name = 'spot_cat';
 $course_loopcount = 0;
 $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_sudatiburi', 'awaiyashi_car'];
 ?>
-
+<div class="model_head_img"></div>
 <main>
     <section class="container model_container_wrap">
         <div class="model_pc_img_top">
@@ -27,9 +27,9 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                 </div>
 
                 <!-- スタート -->
-                <!-- <div class="model_start_img">
-                            <img src="<?php echo esc_url(get_theme_file_uri('image/model_course_sample.jpg')); ?>" alt="" />
-                        </div> -->
+                <div class="model_start_img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('image/start_station.png')); ?>" alt="" />
+                </div>
 
                 <span class="calm_color_dark model_circle_set model_big_circle">
                     スタート！
@@ -137,7 +137,7 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
         </a>
     </section>
 </main>
-
+<div class="model_bottom_img"></div>
 <!-- ▼ フッター : 開始-->
 <?php get_footer(); ?>
 <!-- ▲ フッター : 終了-->
