@@ -84,7 +84,7 @@
     margin: 20px 0;
 }
 
-.site_about_content>p>span {
+.site_about_content > p > span {
     font-size: 17px;
     display: block;
     margin-bottom: 15px;
@@ -101,7 +101,7 @@
 .top_category_set li:nth-child(1)::after {
     content: "たのしい";
     display: block;
-    color: #9FBF82;
+    color: #9fbf82;
     font-size: 14px;
     line-height: 40px;
 }
@@ -109,7 +109,7 @@
 .top_category_set li:nth-child(2)::after {
     content: "しずか";
     display: block;
-    color: #83CCD2;
+    color: #83ccd2;
     font-size: 14px;
     line-height: 40px;
 }
@@ -117,7 +117,7 @@
 .top_category_set li:nth-child(3)::after {
     content: "うまい";
     display: block;
-    color: #EEC362;
+    color: #eec362;
     font-size: 14px;
     line-height: 40px;
 }
@@ -328,7 +328,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .title_awaiyashi_spot::after {
         content: "";
@@ -338,7 +338,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .title_modelcourse::before {
         content: "";
@@ -348,7 +348,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .title_modelcourse::after {
         content: "";
@@ -358,7 +358,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .title_instagram::before {
         content: "";
@@ -368,7 +368,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .title_instagram::after {
         content: "";
@@ -378,7 +378,7 @@
         height: 60px;
         width: 60px;
         margin: 0 12px;
-        transform: translate(0, 15px)
+        transform: translate(0, 15px);
     }
     .pc_site_about {
         display: block;
@@ -392,13 +392,10 @@
     display: block;
 }
 
-<<<<<<< HEAD
-=======
 .spot_slide_wrap {
     margin-bottom: 30px;
 }
 
->>>>>>> cbeabb3b20e97c961b2329009a394ac7eeac6bdc
 /* サーチページのスタイル */
 
 .tag_search_wrap {
@@ -1704,13 +1701,7 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-<<<<<<< HEAD
     src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
-=======
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
-        url("./fonts/slick.woff") format("woff"),
-        url("./fonts/slick.ttf") format("truetype"),
->>>>>>> cbeabb3b20e97c961b2329009a394ac7eeac6bdc
         url("./fonts/slick.svg#slick") format("svg");
 }
 
@@ -1931,12 +1922,7 @@ textarea {
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
-.sudachi_point img,
-.inside_modal img {
-=======
 .sudachi_point img {
->>>>>>> cbeabb3b20e97c961b2329009a394ac7eeac6bdc
     width: 100%;
     object-fit: cover;
 }
@@ -1959,16 +1945,6 @@ textarea {
     object-fit: cover;
     height: auto;
 }
-<<<<<<< HEAD
-
-.sudachi_point li,
-.inside_modal li {
-    margin: 0 5px;
-    position: relative;
-}
-
-=======
->>>>>>> cbeabb3b20e97c961b2329009a394ac7eeac6bdc
 .inside_modal li {
     /* margin-bottom: 15px; */
     /* width: 20%; */
