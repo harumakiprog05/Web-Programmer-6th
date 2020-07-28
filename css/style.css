@@ -1722,7 +1722,9 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/slick.woff") format("woff"),
+        url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
 }
 
@@ -1901,6 +1903,7 @@ textarea {
 .single_title {
     margin-top: 50px;
     color: #9fbf82;
+    width: auto;
 }
 
 .title_under_bar {
@@ -1946,6 +1949,7 @@ textarea {
 .sudachi_point img {
     width: 100%;
     object-fit: cover;
+    max-width: 150px;
 }
 
 .sudachi_point li {
@@ -1965,6 +1969,7 @@ textarea {
     width: 100%;
     object-fit: cover;
     height: auto;
+    max-width: 150px;
 }
 
 .inside_modal li {
@@ -2108,14 +2113,14 @@ textarea {
 /* :checked */
 
 .info_actab input:checked ~ .info_actab_content {
-    max-height: 70em;
+    max-height: 120em;
     margin: 50px 3%;
 }
 
 /* Icon */
 
 .info_actab .label_cross::after {
-    line-height: 3;
+    line-height: 3.8;
     position: absolute;
     top: 0;
     right: 0;
@@ -2145,6 +2150,7 @@ textarea {
 .single_map {
     width: 100%;
     border: 1px solid gray;
+    height: 400px;
 }
 
 @media screen and (min-width: 940px) {
@@ -2157,7 +2163,6 @@ textarea {
     }
     .single_map {
         width: 40%;
-        margin: 5% 0;
     }
 }
 
@@ -2218,6 +2223,12 @@ textarea {
 .spot_visual {
     width: 100%;
     object-fit: cover;
+}
+
+.spot_visual img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
 }
 
 .article_end_spot p {
