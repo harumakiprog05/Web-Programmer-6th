@@ -222,32 +222,35 @@ $main_cat = get_category_parent($post, 'spot_cat');
         <!-- ▲ いいねボタン・SNSシェアのショートコード : 終了-->
 
         <!-- ▼ 近くのおススメ : 開始-->
-        <div class=" section_hedding">
-            <h2 class="global_section_title">近くのスポット</h2>
-        </div>
-        <div class="spot_wrap">
-            <ul class="article_end_spot container">
-                <?php
-                $tax_posts = get_posts(array(
-                    'post_type' => $ptype_info,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => $tax_name,
-                            'terms' => array($slug_area),
-                            'field' => 'slug',
-                        )
-                    ),
-                    'orderby' => 'rand'
-                ));
+        <?php
+        $tax_posts = get_posts(array(
+            'post_type' => $ptype_info,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => $tax_name,
+                    'terms' => array($slug_area),
+                    'field' => 'slug',
+                )
+            ),
+            'orderby' => 'rand'
+        ));
 
-                if ($tax_posts) :
-                    $count = 1;
-                    $num = 4;
-                    foreach ($tax_posts as $tax_post) :
+        if ($tax_posts) :
+            $near_count = 1;
+            $num = 4; ?>
+            <?php if (count($tax_posts) != 1) : ?>
+                <div class=" section_hedding">
+                    <h2 class="global_section_title">近くのスポット</h2>
+                </div>
+                <div class="spot_wrap">
+                    <ul class="article_end_spot container">
+                    <?php endif; ?>
+
+                    <?php foreach ($tax_posts as $tax_post) :
                         setup_postdata($tax_post);
                         $spot_slug = $tax_post->post_name;
 
-                        if ($num < $count) { // 表示数の制限
+                        if ($num < $near_count) { // 表示数の制限
                             break;
                         } else {
                             $args = array(
@@ -268,24 +271,26 @@ $main_cat = get_category_parent($post, 'spot_cat');
                                         echo the_title('<p>', '</p>');
                                         echo '<a>';
                                         echo '</li>';
-                                        echo $li_tag;
-                                        $count++;
+                                        $near_count++;
                                     }
                                 }
                             }
                             wp_reset_postdata(); //クエリのリセット
                         }
                     endforeach;
-                    wp_reset_postdata();
-                endif;
-                if ($count == 1) {
-                    echo '<li>';
-                    echo '<p>近くのスポットは準備中です。</p>';
-                    echo '</li>';
-                }
-                ?>
-            </ul>
-        </div>
+                    wp_reset_postdata(); ?>
+                    <?php if (count($tax_posts) != 1) : ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+        <?php endif;
+        // if ($count == 1) {
+        //     echo '<li>';
+        //     echo '<p>近くのスポットは準備中です。</p>';
+        //     echo '</li>';
+        // }
+        ?>
+
         <!-- ▲ 近くのおススメ : 終了-->
     </section>
 
