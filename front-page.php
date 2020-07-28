@@ -51,9 +51,9 @@
 
 			<h3 class="contents_copy">あわいやしの癒しコンテンツ</h3>
 			<ul class="top_category_set">
-				<li class="fun fun_color_dark top_circle_set">楽</li>
-				<li class="calm calm_color_dark top_circle_set">静</li>
-				<li class="tasty tasty_color_dark top_circle_set">旨</li>
+				<li class="fun fun_color_dark top_circle_set"><a href="#fun_button">楽</a></li>
+				<li class="calm calm_color_dark top_circle_set"><a href="#calm_button">静</a></li>
+				<li class="tasty tasty_color_dark top_circle_set"><a href="#tasty_button">旨</a></li>
 			</ul>
 			<span class="site_about_end fun_ftcolor_dark">今度の休みは、<br class="sp" />どんな癒しでゆっくりしますか？</span>
 		</div>
@@ -64,7 +64,7 @@
 			<h2 class="global_section_title title_awaiyashi_spot">～あわいやしスポット～</h2>
 		</div>
 
-		<section class="fun_category">
+		<section class="fun_category" id="fun_button">
 			<div class="fun_category_image"></div>
 			<div class="container">
 				<span class="fun fun_color_dark grande_circle_set">楽</span>
@@ -117,7 +117,7 @@
 		</section>
 
 
-		<section class="calm_category">
+		<section class="calm_category" id="calm_button">
 			<div class="calm_category_image"></div>
 
 			<div class="container">
@@ -170,7 +170,7 @@
 			</div>
 		</section>
 
-		<section class="tasty_category">
+		<section class="tasty_category" id="tasty_button">
 			<div class="tasty_category_image"></div>
 
 			<div class="container">
