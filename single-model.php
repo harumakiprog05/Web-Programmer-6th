@@ -137,7 +137,6 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
         </a>
     </section>
 </main>
-<div class="model_bottom_img"></div>
 <!-- ▼ フッター : 開始-->
 <?php get_footer(); ?>
 <!-- ▲ フッター : 終了-->

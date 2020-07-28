@@ -60,6 +60,12 @@ span {
   border-radius: 20px;
   padding: 7px 20px;
   margin-bottom: 50px;
+  transition: 0.2s;
+}
+
+.spot_more:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .more {
@@ -67,13 +73,19 @@ span {
   padding: 7px 20px;
   display: block;
   margin: 0 auto;
+  transition: 0.2s;
+}
+
+.more:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .header_band {
   background-image: url("../image/header_band.png");
   text-align: center;
   z-index: 5;
-  font-family: 'Hannari', serif;
+  font-family: "Hannari", serif;
   font-size: 25px;
   padding: 30px 0;
 }
@@ -177,7 +189,7 @@ span {
 }
 
 .calm_ftcolor_dark {
-  color: #67A1A6;
+  color: #67a1a6;
 }
 
 /* 旨カラー */
@@ -458,12 +470,14 @@ span {
 }
 
 .sp_footer .wave_footer .waves {
-  width: 100%;
-  height: 158px;
+  width: 200%;
+  height: 120px;
 }
 
 .sp_footer .wave_footer {
-  height: 158px;
+  height: 120px;
+  margin-top: 30px;
+  overflow: hidden;
 }
 
 .on_footer {
@@ -488,18 +502,18 @@ span {
   position: relative;
 }
 
-.top_return {
+.top_return_button {
   position: absolute;
   right: 10%;
+  cursor: pointer;
 }
-
 .under_footer ul li {
   line-height: 1.7rem;
 }
 
 .sp_footer .under_footer {
-  background-color: #BFE1EC;
-  color: #67A1A6;
+  background-color: #bfe1ec;
+  color: #67a1a6;
 }
 
 .sp_footer .sns_tag h2 {
@@ -540,11 +554,11 @@ span {
 }
 
 .pc_footer .footer_ul .fa-line {
-  color: #00B900;
+  color: #00b900;
 }
 
 .pc_footer .under_footer {
-  background-color: #BFE1EC;
+  background-color: #bfe1ec;
 }
 
 .pc_footer .under_footer ul {

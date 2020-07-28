@@ -82,6 +82,8 @@
             <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_01.jpg")); ?>" alt="top-image" /></li>
             <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_02.jpg")); ?>" alt="top-image" /></li>
             <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_03.jpg")); ?>" alt="top-image" /></li>
+            <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_04.jpg")); ?>" alt="top-image" /></li>
+            <li><img class="main_visual_image" src="<?php echo esc_url(get_theme_file_uri("image/main_visual_img_05.jpg")); ?>" alt="top-image" /></li>
           </ul>
         </div>
         <div class="visual_logo_wrap">
@@ -90,6 +92,8 @@
         </div>
         <h1 class="main_catch_copy">ゆっくりするから、<br />見えてくるもの。</h1>
       </div>
+      <i class="fas fa-chevron-down"></i>
+
     </div>
     <!-- ▲ メインビジュアル : 終了 -->
 

@@ -5,17 +5,7 @@
 <!-- ▼ コンテンツ : 開始-->
 <main>
     <section <?php post_class(); ?>>
-        <?php
-        $class_name = '';
-        if (is_page('about')) {
-            $class_name = 'site_about_wrap';
-        } elseif (is_page('privacy-policy')) {
-            $class_name = 'pp_container';
-        } elseif (is_page('contact')) {
-            $class_name = 'foam_wrap';
-        }
-        ?>
-        <div class="container <?php echo $class_name; ?>">
+        <div class="container pp_wrap">
 
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : ?>

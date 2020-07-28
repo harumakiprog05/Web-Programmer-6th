@@ -51,9 +51,9 @@
 
 			<h3 class="contents_copy">あわいやしの癒しコンテンツ</h3>
 			<ul class="top_category_set">
-				<li class="fun fun_color_dark top_circle_set">楽</li>
-				<li class="calm calm_color_dark top_circle_set">静</li>
-				<li class="tasty tasty_color_dark top_circle_set">旨</li>
+				<li class="fun fun_color_dark top_circle_set"><a href="#fun_button">楽</a></li>
+				<li class="calm calm_color_dark top_circle_set"><a href="#calm_button">静</a></li>
+				<li class="tasty tasty_color_dark top_circle_set"><a href="#tasty_button">旨</a></li>
 			</ul>
 			<span class="site_about_end fun_ftcolor_dark">今度の休みは、<br class="sp" />どんな癒しでゆっくりしますか？</span>
 		</div>
@@ -64,7 +64,7 @@
 			<h2 class="global_section_title title_awaiyashi_spot">～あわいやしスポット～</h2>
 		</div>
 
-		<section class="fun_category">
+		<section class="fun_category" id="fun_button">
 			<div class="fun_category_image"></div>
 			<div class="container">
 				<span class="fun fun_color_dark grande_circle_set">楽</span>
@@ -72,10 +72,8 @@
 				<div class="categry_description">
 					<h3 class="category_catch_copy fun_ftcolor_dark">とくしまの自然を感じる、楽しいひととき。</h3>
 					<p class="text-left">
-						<!--自然の中でアクティブに過ごすことで<br> -->
-						「ココロ」と「カラダ」を癒してみませんか。<br />
-						一緒に過ごす大切なひとの笑顔を見て癒されてみませんか。<br />
-						まだまだ知らない楽しみ方がとくしまにあります。
+						自然の中でアクティブに過ごす事で心と身体を癒してみませんか。<br>
+						一緒に過ごす大切なひとの笑顔を見て癒されてみませんか。徳島の大自然を楽しめるスポットをご紹介します。
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
@@ -119,15 +117,16 @@
 		</section>
 
 
-		<section class="calm_category">
+		<section class="calm_category" id="calm_button">
 			<div class="calm_category_image"></div>
 
 			<div class="container">
 				<span class="calm calm_color_dark grande_circle_set">静</span>
 				<div class="categry_description">
-					<h3 class="category_catch_copy calm_ftcolor_dark">とくしまの自然を感じる、楽しいひととき。</h3>
+					<h3 class="category_catch_copy calm_ftcolor_dark">日常を忘れる、静かなひととき。</h3>
 					<p class="text-left">
-						静かな時を過ごして、「わたし」と向き合う<br />日常の喧騒を離れ、音に耳を澄ませてみませんか<br />「何もしない贅沢」をとくしまで
+						静かな時を過ごして、「わたし」と向き合う。徳島の自然や文化に触れて、新しい発見をする。<br>
+						日常の喧騒を忘れ、心をリセットできる静かなスポットをご紹介します。
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
@@ -171,17 +170,16 @@
 			</div>
 		</section>
 
-		<section class="tasty_category">
+		<section class="tasty_category" id="tasty_button">
 			<div class="tasty_category_image"></div>
 
 			<div class="container">
 				<span class="tasty tasty_color_dark grande_circle_set">旨</span>
 				<div class="categry_description">
-					<h3 class="category_catch_copy tasty_ftcolor_dark">とくしまの自然を感じる、楽しいひととき。</h3>
+					<h3 class="category_catch_copy tasty_ftcolor_dark">自然を五感で味わう、旨いひととき。</h3>
 					<p class="text-left">
-						食べて、満たして、癒される<br />
-						とくしまの旨いもの自然の旨いもの<br />
-						どこか懐かしさや安心を与えてくれる、旨いもので癒される
+						休みはやはり美味しい物を食べて癒されたい。徳島には様々な「旨い」が揃っています。<br>
+						自然の側で味わえる、旨いスポットをご紹介します。
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
@@ -239,9 +237,9 @@
 
 			<div class="model_course_description">
 				<p class="text-left">
-					徳島になじみのある方から、初めての方まで癒される<br class="sp" />
-					「楽」「静」「旨」をふんだんに盛り込んだモデルコースをご紹介します。<br />
-					週末、ご家族で新たな癒しを探しませんか？
+					自然がいっぱいの徳島。車で走ればすぐそこに「癒しの時間」があります。<br>
+					ここでは、のんびり行ける癒しのモデルコースご紹介します。<br>
+					次の休日は、ご家族やご友人と癒しの旅に出かけてみませんか？
 				</p>
 			</div>
 		</div>
