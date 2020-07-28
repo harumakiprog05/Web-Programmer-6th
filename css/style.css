@@ -2124,17 +2124,16 @@ single.cssの110行目
 }
 
 @media screen and (min-width: 940px) {
-  .info_actab_content table {
-    width: 56%;
-  }
-  .table_section {
-    display: flex;
-    justify-content: space-around;
-  }
-  .single_map {
-    width: 40%;
-    margin: 5% 0;
-  }
+    .info_actab_content table {
+        width: 56%;
+    }
+    .table_section {
+        display: flex;
+        justify-content: space-around;
+    }
+    .single_map {
+        width: 40%;
+    }
 }
 
 .info_actab_content th {
