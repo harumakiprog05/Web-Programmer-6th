@@ -717,13 +717,13 @@ span {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
   }
   .sidepage_header .pcgnav {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 999;
   }
   .gnav_logo {
     padding: 10px 0;
