@@ -717,7 +717,7 @@ span {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 9999;
   }
   .sidepage_header .pcgnav {
     display: block;
