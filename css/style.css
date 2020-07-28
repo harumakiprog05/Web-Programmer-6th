@@ -271,130 +271,130 @@
 /* PC版表示 */
 
 @media screen and (min-width: 1000px) {
-  .main_visual_contain .main_catch_copy {
-    font-size: 4vw;
-    line-height: 6vw;
-  }
-  .main_visual_image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
-  .visual_logo_wrap {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    width: 30%;
-    z-index: 3;
-    transform: translate(0, 0);
-    text-align: center;
-  }
-  .main_visual_logo {
-    width: 60%;
-  }
-  .visual_subtitle {
-    color: white;
-    width: 100%;
-    font-size: 1.3vw;
-  }
-  .fun_category_image {
-    height: 500px;
-  }
-  .calm_category_image {
-    height: 500px;
-  }
-  .tasty_category_image {
-    height: 500px;
-  }
-  .category_catch_copy {
-    font-size: 34px;
-  }
-  .insta_container {
-    padding: 0 70px;
-  }
-  .insta_container {
-    display: inline-block;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-  }
-  .category_catch_copy {
-    margin-bottom: 50px;
-  }
-  .global_section_title {
-    margin-bottom: 80px;
-  }
-  .awaiyashi_plan h3 {
-    margin-bottom: 80px;
-  }
-  .model_course_description {
-    padding: 50px 0;
-  }
-  .title_awaiyashi_spot::before {
-    content: "";
-    background-image: url("image/illust_spot_left.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .title_awaiyashi_spot::after {
-    content: "";
-    background-image: url("image/illust_spot_right.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .title_modelcourse::before {
-    content: "";
-    background-image: url("image/illust_model_left.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .title_modelcourse::after {
-    content: "";
-    background-image: url("image/illust_model_right.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .title_instagram::before {
-    content: "";
-    background-image: url("image/illust_insta_left.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .title_instagram::after {
-    content: "";
-    background-image: url("image/illust_insta_right.png");
-    background-size: cover;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 12px;
-    transform: translate(0, 15px);
-  }
-  .pc_site_about {
-    display: block;
-  }
-  .sp_site_about {
-    display: none;
-  }
+    .main_visual_contain .main_catch_copy {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+    .main_visual_image {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .visual_logo_wrap {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 30%;
+        z-index: 3;
+        transform: translate(0, 0);
+        text-align: center;
+    }
+    .main_visual_logo {
+        width: 60%;
+    }
+    .visual_subtitle {
+        color: white;
+        width: 100%;
+        font-size: 1.3vw;
+    }
+    .fun_category_image {
+        height: 500px;
+    }
+    .calm_category_image {
+        height: 500px;
+    }
+    .tasty_category_image {
+        height: 500px;
+    }
+    .category_catch_copy {
+        font-size: 34px;
+    }
+    .insta_container {
+        padding: 0 70px;
+    }
+    .insta_container {
+        display: inline-block;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .category_catch_copy {
+        margin-bottom: 50px;
+    }
+    .global_section_title {
+        margin-bottom: 80px;
+    }
+    .awaiyashi_plan h3 {
+        margin-bottom: 80px;
+    }
+    .model_course_description {
+        padding: 50px 0;
+    }
+    .title_awaiyashi_spot::before {
+        content: "";
+        background-image: url("image/illust_spot_left.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .title_awaiyashi_spot::after {
+        content: "";
+        background-image: url("image/illust_spot_right.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .title_modelcourse::before {
+        content: "";
+        background-image: url("image/illust_model_left.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .title_modelcourse::after {
+        content: "";
+        background-image: url("image/illust_model_right.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .title_instagram::before {
+        content: "";
+        background-image: url("image/illust_insta_left.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .title_instagram::after {
+        content: "";
+        background-image: url("image/illust_insta_right.png");
+        background-size: cover;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 12px;
+        transform: translate(0, 15px);
+    }
+    .pc_site_about {
+        display: block;
+    }
+    .sp_site_about {
+        display: none;
+    }
 }
 
 .spot_slide_wrap a {
@@ -1714,7 +1714,9 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/slick.woff") format("woff"),
+        url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
 }
 
@@ -1893,6 +1895,7 @@ textarea {
 .single_title {
     margin-top: 50px;
     color: #9fbf82;
+    width: auto;
 }
 
 .title_under_bar {
@@ -1938,6 +1941,7 @@ textarea {
 .sudachi_point img {
     width: 100%;
     object-fit: cover;
+    max-width: 150px;
 }
 
 .sudachi_point li {
@@ -1957,6 +1961,7 @@ textarea {
     width: 100%;
     object-fit: cover;
     height: auto;
+    max-width: 150px;
 }
 
 .inside_modal li {
@@ -2100,14 +2105,14 @@ textarea {
 /* :checked */
 
 .info_actab input:checked ~ .info_actab_content {
-    max-height: 70em;
+    max-height: 120em;
     margin: 50px 3%;
 }
 
 /* Icon */
 
 .info_actab .label_cross::after {
-    line-height: 3;
+    line-height: 3.8;
     position: absolute;
     top: 0;
     right: 0;
@@ -2137,6 +2142,7 @@ textarea {
 .single_map {
     width: 100%;
     border: 1px solid gray;
+    height: 400px;
 }
 
 @media screen and (min-width: 940px) {
@@ -2210,6 +2216,12 @@ textarea {
 .spot_visual {
     width: 100%;
     object-fit: cover;
+}
+
+.spot_visual img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
 }
 
 .article_end_spot p {
@@ -2373,7 +2385,6 @@ a {
 
 .spot_photo img {
     width: 300px;
-
     height: 225px;
 }
 
