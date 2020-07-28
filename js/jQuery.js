@@ -68,7 +68,6 @@ $(".toppage_header #pcgnav").css("display", "none");
 
 $(window).scroll(function () {
     scrollVolume = $(this).scrollTop();
-    console.log(scrollVolume);
 
 
     if ($(window).width() >= 1000) {
@@ -100,9 +99,34 @@ $(function () {
     }, $interval);
 });
 
+// メインビジュアルの下に下げるボタン
+$(function () {
+    let button = $(".fa-chevron-down") //ボタンとなる要素を指定
+    let scrollposition = $(".site_about").offset().top; //スクロール先の要素を指定
+    let speed = 500; //スクロールするスピード(小さいほど早い)
+
+    button.click(function () {
+        $("body, html").animate({ scrollTop: scrollposition }, speed);
+
+    })
+})
+
+//ボタンの点滅
+$(function () {
+    $self = $(".fa-chevron-down"); //点滅させるボタンを指定
+
+    setInterval(function () {
+        $self.fadeOut(1800).fadeIn(1800);
+    }, 0)
+});
+
+
+
 // カテゴリーごとのスポットスライドショー
 
 $(function () {
+
+
     $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
