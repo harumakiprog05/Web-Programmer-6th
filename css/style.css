@@ -85,21 +85,11 @@
 }
 
 .site_about_content > p > span {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     font-size: 17px;
     display: block;
     margin-bottom: 15px;
-=======
-  font-size: 17px;
-  display: block;
-  margin-bottom: 15px;
->>>>>>> a49003a4d055468b20aca29e9bf7ef1261b9baa3
-=======
-    font-size: 17px;
-    display: block;
-    margin-bottom: 15px;
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
+
 }
 
 .top_category_set {
@@ -111,40 +101,18 @@
 }
 
 .top_category_set li:nth-child(1)::after {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
+
     content: "たのしい";
     display: block;
     color: #9fbf82;
     font-size: 14px;
     line-height: 40px;
-<<<<<<< HEAD
-}
-
-.top_category_set li:nth-child(2)::after {
-    content: "しずか";
-    display: block;
-    color: #83ccd2;
-    font-size: 14px;
-    line-height: 40px;
-}
-
-.top_category_set li:nth-child(3)::after {
-    content: "うまい";
-    display: block;
-    color: #eec362;
-    font-size: 14px;
-    line-height: 40px;
-=======
   content: "たのしい";
   display: block;
   color: #9fbf82;
   font-size: 14px;
   line-height: 40px;
 =======
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
 }
 
 .top_category_set li:nth-child(2)::after {
@@ -156,22 +124,13 @@
 }
 
 .top_category_set li:nth-child(3)::after {
-<<<<<<< HEAD
+
   content: "うまい";
   display: block;
   color: #eec362;
   font-size: 14px;
   line-height: 40px;
->>>>>>> a49003a4d055468b20aca29e9bf7ef1261b9baa3
-=======
-    content: "うまい";
-    display: block;
-    color: #eec362;
-    font-size: 14px;
-    line-height: 40px;
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
 }
-
 .site_about_end {
     font-size: 20px;
 }
@@ -312,10 +271,7 @@
 /* PC版表示 */
 
 @media screen and (min-width: 1000px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
+
     .main_catch_copy {
         font-size: 4vw;
         line-height: 6vw;
@@ -440,8 +396,6 @@
     .sp_site_about {
         display: none;
     }
-<<<<<<< HEAD
-=======
   .main_catch_copy {
     font-size: 4vw;
     line-height: 6vw;
@@ -566,26 +520,14 @@
   .sp_site_about {
     display: none;
   }
->>>>>>> a49003a4d055468b20aca29e9bf7ef1261b9baa3
-=======
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
-}
+
 
 .spot_slide_wrap a {
     display: block;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD ======= .spot_slide_wrap {
-    margin-bottom: 30px;
-=======
 .spot_slide_wrap {
-<<<<<<< HEAD
-  margin-bottom: 30px;
->>>>>>> a49003a4d055468b20aca29e9bf7ef1261b9baa3
-=======
     margin-bottom: 30px;
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
 }
 
 /* サーチページのスタイル */
@@ -1889,20 +1831,6 @@ textarea {
 /* Icons */
 
 @font-face {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
-    font-family: "slick";
-    font-weight: normal;
-    font-style: normal;
-    src: url("./fonts/slick.eot");
-<<<<<<< HEAD
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
-        url("./fonts/slick.woff") format("woff"),
-        url("./fonts/slick.ttf") format("truetype"),
-        url("./fonts/slick.svg#slick") format("svg");
-=======
   font-family: "slick";
   font-weight: normal;
   font-style: normal;
@@ -1911,11 +1839,9 @@ textarea {
     url("./fonts/slick.woff") format("woff"),
     url("./fonts/slick.ttf") format("truetype"),
     url("./fonts/slick.svg#slick") format("svg");
->>>>>>> a49003a4d055468b20aca29e9bf7ef1261b9baa3
-=======
+
     src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
->>>>>>> c0efa9289cdd773035f683bad8530f67f4cfa796
 }
 
 /* Arrows */
