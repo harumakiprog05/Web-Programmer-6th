@@ -269,7 +269,7 @@
 /* PC版表示 */
 
 @media screen and (min-width: 1000px) {
-  .main_catch_copy {
+  .main_visual_contain .main_catch_copy {
     font-size: 4vw;
     line-height: 6vw;
   }
