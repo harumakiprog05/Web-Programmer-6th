@@ -1075,6 +1075,7 @@ textarea {
     position: absolute;
     background-image: url(image/modelcourse_bg_image.png);
     background-size: contain;
+    background-position-y: -150px;
     height: 0;
     width: 100%;
     padding-top: 60%;
