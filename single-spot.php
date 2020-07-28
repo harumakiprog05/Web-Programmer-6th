@@ -2,30 +2,30 @@
 <?php get_header('subpage'); ?>
 <!-- ▲ ヘッダー : 終了-->
 <?php
+// 変数の宣言と代入
+$ptype_info = 'info';
+$tax_name = 'info_cat';
 $modal_count = 0;
 $spot_title = get_the_title();
 $sudachi_visual = ['view', 'natural', 'relax', 'refresh', 'healthy', 'communication', 'local', 'open'];
 $spot_tag_info = ['絶景が楽しめる、自然を眺めがら楽しめる場所', '', '', '', '', '', '', ''];
 $main_cat = get_category_parent($post, 'spot_cat');
-
 ?>
 
 <main>
 	<section class="main_category_description">
-		<!-- ▼ スポット個別記事ループ : 開始-->
+		<!-- ▼ スポット記事ループ : 開始-->
 		<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : ?>
 				<?php the_post(); ?>
-				<!-- <section <?php post_class(); ?>> -->
-				<!-- ▼ トップイメージ : 開始-->
+				<!-- トップイメージ -->
 				<div class="single_eye_catch">
-					<img src="<?php echo CFS()->get('top_image'); ?>" alt="">
+					<img class="single_visual_top" src="<?php echo CFS()->get('top_image'); ?>" alt="top-image">
 				</div>
-
+				<!-- パンくずリスト -->
 				<nav>
 					<?php breadcrumb(); ?>
 				</nav>
-
 
 				<section>
 					<!-- 記事タイトル -->
@@ -39,8 +39,7 @@ $main_cat = get_category_parent($post, 'spot_cat');
 					</div>
 				</section>
 
-				<!-- モーダルウィンドウ -->
-
+				<!-- 癒しポイントイメージ -->
 				<section class="modal_wrap">
 					<div class="content">
 						<h2>癒しのポイント</h2>
@@ -51,7 +50,6 @@ $main_cat = get_category_parent($post, 'spot_cat');
 									$spot_tag_terms = get_the_terms($post->id, 'spot_tag');
 									foreach ($spot_tag_terms as $term) : ?>
 										<li>
-											<!-- <?php echo $term->slug; ?> -->
 											<img class="sudachi_visual" src="<?php echo esc_url(get_theme_file_uri("image/$term->slug.png")); ?>" alt="" />
 										</li>
 									<?php endforeach; ?>
@@ -59,12 +57,11 @@ $main_cat = get_category_parent($post, 'spot_cat');
 							</div>
 						</a>
 					</div>
+					<!-- ▼ モーダルウィンドウ : 開始-->
 					<div class="modal js-modal">
 						<div class="modal__bg js-modal-close"></div>
 						<div class="modal__content">
-							<p>
-								すだちは何？？
-							</p>
+							<p>すだちは何？？</p>
 							<div class="inside_modal">
 								<ul>
 									<?php foreach ($sudachi_visual as $img) : ?>
@@ -83,7 +80,7 @@ $main_cat = get_category_parent($post, 'spot_cat');
 						<!--modal__inner-->
 					</div>
 				</section>
-				<!--modal-->
+				<!-- ▲ モーダルウィンドウ : 終了-->
 
 
 				<!-- ▼ 施設情報・地図 : 開始-->
@@ -97,13 +94,13 @@ $main_cat = get_category_parent($post, 'spot_cat');
 					<label class="label_cross fun_color_dark" for="info_actab_one">
 						<h3>詳細情報</h3>
 					</label>
-					<!-- 中身 -->
+					<!-- 施設情報 -->
 					<div class="info_actab_content">
 						<section class="table_section container">
 							<table>
 								<?php $args = array(
-									'post_type' => 'info', //投稿タイプ名
-									'name' => $slug
+									'post_type' => $ptype_info,
+									'name'      => $slug
 								);
 								$customPosts = get_posts($args);
 								if ($customPosts) :
@@ -167,7 +164,7 @@ $main_cat = get_category_parent($post, 'spot_cat');
 										</tr>
 										<?php
 										// 施設のエリアスラッグを取得
-										$info_cat = get_the_terms($post, 'info_cat');
+										$info_cat = get_the_terms($post, $tax_name);
 										foreach ($info_cat as $term) :
 											if ($term->parent) :
 												$slug_area = $term->slug;
@@ -183,6 +180,7 @@ $main_cat = get_category_parent($post, 'spot_cat');
 								wp_reset_postdata(); //クエリのリセット
 								?>
 							</table>
+							<!-- 地図 -->
 							<div class="single_map">
 								<?php echo $gmap; ?>
 							</div>
@@ -214,25 +212,29 @@ $main_cat = get_category_parent($post, 'spot_cat');
 
 			<?php endwhile; ?>
 		<?php endif; ?>
-		<!-- ▲ スポット個別記事ループ : 終了-->
+		<!-- ▲ スポット記事ループ : 終了-->
 
+		<!-- ▼ いいねボタン・SNSシェアのショートコード : 開始-->
+		<div class="share_button">
+			<?php echo do_shortcode('[wp_ulike]'); ?>
+			<?php echo do_shortcode('[addtoany]'); ?>
+		</div>
+		<!-- ▲ いいねボタン・SNSシェアのショートコード : 終了-->
 
 		<!-- ▼ 近くのおススメ : 開始-->
-		<?php echo '現在の記事：', $spot_title; ?>
+		<div class=" section_hedding">
+			<h2 class="global_section_title">近くのスポット</h2>
+		</div>
 		<div class="spot_wrap">
 			<ul class="article_end_spot container">
 				<?php
-				$taxonomy_name = 'info_cat'; // タクソノミーのスラッグ名
-				$post_type = 'info'; // カスタム投稿のスラッグ名
-
 				$tax_posts = get_posts(array(
-					'post_type' => $post_type,
+					'post_type' => $ptype_info,
 					'tax_query' => array(
 						array(
-							'taxonomy' => $taxonomy_name,
+							'taxonomy' => $tax_name,
 							'terms' => array($slug_area),
 							'field' => 'slug',
-							// 'include_children' => true, //子タクソノミーを含める
 						)
 					),
 					'orderby' => 'rand'
@@ -250,7 +252,7 @@ $main_cat = get_category_parent($post, 'spot_cat');
 						} else {
 							$args = array(
 								'post_type' => 'spot',
-								'name' => $spot_slug
+								'name'      => $spot_slug
 							);
 							$customPosts = get_posts($args);
 							if ($customPosts) {
@@ -259,11 +261,14 @@ $main_cat = get_category_parent($post, 'spot_cat');
 									// 現在の記事と異なるタイトルの場合出力
 									if ($spot_title != get_the_title()) {
 										echo '<li>';
+										echo '<a href="', the_permalink(), '">';
 										echo '<div>';
-										echo get_thumbnail($post, 'tumbnail');
+										echo get_thumbnail($post, 'thumbnail');
 										echo '</div>';
 										echo the_title('<p>', '</p>');
+										echo '<a>';
 										echo '</li>';
+										echo $li_tag;
 										$count++;
 									}
 								}
@@ -273,17 +278,16 @@ $main_cat = get_category_parent($post, 'spot_cat');
 					endforeach;
 					wp_reset_postdata();
 				endif;
+				if ($count == 1) {
+					echo '<li>';
+					echo '<p>近くのスポットは準備中です。</p>';
+					echo '</li>';
+				}
 				?>
 			</ul>
 		</div>
 		<!-- ▲ 近くのおススメ : 終了-->
 	</section>
-
-
-	<!-- ▼ いいねボタン・SNSシェアのショートコード : 開始-->
-	<?php echo do_shortcode('[wp_ulike]'); ?>
-	<?php echo do_shortcode('[addtoany]'); ?>
-	<!-- ▲ いいねボタン・SNSシェアのショートコード : 終了-->
 
 </main>
 
