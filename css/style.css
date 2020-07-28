@@ -2309,21 +2309,40 @@ textarea {
   margin-bottom: 50px;
 }
 
+.spot-Contana {
+  height: 190px;
+  margin-bottom: 0;
+  background-image: url(image/header_band.png);
+}
+
+.spot-Contana .spot_title {
+  font-size: 70px;
+  width: 150px;
+  margin: auto;
+  padding: 50px 0 30px;
+  /* margin: 50px auto 20px auto; */
+  /* margin-right: auto; */
+}
+
+.spot-Contana p {
+  margin-top: 20px;
+}
+
 .spot_Contana ul {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.spot_title {
-  font-size: 70px;
-  width: 150px;
-  height: 70px;
-  margin: 50px auto 20px auto;
-  margin-right: auto;
-}
-
 .fun_underline {
   border-bottom: 2px solid #9fbf82;
+}
+
+.calm_underline {
+  border-bottom: 2px solid #67a1a6;
+}
+
+.tasty_underline {
+  border-bottom: 2px solid #eec362;
 }
 
 .tag_underline {

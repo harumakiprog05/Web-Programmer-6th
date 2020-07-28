@@ -14,10 +14,10 @@ if (is_tax($tax_name, 'fun')) {
     $cat_info = 'とくしまの自然を感じる、楽しいひととき。';
     $select_cat = '楽しむ';
 } elseif (is_tax($tax_name, 'calm')) {
-    $cat_info = '';
+    $cat_info = '日常を忘れる、静かなひととき。';
     $select_cat = '静か';
 } elseif (is_tax($tax_name, 'tasty')) {
-    $cat_info = '';
+    $cat_info = '自然を五感で味わう、旨いひととき。';
     $select_cat = '旨い';
 }
 
@@ -28,11 +28,15 @@ $spot_subcat = get_term_children($term_id, $tax_name);
 ?>
 
 <main>
-    <!-- <?php echo $spot_cat->name; ?> -->
+
     <section class="spot-Contana">
         <h2 class="<?php echo $spot_cat->slug; ?>_underline spot_title centering <?php echo $spot_cat->slug; ?>_ftcolor_dark"><?php echo $spot_cat->name; ?></h2>
         <p class="centering"><?php echo $cat_info; ?></p>
     </section>
+
+    <nav>
+        <?php breadcrumb(); ?>
+    </nav>
 
     <section>
         <nav class="menu_box">

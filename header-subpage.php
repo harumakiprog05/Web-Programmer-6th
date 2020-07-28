@@ -126,7 +126,7 @@
     <!-- ▼ パンくずリスト : 開始-->
     <nav>
         <?php
-        if (!is_singular('spot')) {
+        if (!is_singular('spot') && !is_tax('spot_cat')) {
             breadcrumb();
         }
         ?>
