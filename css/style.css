@@ -1075,13 +1075,13 @@ textarea {
         position: absolute;
         background-image: url(image/modelcourse_bg_image.png);
         background-size: contain;
-        background-position-y: 170px;
+        background-position-y: 350px;
         height: 0;
         width: 100%;
         padding-top: 60%;
         background-repeat: no-repeat;
         z-index: -2;
-        top: 376%;
+        top: 320%;
         box-shadow: inset 0 600px 100px #fff;
         box-shadow: inset 0 -100px 100px #fff;
         /* -60pxずらす */
@@ -1714,9 +1714,7 @@ textarea {
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
-        url("./fonts/slick.woff") format("woff"),
-        url("./fonts/slick.ttf") format("truetype"),
+    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"),
         url("./fonts/slick.svg#slick") format("svg");
 }
 
@@ -2374,7 +2372,9 @@ a {
 }
 
 .spot_photo img {
-    width: 100%;
+    width: 300px;
+
+    height: 225px;
 }
 
 @keyframes zoom-in {
