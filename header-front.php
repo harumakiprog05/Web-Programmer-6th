@@ -90,6 +90,8 @@
         </div>
         <h1 class="main_catch_copy">ゆっくりするから、<br />見えてくるもの。</h1>
       </div>
+      <i class="fas fa-chevron-down"></i>
+
     </div>
     <!-- ▲ メインビジュアル : 終了 -->
 
