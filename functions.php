@@ -109,13 +109,13 @@ function myportfolio_scripts()
 		"1.0",                 // バージョン指定
 		"all"                  // メディアタイプ
 	);
-	// ▼▼▼▼▼スタイルCSSの読み込み
-	if (is_tax('spot_cat')) {
-		wp_enqueue_style(
-			"tax-spot-style",
-			get_template_directory_uri() . "/css/archive-spot.css"
-		);
-	}
+	// // ▼▼▼▼▼スタイルCSSの読み込み
+	// if (is_tax('spot_cat')) {
+	// 	wp_enqueue_style(
+	// 		"tax-spot-style",
+	// 		get_template_directory_uri() . "/css/archive-spot.css"
+	// 	);
+	// }
 
 	if (!is_admin()) {
 		// ▼▼▼▼▼WordPress 本体の jQuery を登録解除
@@ -184,6 +184,16 @@ function myportfolio_scripts()
 			true
 		);
 	}
+	// ▼▼▼▼▼カスタム投稿spot投稿ページの場合
+	if (is_singular('spot')) {
+		wp_enqueue_script(
+			'single-spot-script',
+			get_template_directory_uri() . '/js/single-spot.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/single-spot.js')),
+			true
+		);
+	}
 }
 add_action("wp_enqueue_scripts", "myportfolio_scripts");
 
@@ -244,7 +254,7 @@ function breadcrumb()
 
 		// ▽▽▽▽▽ 絞り込み検索ページの場合 ▽▽▽▽▽
 	} else if (is_post_type_archive('spot')) {
-		echo $home;
+		// echo $home;
 
 		// ▽▽▽▽▽ アーカイブ・タグページの場合 ▽▽▽▽▽
 	} else if (is_archive()) {
@@ -663,13 +673,13 @@ function header_band()
 	$search_icon = '<i class="fas fa-search"></i>'; // モデルコース一覧のアイコン
 
 	if (is_tax('spot_cat')) {
-		$text =  the_archive_title($header_band_open, $header_band_close);
+		// $text =  the_archive_title($header_band_open, $header_band_close);
 	} elseif (is_singular('model')) {
-		$text =  $header_band_open . 'モデルコース' . $header_band_close;
+		$text =  $header_band_open . 'モデルコース' . $model_icon . $header_band_close;
 	} elseif (is_post_type_archive('model')) {
 		$text =  the_archive_title($header_band_open, $model_icon . $header_band_close);
 	} elseif (is_post_type_archive('spot')) {
-		$text =  $header_band_open . '検索' . $search_icon . $header_band_close;
+		$text =  $header_band_open . '検　索' . $search_icon . $header_band_close;
 	}
 	return $text;
 }
