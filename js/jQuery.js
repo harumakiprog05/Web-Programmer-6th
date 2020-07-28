@@ -68,6 +68,7 @@ $(".toppage_header #pcgnav").css("display", "none");
 
 $(window).scroll(function () {
     scrollVolume = $(this).scrollTop();
+    // console.log(scrollVolume);
 
 
     if ($(window).width() >= 1000) {
@@ -99,9 +100,71 @@ $(function () {
     }, $interval);
 });
 
+// メインビジュアルの下に下げるボタン
+$(function () {
+    let button = $(".fa-chevron-down") //ボタンとなる要素を指定
+    let scrollposition = $(".site_about").offset().top; //スクロール先の要素を指定
+    let speed = 500; //スクロールするスピード(小さいほど早い)
+
+
+
+    button.click(function () {
+        $("body, html").animate({ scrollTop: scrollposition }, speed);
+
+    })
+})
+
+// トップページの3つの丸をクリックするとページ内リンクするやつ
+//楽しい
+$(function () {
+    let button = $(".top_category_set li:nth-child(1)") //ボタンとなる要素を指定
+    let scrollposition = $(".fun_category").offset().top; //スクロール先の要素を指定
+    let speed = 500; //スクロールするスピード(小さいほど早い)
+
+
+
+    button.click(function () {
+        // console.log(scrollposition);
+
+        $("body, html").animate({ scrollTop: scrollposition }, speed);
+
+    })
+})
+//静か
+$(function () {
+    let button = $(".top_category_set li:nth-child(2)") //ボタンとなる要素を指定
+    let scrollposition = $(".calm_category").offset().top;; //スクロール先の要素を指定
+    let speed = 500; //スクロールするスピード(小さいほど早い)
+
+    button.click(function () {
+        // console.log(scrollposition);
+
+        $("body, html").animate({ scrollTop: scrollposition }, speed);
+
+    })
+})
+
+//旨い
+$(function () {
+    let button = $(".top_category_set li:nth-child(3)") //ボタンとなる要素を指定
+    let scrollposition = $(".tasty_category").offset().top;; //スクロール先の要素を指定
+    let speed = 500; //スクロールするスピード(小さいほど早い)
+
+
+
+    button.click(function () {
+        // console.log(scrollposition);
+        $("body, html").animate({ scrollTop: scrollposition }, speed);
+
+    })
+})
+
+
 // カテゴリーごとのスポットスライドショー
 
 $(function () {
+
+
     $(".spot_slide_wrap").slick({
         autoplay: true,
         autoplaySpeed: 2000,
