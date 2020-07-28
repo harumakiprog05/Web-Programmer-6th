@@ -9,11 +9,11 @@ html {
   user-select: none;
 }
 
-main > section {
+main>section {
   margin-bottom: 100px;
 }
 
-section > section {
+section>section {
   margin-bottom: 80px;
 }
 
@@ -60,6 +60,12 @@ span {
   border-radius: 20px;
   padding: 7px 20px;
   margin-bottom: 50px;
+  transition: 0.2s;
+}
+
+.spot_more:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .more {
@@ -67,6 +73,12 @@ span {
   padding: 7px 20px;
   display: block;
   margin: 0 auto;
+  transition: 0.2s;
+}
+
+.more:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .header_band {
@@ -275,8 +287,7 @@ span {
 .el_humburger_text {
   font-size: 12px;
   letter-spacing: 0.1em;
-  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro",
-    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
@@ -491,11 +502,11 @@ span {
   position: relative;
 }
 
-.top_return {
+.top_return_button {
   position: absolute;
   right: 10%;
+  cursor: pointer;
 }
-
 .under_footer ul li {
   line-height: 1.7rem;
 }
@@ -599,26 +610,26 @@ span {
 
 /* SVG Animation   */
 
-.parallax > use {
+.parallax>use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
 
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
 
-.parallax > use:nth-child(3) {
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
 
-.parallax > use:nth-child(4) {
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
@@ -668,8 +679,7 @@ span {
     font-size: 55px;
   }
   /* PC版は非表示 */
-  .spheader,
-  .sp_footer {
+  .spheader, .sp_footer {
     display: none !important;
   }
   .toppage_header .spgnav {

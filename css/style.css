@@ -35,9 +35,16 @@
     font-size: 50px;
     color: white;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.main_visual_contain .fa-chevron-down:hover {
+    opacity: 1;
+    transition: 0.2s;
 }
 
 .main_visual_image {
@@ -183,21 +190,21 @@
     background-image: url("image/category_img_fun.jpg");
     background-size: cover;
     background-position: center;
-    height: 170px;
+    height: 120px;
 }
 
 .calm_category_image {
     background-image: url("image/category_img_calm.jpg");
     background-size: cover;
     background-position: center;
-    height: 170px;
+    height: 120px;
 }
 
 .tasty_category_image {
     background-image: url("image/category_img_tasty.jpg");
     background-size: cover;
     background-position: center;
-    height: 170px;
+    height: 120px;
 }
 
 .spot_img_frame {
@@ -462,6 +469,12 @@
     margin: 0 auto;
     border-radius: 20px;
     padding: 5px 20px;
+    transition: 0.2s;
+}
+
+.area_serch_more:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 .search_section input[type="submit"] {
@@ -1070,24 +1083,6 @@ textarea {
     z-index: -2;
 }
 
-@media screen and (min-width: 1025px) {
-    .model_bottom_img {
-        position: absolute;
-        background-image: url(image/modelcourse_bg_image.png);
-        background-size: contain;
-        background-position-y: 350px;
-        height: 0;
-        width: 100%;
-        padding-top: 60%;
-        background-repeat: no-repeat;
-        z-index: -2;
-        top: 320%;
-        box-shadow: inset 0 600px 100px #fff;
-        box-shadow: inset 0 -100px 100px #fff;
-        /* -60pxずらす */
-    }
-}
-
 .model_spot_card {
     border-radius: 5%;
     padding: 10px 10px 0 10px;
@@ -1551,6 +1546,18 @@ textarea {
     font-size: 1.1em;
     margin-top: 50px;
     padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .back_model_archive {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 860px) {
+    .back_model_archive {
+        width: 40%;
+    }
 }
 
 .model_iframe_outline {
@@ -2313,6 +2320,7 @@ a {
 
 .cat_image a h3 {
     font-size: 0.9em;
+    margin-bottom: 15px;
 }
 
 .drop_menu {
@@ -2325,7 +2333,7 @@ a {
     height: 55vh;
     overflow-y: auto;
     top: 0%;
-    left: 30%;
+    left: 5%;
     z-index: 1;
 }
 
@@ -2352,9 +2360,9 @@ a {
 }
 
 .menu_btn {
-    width: 80%;
+    width: 85%;
     font-size: 0.9em;
-    padding: 5px;
+    padding: 7px;
     margin: 0 auto;
     text-align: center;
     border-radius: 50px;
@@ -2383,9 +2391,16 @@ a {
     display: none;
 }
 
+.spot_photo {
+    width: 100%;
+    max-width: 300px;
+    height: 80%;
+    max-height: 225px;
+}
+
 .spot_photo img {
-    width: 300px;
-    height: 225px;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes zoom-in {
@@ -2402,7 +2417,7 @@ a {
 }
 
 .spot_wrap {
-    width: 90%;
+    width: 95%;
     position: relative;
     margin: 0 auto;
 }
@@ -2413,7 +2428,7 @@ a {
 
 .spot_card {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -2441,20 +2456,25 @@ a {
     }
     .spot_card {
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
         margin: 0 auto;
     }
     .spot_card li {
         width: 40%;
+        margin: 5%;
     }
     .tag-search {
         font-size: 27px;
         padding: 50px 20px 20px 20px;
     }
+
+    .drop_menu {
+        left: 20%;
+    }
 }
 
-@media screen and (min-width: 746px) {
+@media screen and (min-width: 746px) and (max-width: 999px) {
     .menu_btn {
         font-size: 1.3em;
     }
@@ -2466,9 +2486,12 @@ a {
     }
     .spot_card {
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
         margin: 0 auto;
+    }
+    .spot_card li {
+        margin: 5%;
     }
     .tag_search {
         padding: 10px;
@@ -2479,9 +2502,17 @@ a {
     }
     .drop_menu {
         width: 500px;
+        left: 25%;
     }
     .cat_image a h3 {
         font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    .spot_photo img {
+        width: 100%;
+        max-width: 300px;
+        height: 80%;
+        max-height: 225px;
     }
 }
 
@@ -2489,11 +2520,18 @@ a {
     .menu_btn {
         font-size: 1.5em;
     }
+
+    .drop_menu {
+        left: 30%;
+        width: 500px;
+    }
+
     .spot_Contana {
         max-width: 1000px;
         margin: 0 auto;
     }
     .spot_wrap {
+        width: 95%;
         max-width: 1000px;
     }
     .spot_wrap ul {
@@ -2501,15 +2539,21 @@ a {
     }
     .spot_card {
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
+        width: 100%;
         max-width: 1000px;
         margin: 0 auto;
     }
     .spot_card li {
-        width: 25%;
-        margin: 2%;
+        width: 30%;
+        margin: 0;
     }
+    .spot_card li:nth-child(3n-1) {
+        margin-right: 36px;
+        margin-left: 36px;
+    }
+
     .tag_search {
         padding: 20px;
         max-width: 1000px;
@@ -2519,5 +2563,20 @@ a {
     }
     .cat_image a h3 {
         font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .spot_photo {
+        width: 100%;
+        max-width: 300px;
+        height: 75%;
+        max-height: 225px;
+    }
+
+    .spot_photo img {
+        width: 100%;
+        max-width: 300px;
+        height: 75%;
+        max-height: 225px;
     }
 }

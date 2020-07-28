@@ -11,11 +11,13 @@ $tax_name = 'spot_cat';
 $spot_cat = get_category_parent($post, $tax_name);
 
 if (is_tax($tax_name, 'fun')) {
-    $cat_info = '※※要確認※※自然と文化に触れ楽しむひととき。';
+    $cat_info = 'とくしまの自然を感じる、楽しいひととき。';
     $select_cat = '楽しむ';
 } elseif (is_tax($tax_name, 'calm')) {
+    $cat_info = '';
     $select_cat = '静か';
 } elseif (is_tax($tax_name, 'tasty')) {
+    $cat_info = '';
     $select_cat = '旨い';
 }
 
@@ -46,7 +48,7 @@ $spot_subcat = get_term_children($term_id, $tax_name);
                     <li data-filter="<?php echo $spot_term->slug; ?>">
                         <a>
                             <figure class="<?php echo $spot_cat->slug; ?>_select">
-                                <img src="<?php echo esc_url(get_theme_file_uri("image/test_sample_140_105.jpg")); ?>" />
+                                <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/$spot_term->slug.jpg")); ?>" />
                             </figure>
                             <p class="select_text"><?php echo $spot_term->name; ?></p>
                         </a>
@@ -57,7 +59,7 @@ $spot_subcat = get_term_children($term_id, $tax_name);
                 <li data-filter="all">
                     <a>
                         <figure class="<?php echo $spot_cat->slug; ?>_select">
-                            <img src="<?php echo esc_url(get_theme_file_uri("image/test_sample_140_105.jpg")); ?>" />
+                            <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/all_$spot_cat->slug.jpg")); ?>" />
                         </figure>
                         <p class="select_text">ぜんぶ</p>
                     </a>
