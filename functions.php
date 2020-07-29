@@ -109,13 +109,6 @@ function myportfolio_scripts()
 		"1.0",                 // バージョン指定
 		"all"                  // メディアタイプ
 	);
-	// // ▼▼▼▼▼スタイルCSSの読み込み
-	// if (is_tax('spot_cat')) {
-	// 	wp_enqueue_style(
-	// 		"tax-spot-style",
-	// 		get_template_directory_uri() . "/css/archive-spot.css"
-	// 	);
-	// }
 
 	if (!is_admin()) {
 		// ▼▼▼▼▼WordPress 本体の jQuery を登録解除
@@ -131,7 +124,7 @@ function myportfolio_scripts()
 		wp_enqueue_script(
 			'jquery UI',
 			'https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js',
-			array(),
+			array('jquery'),
 			'1.12.1',
 		);
 	}
@@ -159,14 +152,6 @@ function myportfolio_scripts()
 			get_template_directory_uri() . '/js/archive-spot.js',
 			array('jquery'),
 			filemtime(get_theme_file_path('/js/archive-spot.js')),
-			true
-		);
-		// jquery.morphing.jsの読み込み
-		wp_enqueue_script(
-			'spot-cat-script2',
-			get_template_directory_uri() . '/js/jquery.morphing.js',
-			array('jquery'),
-			filemtime(get_theme_file_path('/js/jquery.morphing.js')),
 			true
 		);
 	}
@@ -270,7 +255,8 @@ function breadcrumb()
 
 		// ▽▽▽▽▽ 絞り込み検索ページの場合 ▽▽▽▽▽
 	} else if (is_post_type_archive('spot')) {
-		// echo $home;
+		echo $home;
+		echo '<li>検索ページ</li>';
 
 		// ▽▽▽▽▽ アーカイブ・タグページの場合 ▽▽▽▽▽
 	} else if (is_archive()) {
