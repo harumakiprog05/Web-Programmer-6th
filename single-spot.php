@@ -8,8 +8,9 @@ $tax_name = 'info_cat';
 $modal_count = 0;
 $spot_title = get_the_title();
 $sudachi_visual = ['view', 'natural', 'relax', 'refresh', 'healthy', 'communication', 'local', 'open'];
-$spot_tag_info = ['絶景が楽しめる、自然を眺めがら楽しめる場所', '', '', '', '', '', '', ''];
+$spot_tag_info = ['見晴らしがいい場所があり、絶景を楽しめるスポット', '人工物が少なく、自然を近くに感じることができるスポット', 'ゆっくりくつろげて、心と身体が休まるスポット', '非日常の新鮮な体験ができ、気分を切り替えられるスポット', '健康的で身体に優しい体験や、食べ物を楽しめるスポット', '地元の人との交流や、生き物と触れ合えるスポット', '徳島特有の自然や文化、特産品に出会えるスポット', '広々な空間。新しい生活様式（３密になりにくい）スポット'];
 $main_cat = get_category_parent($post, 'spot_cat');
+$main_slug = $main_cat->slug;
 ?>
 
 <main>
@@ -29,13 +30,13 @@ $main_cat = get_category_parent($post, 'spot_cat');
 
                 <section>
                     <!-- 記事タイトル -->
-                    <div class="section_hedding single_title">
+                    <div class="section_hedding single_title <?php echo $main_slug; ?>_ftcolor_dark">
                         <?php the_title('<h2>', '</h2>'); ?>
                     </div>
                     <!-- 癒しの一言 -->
                     <div class="single_description">
                         <p><?php echo CFS()->get('iyashi_point'); ?></p>
-                        <span class="title_under_bar"></span>
+                        <span class="<?php echo $main_slug; ?>_under_bar"></span>
                     </div>
                 </section>
 
