@@ -3,7 +3,7 @@
 <!-- ▲ ヘッダー : 終了-->
 
 <?php
-// <!-- ▼ 変数の定義とカテゴリ別テキストの定義 : 開始-->
+// <!-- ▼ 変数の宣言とカテゴリ別テキストの定義 : 開始-->
 $cat_info = $select_cat = '';
 // カスタム投稿spotのタクソノミー名(category)
 $tax_name = 'spot_cat';
@@ -45,7 +45,7 @@ $spot_subcat = get_term_children($term_id, $tax_name);
             </div>
 
 
-            <ul class="drop_menu">
+            <ul class="drop_menu <?php echo $spot_cat->slug; ?>_drop_border">
                 <?php // <!-- ▼ サブカテゴリー出力 : 開始->
                 foreach ($spot_subcat as $value) : ?>
                     <?php $spot_term = get_term($value, $tax_name); ?>

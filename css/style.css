@@ -2508,7 +2508,6 @@ a {
 .drop_menu {
   position: absolute;
   padding: 14px 14px 0;
-  border: #67a1a6 2px solid;
   background: #fff;
   width: 90%;
   text-align: left;
@@ -2517,6 +2516,18 @@ a {
   top: 0%;
   left: 5%;
   z-index: 1;
+}
+
+.drop_menu.fun_drop_border {
+  border: #9fbf82 2px solid;
+}
+
+.drop_menu.calm_drop_border {
+  border: #83ccd2 2px solid;
+}
+
+.drop_menu.tasty_drop_border {
+  border: #eec362 2px solid;
 }
 
 .spot_flex {
@@ -2544,7 +2555,7 @@ a {
 .menu_btn {
   width: 85%;
   font-size: 0.9em;
-  padding: 7px;
+  padding: 10px;
   margin: 0 auto;
   text-align: center;
   border-radius: 50px;
@@ -2726,7 +2737,8 @@ a {
   }
   .spot_card li {
     width: 30%;
-    margin: 0 12px 0;
+    /* margin: 0 12px 0; */
+    margin: 0 16px;
   }
   /* .spot_card li:nth-child(3n-1) {
     margin-right: 36px;
