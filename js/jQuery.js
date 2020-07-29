@@ -116,48 +116,57 @@ $(function () {
 
 // トップページの3つの丸をクリックするとページ内リンクするやつ
 //楽しい
-$(function () {
-    let button = $(".top_category_set li:nth-child(1)") //ボタンとなる要素を指定
-    let scrollposition = $(".fun_category").offset().top; //スクロール先の要素を指定
-    let speed = 500; //スクロールするスピード(小さいほど早い)
 
 
 
-    button.click(function () {
-        // console.log(scrollposition);
 
-        $("body, html").animate({ scrollTop: scrollposition }, speed);
-
-    })
-})
-//静か
-$(function () {
-    let button = $(".top_category_set li:nth-child(2)") //ボタンとなる要素を指定
-    let scrollposition = $(".calm_category").offset().top;; //スクロール先の要素を指定
-    let speed = 500; //スクロールするスピード(小さいほど早い)
-
-    button.click(function () {
-        // console.log(scrollposition);
-
-        $("body, html").animate({ scrollTop: scrollposition }, speed);
-
-    })
-})
-
-//旨い
-$(function () {
-    let button = $(".top_category_set li:nth-child(3)") //ボタンとなる要素を指定
-    let scrollposition = $(".tasty_category").offset().top;; //スクロール先の要素を指定
-    let speed = 500; //スクロールするスピード(小さいほど早い)
+// $(function () {
+//     let button = $(".top_category_set li:nth-child(1)") //ボタンとなる要素を指定
+//     let scrollposition = $(".fun_category").offset().top; //スクロール先の要素を指定
+//     let speed = 500; //スクロールするスピード(小さいほど早い)
 
 
 
-    button.click(function () {
-        // console.log(scrollposition);
-        $("body, html").animate({ scrollTop: scrollposition }, speed);
+//     button.click(function () {
+//         if (window.innerWidth > 1000) {
+//             // console.log(scrollposition);
 
-    })
-})
+//             $("body, html").animate({ scrollTop: scrollposition }, speed);
+//         }
+
+//     })
+// })
+// //静か
+// $(function () {
+//     let button = $(".top_category_set li:nth-child(2)") //ボタンとなる要素を指定
+//     let scrollposition = 2710; //スクロール先の要素を指定
+//     let speed = 500; //スクロールするスピード(小さいほど早い)
+
+//     button.click(function () {
+//         if (window.innerWidth > 1000) {
+//             // console.log(scrollposition);
+
+//             $("body, html").animate({ scrollTop: scrollposition }, speed);
+//         }
+
+//     })
+// })
+
+// //旨い
+// $(function () {
+//     let button = $(".top_category_set li:nth-child(3)") //ボタンとなる要素を指定
+//     let scrollposition = 3828; //スクロール先の要素を指定
+//     let speed = 500; //スクロールするスピード(小さいほど早い)
+
+
+
+//     button.click(function () {
+//         if (window.innerWidth > 1000) {
+//             // console.log(scrollposition);
+//             $("body, html").animate({ scrollTop: scrollposition }, speed);
+//         }
+//     })
+// })
 
 
 // カテゴリーごとのスポットスライドショー

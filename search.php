@@ -30,8 +30,14 @@
 	// <!-- ▲ searchformの値取得と変数定義 : 終了-->
 	?>
 
+	<ul class="search_category_set">
+		<li class="fun fun_color_dark top_circle_set"><a href="#fun_button">楽</a></li>
+		<li class="calm calm_color_dark top_circle_set"><a href="#calm_button">静</a></li>
+		<li class="tasty tasty_color_dark top_circle_set"><a href="#tasty_button">旨</a></li>
+	</ul>
 
 	<section class="result_section">
+
 
 		<!-- ▼ 絞り込み検索の結果出力 : 開始-->
 		<?php if (!($s || $get_cats || $get_tags)) : ?>
@@ -42,7 +48,7 @@
 			<?php $my_query_fun = new WP_Query(create_wp_query($tax_ary_fun, 'AND', $s)); ?>
 			<div class="fun_result fun_color_light">
 				<div class="container">
-					<h2 class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
+					<h2 id="fun_button" class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
 					<ul class="result_items flex">
 						<?php if ($my_query_fun->have_posts()) : ?>
 
@@ -119,6 +125,7 @@
 							<li class="result_item">結果が見つかりませんでした。</li>
 						<?php endif; ?>
 					</ul>
+					<p class="sumber_fun">楽の検索結果：<?php echo $count_spot_fun; ?>件</p>
 				</div>
 			</div>
 			<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
@@ -127,7 +134,7 @@
 			<?php $my_query_calm = new WP_Query(create_wp_query($tax_ary_calm, 'AND', $s)); ?>
 			<div class="calm_result calm_color_light">
 				<div class="container">
-					<h2 class="result_categry_title calm_color_dark grande_circle_set">静</h2>
+					<h2 id="calm_button" class="result_categry_title calm_color_dark grande_circle_set">静</h2>
 					<ul class="result_items flex">
 						<?php if ($my_query_calm->have_posts()) : ?>
 
@@ -210,7 +217,7 @@
 			<?php $my_query_tasty = new WP_Query(create_wp_query($tax_ary_tasty, 'AND', $s)); ?>
 			<div class="tasty_result tasty_color_light">
 				<div class="container">
-					<h2 class="result_categry_title tasty_color_dark grande_circle_set">旨</h2>
+					<h2 id="tasty_button" class="result_categry_title tasty_color_dark grande_circle_set">旨</h2>
 					<ul class="result_items flex">
 						<?php if ($my_query_tasty->have_posts()) : ?>
 
@@ -289,6 +296,11 @@
 			<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
 
 		<?php endif; ?>
+
+		<?php
+		$all_count = $count_spot_fun + $count_spot_clam + $count_spot_tasty;
+		?>
+		<p class="sumber_all">すべての検索結果：<?php echo $all_count; ?>件</p>
 		<!-- ▲ 絞り込み検索の結果出力 : 終了-->
 	</section>
 </main>

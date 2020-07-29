@@ -28,7 +28,7 @@
                     <a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">プライバシーポリシー</a>
                 </li>
             </ul>
-            <a href="">
+            <a href="<?php echo home_url() ?>">
                 <h1>
                     <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" width="170" alt="あわいやしロゴ" />
                 </h1>
@@ -65,8 +65,9 @@
                     <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">プライバシーポリシー</a></li>
                     <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">お問い合わせ</a></li>
                 </ul>
-
-                <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="footer_logo" alt="" />
+                <a href="<?php echo home_url() ?>">
+                    <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="footer_logo" alt="" />
+                </a>
 
                 <small>Copyright © あわいやし. All rights reserved.</small>
                 <i class="top_return_button fas fa-chevron-up circle calm_color_dark"></i>

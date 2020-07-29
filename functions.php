@@ -174,6 +174,16 @@ function myportfolio_scripts()
 			true
 		);
 	}
+	// ▼▼▼▼▼検索ページの場合
+	if (is_post_type_archive('spot')) {
+		wp_enqueue_script(
+			'search-script',
+			get_template_directory_uri() . '/js/search.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/search.js')),
+			true
+		);
+	}
 	// ▼▼▼▼▼カスタム投稿model投稿ページの場合
 	if (is_singular('model')) {
 		wp_enqueue_script(
