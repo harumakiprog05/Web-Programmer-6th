@@ -128,6 +128,12 @@ function myportfolio_scripts()
 			'3.5.1',
 			// true //</body> 終了タグの前で読み込み
 		);
+		wp_enqueue_script(
+			'jquery UI',
+			'https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js',
+			array(),
+			'1.12.1',
+		);
 	}
 	// ▼▼▼▼▼ベースJSの読み込み
 	wp_enqueue_script(
