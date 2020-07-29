@@ -1927,12 +1927,21 @@ single.cssの110行目
 
 .single_title {
   margin-top: 50px;
-  color: #9fbf82;
   width: auto;
 }
 
-.title_under_bar {
+.fun_under_bar {
   border-top: 3px solid #9fbf82;
+  width: 30%;
+}
+
+.calm_under_bar {
+  border-top: 3px solid #67a1a6;
+  width: 30%;
+}
+
+.tasty_under_bar {
+  border-top: 3px solid #eec362;
   width: 30%;
 }
 
@@ -2004,6 +2013,7 @@ single.cssの110行目
 }
 
 .inside_modal p {
+  width: 70%;
   margin-bottom: 10px;
   padding: 5px 0 0 10px;
   text-align: left;
@@ -2043,6 +2053,9 @@ single.cssの110行目
     display: block;
   }
   .sudachi_visual {
+    width: 100%;
+  }
+  .inside_modal p {
     width: 100%;
   }
 }
