@@ -35,36 +35,26 @@
 		<?php if (!($s || $get_cats || $get_tags)) : ?>
 
 		<?php else : ?>
+			<div id="tabs">
+				<ul>
+					<li>
+						<span data-href="#panel1" class="current">楽</span>
+					</li>
+					<li>
+						<span data-href="#panel2" class="">静</span>
+					</li>
+					<li>
+						<span data-href="#panel3" class="">旨</span>
+					</li>
+				</ul>
 
-
-
-			<div class="section">
-
-				<div class="tabBox">
-					<div class="tabArea">
-						<div class="one_tab">
-							<a href="#tab01"><span class="tab_inner">楽</span></a>
-						</div>
-						<div class="one_tab">
-							<a href="#tab02"><span class="tab_inner">静</span></a>
-						</div>
-						<div class="one_tab">
-							<a href="#tab03"><span class="tab_inner">旨</span></a>
-						</div>
-					</div>
-				</div><!-- /.tabBox -->
-
-				<div class="contents">
-
-					<div id="tab01" class="tab_main fun_result fun_color_light">
+				<div id="tabcontents">
+					<div id="panel1" class="panel fun_result fun_color_light">
 						<!-- ▼ WP_Query（楽） : 開始------------------------------------------------------>
 						<?php $my_query_fun = new WP_Query(create_wp_query($tax_ary_fun, 'AND', $s)); ?>
 
-
-
-
 						<div class="container">
-							<h2 id="fun_button" class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
+							<h2 class="result_categry_title fun_color_dark grande_circle_set">楽</h2>
 							<ul class="result_items flex">
 								<?php if ($my_query_fun->have_posts()) : ?>
 
@@ -144,15 +134,13 @@
 							<p class="sumber_fun">楽の検索結果：<?php echo $count_spot_fun; ?>件</p>
 						</div>
 						<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
-
-
 					</div><!-- /#tab01 -->
 
-					<div id="tab02" class="tab_main calm_result calm_color_light">
+					<div id="panel2" class="panel calm_result calm_color_light">
 						<!-- ▼ WP_Query（静） : 開始------------------------------------------------------>
 						<?php $my_query_calm = new WP_Query(create_wp_query($tax_ary_calm, 'AND', $s)); ?>
 						<div class="container">
-							<h2 id="calm_button" class="result_categry_title calm_color_dark grande_circle_set">静</h2>
+							<h2 class="result_categry_title calm_color_dark grande_circle_set">静</h2>
 							<ul class="result_items flex">
 								<?php if ($my_query_calm->have_posts()) : ?>
 
@@ -229,108 +217,99 @@
 							</ul>
 						</div>
 						<!-- ▲ WP_Query（静） : 終了------------------------------------------------------>
-
 					</div><!-- /#tab02 -->
 
-					<div id="tab03" class="tab_main tasty_result tasty_color_light">
+					<div id="panel3" class="panel tasty_result tasty_color_light">
 						<!-- ▼ WP_Query（旨） : 開始------------------------------------------------------>
 						<?php $my_query_tasty = new WP_Query(create_wp_query($tax_ary_tasty, 'AND', $s)); ?>
-							<div class="container">
-								<h2 id="tasty_button" class="result_categry_title tasty_color_dark grande_circle_set">旨</h2>
-								<ul class="result_items flex">
-									<?php if ($my_query_tasty->have_posts()) : ?>
+						<div class="container">
+							<h2 class="result_categry_title tasty_color_dark grande_circle_set">旨</h2>
+							<ul class="result_items flex">
+								<?php if ($my_query_tasty->have_posts()) : ?>
 
-										<?php while ($my_query_tasty->have_posts()) : ?>
-											<?php $my_query_tasty->the_post(); ?>
+									<?php while ($my_query_tasty->have_posts()) : ?>
+										<?php $my_query_tasty->the_post(); ?>
 
-											<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
-											if (!$get_cats) : ?>
-												<?php $count_spot_tasty++; ?>
-												<li class="result_item">
-													<a href="<?php the_permalink() ?>">
-														<?php set_thumbnail(''); ?>
-														<span><?php the_title(); ?></span>
-													</a>
-												</li>
+										<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
+										if (!$get_cats) : ?>
+											<?php $count_spot_tasty++; ?>
+											<li class="result_item">
+												<a href="<?php the_permalink() ?>">
+													<?php set_thumbnail(''); ?>
+													<span><?php the_title(); ?></span>
+												</a>
+											</li>
 
 
-											<?php // <!-- ▼ エリア指定が「有る」場合の処理 : 開始 ---------------------->
-											elseif ($get_cats) : ?>
+										<?php // <!-- ▼ エリア指定が「有る」場合の処理 : 開始 ---------------------->
+										elseif ($get_cats) : ?>
 
-												<?php
-												// <!-- ▼ カスタム投稿spotのスラッグとID取得 : 開始 -->
-												$spot_post_id = get_the_ID();
-												$slug = $post->post_name;
-												// <!-- スラッグに「-(ハイフン)」が含まれていれば「-」以下カット -->
-												$slug = cut_string($slug);
-												// <!-- ▲ カスタム投稿spotのスラッグとID取得 : 終了-->
-												?>
+											<?php
+											// <!-- ▼ カスタム投稿spotのスラッグとID取得 : 開始 -->
+											$spot_post_id = get_the_ID();
+											$slug = $post->post_name;
+											// <!-- スラッグに「-(ハイフン)」が含まれていれば「-」以下カット -->
+											$slug = cut_string($slug);
+											// <!-- ▲ カスタム投稿spotのスラッグとID取得 : 終了-->
+											?>
 
-												<?php
-												// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
-												$args = array(
-													'post_type' => 'info', //投稿タイプ名
-													'name' => $slug
-												);
-												$customPosts = get_posts($args);
-												if ($customPosts) {
-													foreach ($customPosts as $post) {
-														setup_postdata($post);
-														$area = get_category_parent($post, $tax_name_info)->slug;
-													}
+											<?php
+											// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
+											$args = array(
+												'post_type' => 'info', //投稿タイプ名
+												'name' => $slug
+											);
+											$customPosts = get_posts($args);
+											if ($customPosts) {
+												foreach ($customPosts as $post) {
+													setup_postdata($post);
+													$area = get_category_parent($post, $tax_name_info)->slug;
 												}
-												wp_reset_postdata(); //クエリのリセット
-												// <!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 終了-->
-												?>
+											}
+											wp_reset_postdata(); //クエリのリセット
+											// <!-- ▲ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 終了-->
+											?>
 
-												<?php
-												// <!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
-												foreach ($get_cats as $val) {
-													if ($area == $val) {
-														$post = get_post($spot_post_id);
-														echo '<li class="result_item"><a href="', get_permalink(), '">';
-														echo get_thumbnail($post, '');
-														echo '<span>', $post->post_title, '</span></a></li>';
-														$count_spot_tasty++;
-													}
+											<?php
+											// <!-- ▼ infoのカテゴリスラッグとエリアが一致すれば出力 : 開始 -->
+											foreach ($get_cats as $val) {
+												if ($area == $val) {
+													$post = get_post($spot_post_id);
+													echo '<li class="result_item"><a href="', get_permalink(), '">';
+													echo get_thumbnail($post, '');
+													echo '<span>', $post->post_title, '</span></a></li>';
+													$count_spot_tasty++;
 												}
-												// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
-												?>
+											}
+											// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
+											?>
 
-											<?php // ▲ エリア指定が「有る」場合の処理 : 終了--------------------
-											endif; ?>
+										<?php // ▲ エリア指定が「有る」場合の処理 : 終了--------------------
+										endif; ?>
 
-										<?php endwhile; ?>
-										<?php
-										if ($count_spot_tasty == 0) {
-											echo '<li class="result_item">結果が見つかりませんでした。</li>';
-										}
-										?>
-									<?php else : ?>
-										<li class="result_item">結果が見つかりませんでした。</li>
-									<?php endif; ?>
-								</ul>
-							</div>
+									<?php endwhile; ?>
+									<?php
+									if ($count_spot_tasty == 0) {
+										echo '<li class="result_item">結果が見つかりませんでした。</li>';
+									}
+									?>
+								<?php else : ?>
+									<li class="result_item">結果が見つかりませんでした。</li>
+								<?php endif; ?>
+							</ul>
+						</div>
 						<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
-
 					</div>
 					<!--#tab03-->
-
 				</div>
-				<!--contents-->
+			</div>
+		<?php endif; ?>
 
-
-
-
-
-
-			<?php endif; ?>
-
-			<?php
-			$all_count = $count_spot_fun + $count_spot_clam + $count_spot_tasty;
-			?>
-			<p class="sumber_all">すべての検索結果：<?php echo $all_count; ?>件</p>
-			<!-- ▲ 絞り込み検索の結果出力 : 終了-->
+		<?php
+		$all_count = $count_spot_fun + $count_spot_clam + $count_spot_tasty;
+		?>
+		<p class="sumber_all">すべての検索結果：<?php echo $all_count; ?>件</p>
+		<!-- ▲ 絞り込み検索の結果出力 : 終了-->
 	</section>
 </main>
 
