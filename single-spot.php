@@ -225,12 +225,13 @@ $main_slug = $main_cat->slug;
         <!-- ▼ 近くのおススメ : 開始-->
         <?php
         $tax_posts = get_posts(array(
-            'post_type' => $ptype_info,
-            'tax_query' => array(
+            'posts_per_page' => -1,
+            'post_type'      => $ptype_info,
+            'tax_query'      => array(
                 array(
                     'taxonomy' => $tax_name,
-                    'terms' => array($slug_area),
-                    'field' => 'slug',
+                    'terms'    => array($slug_area),
+                    'field'    => 'slug',
                 )
             ),
             'orderby' => 'rand'
@@ -238,7 +239,7 @@ $main_slug = $main_cat->slug;
 
         if ($tax_posts) :
             $near_count = 1;
-            $num = 4; ?>
+            $num        = 4; ?>
             <?php if (count($tax_posts) != 1) : ?>
                 <div class=" section_hedding">
                     <h2 class="global_section_title">近くのスポット</h2>
@@ -255,8 +256,8 @@ $main_slug = $main_cat->slug;
                             break;
                         } else {
                             $args = array(
-                                'post_type' => 'spot',
-                                'name'      => $spot_slug
+                                'post_type'      => 'spot',
+                                'name'           => $spot_slug
                             );
                             $customPosts = get_posts($args);
                             if ($customPosts) {
@@ -284,13 +285,7 @@ $main_slug = $main_cat->slug;
                     </ul>
                 </div>
             <?php endif; ?>
-        <?php endif;
-        // if ($count == 1) {
-        //     echo '<li>';
-        //     echo '<p>近くのスポットは準備中です。</p>';
-        //     echo '</li>';
-        // }
-        ?>
+        <?php endif; ?>
 
         <!-- ▲ 近くのおススメ : 終了-->
     </section>
