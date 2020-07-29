@@ -100,7 +100,7 @@
   margin: 20px 0;
 }
 
-.site_about_content>p>span {
+.site_about_content > p > span {
   font-size: 17px;
   display: block;
   margin-bottom: 15px;
@@ -224,7 +224,9 @@
   margin-bottom: 15px;
 }
 
-.fun_category span, .calm_category span, .tasty_category span {
+.fun_category span,
+.calm_category span,
+.tasty_category span {
   transform: translate(0, -50%);
 }
 
@@ -415,8 +417,14 @@
 .tag_search_wrap {
   border: dashed 2px #b5d0d2;
   border-radius: 30px;
-  margin: 30px;
+  margin-top: 30px;
   padding: 10px 10px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .tag_search_wrap {
+    border: none;
+  }
 }
 
 .tag_search_wrap .info_actab {
@@ -496,7 +504,9 @@ input::placeholder {
 
 /* 検索結果のスタイル */
 
-.fun_result, .calm_result, .tasty_result {
+.fun_result,
+.calm_result,
+.tasty_result {
   margin-bottom: 50px;
 }
 
@@ -553,7 +563,7 @@ input::placeholder {
   top: -50px;
 }
 
-.fun_result>.container {
+.fun_result > .container {
   position: relative;
 }
 
@@ -624,20 +634,20 @@ input::placeholder {
   pointer-events: none;
 }
 
-#east:checked+label .map_color {
-  fill: #000;
-}
-
-#west:checked+label .map_color {
+#east:checked + label .map_color {
   fill: #fdbc00;
 }
 
-#south:checked+label .map_color {
-  fill: #83ccd2;
+#west:checked + label .map_color {
+  fill: #fdbc00;
 }
 
-#north:checked+label .map_color {
-  fill: #888888;
+#south:checked + label .map_color {
+  fill: #fdbc00;
+}
+
+#north:checked + label .map_color {
+  fill: #fdbc00;
 }
 
 .area_search_wrap figure input {
@@ -664,7 +674,7 @@ path {
 .east_map_color {
   position: absolute;
   width: 17%;
-  right: 55.5%;
+  right: 50.5%;
   top: 21.9%;
   stroke: #fff;
   stroke-width: 2px;
@@ -673,7 +683,7 @@ path {
 .west_map_color {
   position: absolute;
   width: 32%;
-  right: 64.1%;
+  right: 59.1%;
   top: 11.3%;
   stroke: #fff;
   stroke-width: 2px;
@@ -683,7 +693,7 @@ path {
   position: absolute;
   width: 31%;
   top: 34.5%;
-  right: 49.3%;
+  right: 44.3%;
   stroke: #fff;
   stroke-width: 2px;
 }
@@ -692,7 +702,7 @@ path {
   position: absolute;
   width: 12%;
   top: 1.7%;
-  right: 53.59%;
+  right: 48.59%;
   stroke: #fff;
   stroke-width: 2px;
 }
@@ -709,33 +719,33 @@ path {
   }
   .east_map_color {
     position: absolute;
-    width: 18%;
-    right: 42%;
-    top: 25.4%;
+    width: 24%;
+    right: 30.6%;
+    top: 18.5%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .west_map_color {
     position: absolute;
-    width: 34%;
-    right: 51%;
-    top: 17%;
+    width: 45.6%;
+    right: 41.7%;
+    top: 7.57%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .south_map_color {
     position: absolute;
-    width: 33%;
-    top: 35.5%;
-    right: 35.2%;
+    width: 44%;
+    right: 21.6%;
+    top: 32%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .north_map_color {
     position: absolute;
-    width: 13%;
-    top: 8.9%;
-    right: 39.72%;
+    width: 15.3%;
+    right: 28.52%;
+    top: -0.9%;
     stroke: #fff;
     stroke-width: 2px;
   }
@@ -753,33 +763,33 @@ path {
   }
   .east_map_color {
     position: absolute;
-    width: 18%;
-    right: 41.8%;
-    top: 26.4%;
+    width: 25.4%;
+    right: 30.5%;
+    top: 19.4%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .west_map_color {
     position: absolute;
-    width: 34%;
-    right: 50.8%;
-    top: 18.5%;
+    width: 47.8%;
+    right: 42.4%;
+    top: 8.7%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .south_map_color {
     position: absolute;
-    width: 33%;
-    top: 35.5%;
-    right: 35.2%;
+    width: 46%;
+    top: 32.5%;
+    right: 21.2%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .north_map_color {
     position: absolute;
-    width: 13%;
-    top: 11%;
-    right: 39.6%;
+    width: 16.5%;
+    top: 0.1%;
+    right: 28.26%;
     stroke: #fff;
     stroke-width: 2px;
   }
@@ -797,33 +807,33 @@ path {
   }
   .east_map_color {
     position: absolute;
-    width: 18%;
-    right: 54%;
-    top: 26.4%;
+    width: 23.4%;
+    right: 45%;
+    top: 23.7%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .west_map_color {
     position: absolute;
-    width: 34%;
-    right: 63%;
-    top: 18.5%;
+    width: 43.5%;
+    right: 56.8%;
+    top: 14.3%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .south_map_color {
     position: absolute;
-    width: 33%;
+    width: 43%;
+    right: 36.2%;
     top: 35.5%;
-    right: 47.2%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .north_map_color {
     position: absolute;
-    width: 13%;
-    top: 10.9%;
-    right: 51.82%;
+    width: 17%;
+    right: 42.1%;
+    top: 4.5%;
     stroke: #fff;
     stroke-width: 2px;
   }
@@ -841,33 +851,121 @@ path {
   }
   .east_map_color {
     position: absolute;
-    width: 22%;
-    right: 46.4%;
+    width: 30%;
+    right: 29.5%;
+    top: 24.2%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .west_map_color {
+    position: absolute;
+    width: 56%;
+    right: 44.4%;
+    top: 15.4%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .south_map_color {
+    position: absolute;
+    width: 55%;
+    right: 18.5%;
+    top: 34.4%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .north_map_color {
+    position: absolute;
+    width: 21.4%;
+    right: 25.99%;
+    top: 7%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .area_search_wrap {
+    height: 300px;
+  }
+  .area_search_flex {
+    position: relative;
+    height: 300px;
+    width: 380px;
+    margin: auto;
+  }
+  .east_map_color {
+    position: absolute;
+    width: 25%;
+    right: 41.4%;
     top: 27.8%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .west_map_color {
     position: absolute;
-    width: 41%;
-    right: 57.4%;
-    top: 21.4%;
+    width: 46.2%;
+    right: 54%;
+    top: 20.6%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .south_map_color {
+    position: absolute;
+    width: 45%;
+    right: 32.4%;
+    top: 36.7%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .north_map_color {
+    position: absolute;
+    width: 17.9%;
+    right: 38.4%;
+    top: 13.7%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .area_search_wrap {
+    height: 300px;
+  }
+  .area_search_flex {
+    position: relative;
+    height: 300px;
+    width: 380px;
+    margin: auto;
+  }
+  .east_map_color {
+    position: absolute;
+    width: 21.5%;
+    right: 47.9%;
+    top: 26.9%;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .west_map_color {
+    position: absolute;
+    width: 40%;
+    right: 59%;
+    top: 20.6%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .south_map_color {
     position: absolute;
     width: 40%;
-    top: 35.5%;
-    right: 38.2%;
+    right: 39.6%;
+    top: 34.3%;
     stroke: #fff;
     stroke-width: 2px;
   }
   .north_map_color {
     position: absolute;
-    width: 15.4%;
-    top: 15.6%;
-    right: 43.99%;
+    width: 15.2%;
+    right: 45.6%;
+    top: 14.8%;
     stroke: #fff;
     stroke-width: 2px;
   }
@@ -879,19 +977,19 @@ single.cssの110行目
 を打ち消している
 */
 
-#east+label::after {
+#east + label::after {
   content: none;
 }
 
-#west+label::after {
+#west + label::after {
   content: none;
 }
 
-#south+label::after {
+#south + label::after {
   content: none;
 }
 
-#north+label::after {
+#north + label::after {
   content: none;
 }
 
@@ -900,7 +998,9 @@ single.cssの110行目
     display: flex;
     justify-content: space-around;
   }
-  .fun_result, .calm_result, .tasty_result {
+  .fun_result,
+  .calm_result,
+  .tasty_result {
     margin-bottom: 130px;
   }
 }
@@ -912,7 +1012,8 @@ single.cssの110行目
   margin-bottom: 50px;
 }
 
-.pp_wrap h3, .pp_wrap h2 {
+.pp_wrap h3,
+.pp_wrap h2 {
   margin-bottom: 30px;
 }
 
@@ -950,7 +1051,10 @@ single.cssの110行目
 
 /* ---フォームページのスタイル--- */
 
-.pp_wrap input[type="text"], .pp_wrap input[type="tel"], .pp_wrap input[type="email"], textarea {
+.pp_wrap input[type="text"],
+.pp_wrap input[type="tel"],
+.pp_wrap input[type="email"],
+textarea {
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
@@ -1011,7 +1115,8 @@ single.cssの110行目
   position: absolute;
 }
 
-.archive_model_pc_img_top img, .model_pc_img img {
+.archive_model_pc_img_top img,
+.model_pc_img img {
   width: 100%;
   object-fit: cover;
 }
@@ -1023,7 +1128,8 @@ single.cssの110行目
 /* イラスト：レスポンシブ変更 */
 
 @media screen and (max-width: 940px) {
-  .model_pc_img, .archive_model_pc_img_top {
+  .model_pc_img,
+  .archive_model_pc_img_top {
     display: none;
   }
 }
@@ -1299,7 +1405,8 @@ single.cssの110行目
 }
 
 @media screen and (max-width: 1024px) {
-  .model_pc_img, .model_pc_img_top {
+  .model_pc_img,
+  .model_pc_img_top {
     display: none;
   }
 }
@@ -1673,7 +1780,8 @@ single.cssの110行目
   cursor: hand;
 }
 
-.slick-slider .slick-track, .slick-slider .slick-list {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -1690,7 +1798,8 @@ single.cssの110行目
   margin-right: auto;
 }
 
-.slick-track:before, .slick-track:after {
+.slick-track:before,
+.slick-track:after {
   display: table;
   content: "";
 }
@@ -1761,12 +1870,16 @@ single.cssの110行目
   font-weight: normal;
   font-style: normal;
   src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/slick.woff") format("woff"),
+    url("./fonts/slick.ttf") format("truetype"),
+    url("./fonts/slick.svg#slick") format("svg");
 }
 
 /* Arrows */
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -1785,21 +1898,29 @@ single.cssの110行目
   background: transparent;
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
   color: transparent;
   outline: none;
   background: transparent;
 }
 
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
   opacity: 1;
 }
 
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
   opacity: 0.25;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   font-family: "slick";
   font-size: 20px;
   line-height: 1;
@@ -1884,11 +2005,13 @@ single.cssの110行目
   background: transparent;
 }
 
-.slick-dots li button:hover, .slick-dots li button:focus {
+.slick-dots li button:hover,
+.slick-dots li button:focus {
   outline: none;
 }
 
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
   opacity: 1;
 }
 
@@ -2150,7 +2273,7 @@ single.cssの110行目
 
 /* :checked */
 
-.info_actab input:checked~.info_actab_content {
+.info_actab input:checked ~ .info_actab_content {
   max-height: 120em;
   margin: 50px 3%;
 }
@@ -2170,11 +2293,11 @@ single.cssの110行目
   text-align: center;
 }
 
-.info_actab input[type="checkbox"]+label::after {
+.info_actab input[type="checkbox"] + label::after {
   content: "+";
 }
 
-.info_actab input[type="checkbox"]:checked+label::after {
+.info_actab input[type="checkbox"]:checked + label::after {
   transform: rotate(315deg);
 }
 
@@ -2629,6 +2752,16 @@ a {
     max-width: 300px;
     height: 75%;
     max-height: 225px;
+  }
+}
+
+.info_actab input:checked ~ .map_actab {
+  margin: 10px 0 10px 0;
+}
+
+@media screen and (min-width: 430px) {
+  .info_actab input:checked ~ .map_actab {
+    margin: 30px 0 10px 0;
   }
 }
 

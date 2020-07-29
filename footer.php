@@ -61,7 +61,7 @@
         <div class="under_footer calm_ftcolor_dark">
             <div class="container">
                 <ul class="flex left">
-                    <li><a href="">運営者情報</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">運営者情報</a></li>
                     <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">プライバシーポリシー</a></li>
                     <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">お問い合わせ</a></li>
                 </ul>

@@ -65,7 +65,7 @@
 						<div class="info_actab">
 							<input id="info_actab_one" type="checkbox" name="tabs" />
 							<label class="area_serch_more fun_color_dark" for="info_actab_one">マップで検索</label>
-							<div class="info_actab_content">
+							<div class="info_actab_content map_actab">
 								<div class="area_search_wrap tabele_section">
 									<div class="area_search_flex">
 										<figure class="actab_cansel">
