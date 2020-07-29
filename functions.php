@@ -144,6 +144,16 @@ function myportfolio_scripts()
 		filemtime(get_theme_file_path('/js/slick.min.js')),
 		true
 	);
+	// ▼▼▼▼▼フロントページの場合
+	if (is_front_page()) {
+		wp_enqueue_script(
+			'front-script',
+			get_template_directory_uri() . '/js/fron-page.js',
+			array('jquery'),
+			filemtime(get_theme_file_path('/js/fron-page.js')),
+			true
+		);
+	}
 	// ▼▼▼▼▼カスタム投稿spotタクソノミーアーカイブの場合
 	if (is_tax('spot_cat')) {
 		// archive-spot.jsの読み込み
@@ -305,7 +315,7 @@ function breadcrumb()
 		// ▽▽▽▽▽ 検索ページの場合 ▽▽▽▽▽
 	} else if (is_search()) {
 		echo $home;
-		echo '<li>「' . get_search_query() . '」の検索結果</li>';
+		echo '<li>検索ページ</li>';
 
 		// ▽▽▽▽▽ 404ページの場合 ▽▽▽▽▽
 	} else if (is_404()) {
@@ -671,16 +681,20 @@ function header_band()
 	$header_band_open = '<div class="header_band"><h1>';
 	$header_band_close = '</h1></div>';
 
-	$model_icon = '<i class="fas fa-car"></i>'; // 検索ページのアイコン
-	$search_icon = '<i class="fas fa-search"></i>'; // モデルコース一覧のアイコン
+	$model_icon = '<i class="fas fa-car"></i>'; // モデルコース一覧のアイコン
+	$model_single_icon = '<i class="fas fa-route"></i>'; // モデルコース記事ページのアイコン
+	$search_icon = '<i class="fas fa-search"></i>'; // 検索ページのアイコン
+
 
 	if (is_tax('spot_cat')) {
 		// $text =  the_archive_title($header_band_open, $header_band_close);
 	} elseif (is_singular('model')) {
-		$text =  $header_band_open . 'モデルコース' . $model_icon . $header_band_close;
+		$text =  $header_band_open . 'モデルコース' . $model_single_icon . $header_band_close;
 	} elseif (is_post_type_archive('model')) {
 		$text =  the_archive_title($header_band_open, $model_icon . $header_band_close);
 	} elseif (is_post_type_archive('spot')) {
+		$text =  $header_band_open . '検　索' . $search_icon . $header_band_close;
+	} elseif (is_search()) {
 		$text =  $header_band_open . '検　索' . $search_icon . $header_band_close;
 	}
 	return $text;

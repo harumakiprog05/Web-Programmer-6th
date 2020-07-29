@@ -38,18 +38,18 @@
 			<div id="tabs">
 				<ul>
 					<li>
-						<span data-href="#panel1" class="current">楽</span>
+						<a href="#tab01">楽</a>
 					</li>
 					<li>
-						<span data-href="#panel2" class="">静</span>
+						<a href="#tab02">静</a>
 					</li>
 					<li>
-						<span data-href="#panel3" class="">旨</span>
+						<a href="#tab03">旨</a>
 					</li>
 				</ul>
 
 				<div id="tabcontents">
-					<div id="panel1" class="panel fun_result fun_color_light">
+					<div id="tab01" class="tab_main fun_result fun_color_light">
 						<!-- ▼ WP_Query（楽） : 開始------------------------------------------------------>
 						<?php $my_query_fun = new WP_Query(create_wp_query($tax_ary_fun, 'AND', $s)); ?>
 
@@ -91,7 +91,7 @@
 											// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
 											$args = array(
 												'post_type' => 'info', //投稿タイプ名
-												'name' => $slug
+												'name'      => $slug
 											);
 											$customPosts = get_posts($args);
 											if ($customPosts) {
@@ -136,7 +136,7 @@
 						<!-- ▲ WP_Query（楽） : 終了------------------------------------------------------>
 					</div><!-- /#tab01 -->
 
-					<div id="panel2" class="panel calm_result calm_color_light">
+					<div id="tab02" class="tab_main calm_result calm_color_light">
 						<!-- ▼ WP_Query（静） : 開始------------------------------------------------------>
 						<?php $my_query_calm = new WP_Query(create_wp_query($tax_ary_calm, 'AND', $s)); ?>
 						<div class="container">
@@ -175,7 +175,7 @@
 											// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
 											$args = array(
 												'post_type' => 'info', //投稿タイプ名
-												'name' => $slug
+												'name'      => $slug
 											);
 											$customPosts = get_posts($args);
 											if ($customPosts) {
@@ -215,11 +215,12 @@
 									<li class="result_item">結果が見つかりませんでした。</li>
 								<?php endif; ?>
 							</ul>
+							<p class="sumber_clam">静の検索結果：<?php echo $count_spot_clam; ?>件</p>
 						</div>
 						<!-- ▲ WP_Query（静） : 終了------------------------------------------------------>
 					</div><!-- /#tab02 -->
 
-					<div id="panel3" class="panel tasty_result tasty_color_light">
+					<div id="tab03" class="tab_main tasty_result tasty_color_light">
 						<!-- ▼ WP_Query（旨） : 開始------------------------------------------------------>
 						<?php $my_query_tasty = new WP_Query(create_wp_query($tax_ary_tasty, 'AND', $s)); ?>
 						<div class="container">
@@ -257,7 +258,7 @@
 											// <!-- ▼ カスタム投稿spotのスラッグでinfoのカテゴリ（エリア）取得 : 開始 -->
 											$args = array(
 												'post_type' => 'info', //投稿タイプ名
-												'name' => $slug
+												'name'      => $slug
 											);
 											$customPosts = get_posts($args);
 											if ($customPosts) {
@@ -297,6 +298,7 @@
 									<li class="result_item">結果が見つかりませんでした。</li>
 								<?php endif; ?>
 							</ul>
+							<p class="sumber_tasty">旨の検索結果：<?php echo $count_spot_tasty; ?>件</p>
 						</div>
 						<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
 					</div>
@@ -317,7 +319,7 @@
 <script>
 	const protcol = location.protocol;
 	const host = location.hostname;
-	const url = protcol + "//" + host + "/awaiyashi/?s=&post_type=spot";
+	const url = protcol + "//" + host + "/awaiyashi/?s=";
 
 	function back() {
 		// 指定画面に移動
