@@ -2,7 +2,7 @@
 <?php get_header('subpage'); ?>
 <!-- ▲ ヘッダー : 終了-->
 <?php
-// 変数の定義と背景画像の配列
+// 変数の宣言と背景画像の配列
 $post_type = 'spot';
 $tax_name = 'spot_cat';
 $course_loopcount = 0;
@@ -27,9 +27,9 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                 </div>
 
                 <!-- スタート -->
-                <div class="model_start_img">
+                <!-- <div class="model_start_img">
                     <img src="<?php echo esc_url(get_theme_file_uri('image/start_station.png')); ?>" alt="" />
-                </div>
+                </div> -->
 
                 <span class="calm_color_dark model_circle_set model_big_circle">
                     スタート！
@@ -63,7 +63,11 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                             <!-- スポットカード-->
                             <div class="pc_spot_more">
                                 <button class="spot_more <?php echo $spot_cat_slug; ?>_color_dark pc_spot_name1 <?php echo $spot_cat_slug; ?>_color_dark">
-                                    <?php the_title(); ?> <i class="fas fa-chevron-<?php echo $course_loopcount == 1 ? 'left' : 'right' ?>"></i>
+                                    <?php if ($course_loopcount == 0 || $course_loopcount == 2) : ?>
+                                        <a href="<?php the_permalink() ?>"><?php the_title(); ?> <i class="fas fa-chevron-right"></i></a>
+                                    <?php elseif ($course_loopcount == 1) : ?>
+                                        <a href="<?php the_permalink() ?>"><i class="fas fa-chevron-left"></i> <?php the_title(); ?></a>
+                                    <?php endif; ?>
                                 </button>
                             </div>
 
