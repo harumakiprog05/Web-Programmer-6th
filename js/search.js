@@ -1,32 +1,19 @@
 // ┏◆◇─────－- - - << jQuery >> - - – -－─────◇◆┓
-//            内部リンクのスムーススクロール
+//            検索ページの結果表示タブ
 // ┗◆◇──────────－- - -  - - – -－────────────◇◆┛
 $(function () {
-  $(window).on("load resize", function get_window_w() {
-    return $(window).width();
+  $('#tabcontents .panel[id != "panel1"]').hide();
+  $("span[data-href]").on("click", function () {
+    $("#tabcontents .panel").hide();
+    $($(this).data("href")).show();
+    $(".current").removeClass("current");
+    $(this).addClass("current");
+    return false;
   });
+  //わざと1つ目を表示させておくことができます
+  $form_bottom = $(".tag_search_wrap").offset();
+  $("body, html").animate({ scrollTop: 0 }, 800);
+  return false;
 
-  $('a[href^="#"]')
-    .not(".remove-class")
-    .click(function () {
-      var width = $(window).width();
-
-      var top_px = 0;
-      if (width < 1000) {
-        var top_px = 20;
-      } else {
-        var top_px = 90;
-      }
-      //スクロールのスピード
-      var speed = 500;
-      //リンク元を取得
-      var href = $(this).attr("href");
-      //リンク先を取得
-      var target = $(href == "#" || href == "" ? "html" : href);
-      //リンク先までの距離を取得
-      var position = target.offset().top - top_px;
-      //スムーススクロール
-      $("html, body").animate({ scrollTop: position }, speed, "swing");
-      return false;
-    });
+  $("span[data-href]:eq(0)").trigger("click");
 });
