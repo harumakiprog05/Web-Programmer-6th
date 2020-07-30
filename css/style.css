@@ -1202,6 +1202,13 @@ textarea {
 
 /* モデルコース説明テキスト */
 
+/* 0730ikeda */
+
+.archive_model_text {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
 .model_text {
     text-align: center;
 }
