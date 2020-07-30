@@ -80,11 +80,33 @@
 
 					<!-- スライドショー記事ループ開始 -->
 
-					<div><a href=""><img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_01.jpg")); ?>" alt=""></a></div>
-					<div><a href=""><img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt=""></a></div>
-					<div><a href=""><img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt=""></a></div>
-					<div><a href=""><img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt=""></a></div>
-					<div><a href=""><img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt=""></a></div>
+					<?php
+					$cat_posts = get_posts(array(
+						'post_type' => 'spot', // 投稿タイプ
+						'spot_cat' => "fun", // カテゴリをスラッグで指定
+						'posts_per_page' => 6, // 表示件数
+						'orderby' => 'rand', // 表示順の基準
+						'order' => 'DESC' // 昇順・降順
+					));
+					global $post;
+					if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post);
+					?>
+
+							<!-- ループはじめ -->
+
+							<!-- サムネイルを取得 -->
+							<?php if (has_post_thumbnail()) {
+								the_post_thumbnail(array(300, 230));
+							} else { ?>
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+
+							<?php } ?>
+
+							<!-- ループおわり -->
+
+					<?php endforeach;
+					endif;
+					wp_reset_postdata(); ?>
 
 
 				</div>
