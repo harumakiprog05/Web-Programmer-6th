@@ -2,12 +2,12 @@
 //            検索ページの結果表示タブ
 // ┗◆◇──────────－- - -  - - – -－────────────◇◆┛
 $(function () {
-  $('#tabs a[href^="#tab"]').click(function () {
-    $("#tabs .tab_main").hide();
+  $('.tabBox a[href^="#tab"]').click(function () {
+    $(".tab_main").hide();
     $(this.hash).fadeIn();
     return false;
   });
-  $('#tabs a[href^="#tab"]:eq(0)').trigger("click");
+  $('.tabBox a[href^="#tab"]:eq(0)').trigger("click");
 });
 
 $(window).on("load", function () {
