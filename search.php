@@ -149,7 +149,7 @@
 
 										<?php // <!-- ▼ エリア指定が「無い」場合の処理 : 開始 ---------------------->
 										if (!$get_cats) : ?>
-											<?php $count_spot_clam++; ?>
+											<?php $count_spot_calm++; ?>
 											<li class="result_item">
 												<a href="<?php the_permalink() ?>">
 													<?php set_thumbnail(''); ?>
@@ -196,7 +196,7 @@
 													echo '<li class="result_item"><a href="', get_permalink(), '">';
 													echo get_thumbnail($post, '');
 													echo '<span>', $post->post_title, '</span></a></li>';
-													$count_spot_clam++;
+													$count_spot_calm++;
 												}
 											}
 											// <!-- ▲ infoのカテゴリスラッグとエリアが一致すれば出力 : 終了-->
@@ -207,7 +207,7 @@
 
 									<?php endwhile; ?>
 									<?php
-									if ($count_spot_clam == 0) {
+									if ($count_spot_calm == 0) {
 										echo '<li class="result_item">結果が見つかりませんでした。</li>';
 									}
 									?>
@@ -215,7 +215,7 @@
 									<li class="result_item">結果が見つかりませんでした。</li>
 								<?php endif; ?>
 							</ul>
-							<p class="sumber_clam">静の検索結果：<?php echo $count_spot_clam; ?>件</p>
+							<p class="sumber_calm">静の検索結果：<?php echo $count_spot_calm; ?>件</p>
 						</div>
 						<!-- ▲ WP_Query（静） : 終了------------------------------------------------------>
 					</div><!-- /#tab02 -->
@@ -308,7 +308,7 @@
 		<?php endif; ?>
 
 		<?php
-		$all_count = $count_spot_fun + $count_spot_clam + $count_spot_tasty;
+		$all_count = $count_spot_fun + $count_spot_calm + $count_spot_tasty;
 		?>
 		<p class="sumber_all">すべての検索結果：<?php echo $all_count; ?>件</p>
 		<!-- ▲ 絞り込み検索の結果出力 : 終了-->
