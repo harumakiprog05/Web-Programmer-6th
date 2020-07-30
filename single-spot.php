@@ -65,7 +65,7 @@ $main_slug = $main_cat->slug;
                         <div class="modal_container">
                             <div class="inner">
                                 <section class="single_modal">
-                                    <p>すだちは何？？</p>
+                                    <p>癒しポイントとは？</p>
                                     <ul>
                                         <?php foreach ($sudachi_visual as $img) : ?>
                                             <li>
@@ -77,7 +77,7 @@ $main_slug = $main_cat->slug;
                                         <?php $modal_count++;
                                         endforeach; ?>
                                     </ul>
-                                    <button class="sudachi_modal_button" type="button">閉じる</button>
+                                    <button class="sudachi_modal_button theme_color_dark" type="button">閉じる</button>
 
                                 </section>
                             </div>

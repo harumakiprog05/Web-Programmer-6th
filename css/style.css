@@ -2918,7 +2918,7 @@ a {
 
 .single_modal {
     margin: 0 auto;
-    padding: 1.9em 2em;
+    padding: 1.9em 1.1em;
     max-width: 550px;
     text-align: justify;
     text-justify: inter-ideograph;
@@ -2939,13 +2939,20 @@ a {
     text-align: center;
 }
 
+.single_modal ul p {
+    margin-bottom: 0;
+    line-height: 1.5;
+    padding: 18px 0 0 10px;
+}
+
 .single_modal li {
     display: flex;
     vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 .single_modal img {
-    max-width: 150px;
+    max-width: 80px;
 }
 
 .sudachi_modal_button {
@@ -2957,7 +2964,6 @@ a {
     border: 0;
     border-radius: 4px;
     outline: 0;
-    background-color: #e57373;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2966,6 +2972,40 @@ a {
 
 /* (ここまで)モーダルテストbyIKEDA */
 
+/*（ここから）モーダル調整byDOI*/
+
+@media screen and (min-width: 850px) {
+    .single_modal {
+        max-width: 800px;
+    }
+    .single_modal ul {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .single_modal ul li {
+        width: 20%;
+        max-width: 300px;
+        height: 30%;
+        max-height: 450px;
+        display: block;
+        margin: 18px;
+        font-size: 0.9em;
+    }
+    .single_modal div {
+        width: 100%;
+    }
+    .single_modal img {
+        width: 100%;
+        max-width: 130px;
+        height: 100%;
+        max-height: 130px;
+    }
+}
+
+/*（ここまで）モーダル調整byDOI*/
+
 .mw_wp_form,
 .mw_wp_form_send_error {
     height: 100vh;
@@ -2973,4 +3013,13 @@ a {
 
 .mw_wp_form_send_error {
     padding: 15%;
+}
+
+.slick-next,
+.slick-arrow,
+.slick-arrow::before {
+    display: none;
+}
+.slick-next {
+    right: 0;
 }
