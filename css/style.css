@@ -562,6 +562,10 @@ input::placeholder {
   text-align: center;
 }
 
+.sumber_all span {
+  font-size: 1.2em;
+}
+
 .fun_result>.container {
   position: relative;
 }
@@ -2419,8 +2423,6 @@ single.cssの110行目
 }
 
 .spot-Contana p {
-  src: url("wordpress/wp-includes/fonts/hanazome.woff") format("woff");
-  font-family: "hanazome";
   margin-top: 20px;
 }
 
@@ -2796,6 +2798,7 @@ a {
   align-items: center;
   height: 60px;
   transition-duration: 0.3s;
+  border-radius: 20px 20px 0 0;
 }
 
 .tabBox .tabArea .one_tab:nth-child(1) .tab_inner {
