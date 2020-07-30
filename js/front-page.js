@@ -73,6 +73,7 @@ $(function () {
 
 $(function () {
   $(".spot_slide_wrap").slick({
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 5,
@@ -98,6 +99,7 @@ $(function () {
 
 $(function () {
   $(".modelcose_slide_wrap").slick({
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
     dots: true,
