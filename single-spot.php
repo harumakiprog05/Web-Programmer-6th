@@ -241,7 +241,7 @@ $main_slug = $main_cat->slug;
 
             if ($tax_posts) :
                 $near_count = 1;
-                $num        = 4; ?>
+                $num        = 3; ?>
                 <?php if (count($tax_posts) != 1) : ?>
                     <div class=" section_hedding">
                         <h2 class="global_section_title">近くのスポット</h2>

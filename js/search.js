@@ -8,17 +8,30 @@ $(function () {
     return false;
   });
   $('.tabBox a[href^="#tab"]:eq(0)').trigger("click");
-});
 
-$(window).on("load", function () {
   const form = document.getElementById("searchform");
   const form_rect = form.getBoundingClientRect();
+  const scroll_h = form_rect.bottom - 10;
 
   if (document.URL.match(/tabs=on/)) {
-    $("body, html").stop().animate({ scrollTop: form_rect.bottom }, 500);
+    $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
   } else if (document.URL.match(/get_tags/)) {
-    $("body, html").stop().animate({ scrollTop: form_rect.bottom }, 500);
+    $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
   } else if (document.URL.indexOf("/spot/?s=")) {
-    $("body, html").stop().animate({ scrollTop: form_rect.bottom }, 500);
+    $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
   }
 });
+
+// $(window).on("load", function () {
+//   const form = document.getElementById("searchform");
+//   const form_rect = form.getBoundingClientRect();
+//   const scroll_h = form_rect.bottom + 10;
+
+//   if (document.URL.match(/tabs=on/)) {
+//     $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
+//   } else if (document.URL.match(/get_tags/)) {
+//     $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
+//   } else if (document.URL.indexOf("/spot/?s=")) {
+//     $("body, html").stop().animate({ scrollTop: scroll_h }, 500);
+//   }
+// });
