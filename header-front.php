@@ -64,7 +64,7 @@
             <div class="gnav_item">モデルコース</div>
           </a>
 
-          <a href="<?php echo home_url('/?s=&post_type=spot'); ?>">
+          <a href="<?php echo home_url('/?s='); ?>">
             <div class="gnav_item">検索</div>
           </a>
         </div>
@@ -130,7 +130,7 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo home_url('/?s=&post_type=spot'); ?>">
+            <a href="<?php echo home_url('/?s='); ?>">
               <i class="fas fa-search"></i> 検索
             </a>
           </li>
