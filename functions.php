@@ -148,9 +148,9 @@ function myportfolio_scripts()
 	if (is_front_page()) {
 		wp_enqueue_script(
 			'front-script',
-			get_template_directory_uri() . '/js/fron-page.js',
+			get_template_directory_uri() . '/js/front-page.js',
 			array('jquery'),
-			filemtime(get_theme_file_path('/js/fron-page.js')),
+			filemtime(get_theme_file_path('/js/front-page.js')),
 			true
 		);
 	}
