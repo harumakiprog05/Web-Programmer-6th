@@ -313,7 +313,7 @@
 		<?php
 		$all_count = $count_spot_fun + $count_spot_calm + $count_spot_tasty;
 		?>
-		<p class="sumber_all">すべての検索結果：<?php echo $all_count; ?>件</p>
+		<p class="sumber_all">すべての検索結果：<span><?php echo $all_count; ?></span>件</p>
 		<!-- ▲ 絞り込み検索の結果出力 : 終了-->
 	</section>
 
