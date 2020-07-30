@@ -241,6 +241,8 @@
 					ここでは、のんびり行ける癒しのモデルコースご紹介します。<br>
 					次の休日は、ご家族やご友人と癒しの旅に出かけてみませんか？
 				</p>
+				<button onclick="location.href=' <?php echo esc_url(get_post_type_archive_link('model')); ?>'" class="spot_more theme_color_dark">
+					モデルコース一覧へ<i class="fas fa-chevron-right"></i></button>
 			</div>
 		</div>
 	</section>
