@@ -218,7 +218,7 @@
 								<li class="result_item">結果が見つかりませんでした。</li>
 							<?php endif; ?>
 						</ul>
-						<p class="sumber_calm">(<?php echo $count_spot_calm; ?>件)</p>
+						<!-- <p class="sumber_calm">(<?php //echo $count_spot_calm; ?>件)</p> -->
 					</div>
 					<!-- ▲ WP_Query（静） : 終了------------------------------------------------------>
 				</div><!-- /#tab02 -->
@@ -301,7 +301,7 @@
 								<li class="result_item">結果が見つかりませんでした。</li>
 							<?php endif; ?>
 						</ul>
-						<p class="sumber_tasty">旨の検索結果：<?php echo $count_spot_tasty; ?>件</p>
+						<!-- <p class="sumber_tasty">旨の検索結果：<?php //echo $count_spot_tasty; ?>件</p> -->
 					</div>
 					<!-- ▲ WP_Query（旨） : 終了------------------------------------------------------>
 				</div>

@@ -621,14 +621,14 @@ input::placeholder {
     line-height: 20px;
   }
   .result_item img {
-    width: 150px;
-    height: 112.5px;
+    width: 140px;
+    height: 110.5px;
     object-fit: cover;
   }
   .result_item span {
     display: block;
     text-align: left;
-    width: 150px;
+    width: 130px;
     margin: 0 auto;
   }
 }
