@@ -62,7 +62,7 @@ $main_slug = $main_cat->slug;
                     </div>
                     <!-- ▼ モーダルウィンドウ : 開始-->
                     <div class="overlay">
-                        <div class="container">
+                        <div class="modal_container">
                             <div class="inner">
                                 <section class="single_modal">
                                     <p>すだちは何？？</p>

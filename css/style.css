@@ -2877,6 +2877,95 @@ a {
     border: 2px solid #eec362;
 }
 
+/* モーダルテストbyIKEDA */
+
+.timeline {
+    display: flex;
+}
+
+.single_front_sudachi img {
+    width: 100%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 999;
+}
+
+.modal_container {
+    display: table;
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    display: table-cell;
+    padding: 2.7em 2em;
+    vertical-align: middle;
+}
+
+.single_modal {
+    margin: 0 auto;
+    padding: 1.9em 2em;
+    max-width: 550px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.single_modal::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.single_modal > p {
+    text-indent: 1em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.single_modal li {
+    display: flex;
+    vertical-align: middle;
+}
+
+.single_modal img {
+    max-width: 150px;
+}
+
+.sudachi_modal_button {
+    float: right;
+    margin-top: 0.8em;
+    padding: 0.5em 1.4em;
+    color: #fff;
+    font-size: 0.95em;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+    background-color: #e57373;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* (ここまで)モーダルテストbyIKEDA */
+
 .mw_wp_form,
 .mw_wp_form_send_error {
     height: 100vh;
