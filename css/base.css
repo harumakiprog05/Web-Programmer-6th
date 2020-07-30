@@ -6,14 +6,15 @@ html {
     /* テキストをドラッグで選択きないようにする */
     -ms-user-select: none;
     -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 
-main > section {
+main>section {
     margin-bottom: 100px;
 }
 
-section > section {
+section>section {
     margin-bottom: 80px;
 }
 
@@ -132,12 +133,19 @@ span {
 }
 
 .top_circle_set {
+    cursor: pointer;
     border-radius: 50%;
     height: 65px;
     width: 65px;
     line-height: 65px;
     font-size: 35px;
     text-align: center;
+    transition: 0.2s;
+}
+
+.top_category_set li:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 /* -----カラー----- */
@@ -247,7 +255,6 @@ span {
     width: 46px;
     height: 25px;
     padding-top: 1px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-top: 0px;
     z-index: 20;
@@ -287,8 +294,7 @@ span {
 .el_humburger_text {
     font-size: 12px;
     letter-spacing: 0.1em;
-    font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro",
-        "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
@@ -312,8 +318,6 @@ span {
 
 @media screen and (max-width: 1000px) {
     .el_humburger_text svg path {
-        -webkit-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
-        -o-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
         transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
         fill: #000;
     }
@@ -331,8 +335,6 @@ span {
     margin: 0 auto 9px;
     height: 1px;
     background: #000;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -353,8 +355,6 @@ span {
 }
 
 .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
-    -webkit-transform: translateY(9px) rotate(-45deg);
-    -ms-transform: translateY(9px) rotate(-45deg);
     transform: translateY(9px) rotate(-45deg);
 }
 
@@ -363,8 +363,6 @@ span {
 }
 
 .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
-    -webkit-transform: translateY(-11px) rotate(45deg);
-    -ms-transform: translateY(-11px) rotate(45deg);
     transform: translateY(-11px) rotate(45deg);
 }
 
@@ -382,14 +380,10 @@ span {
 }
 
 .el_humburgerButton__close span.el_humburger_bar.top {
-    -webkit-transform: translateY(5px) rotate(-45deg);
-    -ms-transform: translateY(5px) rotate(-45deg);
     transform: translateY(5px) rotate(-45deg);
 }
 
 .el_humburgerButton__close span.el_humburger_bar.bottom {
-    -webkit-transform: translateY(-6px) rotate(45deg);
-    -ms-transform: translateY(-6px) rotate(45deg);
     transform: translateY(-6px) rotate(45deg);
 }
 
@@ -402,10 +396,7 @@ span {
     width: 0;
     z-index: 999;
     padding-top: 100px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all 600ms ease-out;
-    -o-transition: all 600ms ease-out;
     transition: all 600ms ease-out;
     overflow: hidden;
 }
@@ -504,8 +495,10 @@ span {
 }
 
 .top_return_button {
-    position: absolute;
-    right: 10%;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    padding: 18px;
     cursor: pointer;
 }
 
@@ -514,6 +507,7 @@ span {
 }
 
 .sp_footer .under_footer {
+    padding-top: 30px;
     background-color: #bfe1ec;
     color: #67a1a6;
 }
@@ -524,13 +518,6 @@ span {
 
 .sp_footer .footer_ul li {
     margin-bottom: 20px;
-}
-
-.under_footer .fa-chevron-up {
-    position: fixed;
-    right: 10%;
-    bottom: 5%;
-    padding: 18px;
 }
 
 /* PC用フッター */
@@ -564,11 +551,16 @@ span {
 }
 
 .pc_footer .under_footer ul {
-    padding: 30px 0;
+    padding: 50px 0 30px;
 }
 
 .pc_footer .under_footer ul li {
     padding: 0 20px;
+}
+
+.pc_footer .under_footer ul li a:hover {
+    color: #fff;
+    transition: all 0.5s;
 }
 
 .pc_footer .under_footer .right {
@@ -577,11 +569,12 @@ span {
 
 .pc_footer .waves {
     width: 100%;
-    height: 180px;
+    height: 100px;
 }
 
 .pc_footer .wave_footer {
-    height: 180px;
+    height: 100px;
+    margin-top: 50px;
 }
 
 .pc_footer .footer_logo {
@@ -612,28 +605,46 @@ span {
 
 /* SVG Animation   */
 
-.parallax > use {
+.parallax>use {
+    -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
     animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
+    -webkit-animation-delay: -2s;
     animation-delay: -2s;
+    -webkit-animation-duration: 7s;
     animation-duration: 7s;
 }
 
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
+    -webkit-animation-delay: -3s;
     animation-delay: -3s;
+    -webkit-animation-duration: 10s;
     animation-duration: 10s;
 }
 
-.parallax > use:nth-child(3) {
+.parallax>use:nth-child(3) {
+    -webkit-animation-delay: -4s;
     animation-delay: -4s;
+    -webkit-animation-duration: 13s;
     animation-duration: 13s;
 }
 
-.parallax > use:nth-child(4) {
+.parallax>use:nth-child(4) {
+    -webkit-animation-delay: -5s;
     animation-delay: -5s;
+    -webkit-animation-duration: 20s;
     animation-duration: 20s;
+}
+
+@-webkit-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
 
 @keyframes move-forever {
@@ -681,8 +692,7 @@ span {
         font-size: 55px;
     }
     /* PC版は非表示 */
-    .spheader,
-    .sp_footer {
+    .spheader, .sp_footer {
         display: none !important;
     }
     .toppage_header .spgnav {
