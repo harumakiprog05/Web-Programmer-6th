@@ -559,15 +559,8 @@ input::placeholder {
 }
 
 .sumber_all {
-    width: 100%;
     position: absolute;
     top: -50px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.sumber_all span {
-    font-size: 1.2em;
 }
 
 .fun_result > .container {
@@ -596,7 +589,6 @@ input::placeholder {
 .result_categry_title {
     margin: 0 auto;
     transform: translate(0, -50%);
-    margin-top: 10px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -616,27 +608,19 @@ input::placeholder {
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .result_categry_title {
-        margin-top: 40px;
-    }
-}
-
 @media screen and (max-width: 480px) {
     .result_item {
         width: 50%;
-        min-height: 180px;
-        line-height: 20px;
     }
     .result_item img {
-        width: 140px;
-        height: 110.5px;
+        width: 150px;
+        height: 112.5px;
         object-fit: cover;
     }
     .result_item span {
         display: block;
         text-align: left;
-        width: 130px;
+        width: 150px;
         margin: 0 auto;
     }
 }
@@ -1054,15 +1038,27 @@ single.cssの110行目
 }
 
 .not_found_wrap {
-    margin: 20% auto;
+    height: 100vh;
+    margin: 0 auto;
     text-align: center;
 }
 
 .not_found_wrap h1 {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     color: #67a1a6;
     font-size: 3em;
+}
+
+.not_found_title {
+    padding: 15%;
+}
+
+.not_found_content {
+    padding: 5%;
+}
+.not_found_backbutton {
+    padding: 0;
 }
 
 /* ---フォームページのスタイル--- */
@@ -1206,6 +1202,13 @@ textarea {
 
 /* モデルコース説明テキスト */
 
+/* 0730ikeda */
+
+.archive_model_text {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
 .model_text {
     text-align: center;
 }
@@ -1249,7 +1252,7 @@ textarea {
 }
 
 .model_spot_card {
-    border-radius: 5%;
+    border-radius: 40px;
     padding: 10px 10px 0 10px;
 }
 
@@ -1271,15 +1274,15 @@ textarea {
         display: none;
     }
     .spot_fade_in1 {
-        top: 20%;
+        top: 14%;
         right: -40%;
     }
     .spot_fade_in2 {
-        top: 34%;
+        top: 28%;
         left: -40%;
     }
     .spot_fade_in3 {
-        top: 49%;
+        top: 43%;
         right: -40%;
     }
     .model_text h3 {
@@ -1632,7 +1635,7 @@ textarea {
         height: 75px;
         width: 150px;
         left: 70%;
-        top: 46%;
+        top: 38%;
         position: absolute;
     }
     .model_sp_img3 {
@@ -2381,7 +2384,7 @@ textarea {
         margin: 0 auto;
     }
     .article_end_spot li {
-        width: 300px;
+        width: 30%;
     }
 }
 
@@ -2393,8 +2396,13 @@ textarea {
 
 .article_end_spot {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.article_end_spot li {
+    margin: 16px;
 }
 
 .spot_visual {
@@ -2404,8 +2412,9 @@ textarea {
 
 .spot_visual img {
     width: 100%;
-    object-fit: cover;
-    height: auto;
+    max-width: 300px;
+    height: 75%;
+    max-height: 225px;
 }
 
 .article_end_spot p {
@@ -2825,7 +2834,6 @@ a {
     align-items: center;
     height: 60px;
     transition-duration: 0.3s;
-    border-radius: 20px 20px 0 0;
 }
 
 .tabBox .tabArea .one_tab:nth-child(1) .tab_inner {
@@ -2849,6 +2857,7 @@ a {
     padding: 50px 25px;
     text-align: center;
     min-height: 280px;
+    border: 2px solid #94ad73;
     transition-duration: 0.3s;
 }
 
@@ -2963,7 +2972,7 @@ a {
 
 /* (ここまで)モーダルテストbyIKEDA */
 
-/*（ここから）モーダル調整byDOI*/
+/*（ここから）モーダル調整byDOIです*/
 
 @media screen and (min-width: 850px) {
     .single_modal {
@@ -2995,7 +3004,7 @@ a {
     }
 }
 
-/*（ここまで）モーダル調整byDOI*/
+/*（ここまで）モーダル調整byDOIです*/
 
 .mw_wp_form,
 .mw_wp_form_send_error {
@@ -3005,10 +3014,6 @@ a {
 .mw_wp_form_send_error {
     padding: 15%;
 }
-
-/* border: 2px solid #eec362;
-マージがコンフリクトした時に出てきた何かわからないもの
-*/
 
 .slick-next,
 .slick-arrow,
