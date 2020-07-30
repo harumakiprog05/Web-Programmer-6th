@@ -612,7 +612,7 @@ input::placeholder {
 }
 
 @media screen and (min-width: 1000px) {
-  .result_categry_title{
+  .result_categry_title {
     margin-top: 40px;
   }
 }
@@ -1181,6 +1181,10 @@ single.cssの110行目
   .archive_model_spot_wrap {
     margin: 0;
   }
+}
+
+.archive_model_text h2 {
+  margin: 30px auto;
 }
 
 /* .model_pc_img_top {
