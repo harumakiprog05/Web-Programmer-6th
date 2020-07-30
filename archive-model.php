@@ -35,11 +35,11 @@
                                     <img src="<?php echo $row['model_spot_img']; ?>">
                                 <?php endforeach; ?>
                             </div>
-                            <div class="model_text">
-                                <h3 class="">
+                            <div class="archive_model_text">
+                                <h2 class="">
                                     <?php the_title(); ?>
 
-                                </h3>
+                                </h2>
 
 
                                 <p class="model_card_description">
