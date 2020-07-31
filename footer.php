@@ -66,7 +66,7 @@
                     <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">お問い合わせ</a></li>
                 </ul>
                 <a href="<?php echo home_url() ?>">
-                    <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="footer_logo" alt="" />
+                    <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="footer_logo" alt="あわいやしロゴ" />
                 </a>
 
                 <small>Copyright © あわいやし. All rights reserved.</small>

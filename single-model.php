@@ -12,7 +12,7 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
 <main>
     <section class="container model_container_wrap">
         <div class="model_pc_img_top">
-            <img src="<?php echo esc_url(get_theme_file_uri('image/model_pc_img.png')); ?>" alt="" />
+            <img src="<?php echo esc_url(get_theme_file_uri('image/model_pc_img.png')); ?>" alt="リュックサックと鳥" />
         </div>
 
         <?php if (have_posts()) : ?>
@@ -43,7 +43,7 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                     <!-- 道路 -->
                     <span class="calm_color_dark road">
                         <?php if ($course_loopcount < 2) :
-                            echo '<img class="model_sp_img', $course_loopcount + 2, '" src="', esc_url(get_theme_file_uri('image/' . $background_img[2 * $course_loopcount] . '.png')), '" alt="" />';
+                            echo '<img class="model_sp_img', $course_loopcount + 2, '" src="', esc_url(get_theme_file_uri('image/' . $background_img[2 * $course_loopcount] . '.png')), '" alt="水彩画像" />';
                         endif; ?>
                     </span>
 
@@ -62,13 +62,13 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                     ?>
                             <!-- スポットカード-->
                             <div class="pc_spot_more">
-                                <button class="spot_more <?php echo $spot_cat_slug; ?>_color_dark pc_spot_name1 <?php echo $spot_cat_slug; ?>_color_dark">
+                                <div class="spot_more <?php echo $spot_cat_slug; ?>_color_dark pc_spot_name1 <?php echo $spot_cat_slug; ?>_color_dark">
                                     <?php if ($course_loopcount == 0 || $course_loopcount == 2) : ?>
                                         <a href="<?php the_permalink() ?>"><?php the_title(); ?> <i class="fas fa-chevron-right"></i></a>
                                     <?php elseif ($course_loopcount == 1) : ?>
                                         <a href="<?php the_permalink() ?>"><i class="fas fa-chevron-left"></i> <?php the_title(); ?></a>
                                     <?php endif; ?>
-                                </button>
+                                </div>
                             </div>
 
                             <div class="model_spot_wrap spot_fade_in<?php echo $course_loopcount + 1; ?>" id="modelSpotCard<?php echo $course_loopcount + 1; ?>">
@@ -86,9 +86,9 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                                         </p>
                                         <a href="<?php echo the_permalink(); // <!-- spot詳細へのリンク -->
                                                     ?>">
-                                            <button class="spot_more <?php echo $spot_cat_slug; ?>_color_dark">
+                                            <div class="spot_more <?php echo $spot_cat_slug; ?>_color_dark">
                                                 詳細はこちら <i class="fas fa-chevron-right"></i>
-                                            </button>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -104,14 +104,14 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
                     <!-- 道路 -->
                     <span class="calm_color_dark road">
                         <?php if ($course_loopcount < 2) :
-                            echo '<img class="model_sp_img', $course_loopcount + 4, '" src="', esc_url(get_theme_file_uri('image/' . $background_img[2 * $course_loopcount + 1] . '.png')), '" alt="" />';
+                            echo '<img class="model_sp_img', $course_loopcount + 4, '" src="', esc_url(get_theme_file_uri('image/' . $background_img[2 * $course_loopcount + 1] . '.png')), '" alt="水彩画像" />';
                         endif; ?>
                     </span>
 
                     <!-- 所要時間 -->
                     <?php
                     if (!empty($row['travel_time'])) {
-                        echo '<span class="calm_color_dark model_circle_set">';
+                        echo '<span class="calm_color_dark model_circle_set">車で';
                         echo $row['travel_time'];
                         echo '</span>';
                     }
@@ -127,7 +127,7 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
         <!-- ゴール -->
         <span class="calm_color_dark model_circle_set model_big_circle">ゴール！</span>
         <div>
-            <img class="model_sp_img6" src="<?php echo esc_url(get_theme_file_uri('image/model_bottom_img.png')); ?>" alt="" />
+            <img class="model_sp_img6" src="<?php echo esc_url(get_theme_file_uri('image/model_bottom_img.png')); ?>" alt="水彩画像" />
         </div>
 
         <div class="model_iframe_outline">
@@ -135,9 +135,9 @@ $background_img = ['awaiyashi_gyogun', 'awaiyashi_sudachi_flower3', 'awaiyashi_s
         </div>
 
         <a href="<?php echo esc_url(get_post_type_archive_link('model')); ?>">
-            <button class="back_model_archive calm_color_dark">
+            <div class="back_model_archive calm_color_dark">
                 モデルコース一覧へ
-            </button>
+            </div>
         </a>
     </section>
 </main>

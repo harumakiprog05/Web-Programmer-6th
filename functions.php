@@ -591,7 +591,7 @@ add_filter('rewrite_rules_array', 'my_rewrite_rules_array');
 //▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼
 function SearchFilter($query)
 {
-	if ($query->is_search) {
+	if ($query->is_search && !is_admin()) {
 		$query->set('post_type', 'spot');
 	}
 	return $query;

@@ -87,7 +87,7 @@
           </ul>
         </div>
         <div class="visual_logo_wrap">
-          <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="main_visual_logo" alt="" />
+          <img src="<?php echo esc_url(get_theme_file_uri("image/logo.png")); ?>" class="main_visual_logo" alt="あわいやしロゴ" />
           <h2 class="visual_subtitle">とくしまの癒し再発見。</h2>
         </div>
         <h1 class="main_catch_copy">ゆっくりするから、<br />見えてくるもの。</h1>

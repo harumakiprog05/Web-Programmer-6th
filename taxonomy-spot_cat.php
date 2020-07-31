@@ -52,7 +52,7 @@ $spot_subcat = get_term_children($term_id, $tax_name);
                     <li data-filter="<?php echo $spot_term->slug; ?>">
                         <a>
                             <figure class="<?php echo $spot_cat->slug; ?>_select">
-                                <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/$spot_term->slug.jpg")); ?>" />
+                                <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/$spot_term->slug.jpg")); ?>" alt="サブカテゴリ画像" />
                             </figure>
                             <p class="select_text"><?php echo $spot_term->name; ?></p>
                         </a>
@@ -63,7 +63,7 @@ $spot_subcat = get_term_children($term_id, $tax_name);
                 <li data-filter="all">
                     <a>
                         <figure class="<?php echo $spot_cat->slug; ?>_select">
-                            <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/all_$spot_cat->slug.jpg")); ?>" />
+                            <img src="<?php echo esc_url(get_theme_file_uri("image/spot_category/all_$spot_cat->slug.jpg")); ?>" alt="すべて選択" />
                         </figure>
                         <p class="select_text">ぜんぶ</p>
                     </a>

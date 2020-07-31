@@ -13,10 +13,10 @@
                     </p>
                 </div>
                 <div class="archive_model_pc_img_top left_top">
-                    <img src="<?php echo esc_url(get_theme_file_uri('image/model_img.png')); ?>" alt="" />
+                    <img src="<?php echo esc_url(get_theme_file_uri('image/model_img.png')); ?>" alt="おにぎりとリュックサック" />
                 </div>
                 <div class="archive_model_pc_img_top right_top">
-                    <img src="<?php echo esc_url(get_theme_file_uri('image/bird_flower.png')); ?>" alt="" />
+                    <img src="<?php echo esc_url(get_theme_file_uri('image/bird_flower.png')); ?>" alt="鳥と花" />
                 </div>
             </div>
             <div class="archive_model_spot_wrap">
@@ -32,7 +32,7 @@
                                 foreach ($loop as $row) :
                                 ?>
                                     <!-- 画像： -->
-                                    <img src="<?php echo $row['model_spot_img']; ?>">
+                                    <img src="<?php echo $row['model_spot_img']; ?>" alt="モデルコーススポット画像">
                                 <?php endforeach; ?>
                             </div>
                             <div class="archive_model_text">
@@ -46,10 +46,10 @@
                                     <?php echo CFS()->get('model_info'); ?>
                                 </p>
                                 <a href="<?php the_permalink(); ?>">
-                                    <button class="spot_more theme_color_dark">
+                                    <div class="spot_more theme_color_dark">
                                         モデルコース詳細へ
                                         <i class="fas fa-chevron-right"></i>
-                                    </button>
+                                    </div>
                                 </a>
                             </div>
                         </article>
@@ -60,12 +60,12 @@
             </div>
             <!-- SPイラスト -->
             <div class="model_sp_img">
-                <img src="<?php echo esc_url(get_theme_file_uri('image/model_bottom_img.png')); ?>" alt="" />
+                <img src="<?php echo esc_url(get_theme_file_uri('image/model_bottom_img.png')); ?>" alt="木" />
             </div>
 
             <!-- PCイラスト -->
             <div class="model_pc_img">
-                <img src="<?php echo esc_url(get_theme_file_uri('image/model_pc_bottom_img.png')); ?>" alt="" />
+                <img src="<?php echo esc_url(get_theme_file_uri('image/model_pc_bottom_img.png')); ?>" alt="水彩画" />
             </div>
         </section>
     </article>

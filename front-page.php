@@ -98,7 +98,7 @@
 							<?php if (has_post_thumbnail()) {
 								the_post_thumbnail(array(300, 230));
 							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="楽スポット画像">
 
 							<?php } ?>
 
@@ -152,7 +152,7 @@
 							<?php if (has_post_thumbnail()) {
 								the_post_thumbnail(array(300, 230));
 							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="静スポット画像">
 
 							<?php } ?>
 							<!-- ループおわり -->
@@ -204,7 +204,7 @@
 							<?php if (has_post_thumbnail()) {
 								the_post_thumbnail(array(300, 230));
 							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="">
+								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="旨スポット画像">
 
 							<?php } ?>
 							<!-- ループおわり -->
@@ -229,9 +229,9 @@
 			</h2>
 			<h3>～モデルコース～</h3>
 			<div class="modelcose_slide_wrap">
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_01.jpg")); ?>" alt="" />
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt="" />
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt="" />
+				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_01.jpg")); ?>" alt="鳴門コース" />
+				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt="神山コース" />
+				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt="うだつコース" />
 
 			</div>
 
