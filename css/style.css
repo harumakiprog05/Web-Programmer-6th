@@ -51,13 +51,13 @@
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  filter: brightness(70%);
   -webkit-animation-name: inout;
-          animation-name: inout;
+  animation-name: inout;
   -webkit-animation-duration: 15s;
-          animation-duration: 15s;
+  animation-duration: 15s;
 }
 
 @-webkit-keyframes inout {
@@ -299,7 +299,7 @@
     width: 100%;
     height: 100vh;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .visual_logo_wrap {
     position: absolute;
@@ -616,7 +616,7 @@ input::placeholder {
   width: 300px;
   height: 225px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .result_item span {
@@ -637,7 +637,7 @@ input::placeholder {
     width: 200px;
     height: 150px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .result_item span {
     display: block;
@@ -662,7 +662,7 @@ input::placeholder {
     width: 140px;
     height: 102.5px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .result_item span {
     display: block;
@@ -1019,7 +1019,6 @@ path {
   }
 }
 
-
 /* single.cssの110行目 */
 .info_actab.multi input[type="checkbox"] + label::after {
   content: "+";
@@ -1027,7 +1026,6 @@ path {
   top: 0;
 }
 /* を打ち消している */
-
 
 #east + label::after {
   content: none;
@@ -1184,7 +1182,7 @@ textarea {
 .model_pc_img img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .model_sp_img {
@@ -1256,7 +1254,7 @@ textarea {
   width: 100%;
   position: absolute;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* モデルコース説明テキスト */
@@ -1407,7 +1405,7 @@ textarea {
   width: 95%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-top: 30px;
 }
 
@@ -1463,7 +1461,7 @@ textarea {
 .model_pc_img_top img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .model_description {
@@ -1595,7 +1593,7 @@ textarea {
     width: 150px;
     height: 90px;
     -webkit-animation: carmove 3s ease infinite;
-            animation: carmove 3s ease infinite;
+    animation: carmove 3s ease infinite;
   }
   @-webkit-keyframes carmove {
     0% {
@@ -1680,7 +1678,7 @@ textarea {
     width: 150px;
     height: 90px;
     -webkit-animation: carmove 3s ease infinite;
-            animation: carmove 3s ease infinite;
+    animation: carmove 3s ease infinite;
   }
   @-webkit-keyframes carmove {
     0% {
@@ -1772,7 +1770,7 @@ textarea {
     width: 150px;
     height: 110px;
     -webkit-animation: carmove 3s ease infinite;
-            animation: carmove 3s ease infinite;
+    animation: carmove 3s ease infinite;
   }
   @-webkit-keyframes carmove {
     0% {
@@ -1961,8 +1959,18 @@ textarea {
 .slick-slide {
   display: none;
   float: left;
-  height: 100%;
+  /* height: 100%; */
   min-height: 1px;
+  outline: none;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-slide img:hover {
+  opacity: 0.7;
 }
 
 [dir="rtl"] .slick-slide {
@@ -2222,7 +2230,7 @@ textarea {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 50px;
 }
 
@@ -2251,7 +2259,7 @@ textarea {
 .sudachi_point img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 150px;
 }
 
@@ -2271,7 +2279,7 @@ textarea {
 .inside_modal img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: auto;
   max-width: 150px;
 }
@@ -2369,7 +2377,7 @@ textarea {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .image_wrap img:nth-child(2) {
@@ -2410,9 +2418,9 @@ textarea {
 
 @media screen and (min-width: 940px) {
   .label_cross {
-  font-size: 20px;
-  margin: 0 auto 100px;
-  border-radius: 20px;
+    font-size: 20px;
+    margin: 0 auto 100px;
+    border-radius: 20px;
   }
 }
 
@@ -2456,7 +2464,7 @@ textarea {
 
 @media screen and (min-width: 940px) {
   .info_actab input[type="checkbox"] + label::after {
-  top: -9px;
+    top: -9px;
   }
 }
 
@@ -2527,9 +2535,6 @@ textarea {
   .single_page_contents {
     margin: 0 auto;
   }
-  .article_end_spot li {
-    width: 30%;
-  }
 }
 
 .single_map iframe {
@@ -2538,21 +2543,27 @@ textarea {
   height: 100%;
 }
 
-.article_end_spot {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
 .article_end_spot li {
   margin: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .article_end_spot {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .article_end_spot li {
+    width: 30%;
+    min-width: 255px;
+  }
 }
 
 .spot_visual {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .spot_visual img {
@@ -2784,7 +2795,7 @@ a {
 
 .is_animated {
   -webkit-animation: 0.6s zoom-in;
-          animation: 0.6s zoom-in;
+  animation: 0.6s zoom-in;
 }
 
 .spot_wrap {
@@ -3163,7 +3174,7 @@ a {
 
 .mw_wp_form,
 .mw_wp_form_send_error {
-  height: 100vh;
+  height: 100%;
 }
 
 .mw_wp_form_send_error {

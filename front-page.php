@@ -77,38 +77,28 @@
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
-
 					<!-- スライドショー記事ループ開始 -->
-
 					<?php
 					$cat_posts = get_posts(array(
-						'post_type' => 'spot', // 投稿タイプ
-						'spot_cat' => "fun", // カテゴリをスラッグで指定
-						'posts_per_page' => 6, // 表示件数
-						'orderby' => 'rand', // 表示順の基準
-						'order' => 'DESC' // 昇順・降順
+						'post_type'      => 'spot', // 投稿タイプ
+						'spot_cat'       => 'fun',  // カテゴリをスラッグで指定
+						'posts_per_page' => 6,      // 表示件数
+						'orderby'        => 'rand', // 表示順の基準
+						'order'          => 'DESC'  // 昇順・降順
 					));
 					global $post;
-					if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post);
-					?>
-
+					if ($cat_posts) :
+						foreach ($cat_posts as $post) :
+							setup_postdata($post); ?>
 							<!-- ループはじめ -->
-
-							<!-- サムネイルを取得 -->
-							<?php if (has_post_thumbnail()) {
-								the_post_thumbnail(array(300, 230));
-							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="楽スポット画像">
-
-							<?php } ?>
-
+							<a href="<?php the_permalink(); ?>">
+								<?php set_thumbnail(array(300, 230)) ?>
+							</a>
 							<!-- ループおわり -->
-
-					<?php endforeach;
+					<?php
+						endforeach;
 					endif;
 					wp_reset_postdata(); ?>
-
-
 				</div>
 
 				<button onclick="location.href='<?php echo esc_url(get_term_link(2)); ?>'" class="spot_more fun_color_dark">楽スポット一覧へ <i class="fas fa-chevron-right"></i></button>
@@ -130,38 +120,28 @@
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
-
 					<!-- スライドショー記事ループ開始 -->
-
 					<?php
 					$cat_posts = get_posts(array(
-						'post_type' => 'spot', // 投稿タイプ
-						'spot_cat' => "calm", // カテゴリをスラッグで指定
-						'posts_per_page' => 6, // 表示件数
-						'orderby' => 'rand', // 表示順の基準
-						'order' => 'DESC' // 昇順・降順
+						'post_type'      => 'spot', // 投稿タイプ
+						'spot_cat'       => 'calm',  // カテゴリをスラッグで指定
+						'posts_per_page' => 6,      // 表示件数
+						'orderby'        => 'rand', // 表示順の基準
+						'order'          => 'DESC'  // 昇順・降順
 					));
 					global $post;
-					if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post);
-					?>
-
+					if ($cat_posts) :
+						foreach ($cat_posts as $post) :
+							setup_postdata($post); ?>
 							<!-- ループはじめ -->
-
-							<!--記事URLを取得-->
-							<!-- サムネイルを取得 -->
-							<?php if (has_post_thumbnail()) {
-								the_post_thumbnail(array(300, 230));
-							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="静スポット画像">
-
-							<?php } ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php set_thumbnail(array(300, 230)) ?>
+							</a>
 							<!-- ループおわり -->
-
-					<?php endforeach;
+					<?php
+						endforeach;
 					endif;
 					wp_reset_postdata(); ?>
-
-
 				</div>
 
 				<button onclick="location.href='<?php echo esc_url(get_term_link(3)); ?>'" class="spot_more calm_color_dark">静スポット一覧へ <i class="fas fa-chevron-right"></i></button>
@@ -183,33 +163,25 @@
 					</p>
 				</div>
 				<div class="spot_slide_wrap">
-					<!-- スライドショー記事ループ開始 -->
-
 					<?php
 					$cat_posts = get_posts(array(
-						'post_type' => 'spot', // 投稿タイプ
-						'spot_cat' => "tasty", // カテゴリをスラッグで指定
-						'posts_per_page' => 6, // 表示件数
-						'orderby' => 'rand', // 表示順の基準
-						'order' => 'DESC' // 昇順・降順
+						'post_type'      => 'spot', // 投稿タイプ
+						'spot_cat'       => 'tasty',  // カテゴリをスラッグで指定
+						'posts_per_page' => 6,      // 表示件数
+						'orderby'        => 'rand', // 表示順の基準
+						'order'          => 'DESC'  // 昇順・降順
 					));
 					global $post;
-					if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post);
-					?>
-
+					if ($cat_posts) :
+						foreach ($cat_posts as $post) :
+							setup_postdata($post); ?>
 							<!-- ループはじめ -->
-
-							<!--記事URLを取得-->
-							<!-- サムネイルを取得 -->
-							<?php if (has_post_thumbnail()) {
-								the_post_thumbnail(array(300, 230));
-							} else { ?>
-								<img src="<?php echo esc_url(get_theme_file_uri("image/noimage.png")); ?>" alt="旨スポット画像">
-
-							<?php } ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php set_thumbnail(array(300, 230)) ?>
+							</a>
 							<!-- ループおわり -->
-
-					<?php endforeach;
+					<?php
+						endforeach;
 					endif;
 					wp_reset_postdata(); ?>
 				</div>
@@ -229,9 +201,15 @@
 			</h2>
 			<h3>～モデルコース～</h3>
 			<div class="modelcose_slide_wrap">
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_01.jpg")); ?>" alt="鳴門コース" />
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt="神山コース" />
-				<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt="うだつコース" />
+				<a href="<?php echo esc_url(get_permalink(215)); ?>">
+					<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_01.jpg")); ?>" alt="鳴門コース" />
+				</a>
+				<a href="<?php echo esc_url(get_permalink(512)); ?>">
+					<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_02.jpg")); ?>" alt="神山コース" />
+				</a>
+				<a href="<?php echo esc_url(get_permalink(514)); ?>">
+					<img src="<?php echo esc_url(get_theme_file_uri("image/top_modelcourse_03.jpg")); ?>" alt="うだつコース" />
+				</a>
 
 			</div>
 
