@@ -50,10 +50,23 @@
 .main_visual_image {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
-  filter: brightness(70%);
-  animation-name: inout;
-  animation-duration: 15s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-animation-name: inout;
+          animation-name: inout;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+
+@-webkit-keyframes inout {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+  }
 }
 
 @keyframes inout {
@@ -285,7 +298,8 @@
   .main_visual_image {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .visual_logo_wrap {
     position: absolute;
@@ -489,6 +503,22 @@
   width: 60%;
 }
 
+input::-webkit-input-placeholder {
+  color: rgb(228, 228, 228);
+}
+
+input::-moz-placeholder {
+  color: rgb(228, 228, 228);
+}
+
+input:-ms-input-placeholder {
+  color: rgb(228, 228, 228);
+}
+
+input::-ms-input-placeholder {
+  color: rgb(228, 228, 228);
+}
+
 input::placeholder {
   color: rgb(228, 228, 228);
 }
@@ -585,7 +615,8 @@ input::placeholder {
 .result_item img {
   width: 300px;
   height: 225px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .result_item span {
@@ -605,7 +636,8 @@ input::placeholder {
   .result_item img {
     width: 200px;
     height: 150px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .result_item span {
     display: block;
@@ -629,7 +661,8 @@ input::placeholder {
   .result_item img {
     width: 140px;
     height: 102.5px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .result_item span {
     display: block;
@@ -986,11 +1019,15 @@ path {
   }
 }
 
-/*
-single.cssの110行目
-.info_actab input[type="checkbox"] + label::after {content: "+";}
-を打ち消している
-*/
+
+/* single.cssの110行目 */
+.info_actab.multi input[type="checkbox"] + label::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+}
+/* を打ち消している */
+
 
 #east + label::after {
   content: none;
@@ -1146,7 +1183,8 @@ textarea {
 .archive_model_pc_img_top img,
 .model_pc_img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .model_sp_img {
@@ -1217,7 +1255,8 @@ textarea {
 .model_course_card img {
   width: 100%;
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* モデルコース説明テキスト */
@@ -1367,7 +1406,8 @@ textarea {
 .model_spot_wrap img {
   width: 95%;
   height: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 30px;
 }
 
@@ -1422,7 +1462,8 @@ textarea {
 
 .model_pc_img_top img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .model_description {
@@ -1553,7 +1594,34 @@ textarea {
     top: 50%;
     width: 150px;
     height: 90px;
-    animation: carmove 3s ease infinite;
+    -webkit-animation: carmove 3s ease infinite;
+            animation: carmove 3s ease infinite;
+  }
+  @-webkit-keyframes carmove {
+    0% {
+      transform: translateY(0);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-15px);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   @keyframes carmove {
     0% {
@@ -1611,7 +1679,34 @@ textarea {
     top: 45%;
     width: 150px;
     height: 90px;
-    animation: carmove 3s ease infinite;
+    -webkit-animation: carmove 3s ease infinite;
+            animation: carmove 3s ease infinite;
+  }
+  @-webkit-keyframes carmove {
+    0% {
+      transform: translateY(0);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-15px);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   @keyframes carmove {
     0% {
@@ -1676,7 +1771,34 @@ textarea {
     top: 21%;
     width: 150px;
     height: 110px;
-    animation: carmove 3s ease infinite;
+    -webkit-animation: carmove 3s ease infinite;
+            animation: carmove 3s ease infinite;
+  }
+  @-webkit-keyframes carmove {
+    0% {
+      transform: translateY(0);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-15px);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   @keyframes carmove {
     0% {
@@ -1787,7 +1909,6 @@ textarea {
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -1811,10 +1932,6 @@ textarea {
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -1917,8 +2034,6 @@ textarea {
   width: 20px;
   height: 20px;
   padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   cursor: pointer;
   color: transparent;
@@ -2106,7 +2221,8 @@ textarea {
 .single_visual {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 50px;
 }
 
@@ -2134,7 +2250,8 @@ textarea {
 
 .sudachi_point img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 150px;
 }
 
@@ -2153,7 +2270,8 @@ textarea {
 
 .inside_modal img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: auto;
   max-width: 150px;
 }
@@ -2250,7 +2368,8 @@ textarea {
 .single_visual_top {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .image_wrap img:nth-child(2) {
@@ -2277,21 +2396,29 @@ textarea {
 }
 
 .label_cross {
+  font-size: 16px;
   font-weight: bold;
   line-height: 3;
   position: relative;
   display: block;
   text-align: center;
   cursor: pointer;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   width: 150px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 940px) {
+  .label_cross {
+  font-size: 20px;
+  margin: 0 auto 100px;
   border-radius: 20px;
+  }
 }
 
 .info_actab .info_actab_content {
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: max-height 0.35s;
   transition: max-height 0.35s;
   color: #333333;
 }
@@ -2317,13 +2444,20 @@ textarea {
   display: block;
   width: 3em;
   height: 3em;
-  -webkit-transition: all 0.35s;
   transition: all 0.35s;
   text-align: center;
 }
 
 .info_actab input[type="checkbox"] + label::after {
+  position: absolute;
+  top: -6px;
   content: "+";
+}
+
+@media screen and (min-width: 940px) {
+  .info_actab input[type="checkbox"] + label::after {
+  top: -9px;
+  }
 }
 
 .info_actab input[type="checkbox"]:checked + label::after {
@@ -2417,7 +2551,8 @@ textarea {
 
 .spot_visual {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .spot_visual img {
@@ -2629,6 +2764,15 @@ a {
   width: 100%;
 }
 
+@-webkit-keyframes zoom-in {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 @keyframes zoom-in {
   0% {
     transform: scale(0.1);
@@ -2639,7 +2783,8 @@ a {
 }
 
 .is_animated {
-  animation: 0.6s zoom-in;
+  -webkit-animation: 0.6s zoom-in;
+          animation: 0.6s zoom-in;
 }
 
 .spot_wrap {

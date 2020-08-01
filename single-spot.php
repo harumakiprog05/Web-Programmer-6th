@@ -94,8 +94,7 @@ $main_slug = $main_cat->slug;
                 ?>
                 <div class="info_actab">
                     <input id="info_actab_one" type="checkbox" name="tabs" />
-                    <label class="label_cross fun_color_dark" for="info_actab_one">
-                        <h3>詳細情報　</h3>
+                    <label class="label_cross fun_color_dark" for="info_actab_one">施設情報　
                     </label>
                     <!-- 施設情報 -->
                     <div class="info_actab_content">
@@ -110,6 +109,7 @@ $main_slug = $main_cat->slug;
                                     foreach ($customPosts as $post) :
                                         setup_postdata($post);
                                         $gmap = CFS()->get('gmap_if');
+                                        $gmap = str_replace('frameborder="0" ', '', $gmap);
                                 ?>
                                         <tr>
                                             <th>名称</th>

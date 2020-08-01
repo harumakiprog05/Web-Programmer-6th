@@ -7,9 +7,9 @@
 			<h2 class="site_about_title fun_ftcolor_dark">とくしまの自然と文化に<br class="sp" />癒されに行こう</h2>
 
 			<!-- スマホ用サイト説明 -->
-			<div class="info_actab sp_site_about">
+			<div class="info_actab multi sp_site_about">
 				<input id="info_actab_one" type="checkbox" name="tabs" />
-				<label class="area_serch_more fun_color_dark" for="info_actab_one">あわいやしとは</label>
+				<label class="area_serch_more fun_color_dark" for="info_actab_one">あわいやしとは　</label>
 				<div class="info_actab_content">
 					<div class="site_about_content text-left">
 						<p>
